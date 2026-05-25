@@ -1,4 +1,11 @@
+import { useCaustics } from "./caustics-provider";
+
 export default function FloatingGenerateButton() {
+  const { getSkeletons } = useCaustics();
+
+  const handleClick = () => {
+    console.log(getSkeletons());
+  };
   return (
     <>
       <style>{`
@@ -53,7 +60,7 @@ export default function FloatingGenerateButton() {
         }
       `}</style>
 
-      <button className="floating-generate-btn">
+      <button className="floating-generate-btn" onClick={handleClick}>
         Generate skeletons
         <span className="floating-generate-btn__dot" />
       </button>

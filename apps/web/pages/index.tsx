@@ -1,8 +1,10 @@
-import { CausticsProvider } from "@caustics/react";
+import { CausticsProvider, Skeleton } from "@caustics/react";
 export default function Page() {
   return (
     <CausticsProvider config={{ name: "My App" }}>
-      <p>Hello world</p>
+      <Skeleton name="Title">
+        <p>Hello world</p>
+      </Skeleton>
     </CausticsProvider>
   );
 }

@@ -1,4 +1,5 @@
 import { createContext, useContext, type PropsWithChildren } from "react";
+import FloatingWindow from "./control-panel";
 
 export type CausticsConfig = {
   name: string;
@@ -14,6 +15,7 @@ export function CausticsProvider({ config, children }: CausticsProviderProps) {
   return (
     <CausticsContext.Provider value={config}>
       {children}
+      <FloatingWindow />
     </CausticsContext.Provider>
   );
 }

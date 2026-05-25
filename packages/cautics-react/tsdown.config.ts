@@ -1,8 +1,10 @@
-import { defineConfig } from 'tsdown'
+// tsdown.config.ts
+import { defineConfig } from "tsdown";
 
 export default defineConfig({
-  platform: 'neutral',
+  platform: "neutral",
   dts: true,
   exports: true,
-  // ...config options
-})
+  format: ["esm"],
+  external: ["react", "react-dom", "@base-ui/react"],
+});

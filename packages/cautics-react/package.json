@@ -48,6 +48,17 @@
     "typescript": "^6.0.3",
     "vite": "^8.0.11",
     "vitest": "^4.1.5",
-    "vitest-browser-react": "^2.2.0"
+    "vitest-browser-react": "^2.2.0",
+    "@base-ui/react": "^1.5.0"
+  },
+  "dependencies": {},
+  "inlinedDependencies": {
+    "@base-ui/react": "1.5.0",
+    "@base-ui/utils": "0.2.9",
+    "@floating-ui/core": "1.7.5",
+    "@floating-ui/dom": "1.7.6",
+    "@floating-ui/react-dom": "2.1.8",
+    "@floating-ui/utils": "0.2.11",
+    "use-sync-external-store": "1.6.0"
   }
 }

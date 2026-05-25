@@ -1,3 +1,3 @@
-# `@repo/eslint-config`
+# `@caustics/eslint-config`
 
 Collection of internal eslint configurations.

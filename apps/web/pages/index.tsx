@@ -1,5 +1,5 @@
-import { Button } from "@repo/ui/button";
-import { Header } from "@repo/ui/header";
+import { Button } from "@caustics/react/button";
+import { Header } from "@caustics/react/header";
 
 export default function Page() {
   return (

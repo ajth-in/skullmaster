@@ -1,5 +1,5 @@
 {
-  "name": "@repo/ui",
+  "name": "@caustics/react",
   "version": "0.0.0",
   "type": "module",
   "exports": {
@@ -18,8 +18,8 @@
     "dev": "pnpm build --watch"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@caustics/eslint-config": "workspace:*",
+    "@caustics/typescript-config": "workspace:*",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",

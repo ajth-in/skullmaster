@@ -1,11 +1,8 @@
-import { Button } from "@caustics/react/button";
-import { Header } from "@caustics/react/header";
-
+import { CausticsProvider } from "@caustics/react";
 export default function Page() {
   return (
-    <>
-      <Header text="Web" />
-      <Button />
-    </>
+    <CausticsProvider config={{ name: "My App" }}>
+      <p>Hello world</p>
+    </CausticsProvider>
   );
 }

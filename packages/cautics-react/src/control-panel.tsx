@@ -1,4 +1,5 @@
 import { useCaustics } from "./caustics-provider";
+import { Button } from "./ui/button";
 
 export default function FloatingGenerateButton() {
   const { getSkeletons } = useCaustics();
@@ -64,6 +65,7 @@ export default function FloatingGenerateButton() {
         Generate skeletons
         <span className="floating-generate-btn__dot" />
       </button>
+      <Button>Hello</Button>
     </>
   );
 }

@@ -1,9 +1,12 @@
 import { CausticsProvider, Skeleton } from "@caustics/react";
 export default function Page() {
   return (
-    <CausticsProvider config={{ name: "My App" }}>
+    <CausticsProvider>
       <Skeleton name="Title">
-        <p>Hello world</p>
+        <div>
+          <p>Hello world</p>
+          <img src="https://via.placeholder.com/150" alt="placeholder" />
+        </div>
       </Skeleton>
     </CausticsProvider>
   );

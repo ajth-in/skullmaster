@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@o-slash/web",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@caustics/react": "workspace:*",
+    "@o-slash/react": "workspace:*",
     "next": "16.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@caustics/server": "workspace:*",
+    "@o-slash/server": "workspace:*",
     "@next/eslint-plugin-next": "^16.2.0",
-    "@caustics/eslint-config": "workspace:*",
-    "@caustics/typescript-config": "workspace:*",
+    "@o-slash/eslint-config": "workspace:*",
+    "@o-slash/typescript-config": "workspace:*",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",

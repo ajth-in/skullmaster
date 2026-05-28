@@ -1,5 +1,5 @@
 {
-  "name": "@caustics/react",
+  "name": "@o-slash/react",
   "type": "module",
   "version": "0.0.0",
   "description": "A starter for creating a React component library.",
@@ -46,15 +46,16 @@
     "@vitejs/plugin-react": "^6.0.1",
     "@vitest/browser-playwright": "^4.1.5",
     "bumpp": "^11.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "tsdown": "^0.22.0",
     "typescript": "^6.0.3",
     "vite": "^8.0.11",
     "vitest": "^4.1.5",
-    "vitest-browser-react": "^2.2.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "vitest-browser-react": "^2.2.0"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.100.14",
     "react-aria-components": "^1.17.0"
   }
 }

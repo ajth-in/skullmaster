@@ -8,7 +8,7 @@ import {
   type HTMLAttributes,
   type ReactElement,
 } from "react";
-import { useCaustics } from "./caustics-provider";
+import { useOSlash } from "./o-slash-provider";
 
 type RefableElement = ReactElement<HTMLAttributes<HTMLElement>>;
 
@@ -21,7 +21,7 @@ export default function Skeleton(props: {
   const refCallback = useCallback((node: HTMLElement | null) => {
     ref.current = node;
   }, []);
-  const { registerSkeleton } = useCaustics();
+  const { registerSkeleton } = useOSlash();
 
   useEffect(() => {
     if (!ref.current) return;

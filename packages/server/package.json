@@ -1,5 +1,5 @@
 {
-  "name": "@caustics/server",
+  "name": "@o-slash/server",
   "type": "module",
   "version": "0.0.0",
   "private": true,

@@ -1,3 +1,3 @@
-# `@caustics/eslint-config`
+# `@o-slash/eslint-config`
 
 Collection of internal eslint configurations.

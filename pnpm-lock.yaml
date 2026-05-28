@@ -20,9 +20,9 @@ importers:
 
   apps/web:
     dependencies:
-      '@caustics/react':
+      '@o-slash/react':
         specifier: workspace:*
-        version: link:../../packages/cautics-react
+        version: link:../../packages/react
       next:
         specifier: 16.2.0
         version: 16.2.0(react-dom@18.3.1)(react@18.3.1)
@@ -33,18 +33,18 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
     devDependencies:
-      '@caustics/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/config-eslint
-      '@caustics/server':
-        specifier: workspace:*
-        version: link:../../packages/caustic-server
-      '@caustics/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config-typescript
       '@next/eslint-plugin-next':
         specifier: ^16.2.0
         version: 16.2.0
+      '@o-slash/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/config-eslint
+      '@o-slash/server':
+        specifier: workspace:*
+        version: link:../../packages/server
+      '@o-slash/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/config-typescript
       '@types/node':
         specifier: ^20.11.24
         version: 20.14.0
@@ -58,54 +58,37 @@ importers:
         specifier: 5.5.4
         version: 5.5.4
 
-  packages/caustic-server:
-    dependencies:
-      '@babel/generator':
-        specifier: ^7.29.7
-        version: 7.29.7
-      '@babel/types':
-        specifier: ^7.29.7
-        version: 7.29.7
-      '@hono/node-server':
-        specifier: ^2.0.4
-        version: 2.0.4(hono@4.12.23)
-      c12:
-        specifier: 4.0.0-beta.5
-        version: 4.0.0-beta.5
-      cac:
-        specifier: ^7.0.0
-        version: 7.0.0
-      hono:
-        specifier: ^4.12.23
-        version: 4.12.23
-      jsdom:
-        specifier: ^29.1.1
-        version: 29.1.1
-      oxfmt:
-        specifier: ^0.52.0
-        version: 0.52.0
-      ts-morph:
-        specifier: ^28.0.0
-        version: 28.0.0
-      zod:
-        specifier: ^4.4.3
-        version: 4.4.3
+  packages/config-eslint:
     devDependencies:
-      '@types/babel__generator':
-        specifier: ^7.27.0
-        version: 7.27.0
-      '@types/jsdom':
-        specifier: ^28.0.3
-        version: 28.0.3
-      tsdown:
-        specifier: ^0.22.0
-        version: 0.22.0(typescript@6.0.3)
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^7.1.0
+        version: 7.12.0(@typescript-eslint/parser@7.12.0)(eslint@8.57.1)(typescript@5.5.4)
+      '@typescript-eslint/parser':
+        specifier: ^7.1.0
+        version: 7.12.0(eslint@8.57.1)(typescript@5.5.4)
+      '@vercel/style-guide':
+        specifier: ^5.2.0
+        version: 5.2.0(eslint@8.57.1)(prettier@3.3.0)(typescript@5.5.4)
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@8.57.1)
+      eslint-config-turbo:
+        specifier: ^2.0.0
+        version: 2.0.0(eslint@8.57.1)
+      eslint-plugin-only-warn:
+        specifier: ^1.1.0
+        version: 1.1.0
       typescript:
-        specifier: ^6.0.3
-        version: 6.0.3
+        specifier: 5.5.4
+        version: 5.5.4
 
-  packages/cautics-react:
+  packages/config-typescript: {}
+
+  packages/react:
     dependencies:
+      '@tanstack/react-query':
+        specifier: ^5.100.14
+        version: 5.100.14(react@19.2.6)
       react-aria-components:
         specifier: ^1.17.0
         version: 1.17.0(react-dom@19.2.6)(react@19.2.6)
@@ -156,31 +139,51 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0(@types/react-dom@19.2.3)(@types/react@19.2.15)(react-dom@19.2.6)(react@19.2.6)(vitest@4.1.7)
 
-  packages/config-eslint:
+  packages/server:
+    dependencies:
+      '@babel/generator':
+        specifier: ^7.29.7
+        version: 7.29.7
+      '@babel/types':
+        specifier: ^7.29.7
+        version: 7.29.7
+      '@hono/node-server':
+        specifier: ^2.0.4
+        version: 2.0.4(hono@4.12.23)
+      c12:
+        specifier: 4.0.0-beta.5
+        version: 4.0.0-beta.5
+      cac:
+        specifier: ^7.0.0
+        version: 7.0.0
+      hono:
+        specifier: ^4.12.23
+        version: 4.12.23
+      jsdom:
+        specifier: ^29.1.1
+        version: 29.1.1
+      oxfmt:
+        specifier: ^0.52.0
+        version: 0.52.0
+      ts-morph:
+        specifier: ^28.0.0
+        version: 28.0.0
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
     devDependencies:
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^7.1.0
-        version: 7.12.0(@typescript-eslint/parser@7.12.0)(eslint@8.57.1)(typescript@5.5.4)
-      '@typescript-eslint/parser':
-        specifier: ^7.1.0
-        version: 7.12.0(eslint@8.57.1)(typescript@5.5.4)
-      '@vercel/style-guide':
-        specifier: ^5.2.0
-        version: 5.2.0(eslint@8.57.1)(prettier@3.3.0)(typescript@5.5.4)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.57.1)
-      eslint-config-turbo:
-        specifier: ^2.0.0
-        version: 2.0.0(eslint@8.57.1)
-      eslint-plugin-only-warn:
-        specifier: ^1.1.0
-        version: 1.1.0
+      '@types/babel__generator':
+        specifier: ^7.27.0
+        version: 7.27.0
+      '@types/jsdom':
+        specifier: ^28.0.3
+        version: 28.0.3
+      tsdown:
+        specifier: ^0.22.0
+        version: 0.22.0(typescript@6.0.3)
       typescript:
-        specifier: 5.5.4
-        version: 5.5.4
-
-  packages/config-typescript: {}
+        specifier: ^6.0.3
+        version: 6.0.3
 
 packages:
 
@@ -188,8 +191,8 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
     dependencies:
-      '@jridgewell/gen-mapping': 0.3.5
-      '@jridgewell/trace-mapping': 0.3.25
+      '@jridgewell/gen-mapping': 0.3.13
+      '@jridgewell/trace-mapping': 0.3.31
     dev: true
 
   /@asamuzakjp/css-color@5.1.11:
@@ -242,7 +245,7 @@ packages:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@babel/code-frame': 7.24.6
-      '@babel/generator': 7.24.6
+      '@babel/generator': 7.29.7
       '@babel/helper-compilation-targets': 7.24.6
       '@babel/helper-module-transforms': 7.24.6(@babel/core@7.24.6)
       '@babel/helpers': 7.24.6
@@ -273,16 +276,6 @@ packages:
       semver: 6.3.1
     dev: true
 
-  /@babel/generator@7.24.6:
-    resolution: {integrity: sha512-S7m4eNa6YAPJRHmKsLHIDJhNAGNKoWNiWefz1MBbpnt8g9lvMDl1hir4P9bo/57bQEmuwEhnRU/AMWsD0G/Fbg==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/types': 7.29.7
-      '@jridgewell/gen-mapping': 0.3.5
-      '@jridgewell/trace-mapping': 0.3.25
-      jsesc: 2.5.2
-    dev: true
-
   /@babel/generator@7.29.7:
     resolution: {integrity: sha512-DkXD5OJQaAQIdZ1bt3UZdEnHAn9Imd3IVBdX03UFe+ony9Ojw5pzr9YVKGDY1jt+Gcn/FnGkNf8r+Vj5NOJWtQ==}
     engines: {node: '>=6.9.0'}
@@ -292,7 +285,6 @@ packages:
       '@jridgewell/gen-mapping': 0.3.13
       '@jridgewell/trace-mapping': 0.3.31
       jsesc: 3.0.2
-    dev: false
 
   /@babel/generator@8.0.0-rc.5:
     resolution: {integrity: sha512-nFZPWz3FHIS7y6rMIVoa/WBwjdutfIaRJIBQjzn+t3RnecZoRNlGmGcyR2wb0T/IgSd50Kz/6dG8/LvMCRunjg==}
@@ -355,7 +347,7 @@ packages:
       '@babel/helper-module-imports': 7.24.6
       '@babel/helper-simple-access': 7.24.6
       '@babel/helper-split-export-declaration': 7.24.6
-      '@babel/helper-validator-identifier': 7.24.6
+      '@babel/helper-validator-identifier': 7.29.7
     dev: true
 
   /@babel/helper-simple-access@7.24.6:
@@ -417,7 +409,7 @@ packages:
     resolution: {integrity: sha512-2YnuOp4HAk2BsBrJJvYCbItHx0zWscI1C3zgWkz+wDyD9I7GIVrfnLyrR4Y1VR+7p+chAEcrgRQYZAGIKMV7vQ==}
     engines: {node: '>=6.9.0'}
     dependencies:
-      '@babel/helper-validator-identifier': 7.24.6
+      '@babel/helper-validator-identifier': 7.29.7
       chalk: 2.4.2
       js-tokens: 4.0.0
       picocolors: 1.1.1
@@ -436,7 +428,6 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.29.7
-    dev: false
 
   /@babel/parser@8.0.0-rc.4:
     resolution: {integrity: sha512-0S/1yefMa15N4i2v3t8Fw9pgMHhf2gF6Lc1UEXI96Ls6FNAjqvHHZouZ2ZS/deqLhbMFtmfVeFac6iTsvFbLwA==}
@@ -471,7 +462,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/code-frame': 7.24.6
-      '@babel/parser': 7.24.6
+      '@babel/parser': 7.29.7
       '@babel/types': 7.29.7
     dev: true
 
@@ -480,12 +471,12 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/code-frame': 7.24.6
-      '@babel/generator': 7.24.6
+      '@babel/generator': 7.29.7
       '@babel/helper-environment-visitor': 7.24.6
       '@babel/helper-function-name': 7.24.6
       '@babel/helper-hoist-variables': 7.24.6
       '@babel/helper-split-export-declaration': 7.24.6
-      '@babel/parser': 7.24.6
+      '@babel/parser': 7.29.7
       '@babel/types': 7.29.7
       debug: 4.3.5
       globals: 11.12.0
@@ -1047,37 +1038,12 @@ packages:
       '@jridgewell/sourcemap-codec': 1.5.5
       '@jridgewell/trace-mapping': 0.3.31
 
-  /@jridgewell/gen-mapping@0.3.5:
-    resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
-    engines: {node: '>=6.0.0'}
-    dependencies:
-      '@jridgewell/set-array': 1.2.1
-      '@jridgewell/sourcemap-codec': 1.4.15
-      '@jridgewell/trace-mapping': 0.3.25
-    dev: true
-
   /@jridgewell/resolve-uri@3.1.2:
     resolution: {integrity: sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw==}
     engines: {node: '>=6.0.0'}
 
-  /@jridgewell/set-array@1.2.1:
-    resolution: {integrity: sha512-R8gLRTZeyp03ymzP/6Lil/28tGeGEzhx1q2k703KGWRAI1VdvPIXdG70VJc2pAMw3NA6JKL5hhFu1sJX0Mnn/A==}
-    engines: {node: '>=6.0.0'}
-    dev: true
-
-  /@jridgewell/sourcemap-codec@1.4.15:
-    resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
-    dev: true
-
   /@jridgewell/sourcemap-codec@1.5.5:
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
-
-  /@jridgewell/trace-mapping@0.3.25:
-    resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
-    dependencies:
-      '@jridgewell/resolve-uri': 3.1.2
-      '@jridgewell/sourcemap-codec': 1.4.15
-    dev: true
 
   /@jridgewell/trace-mapping@0.3.31:
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
@@ -1572,6 +1538,19 @@ packages:
     resolution: {integrity: sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==}
     dependencies:
       tslib: 2.8.1
+    dev: false
+
+  /@tanstack/query-core@5.100.14:
+    resolution: {integrity: sha512-5X41dGpxgeaHISCRW2oYwcSycZeULZzAunaudXT9ov1KOTj9xwt0CH6hbwqP1/z74ZWF7rYFnDpyYH07XFcZew==}
+    dev: false
+
+  /@tanstack/react-query@5.100.14(react@19.2.6):
+    resolution: {integrity: sha512-oOr6aRdSFEwWhzxEkD/9ZcItM3+LjBSkeVmadWKwUssAHTsqd/7bOjWrX4AbvEkoEhgAxzN0Xk6H/aYzXiYBAw==}
+    peerDependencies:
+      react: ^18 || ^19
+    dependencies:
+      '@tanstack/query-core': 5.100.14
+      react: 19.2.6
     dev: false
 
   /@ts-morph/common@0.29.0:
@@ -4181,11 +4160,6 @@ packages:
 
   /jsesc@0.5.0:
     resolution: {integrity: sha512-uZz5UnB7u4T9LvwmFqXii7pZSouaRPorGs5who1Ip7VO0wxanFvBL7GkM6dTHlgX+jhBApRetaWpnDabOeTcnA==}
-    dev: true
-
-  /jsesc@2.5.2:
-    resolution: {integrity: sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==}
-    engines: {node: '>=4'}
     dev: true
 
   /jsesc@3.0.2:

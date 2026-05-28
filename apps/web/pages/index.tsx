@@ -1,4 +1,4 @@
-import { CausticsProvider, Skeleton } from "@caustics/react";
+import { CausticsProvider, Skeleton } from "@o-slash/react";
 export default function Page() {
   return (
     <CausticsProvider>

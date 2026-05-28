@@ -1,5 +1,5 @@
 {
-  "name": "@caustics/eslint-config",
+  "name": "@o-slash/eslint-config",
   "version": "0.0.0",
   "private": true,
   "files": [

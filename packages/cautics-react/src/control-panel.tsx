@@ -65,7 +65,6 @@ export default function FloatingGenerateButton() {
         Generate skeletons
         <span className="floating-generate-btn__dot" />
       </button>
-      <Button>Hello</Button>
     </>
   );
 }

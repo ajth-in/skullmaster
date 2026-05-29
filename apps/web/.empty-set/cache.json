@@ -211,8 +211,8 @@
   },
   "profileBio": {
     "component": "profileBio",
-    "html": "<p class=\"page-module__iN6gNa__cardBio\">Analyzing components via ts-morph and writing static loaders directly into your filesystem in real-time.</p>",
-    "hash": "0a3924c00c6a1356974b7a99f7829aaea8a231b80ca3ed26fa4744b31342b53d"
+    "html": "<p class=\"page-module__iN6gNa__cardBio\">Analyzing components via ts-morph and writing static loaders directly into yoursss filesystem ins real-time.</p>",
+    "hash": "f33a5324ff6fc4c941e0c5d6f331e8af1e37234f39b50d202512b0f037ac5f5b"
   },
   "skeletonAvatar": {
     "component": "skeletonAvatar",

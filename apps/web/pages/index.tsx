@@ -9,7 +9,7 @@ export default function Page() {
   const [loading, setLoading] = useState(false);
 
   return (
-    <CausticsProvider>
+    <CausticsProvider isEnabled={true}>
       <div className={styles.container}>
         <Head>
           <title>Ø-Slash | Automated Skeleton UI Generation</title>
@@ -88,7 +88,7 @@ export default function Page() {
               </Skeleton>
               <Skeleton name="profileBio">
                 <p className={styles.cardBio}>
-                  Analyzing components via ts-morph and writing static loaders directly into your
+                  Analyzing components via ts-morph and writing static loaders directly into yoursss
                   filesystem ins real-time.
                 </p>
               </Skeleton>

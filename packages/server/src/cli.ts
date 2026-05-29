@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
+import { DEFAULT_PORT } from "@o-slash/shared";
 import { cac } from "cac";
 import { initialize } from "./commands/init";
 import { serveCommand } from "./commands/serve";
-import { DEFAULT_PORT } from "./constants";
 
 const cli = cac("Ø");
 

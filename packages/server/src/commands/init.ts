@@ -1,6 +1,6 @@
+import { EMPTY_SET_DEFAULT_DIR } from "@o-slash/shared";
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { EMPTY_SET_DEFAULT_DIR } from "../constants";
 
 export async function initialize(isTs: boolean): Promise<void> {
   try {

@@ -1,4 +1,6 @@
 "use client";
+import { DEFAULT_PORT, type SkeletonPayloadInput } from "@o-slash/shared";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   createContext,
   useCallback,
@@ -7,9 +9,7 @@ import {
   useRef,
   type PropsWithChildren,
 } from "react";
-import FloatingGenerateButton from "./control-panel";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { type SkeletonPayloadInput } from "@o-slash/shared";
+import PostSkeletons, { type PostSkeletonsProps } from "./control-panel";
 
 type EmptyContextValue = {
   registerSkeleton: (name: string, html: string) => void;
@@ -18,7 +18,11 @@ type EmptyContextValue = {
 
 const EmptySetContext = createContext<EmptyContextValue | null>(null);
 
-export function OSlashProvider({ children }: PropsWithChildren) {
+export function OSlashProvider({
+  children,
+  isEnabled,
+  port,
+}: PropsWithChildren<PostSkeletonsProps>) {
   const skeletonsRef = useRef<SkeletonPayloadInput>({});
 
   const registerSkeleton = useCallback((name: string, html: string) => {
@@ -42,7 +46,7 @@ export function OSlashProvider({ children }: PropsWithChildren) {
     <QueryClientProvider client={queryClient}>
       <EmptySetContext.Provider value={value}>
         {children}
-        <FloatingGenerateButton />
+        <PostSkeletons isEnabled={isEnabled} port={port ?? DEFAULT_PORT} />
       </EmptySetContext.Provider>
     </QueryClientProvider>
   );

@@ -1,7 +1,10 @@
-import { SkeletonCacheEntry, SkeletonCacheEntrySchema } from "@o-slash/shared";
+import {
+  EMPTY_SET_DEFAULT_DIR,
+  SkeletonCacheEntry,
+  SkeletonCacheEntrySchema,
+} from "@o-slash/shared";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
-import { EMPTY_SET_DEFAULT_DIR } from "../constants";
 
 export class SkeletonCacheDB {
   private path = `${EMPTY_SET_DEFAULT_DIR}/cache.json`;

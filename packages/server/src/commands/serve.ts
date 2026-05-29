@@ -1,15 +1,25 @@
-import { Hono } from "hono";
 import { serve } from "@hono/node-server";
-import { SkeletonBodySchema } from "../schema";
+import { SkeletonPayloadInputSchema } from "@o-slash/shared";
 import { loadConfig } from "c12";
+import { Hono } from "hono";
+import { cors } from "hono/cors";
 import { Project } from "ts-morph";
-import generateTarget from "../generate-target";
-import { transformInput } from "../transform";
 import { SkeletonCacheDB } from "../cache";
 import { hashInput } from "../cache/hash";
+import generateTarget from "../generate-target";
+import { transformInput } from "../transform";
 
 export async function serveCommand(port: number) {
   const app = new Hono();
+
+  app.use(
+    "*",
+    cors({
+      origin: "*",
+      allowMethods: ["GET", "POST", "OPTIONS"],
+      allowHeaders: ["Content-Type", "Authorization"],
+    }),
+  );
 
   const db = await SkeletonCacheDB.create();
 
@@ -26,7 +36,7 @@ export async function serveCommand(port: number) {
   app.post("/skeletons", async (c) => {
     const body = await c.req.json();
 
-    const result = SkeletonBodySchema.parse(body);
+    const result = SkeletonPayloadInputSchema.parse(body);
 
     const project = new Project();
 
@@ -36,9 +46,9 @@ export async function serveCommand(port: number) {
       const cached = db.get(key);
 
       const shouldSkip = cached && cached.hash === hash;
-      console.log(
-        `Processing ${key} - ${shouldSkip ? "skipped (cached)" : "updated"}`,
-      );
+
+      console.log(`Processing ${key} - ${shouldSkip ? "skipped (cached)" : "updated"}`);
+
       if (shouldSkip) {
         continue;
       }
@@ -70,7 +80,7 @@ export async function serveCommand(port: number) {
       port,
     },
     (info) => {
-      console.log(`Caustic running at http://localhost:${info.port}`);
+      console.log(`o-slash running at http://localhost:${info.port}`);
     },
   );
 }

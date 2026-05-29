@@ -15,7 +15,6 @@
   },
   "exports": {
     ".": "./dist/index.js",
-    "./worker": "./dist/worker.js",
     "./package.json": "./package.json"
   },
   "files": [
@@ -53,6 +52,7 @@
     "vitest-browser-react": "^2.2.0"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.100.14"
+    "@tanstack/react-query": "^5.100.14",
+    "@o-slash/shared": "workspace:*"
   }
 }

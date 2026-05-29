@@ -1,3 +1,4 @@
+"use client";
 import {
   createContext,
   useCallback,
@@ -8,21 +9,20 @@ import {
 } from "react";
 import FloatingGenerateButton from "./control-panel";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-
-export type SkeletonPayload = Record<string, string>;
+import { type SkeletonPayloadInput } from "@o-slash/shared";
 
 type EmptyContextValue = {
   registerSkeleton: (name: string, html: string) => void;
-  getSkeletons: () => SkeletonPayload;
+  getSkeletons: () => SkeletonPayloadInput;
 };
 
 const EmptySetContext = createContext<EmptyContextValue | null>(null);
 
 export function OSlashProvider({ children }: PropsWithChildren) {
-  const skeletonsRef = useRef<SkeletonPayload>({});
+  const skeletonsRef = useRef<SkeletonPayloadInput>({});
 
   const registerSkeleton = useCallback((name: string, html: string) => {
-    skeletonsRef.current[name] = html;
+    skeletonsRef.current[name] = { component: name, html };
   }, []);
 
   const getSkeletons = useCallback(() => {

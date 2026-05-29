@@ -1,29 +1,23 @@
 {
-  "name": "@o-slash/server",
-  "type": "module",
+  "name": "o-slash",
   "version": "0.0.0",
   "private": true,
   "description": "A simple example library built by tsdown",
   "bin": {
-    "server": "./dist/cli.mjs"
+    "o-slash": "./dist/cli.mjs"
   },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
   "exports": {
     ".": "./dist/index.mjs",
     "./cli": "./dist/cli.mjs",
     "./package.json": "./package.json"
   },
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch"
-  },
-  "devDependencies": {
-    "@types/babel__generator": "^7.27.0",
-    "@types/jsdom": "^28.0.3",
-    "tsdown": "^0.22.0",
-    "typescript": "^6.0.3"
   },
   "dependencies": {
     "@babel/generator": "^7.29.7",
@@ -36,5 +30,12 @@
     "oxfmt": "^0.52.0",
     "ts-morph": "^28.0.0",
     "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@o-slash/shared": "workspace:*",
+    "@types/babel__generator": "^7.27.0",
+    "@types/jsdom": "^28.0.3",
+    "tsdown": "^0.22.0",
+    "typescript": "^6.0.3"
   }
 }

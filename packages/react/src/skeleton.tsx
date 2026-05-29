@@ -2,29 +2,33 @@ import {
   Fragment,
   cloneElement,
   isValidElement,
+  useCallback,
   useEffect,
   useRef,
-  useCallback,
   type HTMLAttributes,
   type ReactElement,
 } from "react";
+
 import { useOSlash } from "./o-slash-provider";
 
-type RefableElement = ReactElement<HTMLAttributes<HTMLElement>>;
-
-export default function Skeleton(props: {
+type SkeletonProps = {
   name: string;
-  children: RefableElement;
-}) {
+  children: ReactElement<HTMLAttributes<HTMLElement>>;
+};
+
+export default function Skeleton(props: SkeletonProps) {
   const ref = useRef<HTMLElement | null>(null);
+
+  const { registerSkeleton } = useOSlash();
 
   const refCallback = useCallback((node: HTMLElement | null) => {
     ref.current = node;
   }, []);
-  const { registerSkeleton } = useOSlash();
 
   useEffect(() => {
-    if (!ref.current) return;
+    if (!ref.current) {
+      return;
+    }
 
     registerSkeleton(props.name, ref.current.outerHTML);
   }, [props.name, registerSkeleton]);
@@ -33,7 +37,17 @@ export default function Skeleton(props: {
     return <Fragment>{props.children}</Fragment>;
   }
 
+  if (typeof props.children.type !== "string") {
+    console.warn(
+      `[Skeleton] "${props.name}" received a non-DOM child. ` +
+        `Wrap an intrinsic element instead.`,
+    );
+
+    return props.children;
+  }
+
   return cloneElement(props.children, {
+    //@ts-ignore
     ref: refCallback,
-  } as any);
+  });
 }

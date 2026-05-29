@@ -1,0 +1,34 @@
+{
+  "name": "@o-slash/shared",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "A starter for creating a React component library.",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "^25.6.2",
+    "@vitejs/plugin-react": "^6.0.1",
+    "@vitest/browser-playwright": "^4.1.5",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.11",
+    "vitest": "^4.1.5",
+    "vitest-browser-react": "^2.2.0"
+  },
+  "dependencies": {
+    "zod": "^4.4.3"
+  }
+}

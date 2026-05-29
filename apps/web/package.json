@@ -11,17 +11,17 @@
   "dependencies": {
     "@o-slash/react": "workspace:*",
     "next": "16.2.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@o-slash/server": "workspace:*",
     "@next/eslint-plugin-next": "^16.2.0",
     "@o-slash/eslint-config": "workspace:*",
     "@o-slash/typescript-config": "workspace:*",
     "@types/node": "^20.11.24",
-    "@types/react": "^18.2.61",
-    "@types/react-dom": "^18.2.19",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "o-slash": "workspace:*",
     "typescript": "5.5.4"
   }
 }

@@ -1,12 +1,12 @@
+import { SkeletonCacheEntry, SkeletonCacheEntrySchema } from "@o-slash/shared";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
 import z from "zod";
-import { SkeletonCacheSchema, type SkeletonCache } from "../schema";
 
 export class SkeletonCacheDB {
   private path = ".skeletons/cache.json";
 
-  private data: SkeletonCache = {};
+  private data: SkeletonCacheEntry = {};
 
   private constructor() {}
 
@@ -24,7 +24,7 @@ export class SkeletonCacheDB {
 
       const parsed = JSON.parse(file);
 
-      this.data = SkeletonCacheSchema.parse(parsed);
+      this.data = SkeletonCacheEntrySchema.parse(parsed);
     } catch {
       this.data = {};
 
@@ -44,7 +44,7 @@ export class SkeletonCacheDB {
     return this.data[key];
   }
 
-  async set(key: string, value: SkeletonCache[string]) {
+  async set(key: string, value: SkeletonCacheEntry[string]) {
     this.data[key] = value;
 
     await this.persist();

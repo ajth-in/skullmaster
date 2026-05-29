@@ -8,6 +8,7 @@ import { hashInput } from "../cache/hash";
 import { EMPTY_SET_DEFAULT_DIR } from "../constants";
 import generateTarget from "../generate-target";
 import { transformInput } from "../transform";
+import { log } from "../utils/log";
 import { toCamelCase } from "../utils/to-camel-case";
 
 export async function serveCommand(port: number) {
@@ -44,7 +45,11 @@ export async function serveCommand(port: number) {
 
       const shouldSkip = cached && cached.hash === hash;
 
-      console.log(`Processing ${key} - ${shouldSkip ? "skipped (cached)" : "updated"}`);
+      if (shouldSkip) {
+        log.gray(`Processing ${key} - skipped (cached)`);
+      } else {
+        log.success(`Processing ${key} - updated`);
+      }
 
       if (shouldSkip) {
         continue;
@@ -79,7 +84,7 @@ export async function serveCommand(port: number) {
       port,
     },
     (info) => {
-      console.log(`o-slash running at http://localhost:${info.port}`);
+      log.info(`Server running at http://localhost:${info.port}`);
     },
   );
 }

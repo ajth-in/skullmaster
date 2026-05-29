@@ -1,10 +1,10 @@
 import { SkeletonCacheEntry, SkeletonCacheEntrySchema } from "@o-slash/shared";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
-import z from "zod";
+import { EMPTY_SET_DEFAULT_DIR } from "../constants";
 
 export class SkeletonCacheDB {
-  private path = ".skeletons/cache.json";
+  private path = `${EMPTY_SET_DEFAULT_DIR}/cache.json`;
 
   private data: SkeletonCacheEntry = {};
 

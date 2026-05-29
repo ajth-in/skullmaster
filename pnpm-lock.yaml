@@ -39,9 +39,6 @@ importers:
       '@o-slash/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config-eslint
-      'o-slash':
-        specifier: workspace:*
-        version: link:../../packages/server
       '@o-slash/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config-typescript
@@ -54,6 +51,9 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.15)
+      o-slash:
+        specifier: workspace:*
+        version: link:../../packages/server
       typescript:
         specifier: 5.5.4
         version: 5.5.4
@@ -5406,6 +5406,7 @@ packages:
 
   /tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
+    requiresBuild: true
 
   /tsutils@3.21.0(typescript@5.5.4):
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}

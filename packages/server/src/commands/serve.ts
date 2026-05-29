@@ -1,13 +1,14 @@
 import { serve } from "@hono/node-server";
 import { SkeletonPayloadInputSchema } from "@o-slash/shared";
-import { loadConfig } from "c12";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { Project } from "ts-morph";
 import { SkeletonCacheDB } from "../cache";
 import { hashInput } from "../cache/hash";
+import { EMPTY_SET_DEFAULT_DIR } from "../constants";
 import generateTarget from "../generate-target";
 import { transformInput } from "../transform";
+import { toCamelCase } from "../utils/to-camel-case";
 
 export async function serveCommand(port: number) {
   const app = new Hono();
@@ -22,10 +23,6 @@ export async function serveCommand(port: number) {
   );
 
   const db = await SkeletonCacheDB.create();
-
-  const { config } = await loadConfig({
-    name: "auto-shimmer",
-  });
 
   app.get("/health", (c) => {
     return c.json({
@@ -53,10 +50,12 @@ export async function serveCommand(port: number) {
         continue;
       }
 
+      const componentName = toCamelCase(value.component);
+
       generateTarget({
         project,
-        filePath: `.skeletons/${value.component}.tsx`,
-        componentName: value.component,
+        filePath: `${EMPTY_SET_DEFAULT_DIR}/bones/${componentName}.tsx`,
+        componentName,
         body: transformInput(value.html),
       });
 

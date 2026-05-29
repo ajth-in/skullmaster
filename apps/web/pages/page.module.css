@@ -1,0 +1,224 @@
+.container {
+  min-height: 100vh;
+  background-color: #fcfbf9;
+  color: #292524;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  position: relative;
+  overflow: hidden;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(217, 249, 157, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(196, 181, 253, 0.2) 0%, transparent 40%);
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 24px;
+}
+
+.logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+  color: #1c1917;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  background-color: #f5f5f4;
+  border: 1px solid #e7e5e4;
+  color: #78716c;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero {
+  text-align: center;
+  max-width: 640px;
+  margin-top: 100px;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  color: #1c1917;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #78716c;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Toggle Switch Styling */
+.controlSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 56px;
+}
+
+.switchLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #a8a29e;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.switchContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.switch {
+  width: 90px;
+  height: 48px;
+  background-color: #e7e5e4;
+  border-radius: 9999px;
+  padding: 4px;
+  position: relative;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+  border: 1px solid #d6d3d1;
+}
+
+.switchActive {
+  background-color: #dcfce7; /* Pale green */
+  border-color: #bbf7d0;
+}
+
+.switchKnob {
+  width: 38px;
+  height: 38px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.switchKnobActive {
+  transform: translateX(42px);
+  background-color: #22c55e;
+}
+
+/* Tactile preview card */
+.card {
+  width: 100%;
+  max-width: 480px;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(231, 230, 228, 0.8);
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.015);
+  display: flex;
+  gap: 24px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.025);
+  border-color: #d6d3d1;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c4b5fd, #a78bfa); /* Pale purple gradient */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1c1917;
+  letter-spacing: -0.02em;
+}
+
+.cardTag {
+  font-size: 0.85rem;
+  color: #7c3aed;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.cardBio {
+  font-size: 0.95rem;
+  color: #57534e;
+  line-height: 1.6;
+}
+
+/* Skeleton/Shimmer Effects */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    #f5f5f4 25%,
+    #ecebe9 50%,
+    #f5f5f4 75%
+  );
+  background-size: 200% 100%;
+  animation: loadingShimmer 1.5s infinite linear;
+  border-radius: 8px;
+}
+
+.circleShimmer {
+  border-radius: 50%;
+}
+
+@keyframes loadingShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.footer {
+  margin-top: 80px;
+  font-size: 0.875rem;
+  color: #a8a29e;
+  font-weight: 500;
+}

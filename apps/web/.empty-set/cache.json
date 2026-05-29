@@ -81,8 +81,8 @@
   },
   "profile-avatar": {
     "component": "profile-avatar",
-    "html": "<div class=\"jsx-439cbb430e9df03a profile-avatar\">Ø</div>",
-    "hash": "fb44ea4897dfccf9d4ef8ea852c7c6ed0932976fb01941b088f1b90f60f6b0ff"
+    "html": "<div class=\"jsx-439cbb430e9df03a profile-avatar\" style=\"\">Ø</div>",
+    "hash": "c911433fb78808f7177b7b2d868c950200f898c8770f0afc409b2388a51883c6"
   },
   "profile-name": {
     "component": "profile-name",
@@ -101,13 +101,13 @@
   },
   "profile-stat-1": {
     "component": "profile-stat-1",
-    "html": "<div class=\"jsx-439cbb430e9df03a stat-item\"><span class=\"jsx-439cbb430e9df03a stat-val\">120ms</span><span class=\"jsx-439cbb430e9df03a stat-lbl\">Generation Time</span></div>",
-    "hash": "aba10276e43649f1498b563a92cf41ec21946a1068e9f78b27092a247d305b37"
+    "html": "<div class=\"jsx-439cbb430e9df03a stat-item\" style=\"\"><span class=\"jsx-439cbb430e9df03a stat-val\">120ms</span><span class=\"jsx-439cbb430e9df03a stat-lbl\">Generation Time</span></div>",
+    "hash": "a9b5515426392b551ec6678e1c1b3b389ff3a8e996c4802d3d7e8a6920cce556"
   },
   "profile-stat-2": {
     "component": "profile-stat-2",
-    "html": "<div class=\"jsx-439cbb430e9df03a stat-item\"><span class=\"jsx-439cbb430e9df03a stat-val\">0px</span><span class=\"jsx-439cbb430e9df03a stat-lbl\">Layout Shift</span></div>",
-    "hash": "7588c6cf087ce9aa30c9bfd08b4c93f5e042d7bf46cfe5d3a1bcb9b9ae3c81da"
+    "html": "<div class=\"jsx-439cbb430e9df03a stat-item\" style=\"\"><span class=\"jsx-439cbb430e9df03a stat-val\">0px</span><span class=\"jsx-439cbb430e9df03a stat-lbl\">Layout Shift</span></div>",
+    "hash": "804de61d1effab537840bb4f6969e771a4488f2f4b2b5f9931a190687592d2a2"
   },
   "showcase-card": {
     "component": "showcase-card",
@@ -153,5 +153,85 @@
     "component": "footer-section",
     "html": "<footer class=\"jsx-439cbb430e9df03a footer-section\"><span class=\"jsx-439cbb430e9df03a footer-logo\">Ø-slash © <!-- -->2026</span><span class=\"jsx-439cbb430e9df03a\">Created for the developers of tomorrow.</span></footer>",
     "hash": "dc16f70acd81c740f3be2ce30554b397895f77d7a37c2210d000b4c56b66302e"
+  },
+  "skeleton-avatar": {
+    "component": "skeleton-avatar",
+    "html": "<div class=\"jsx-439cbb430e9df03a shimmer-circle\" style=\"width: 80px; height: 80px; flex-shrink: 0;\"></div>",
+    "hash": "cea2871006482be429d31879366b6ffc272c436294e442cebe345f27adba2a18"
+  },
+  "skeleton-name": {
+    "component": "skeleton-name",
+    "html": "<div style=\"width: 180px; height: 24px;\" class=\"jsx-439cbb430e9df03a shimmer-box\"></div>",
+    "hash": "d45e99494be8e86ffeae47c07e961d97ff11d57102609bd1198d4ddb391c39cc"
+  },
+  "skeleton-tag": {
+    "component": "skeleton-tag",
+    "html": "<div style=\"width: 110px; height: 16px;\" class=\"jsx-439cbb430e9df03a shimmer-box\"></div>",
+    "hash": "69a5993808f6fa2f3e50b6c5f023c33394bedba4abdc6206335d01cf5979a35e"
+  },
+  "skeleton-bio": {
+    "component": "skeleton-bio",
+    "html": "<div style=\"display: flex; flex-direction: column; gap: 6px;\" class=\"jsx-439cbb430e9df03a\"><div style=\"width: 100%; height: 14px;\" class=\"jsx-439cbb430e9df03a shimmer-box\"></div><div style=\"width: 85%; height: 14px;\" class=\"jsx-439cbb430e9df03a shimmer-box\"></div></div>",
+    "hash": "1d50cb81d898b20a4d8df2df7108e322ed298add7cc1b2c29170947e89d189c6"
+  },
+  "skeleton-stat-1": {
+    "component": "skeleton-stat-1",
+    "html": "<div class=\"jsx-439cbb430e9df03a\" style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"width: 60px; height: 18px;\" class=\"jsx-439cbb430e9df03a shimmer-box\"></div><div style=\"width: 80px; height: 12px;\" class=\"jsx-439cbb430e9df03a shimmer-box\"></div></div>",
+    "hash": "3f9f2f13c1750a92cc70697fb06c33be8aae49b4414c5a8149af0bea95d5a135"
+  },
+  "skeleton-stat-2": {
+    "component": "skeleton-stat-2",
+    "html": "<div class=\"jsx-439cbb430e9df03a\" style=\"display: flex; flex-direction: column; gap: 6px;\"><div style=\"width: 40px; height: 18px;\" class=\"jsx-439cbb430e9df03a shimmer-box\"></div><div style=\"width: 70px; height: 12px;\" class=\"jsx-439cbb430e9df03a shimmer-box\"></div></div>",
+    "hash": "c1c55ce001bff1c49039cb66b84953c0e699cf1cc9c5299752f84c77dc0cb39d"
+  },
+  "navBar": {
+    "component": "navBar",
+    "html": "<header class=\"page-module__iN6gNa__header\"><div class=\"page-module__iN6gNa__logo\">Ø-slash</div><div class=\"page-module__iN6gNa__badge\">Minimal Preview</div></header>",
+    "hash": "9da930a92bcd32ceb79b13c07147749c75220996620b81ae9453a3433dafa9ff"
+  },
+  "heroSection": {
+    "component": "heroSection",
+    "html": "<section class=\"page-module__iN6gNa__hero\"><h1 class=\"page-module__iN6gNa__title\">Automated loaders.</h1><p class=\"page-module__iN6gNa__subtitle\">Ø-slash compiles your React component layout into perfect, CSS-animated skeleton screens.</p></section>",
+    "hash": "4d2ec34d49fc29fa9a8120778df6c61691673e189f3f56f55a9f0d78e3510634"
+  },
+  "profileAvatar": {
+    "component": "profileAvatar",
+    "html": "<div class=\"page-module__iN6gNa__avatar\">Ø</div>",
+    "hash": "f958a1fce2372453cce7ba81b11c14762652d6de814c0d0ec832aacaeec8d56f"
+  },
+  "profileName": {
+    "component": "profileName",
+    "html": "<h3 class=\"page-module__iN6gNa__cardTitle\">Caustic Compiler</h3>",
+    "hash": "0ec28a28d21dc0278ecaaad56cf1e6cd82349f267a082695e7ee4292b78b78f3"
+  },
+  "profileTag": {
+    "component": "profileTag",
+    "html": "<span class=\"page-module__iN6gNa__cardTag\">@caustics/server</span>",
+    "hash": "88847d6e5a096778f6f30dbecc99d070ccf33bdb3161604ad4c6d6992f8015b7"
+  },
+  "profileBio": {
+    "component": "profileBio",
+    "html": "<p class=\"page-module__iN6gNa__cardBio\">Analyzing components via ts-morph and writing static loaders directly into your filesystem in real-time.</p>",
+    "hash": "0a3924c00c6a1356974b7a99f7829aaea8a231b80ca3ed26fa4744b31342b53d"
+  },
+  "skeletonAvatar": {
+    "component": "skeletonAvatar",
+    "html": "<div class=\"page-module__iN6gNa__avatar page-module__iN6gNa__shimmer page-module__iN6gNa__circleShimmer\"></div>",
+    "hash": "cf5bbb31d9f2b60374d27a5cd18b5af902067a6b99746b74bf8cb10850f28085"
+  },
+  "skeletonName": {
+    "component": "skeletonName",
+    "html": "<div class=\"page-module__iN6gNa__shimmer\" style=\"width: 160px; height: 20px;\"></div>",
+    "hash": "2f14ec3a8c8384a43fafc59b0e377a23ebe38e36cb254173e828c3e75fc357a0"
+  },
+  "skeletonTag": {
+    "component": "skeletonTag",
+    "html": "<div class=\"page-module__iN6gNa__shimmer\" style=\"width: 90px; height: 14px; margin-top: 4px;\"></div>",
+    "hash": "6d434ba54dee143425a0378cd76f950c94710fd67ee27ffd5b7abe90b8d753e4"
+  },
+  "skeletonBio": {
+    "component": "skeletonBio",
+    "html": "<div style=\"display: flex; flex-direction: column; gap: 6px; margin-top: 8px;\"><div class=\"page-module__iN6gNa__shimmer\" style=\"width: 100%; height: 14px;\"></div><div class=\"page-module__iN6gNa__shimmer\" style=\"width: 80%; height: 14px;\"></div></div>",
+    "hash": "dc736fbeb7bc3eb3931220d05937a683ec92d00c5e428e6acf46cab048941c39"
   }
 }

@@ -7,6 +7,7 @@ import { format } from "oxfmt";
 const generate = pkg.default;
 
 import htmlNodeToJsx from "./html-jsx";
+import { stripToShim } from "./strip-to-shim";
 
 export function transformInput(html: string) {
   const dom = new JSDOM(html);
@@ -17,7 +18,13 @@ export function transformInput(html: string) {
     throw new Error("No root element found");
   }
 
-  const jsxAst = htmlNodeToJsx(root);
+  const strippedRoot = stripToShim(root);
+
+  if (!strippedRoot) {
+    throw new Error("Failed to generate skeleton DOM structure");
+  }
+
+  const jsxAst = htmlNodeToJsx(strippedRoot);
 
   if (!jsxAst) {
     throw new Error("Failed to generate JSX AST");

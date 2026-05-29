@@ -31,9 +31,37 @@ export default function htmlNodeToJsx(node: Node): JsxChild | null {
       name = "className";
     }
 
-    attributes.push(
-      t.jsxAttribute(t.jsxIdentifier(name), t.stringLiteral(value)),
-    );
+    if (name === "style") {
+      const parsedStyles: Record<string, string> = {};
+      value.split(";").forEach((rule) => {
+        const trimmedRule = rule.trim();
+        if (!trimmedRule) return;
+        const colonIndex = trimmedRule.indexOf(":");
+        if (colonIndex === -1) return;
+        const key = trimmedRule.slice(0, colonIndex).trim();
+        const val = trimmedRule.slice(colonIndex + 1).trim();
+        const camelKey = key.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+        parsedStyles[camelKey] = val;
+      });
+
+      const properties = Object.entries(parsedStyles).map(([key, val]) => {
+        // Ensure valid identifiers for CSS custom properties or fallback to string keys if contains non-alphanumeric
+        const isCustomProp = key.startsWith("--") || key.includes("-");
+        const keyNode = isCustomProp ? t.stringLiteral(key) : t.identifier(key);
+        return t.objectProperty(keyNode, t.stringLiteral(val));
+      });
+
+      attributes.push(
+        t.jsxAttribute(
+          t.jsxIdentifier("style"),
+          t.jsxExpressionContainer(t.objectExpression(properties)),
+        ),
+      );
+    } else {
+      attributes.push(
+        t.jsxAttribute(t.jsxIdentifier(name), t.stringLiteral(value)),
+      );
+    }
   }
 
   const children = Array.from(element.childNodes)

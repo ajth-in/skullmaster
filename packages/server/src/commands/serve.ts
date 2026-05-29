@@ -7,7 +7,7 @@ import { SkeletonCacheDB } from "../cache";
 import { hashInput } from "../cache/hash";
 import generateTarget from "../generate-target";
 import { transformInput } from "../transform";
-import { toCamelCase } from "../utils/to-camel-case";
+import { toPascalCase } from "../utils/to-pascal-case";
 
 export async function serveCommand(port: number) {
   const app = new Hono();
@@ -53,7 +53,7 @@ export async function serveCommand(port: number) {
         continue;
       }
 
-      const componentName = toCamelCase(value.component);
+      const componentName = toPascalCase(value.component);
 
       generateTarget({
         project,

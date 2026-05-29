@@ -3,6 +3,9 @@
 import { CausticsProvider, Skeleton } from "@o-slash/react";
 import Head from "next/head";
 import { useState } from "react";
+import HeroSection from "../.empty-set/bones/HeroSection";
+import NavBar from "../.empty-set/bones/NavBar";
+
 import styles from "./page.module.css";
 
 export default function Page() {
@@ -18,7 +21,6 @@ export default function Page() {
             content="Generate perfect, zero-layout-shift Skeleton Screen loaders automatically from your React components."
           />
         </Head>
-
         {/* Navigation Bar */}
         <Skeleton name="navBar">
           <header className={styles.header}>
@@ -26,7 +28,8 @@ export default function Page() {
             <div className={styles.badge}>Minimal Preview</div>
           </header>
         </Skeleton>
-
+        ----
+        <NavBar />
         {/* Hero Section */}
         <Skeleton name="heroSection">
           <section className={styles.hero}>
@@ -37,7 +40,7 @@ export default function Page() {
             </p>
           </section>
         </Skeleton>
-
+        <HeroSection />
         {/* Big Switch */}
         <div className={styles.controlSection}>
           <span className={styles.switchLabel}>Toggle Loader</span>
@@ -47,7 +50,6 @@ export default function Page() {
             </div>
           </div>
         </div>
-
         {/* Preview Card */}
         {loading ? (
           <div className={styles.card}>
@@ -95,7 +97,6 @@ export default function Page() {
             </div>
           </div>
         )}
-
         <footer className={styles.footer}>
           <span>Ø-slash © {new Date().getFullYear()}</span>
         </footer>

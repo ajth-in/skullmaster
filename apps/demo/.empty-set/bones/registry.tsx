@@ -11,7 +11,9 @@ const registry: Record<
     string,
     LazyExoticComponent<ComponentType<any>>
 > = {
-    "Pricing": lazy(() => import("./Pricing"))
+    "Pricing": lazy(() => import("./Pricing")),
+    "Projects": lazy(() => import("./Projects")),
+    "Contact7": lazy(() => import("./Contact7"))
 };
 
 

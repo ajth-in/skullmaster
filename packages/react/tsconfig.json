@@ -3,7 +3,7 @@
   "compilerOptions": {
     "target": "esnext",
     "jsx": "react-jsx",
-    "lib": ["es2023", "DOM"],
+    "lib": ["es2023", "DOM", "DOM.Iterable"],
     "moduleDetection": "force",
     "module": "preserve",
     "moduleResolution": "bundler",

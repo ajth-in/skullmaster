@@ -54,7 +54,7 @@ export async function serveCommand(port: number) {
       }
 
       if (shouldSkip) {
-        continue;
+        // continue;
       }
 
       const componentName = toPascalCase(value.component);

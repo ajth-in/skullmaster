@@ -9,6 +9,7 @@
     "inlineSources": false,
     "isolatedModules": true,
     "module": "preserve",
+    "target": "es2015",
     "moduleResolution": "bundler",
     "noUnusedLocals": false,
     "noUnusedParameters": false,

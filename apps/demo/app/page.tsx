@@ -13,11 +13,15 @@ export default function Page() {
   return (
     <CausticsProvider isEnabled>
       <div className="flex min-h-svh flex-col p-6">
-        <Projects5 />
+        <SkeletonSwitch name="Projects">
+          <Projects5 />
+        </SkeletonSwitch>
         <SkeletonSwitch name="Pricing">
           <Pricing4 />
         </SkeletonSwitch>
-        <Contact7 />
+        <SkeletonSwitch name="Contact7">
+          <Contact7 />
+        </SkeletonSwitch>
         <Testimonial10 />
         <Download2 />
         <Team1 />

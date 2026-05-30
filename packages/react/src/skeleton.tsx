@@ -25,12 +25,30 @@ const CONTAINER_TAGS = new Set([
   "fieldset",
 ]);
 
-function hasVisibleBackground(element: HTMLElement): boolean {
-  const style = window.getComputedStyle(element);
-  const bg = style.backgroundColor;
-  const hasColor =
-    bg !== "" && bg !== "transparent" && bg !== "rgba(0, 0, 0, 0)";
-  return hasColor;
+function hasVisibleBackgroundOrBorder(element: HTMLElement): boolean {
+  const style = getComputedStyle(element);
+
+  const isVisibleColor = (color: string) =>
+    color && color !== "transparent" && color !== "rgba(0, 0, 0, 0)";
+
+  const hasBackground = isVisibleColor(style.backgroundColor);
+
+  const sides = ["Top", "Right", "Bottom", "Left"] as const;
+
+  const hasFullBorder = sides.every((side) => {
+    const width = parseFloat(style[`border${side}Width`]);
+    const borderStyle = style[`border${side}Style`];
+    const color = style[`border${side}Color`];
+
+    return (
+      width > 0 &&
+      borderStyle !== "none" &&
+      borderStyle !== "hidden" &&
+      isVisibleColor(color)
+    );
+  });
+
+  return hasBackground || hasFullBorder;
 }
 
 function markTransparentContainers(root: HTMLElement): void {
@@ -38,7 +56,7 @@ function markTransparentContainers(root: HTMLElement): void {
     Array.from(CONTAINER_TAGS).join(","),
   );
   for (const el of containers) {
-    if (!hasVisibleBackground(el)) {
+    if (!hasVisibleBackgroundOrBorder(el)) {
       el.setAttribute("data-depth", "-1");
     }
   }

@@ -21,6 +21,8 @@ export default function htmlNodeToJsx(
   const tagName = element.tagName.toLowerCase();
   const attributes: t.JSXAttribute[] = [];
 
+  const dataDepthAlreadySet = element.getAttribute("data-depth") !== null;
+
   for (const attr of element.attributes) {
     if (!shouldKeepAttribute(attr.name)) continue;
 
@@ -33,6 +35,13 @@ export default function htmlNodeToJsx(
           t.jsxIdentifier("style"),
           t.jsxExpressionContainer(parseStyle(value)),
         ),
+      );
+      continue;
+    }
+
+    if (name === "data-depth") {
+      attributes.push(
+        t.jsxAttribute(t.jsxIdentifier("data-depth"), t.stringLiteral(value)),
       );
       continue;
     }
@@ -76,13 +85,14 @@ export default function htmlNodeToJsx(
     );
   }
 
-  // Inject data-depth attribute
-  attributes.push(
-    t.jsxAttribute(
-      t.jsxIdentifier("data-depth"),
-      t.stringLiteral(String(depth)),
-    ),
-  );
+  if (!dataDepthAlreadySet) {
+    attributes.push(
+      t.jsxAttribute(
+        t.jsxIdentifier("data-depth"),
+        t.stringLiteral(String(depth)),
+      ),
+    );
+  }
 
   const children = Array.from(element.childNodes)
     .map((child) => htmlNodeToJsx(child, depth + 1))

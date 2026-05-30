@@ -22,9 +22,15 @@ export default function Page() {
         <SkeletonSwitch name="Contact7">
           <Contact7 />
         </SkeletonSwitch>
-        <Testimonial10 />
-        <Download2 />
-        <Team1 />
+        <SkeletonSwitch name="Testimonial10">
+          <Testimonial10 />
+        </SkeletonSwitch>
+        <SkeletonSwitch name="Download2">
+          <Download2 />
+        </SkeletonSwitch>
+        <SkeletonSwitch name="Team1">
+          <Team1 />
+        </SkeletonSwitch>
       </div>
     </CausticsProvider>
   )

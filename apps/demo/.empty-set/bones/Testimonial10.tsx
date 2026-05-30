@@ -1,0 +1,50 @@
+export default function Testimonial10() {
+  return (
+    <section className="empty-set__skeleton py-32" data-depth="-1">
+      <div className="container" data-depth="-1">
+        <div className="flex flex-col items-center text-center" data-depth="-1">
+          <p
+            className="mb-16 max-w-4xl px-8 font-medium lg:text-3xl"
+            data-depth="3"
+          >
+            ##################### ###########################################
+            #######################
+            ##########################################################
+          </p>
+          <div className="flex items-center gap-2 md:gap-4" data-depth="-1">
+            <span
+              data-slot="avatar"
+              data-size="default"
+              className="group/avatar relative flex size-12 shrink-0 rounded-full select-none after:absolute after:inset-0 after:rounded-full after:border after:border-border after:mix-blend-darken data-[size=lg]:size-10 data-[size=sm]:size-6 md:size-16 dark:after:mix-blend-lighten"
+              data-depth="4"
+            >
+              <img
+                data-slot="avatar-image"
+                className="aspect-square size-full rounded-full object-cover"
+                data-depth="5"
+              ></img>
+              <span
+                data-slot="avatar-fallback"
+                className="flex size-full items-center justify-center rounded-full bg-muted text-sm text-muted-foreground group-data-[size=sm]/avatar:text-xs"
+                data-depth="5"
+              >
+                #############
+              </span>
+            </span>
+            <div className="text-left" data-depth="-1">
+              <p className="text-sm font-medium md:text-base" data-depth="5">
+                #############
+              </p>
+              <p
+                className="text-sm text-muted-foreground md:text-base"
+                data-depth="5"
+              >
+                ####
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

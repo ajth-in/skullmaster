@@ -5,29 +5,86 @@ import shouldKeepAttribute from "./utils/is-style";
 
 type JsxChild = t.JSXElement | t.JSXText;
 
+const TEXT_CONTAINERS = new Set([
+  "p",
+  "span",
+  "strong",
+  "em",
+  "b",
+  "i",
+  "small",
+  "mark",
+  "label",
+  "blockquote",
+  "cite",
+  "figcaption",
+  "caption",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "a",
+]);
+
 export default function htmlNodeToJsx(
   node: Node,
   depth: number = 0,
 ): JsxChild | null {
   if (node.nodeType === node.TEXT_NODE) {
     const text = node.textContent;
-    if (!text?.trim()) return null;
-    return t.jsxText("#".repeat(text.length));
+
+    if (!text?.trim()) {
+      return null;
+    }
+
+    return t.jsxElement(
+      t.jsxOpeningElement(
+        t.jsxIdentifier("span"),
+        [
+          t.jsxAttribute(
+            t.jsxIdentifier("className"),
+            t.stringLiteral("empty-set__text"),
+          ),
+          t.jsxAttribute(
+            t.jsxIdentifier("data-depth"),
+            t.stringLiteral(String(depth)),
+          ),
+        ],
+        false,
+      ),
+      t.jsxClosingElement(t.jsxIdentifier("span")),
+      [t.jsxText(text.replace(/\S/g, "#"))],
+      false,
+    );
   }
 
-  if (node.nodeType !== node.ELEMENT_NODE) return null;
+  if (node.nodeType !== node.ELEMENT_NODE) {
+    return null;
+  }
 
   const element = node as HTMLElement;
   const tagName = element.tagName.toLowerCase();
+
   const attributes: t.JSXAttribute[] = [];
 
-  const dataDepthAlreadySet = element.getAttribute("data-depth") !== null;
+  const dataDepthAlreadySet = element.hasAttribute("data-depth");
+
+  const hasDirectTextChild = Array.from(element.childNodes).some(
+    (child) => child.nodeType === child.TEXT_NODE && child.textContent?.trim(),
+  );
+
+  const shouldSuppressParentBackground =
+    hasDirectTextChild && TEXT_CONTAINERS.has(tagName);
 
   for (const attr of element.attributes) {
-    if (!shouldKeepAttribute(attr.name)) continue;
+    if (!shouldKeepAttribute(attr.name)) {
+      continue;
+    }
 
-    const value = attr.value;
     const name = normalizeAttributeName(attr.name);
+    const value = attr.value;
 
     if (name === "style") {
       attributes.push(
@@ -49,47 +106,35 @@ export default function htmlNodeToJsx(
     attributes.push(
       t.jsxAttribute(t.jsxIdentifier(name), t.stringLiteral(value)),
     );
-
-    if (depth === 0 && name === "className") {
-      const existingClassName = attributes.find(
-        (attr): attr is t.JSXAttribute =>
-          t.isJSXAttribute(attr) &&
-          t.isJSXIdentifier(attr.name) &&
-          attr.name.name === "className",
-      );
-      if (
-        existingClassName?.value &&
-        t.isStringLiteral(existingClassName.value)
-      ) {
-        existingClassName.value = t.stringLiteral(
-          `empty-set__skeleton ${existingClassName.value.value}`,
-        );
-      }
-    }
   }
 
-  if (
-    depth === 0 &&
-    !attributes.some(
-      (a): a is t.JSXAttribute =>
-        t.isJSXAttribute(a) &&
-        t.isJSXIdentifier(a.name) &&
-        a.name.name === "className",
-    )
-  ) {
-    attributes.push(
-      t.jsxAttribute(
-        t.jsxIdentifier("className"),
-        t.stringLiteral("empty-set__skeleton"),
-      ),
+  if (depth === 0) {
+    const classNameAttr = attributes.find(
+      (attr): attr is t.JSXAttribute =>
+        t.isJSXAttribute(attr) &&
+        t.isJSXIdentifier(attr.name) &&
+        attr.name.name === "className",
     );
+
+    if (classNameAttr?.value && t.isStringLiteral(classNameAttr.value)) {
+      classNameAttr.value = t.stringLiteral(
+        `empty-set__skeleton ${classNameAttr.value.value}`,
+      );
+    } else {
+      attributes.push(
+        t.jsxAttribute(
+          t.jsxIdentifier("className"),
+          t.stringLiteral("empty-set__skeleton"),
+        ),
+      );
+    }
   }
 
   if (!dataDepthAlreadySet) {
     attributes.push(
       t.jsxAttribute(
         t.jsxIdentifier("data-depth"),
-        t.stringLiteral(String(depth)),
+        t.stringLiteral(shouldSuppressParentBackground ? "-1" : String(depth)),
       ),
     );
   }

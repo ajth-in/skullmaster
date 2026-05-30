@@ -1,5 +1,9 @@
 import { serve } from "@hono/node-server";
-import { EMPTY_SET_DEFAULT_DIR, log, SkeletonPayloadInputSchema } from "@o-slash/shared";
+import {
+  EMPTY_SET_DEFAULT_DIR,
+  log,
+  SkeletonPayloadInputSchema,
+} from "@o-slash/shared";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { Project } from "ts-morph";
@@ -8,6 +12,7 @@ import { hashInput } from "../cache/hash";
 import generateTarget from "../generate-target";
 import { transformInput } from "../transform";
 import { toPascalCase } from "../utils/to-pascal-case";
+import { generateRegistry } from "../init/registry";
 
 export async function serveCommand(port: number) {
   const app = new Hono();
@@ -35,7 +40,6 @@ export async function serveCommand(port: number) {
     const result = SkeletonPayloadInputSchema.parse(body);
 
     const project = new Project();
-
     for (const [key, value] of Object.entries(result)) {
       const hash = hashInput(value.html);
 
@@ -54,7 +58,6 @@ export async function serveCommand(port: number) {
       }
 
       const componentName = toPascalCase(value.component);
-
       generateTarget({
         project,
         filePath: `${EMPTY_SET_DEFAULT_DIR}/bones/${componentName}.tsx`,
@@ -68,7 +71,7 @@ export async function serveCommand(port: number) {
         hash,
       });
     }
-
+    generateRegistry(project, db.getComponentNames(), true);
     await project.save();
 
     return c.json({

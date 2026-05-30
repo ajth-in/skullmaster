@@ -46,6 +46,9 @@ export class SkeletonCacheDB {
   get(key: string) {
     return this.data[key];
   }
+  getComponentNames(): string[] {
+    return Object.values(this.data).map((entry) => entry.component);
+  }
 
   async set(key: string, value: SkeletonCacheEntry[string]) {
     this.data[key] = value;

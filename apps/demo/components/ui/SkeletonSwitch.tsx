@@ -3,8 +3,11 @@
 import { PropsWithChildren, useState } from "react"
 import { Switch } from "./switch"
 import { Label } from "./label"
-
-export default function SkeletonSwitch({ children }: PropsWithChildren) {
+import Skeleton from "../../.empty-set/bones/registry"
+export default function SkeletonSwitch({
+  children,
+  name,
+}: PropsWithChildren<{ name: string }>) {
   const [skeletonMode, setSkeletonMode] = useState(false)
 
   return (
@@ -30,7 +33,9 @@ export default function SkeletonSwitch({ children }: PropsWithChildren) {
       </div>
 
       <div className={`rounded-xl border p-6 transition-all duration-300`}>
-        {children}
+        <Skeleton loading={skeletonMode} name={name}>
+          {children}
+        </Skeleton>
       </div>
     </div>
   )

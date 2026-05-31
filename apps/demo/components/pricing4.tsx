@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   Bell,
@@ -19,63 +19,64 @@ import {
   Settings2,
   Users,
   Zap,
-} from "lucide-react";
-import { useState } from "react";
+} from "lucide-react"
+import { useState } from "react"
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Separator } from "@/components/ui/separator"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-type IconComponent = ElementType<{ className?: string }>;
-type Pricing3PlanFeature = | string
+type IconComponent = ElementType<{ className?: string }>
+type Pricing3PlanFeature =
+  | string
   | {
-      text: string;
-      icon?: IconComponent;
-    };
+      text: string
+      icon?: IconComponent
+    }
 interface Pricing3PlansPlan {
-  name: string;
-  monthlyPrice: string;
-  yearlyPrice: string;
+  name: string
+  monthlyPrice: string
+  yearlyPrice: string
   period: {
-    monthly: string;
-    yearly: string;
-  };
+    monthly: string
+    yearly: string
+  }
   description: {
-    monthly: string;
-    yearly: string;
-  };
-  buttonText: string;
-  buttonUrl?: string;
-  highlighted?: boolean;
-  highlightedLabel?: string;
-  icon?: IconComponent;
-  image?: string;
-  features: Pricing3PlanFeature[];
-  tagline?: string;
-  bestFor?: string;
-  planCode?: string;
+    monthly: string
+    yearly: string
+  }
+  buttonText: string
+  buttonUrl?: string
+  highlighted?: boolean
+  highlightedLabel?: string
+  icon?: IconComponent
+  image?: string
+  features: Pricing3PlanFeature[]
+  tagline?: string
+  bestFor?: string
+  planCode?: string
 }
 
 interface Pricing3PlansProps {
-  heading: string;
-  description?: string;
-  plans: Pricing3PlansPlan[];
-  className?: string;
+  heading: string
+  description?: string
+  plans: Pricing3PlansPlan[]
+  className?: string
 }
 
 interface Pricing4Props extends Pricing3PlansProps {}
-type Props = Partial<Pricing4Props>;
+type Props = Partial<Pricing4Props>
 
 export function pricing3PlanFeatureText(feature: Pricing3PlanFeature): string {
-  return typeof feature === "string" ? feature : feature.text;
+  return typeof feature === "string" ? feature : feature.text
 }
 export function pricing3PlanFeatureIcon(
-  feature: Pricing3PlanFeature,
+  feature: Pricing3PlanFeature
 ): IconComponent | undefined {
-  return typeof feature === "string" ? undefined : feature.icon;
+  return typeof feature === "string" ? undefined : feature.icon
 }
 const defaultProps: Pricing4Props = {
   heading: "Simple Pricing Plans",
@@ -84,7 +85,8 @@ const defaultProps: Pricing4Props = {
   plans: [
     {
       icon: Rocket,
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/image-set/placeholder/pricing-plans/plan1.svg",
+      image:
+        "https://deifkwefumgah.cloudfront.net/shadcnblocks/image-set/placeholder/pricing-plans/plan1.svg",
       name: "Basic Plan",
       monthlyPrice: "$0",
       yearlyPrice: "$0",
@@ -114,7 +116,8 @@ const defaultProps: Pricing4Props = {
     },
     {
       icon: Briefcase,
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/image-set/placeholder/pricing-plans/plan2.svg",
+      image:
+        "https://deifkwefumgah.cloudfront.net/shadcnblocks/image-set/placeholder/pricing-plans/plan2.svg",
       name: "Standard Plan",
       monthlyPrice: "$20",
       yearlyPrice: "$200",
@@ -145,7 +148,8 @@ const defaultProps: Pricing4Props = {
     },
     {
       icon: Building,
-      image: "https://deifkwefumgah.cloudfront.net/shadcnblocks/image-set/placeholder/pricing-plans/plan3.svg",
+      image:
+        "https://deifkwefumgah.cloudfront.net/shadcnblocks/image-set/placeholder/pricing-plans/plan3.svg",
       name: "Premium Plan",
       monthlyPrice: "$80",
       yearlyPrice: "$800",
@@ -174,15 +178,15 @@ const defaultProps: Pricing4Props = {
       ],
     },
   ],
-};
+}
 
 const Pricing4 = (props: Props) => {
   const { heading, description, plans, className } = {
     ...defaultProps,
     ...props,
-  };
-  const firstHighlightedIndex = plans.findIndex((p) => p.highlighted);
-  const [isAnnually, setIsAnnually] = useState(false);
+  }
+  const firstHighlightedIndex = plans.findIndex((p) => p.highlighted)
+  const [isAnnually, setIsAnnually] = useState(false)
   return (
     <section className={cn("py-32", className)}>
       <div className="container mx-auto">
@@ -223,13 +227,13 @@ const Pricing4 = (props: Props) => {
           <div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
             {plans.map((plan, index) => {
               const isHighlighted =
-                firstHighlightedIndex !== -1 && index === firstHighlightedIndex;
+                firstHighlightedIndex !== -1 && index === firstHighlightedIndex
               return (
                 <div
                   key={plan.name}
                   className={cn(
                     "flex w-full flex-col rounded-lg border p-6 text-left",
-                    isHighlighted && "bg-muted",
+                    isHighlighted && "bg-muted"
                   )}
                 >
                   <Badge
@@ -242,18 +246,23 @@ const Pricing4 = (props: Props) => {
                     {isAnnually ? plan.yearlyPrice : plan.monthlyPrice}
                   </h3>
                   <p
+                    data-depth={"-1"}
                     className={cn(
                       "text-muted-foreground",
-                      plan.monthlyPrice === "$0" && "invisible",
+                      plan.monthlyPrice === "$0" && "invisible"
                     )}
                   >
                     {isAnnually ? plan.period.yearly : plan.period.monthly}
                   </p>
                   <Separator className="my-6" />
                   <div className="flex h-full flex-col justify-between gap-20">
-                    <ul className="space-y-4 text-muted-foreground md:leading-snug">
+                    <ul
+                      data-depth={"-1"}
+                      className="space-y-4 text-muted-foreground md:leading-snug"
+                    >
                       {plan.features.map((feature, featureIndex) => (
                         <li
+                          data-depth={"-1"}
                           key={featureIndex}
                           className="flex items-center gap-2"
                         >
@@ -273,13 +282,13 @@ const Pricing4 = (props: Props) => {
                     </Button>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { Pricing4 };
+export { Pricing4 }

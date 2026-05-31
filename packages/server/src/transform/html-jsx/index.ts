@@ -31,6 +31,7 @@ const TEXT_CONTAINERS = new Set([
 export default function htmlNodeToJsx(
   node: Node,
   depth: number = 0,
+  inheritedDepth?: string,
 ): JsxChild | null {
   if (node.nodeType === node.TEXT_NODE) {
     const text = node.textContent;
@@ -49,7 +50,7 @@ export default function htmlNodeToJsx(
           ),
           t.jsxAttribute(
             t.jsxIdentifier("data-depth"),
-            t.stringLiteral(String(depth)),
+            t.stringLiteral(inheritedDepth ?? String(depth)),
           ),
         ],
         false,
@@ -69,7 +70,8 @@ export default function htmlNodeToJsx(
 
   const attributes: t.JSXAttribute[] = [];
 
-  const dataDepthAlreadySet = element.hasAttribute("data-depth");
+  const explicitDepth = element.getAttribute("data-depth");
+  const dataDepthAlreadySet = explicitDepth !== null;
 
   const hasDirectTextChild = Array.from(element.childNodes).some(
     (child) => child.nodeType === child.TEXT_NODE && child.textContent?.trim(),
@@ -130,17 +132,19 @@ export default function htmlNodeToJsx(
     }
   }
 
+  const effectiveDepth = explicitDepth ?? String(depth);
+
   if (!dataDepthAlreadySet) {
     attributes.push(
       t.jsxAttribute(
         t.jsxIdentifier("data-depth"),
-        t.stringLiteral(shouldSuppressParentBackground ? "-1" : String(depth)),
+        t.stringLiteral(shouldSuppressParentBackground ? "-1" : effectiveDepth),
       ),
     );
   }
 
   const children = Array.from(element.childNodes)
-    .map((child) => htmlNodeToJsx(child, depth + 1))
+    .map((child) => htmlNodeToJsx(child, depth + 1, effectiveDepth))
     .filter(Boolean) as JsxChild[];
 
   return t.jsxElement(

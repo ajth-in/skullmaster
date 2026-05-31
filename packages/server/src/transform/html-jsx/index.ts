@@ -3,7 +3,6 @@ import { normalizeAttributeName } from "./utils/attr-normalize";
 import { parseStyle } from "./utils/parse-style";
 import shouldKeepAttribute from "./utils/is-style";
 import { createElement } from "./utils/create-element";
-import flow from "lodash/flow";
 type JsxChild = t.JSXElement | t.JSXText;
 
 export default function htmlNodeToJsx(

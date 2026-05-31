@@ -1,4 +1,5 @@
 import * as t from "@babel/types";
+import type { JsxChild } from "../types";
 
 export function createJsxStringAttribute(
   name: string,
@@ -40,4 +41,17 @@ export function findStringJsxAttribute(
   }
 
   return attr as t.JSXAttribute & { value: t.StringLiteral };
+}
+
+export function createJsxElement(
+  tagName: string,
+  children: JsxChild[],
+  attributes: (t.JSXAttribute | t.JSXSpreadAttribute)[] = [],
+): t.JSXElement {
+  return t.jsxElement(
+    t.jsxOpeningElement(t.jsxIdentifier(tagName), attributes, false),
+    t.jsxClosingElement(t.jsxIdentifier(tagName)),
+    children,
+    false,
+  );
 }

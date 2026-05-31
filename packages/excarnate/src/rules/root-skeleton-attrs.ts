@@ -38,6 +38,12 @@ export const addRootSkeletonsAttrs: Rule = {
         createJsxStringAttribute("className", SKELETON_CLASSNAME),
       );
     }
+    ctx.target.attributes = [
+      ...(ctx.target.attributes ?? []),
+      createJsxStringAttribute("role", "status"),
+      createJsxStringAttribute("aria-live", "polite"),
+      createJsxStringAttribute("aria-busy", "true"),
+    ];
 
     ctx.target.element = tagName;
   },

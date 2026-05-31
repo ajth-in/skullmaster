@@ -1,9 +1,4 @@
-import {
-  jsxAttribute,
-  jsxIdentifier,
-  jsxText,
-  stringLiteral,
-} from "@babel/types";
+import { jsxText } from "@babel/types";
 import type { Rule } from "../types";
 import { DEPTH_ATTRIBUTE, TEXT_CLASSNAME } from "../constants";
 import { createJsxStringAttribute } from "../helpers/jsx";

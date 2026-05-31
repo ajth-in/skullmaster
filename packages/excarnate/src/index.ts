@@ -21,6 +21,9 @@ export default function excarnate(
     parentDepth,
   };
 
+  console.log(
+    `Processing element: <${element.nodeName.toLowerCase()}> at depth ${depth}`,
+  );
   executor(context);
   const target = context.target;
   if (!target) return null;

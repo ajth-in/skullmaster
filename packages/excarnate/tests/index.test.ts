@@ -23,12 +23,17 @@ test("adds skeleton class to root", () => {
   ).toBe(
     normalize(
       html`<div
+        data-depth="0"
         className="empty-set__skeleton"
         role="status"
         aria-live="polite"
         aria-busy="true"
       >
-        <p><span className="empty-set__text" data-depth="1">......</span></p>
+        <p data-depth="1">
+          <span className="empty-set__text" data-text-node="true" data-depth="1"
+            >......</span
+          >
+        </p>
       </div>`,
     ),
   );

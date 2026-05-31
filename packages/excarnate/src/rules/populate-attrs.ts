@@ -8,6 +8,7 @@ import {
   createJsxStringAttribute,
 } from "../helpers/jsx";
 import { TargetElementMismatchError } from "../exceptions/target-mismatch";
+import { DEPTH_ATTRIBUTE } from "../constants";
 
 export const populateAttrs: Rule = {
   id: "populate-attrs",
@@ -19,7 +20,11 @@ export const populateAttrs: Rule = {
     const tagName = element.tagName.toLowerCase();
     if (ctx.target?.element && ctx.target?.element !== tagName)
       throw new TargetElementMismatchError(tagName, ctx.target.element);
-
+    if (!element.hasAttribute(DEPTH_ATTRIBUTE)) {
+      attributes.push(
+        createJsxStringAttribute(DEPTH_ATTRIBUTE, String(ctx.depth)),
+      );
+    }
     for (const attr of element.attributes) {
       if (!shouldKeepAttribute(attr.name)) {
         continue;

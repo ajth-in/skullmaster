@@ -18,6 +18,8 @@ export const transformText: Rule = {
       element: "span",
       attributes: [
         createJsxStringAttribute("className", TEXT_CLASSNAME),
+        createJsxStringAttribute("data-text-node", "true"),
+
         createJsxStringAttribute(
           DEPTH_ATTRIBUTE,
           ctx.parentDepth ?? String(ctx.depth),

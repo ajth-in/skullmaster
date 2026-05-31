@@ -3,20 +3,14 @@ import { html } from "lit";
 import { normalize, transform } from "./utils";
 
 test("adds skeleton class to root", () => {
-  console.log(
-    transform(
-      normalize(
-        html`<div>
-          <p>Hello></p>
-        </div>`,
-      ),
-    ),
-  );
   expect(
     normalize(
       transform(
         html`<div>
           <p>Hello></p>
+          <script>
+            alert("Hello");
+          </script>
         </div>`,
       ),
     ),

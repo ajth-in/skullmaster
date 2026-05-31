@@ -4,8 +4,10 @@ import { addRootSkeletonsAttrs } from "./rules/root-skeleton-attrs";
 import { transformText } from "./rules/transform-text";
 import type { JsxChild, TransformContext } from "./types";
 import { createJsxElement } from "./helpers/jsx";
+import { removeReduntantNode } from "./rules/remove-node";
 const executor = buildExecutor([
   transformText,
+  removeReduntantNode,
   populateAttrs,
   addRootSkeletonsAttrs,
 ]);

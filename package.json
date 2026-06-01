@@ -10,7 +10,8 @@
   "devDependencies": {
     "eslint": "^8.57.0",
     "prettier": "^3.2.5",
-    "turbo": "^2.9.14"
+    "turbo": "^2.9.14",
+    "@changesets/cli": "^2.31.0"
   },
   "packageManager": "pnpm@8.15.6",
   "name": "@skullmaster/monorepo"

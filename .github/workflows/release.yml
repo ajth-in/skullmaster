@@ -5,6 +5,10 @@ on:
     branches:
       - master
 
+permissions:
+  contents: write
+  pull-requests: write
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -20,7 +24,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 11
+          version: 8.15.6
 
       - name: Setup Node.js (Latest LTS)
         uses: actions/setup-node@v6
@@ -30,6 +34,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Build workspace dependecies
+        run: pnpm run build
 
       - name: Typecheck
         run: pnpm typecheck
@@ -45,7 +52,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 11
+          version: 8.15.6
 
       - name: Setup Node.js (Latest LTS)
         uses: actions/setup-node@v6

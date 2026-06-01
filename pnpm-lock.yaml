@@ -226,6 +226,9 @@ importers:
       '@hono/node-server':
         specifier: ^2.0.4
         version: 2.0.4(hono@4.12.23)
+      '@skullmaster/excarnate':
+        specifier: workspace:*
+        version: link:../excarnate
       '@types/lodash':
         specifier: ^4.17.24
         version: 4.17.24

@@ -5,10 +5,14 @@ import { transformText } from "./rules/transform-text";
 import type { JsxChild, TransformContext } from "./types";
 import { createJsxElement } from "./helpers/jsx";
 import { removeReduntantNode } from "./rules/remove-node";
+import { transformImg } from "./rules/transform-img";
+import { transformInput } from "./rules/transform-input";
 const executor = buildExecutor([
   transformText,
   removeReduntantNode,
   populateAttrs,
+  transformImg,
+  transformInput,
   addRootSkeletonsAttrs,
 ]);
 
@@ -23,9 +27,6 @@ export default function excarnate(
     parentDepth,
   };
 
-  console.log(
-    `Processing element: <${element.nodeName.toLowerCase()}> at depth ${depth}`,
-  );
   executor(context);
   const target = context.target;
   if (!target) return null;

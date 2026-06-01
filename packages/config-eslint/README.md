@@ -1,3 +1,3 @@
-# `@o-slash/eslint-config`
+# `@skullmaster/eslint-config`
 
 Collection of internal eslint configurations.

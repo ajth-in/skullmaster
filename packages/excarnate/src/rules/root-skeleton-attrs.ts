@@ -1,5 +1,3 @@
-import * as t from "@babel/types";
-
 import { TargetElementMismatchError } from "../exceptions/target-mismatch";
 import { atDepth } from "../matchers";
 import type { Rule } from "../types";

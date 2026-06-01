@@ -1,14 +1,14 @@
 "use client";
-import { log } from "@o-slash/shared";
+import { log } from "@skullmaster/shared";
 import { useQuery } from "@tanstack/react-query";
-import { useOSlash } from "./o-slash-provider";
+import { useSkullMaster } from "./skullmaster-provider";
 
 export type PostSkeletonsProps = {
   isEnabled: boolean;
   port?: number;
 };
 export default function PostSkeletons({ isEnabled, port }: PostSkeletonsProps) {
-  const { getSkeletons } = useOSlash();
+  const { getSkeletons } = useSkullMaster();
 
   useQuery({
     queryKey: ["polling-data"],

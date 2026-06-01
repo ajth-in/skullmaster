@@ -5,18 +5,13 @@ import {
     type LazyExoticComponent,
     type ComponentType,
 } from "react";
-import { Skeleton as OSlashSkeleton } from "@o-slash/react";
+import { Skeleton as SMSkeleton } from "@skullmaster/react";
 
 const registry: Record<
     string,
     LazyExoticComponent<ComponentType<any>>
 > = {
-    "Pricing": lazy(() => import("./Pricing")),
-    "Projects": lazy(() => import("./Projects")),
-    "Contact7": lazy(() => import("./Contact7")),
-    "Testimonial10": lazy(() => import("./Testimonial10")),
-    "Download2": lazy(() => import("./Download2")),
-    "Team1": lazy(() => import("./Team1"))
+
 };
 
 
@@ -33,9 +28,9 @@ export default function Skeleton({
 }: SkeletonProps) {
     if (!loading) {
         return (
-            <OSlashSkeleton name={name}>
+            <SMSkeleton name={name}>
                 {children}
-            </OSlashSkeleton>
+            </SMSkeleton>
         );
     }
 

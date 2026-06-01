@@ -1,2 +1,2 @@
-export { OSlashProvider as CausticsProvider } from "./o-slash-provider";
+export { SkullMaster } from "./skullmaster-provider";
 export { default as Skeleton } from "./skeleton";

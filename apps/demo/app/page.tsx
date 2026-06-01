@@ -7,11 +7,11 @@ import { Team1 } from "@/components/team1"
 import { Testimonial10 } from "@/components/testimonial10"
 import { Button } from "@/components/ui/button"
 import SkeletonSwitch from "@/components/ui/SkeletonSwitch"
-import { CausticsProvider } from "@o-slash/react"
+import { SkullMaster } from "@skullmaster/react"
 
 export default function Page() {
   return (
-    <CausticsProvider isEnabled>
+    <SkullMaster isEnabled>
       <div className="flex min-h-svh flex-col p-6">
         <SkeletonSwitch name="Projects">
           <Projects5 />
@@ -32,6 +32,6 @@ export default function Page() {
           <Team1 />
         </SkeletonSwitch>
       </div>
-    </CausticsProvider>
+    </SkullMaster>
   )
 }

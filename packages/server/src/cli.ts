@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { DEFAULT_PORT } from "@o-slash/shared";
+import { DEFAULT_PORT } from "@skullmaster/shared";
 import { cac } from "cac";
 import { initialize } from "./commands/init";
 import { serveCommand } from "./commands/serve";

@@ -2,7 +2,7 @@ import {
   EMPTY_SET_DEFAULT_DIR,
   SkeletonCacheEntry,
   SkeletonCacheEntrySchema,
-} from "@o-slash/shared";
+} from "@skullmaster/shared";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
 

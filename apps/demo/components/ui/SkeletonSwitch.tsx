@@ -3,7 +3,7 @@
 import { PropsWithChildren, useState } from "react"
 import { Switch } from "./switch"
 import { Label } from "./label"
-import Skeleton from "../../.empty-set/bones/registry"
+import Skeleton from "../../skullmaster/bones/registry"
 export default function SkeletonSwitch({
   children,
   name,

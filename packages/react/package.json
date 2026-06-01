@@ -1,5 +1,5 @@
 {
-  "name": "@o-slash/react",
+  "name": "@skullmaster/react",
   "type": "module",
   "version": "0.0.0",
   "description": "A starter for creating a React component library.",
@@ -53,6 +53,6 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.100.14",
-    "@o-slash/shared": "workspace:*"
+    "@skullmaster/shared": "workspace:*"
   }
 }

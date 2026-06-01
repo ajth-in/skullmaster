@@ -13,5 +13,5 @@
     "turbo": "^2.9.14"
   },
   "packageManager": "pnpm@8.15.6",
-  "name": "@o-slash/monorepo"
+  "name": "@skullmaster/monorepo"
 }

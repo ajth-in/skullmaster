@@ -1,5 +1,5 @@
 "use client";
-import { DEFAULT_PORT, type SkeletonPayloadInput } from "@o-slash/shared";
+import { DEFAULT_PORT, type SkeletonPayloadInput } from "@skullmaster/shared";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   createContext,
@@ -11,14 +11,14 @@ import {
 } from "react";
 import PostSkeletons, { type PostSkeletonsProps } from "./control-panel";
 
-type EmptyContextValue = {
+type SkullMasterValue = {
   registerSkeleton: (name: string, html: string) => void;
   getSkeletons: () => SkeletonPayloadInput;
 };
 
-const EmptySetContext = createContext<EmptyContextValue | null>(null);
+const SkullMasterContext = createContext<SkullMasterValue | null>(null);
 
-export function OSlashProvider({
+export function SkullMaster({
   children,
   isEnabled,
   port,
@@ -44,18 +44,18 @@ export function OSlashProvider({
 
   return (
     <QueryClientProvider client={queryClient}>
-      <EmptySetContext.Provider value={value}>
+      <SkullMasterContext.Provider value={value}>
         {children}
         <PostSkeletons isEnabled={isEnabled} port={port ?? DEFAULT_PORT} />
-      </EmptySetContext.Provider>
+      </SkullMasterContext.Provider>
     </QueryClientProvider>
   );
 }
 
-export function useOSlash() {
-  const context = useContext(EmptySetContext);
+export function useSkullMaster() {
+  const context = useContext(SkullMasterContext);
   if (!context) {
-    throw new Error("useOSlash must be used within OSlash Provider");
+    throw new Error("useSkullMaster must be used within SkullMaster Provider");
   }
   return context;
 }

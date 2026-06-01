@@ -1,10 +1,10 @@
 {
-  "name": "o-slash",
+  "name": "skullmaster",
   "version": "0.0.0",
   "private": true,
   "description": "A simple example library built by tsdown",
   "bin": {
-    "o-slash": "./dist/cli.mjs"
+    "skullmaster": "./dist/cli.mjs"
   },
   "files": [
     "dist"
@@ -34,7 +34,7 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@o-slash/shared": "workspace:*",
+    "@skullmaster/shared": "workspace:*",
     "@types/babel__generator": "^7.27.0",
     "@types/jsdom": "^28.0.3",
     "@types/node": "^25.9.1",

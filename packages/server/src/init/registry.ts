@@ -1,6 +1,6 @@
 import { Project } from "ts-morph";
 import { join } from "node:path";
-import { EMPTY_SET_DEFAULT_DIR } from "@o-slash/shared";
+import { EMPTY_SET_DEFAULT_DIR } from "@skullmaster/shared";
 
 export function generateRegistry(
   project: Project,
@@ -18,7 +18,7 @@ export function generateRegistry(
     ${isTs ? "type LazyExoticComponent," : ""}
     ${isTs ? "type ComponentType," : ""}
   } from "react";
-  import { Skeleton as OSlashSkeleton } from "@o-slash/react";
+  import { Skeleton as SMSkeleton } from "@skullmaster/react";
 
   const registry${
     isTs
@@ -49,9 +49,9 @@ export function generateRegistry(
   }${isTs ? ": SkeletonProps" : ""}) {
     if (!loading) {
       return (
-        <OSlashSkeleton name={name}>
+        <SMSkeleton name={name}>
           {children}
-        </OSlashSkeleton>
+        </SMSkeleton>
       );
     }
 

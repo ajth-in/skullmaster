@@ -1,4 +1,4 @@
-import { EMPTY_SET_DEFAULT_DIR, log } from "@o-slash/shared";
+import { EMPTY_SET_DEFAULT_DIR, log } from "@skullmaster/shared";
 import { mkdir, writeFile, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { askYesNo } from "../utils/prompt-yes-or-no";

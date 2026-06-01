@@ -17,9 +17,9 @@ This Turborepo includes the following packages/apps:
 ### Apps and Packages
 
 - `web`: a [Next.js](https://nextjs.org) app
-- `@o-slash/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@o-slash/typescript-config`: `tsconfig.json`s used throughout the monorepo
-- `@o-slash/react`: a React component library used by the `web` application, compiled with Rollup
+- `@skullmaster/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@skullmaster/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@skullmaster/react`: a React component library used by the `web` application, compiled with Rollup
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 

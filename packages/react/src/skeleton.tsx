@@ -5,7 +5,7 @@ import {
   useEffect,
   useRef,
 } from "react";
-import { useOSlash } from "./o-slash-provider";
+import { useSkullMaster } from "./skullmaster-provider";
 
 type SkeletonProps = {
   name: string;
@@ -64,7 +64,7 @@ function markTransparentContainers(root: HTMLElement): void {
 
 export default function Skeleton(props: SkeletonProps) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const { registerSkeleton } = useOSlash();
+  const { registerSkeleton } = useSkullMaster();
 
   const refCallback = useCallback((node: HTMLDivElement | null) => {
     ref.current = node;
@@ -84,7 +84,7 @@ export default function Skeleton(props: SkeletonProps) {
   return (
     <div
       ref={refCallback}
-      data-o-slash={props.name}
+      data-skullmaster={props.name}
       style={{ display: "contents" }}
     >
       {props.children}

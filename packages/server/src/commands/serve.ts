@@ -3,7 +3,7 @@ import {
   EMPTY_SET_DEFAULT_DIR,
   log,
   SkeletonPayloadInputSchema,
-} from "@o-slash/shared";
+} from "@skullmaster/shared";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { Project } from "ts-morph";

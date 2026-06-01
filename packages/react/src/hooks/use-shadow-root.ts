@@ -5,7 +5,7 @@ export default function useShadowRoot() {
 
   useEffect(() => {
     const host = document.createElement("div");
-    host.id = "o-slash-shadow-root";
+    host.id = "skullmaster-shadow-root";
     document.body.appendChild(host);
 
     const shadowRoot = host.attachShadow({ mode: "open" });
@@ -18,4 +18,3 @@ export default function useShadowRoot() {
 
   return shadow;
 }
-

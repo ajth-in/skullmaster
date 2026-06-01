@@ -4,6 +4,14 @@
   "version": "0.1.0",
   "description": "A starter for creating a React component library.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajth-in/skullmaster.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "exports": {
     ".": "./src/index.ts",
     "./package.json": "./package.json"
@@ -11,9 +19,6 @@
   "files": [
     "src"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "test": "vitest",
     "typecheck": "tsc --noEmit"

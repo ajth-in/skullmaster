@@ -8,6 +8,14 @@
     ".": "./dist/index.mjs",
     "./package.json": "./package.json"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajth-in/skullmaster.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "files": [
     "dist"
   ],

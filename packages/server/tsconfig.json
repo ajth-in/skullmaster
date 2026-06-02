@@ -1,6 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "lib": ["es2023", "DOM", "DOM.Iterable"],
+
     "composite": false,
     "declaration": true,
     "declarationMap": true,

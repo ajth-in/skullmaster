@@ -10,7 +10,7 @@ import { SKELETON_CLASSNAME } from "../constants";
 export const addRootSkeletonsAttrs: Rule = {
   id: "add-root-skeleton-attrs",
   description: "",
-  match: (ctx) => ctx.element.nodeType === Node.ELEMENT_NODE && atDepth(0)(ctx),
+  match: (ctx) => ctx.element.nodeType === 1 && atDepth(0)(ctx),
   transform: (ctx) => {
     const element = ctx.element as Element;
     const tagName = element.tagName.toLowerCase();

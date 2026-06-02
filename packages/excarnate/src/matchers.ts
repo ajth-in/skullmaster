@@ -10,5 +10,5 @@ export const isRoot: Matcher = atDepth(0);
 export const isTagNamesIn =
   (elements: string[]): Matcher =>
   (ctx) =>
-    ctx.element.nodeType === Node.ELEMENT_NODE &&
+    ctx.element.nodeType === 1 &&
     elements.includes((ctx.element as HTMLElement).tagName.toLowerCase());

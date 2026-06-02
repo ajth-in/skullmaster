@@ -1,10 +1,10 @@
 import { JSDOM } from "jsdom";
-import * as t from "@babel/types";
 import pkg from "@babel/generator";
 
 // @ts-ignore
 const generate = pkg.default;
 
+import htmlNodeToJsx from "@skullmaster/excarnate";
 import { stripToShim } from "./strip-to-shim";
 
 export function transformInput(html: string) {
@@ -22,7 +22,8 @@ export function transformInput(html: string) {
     throw new Error("Failed to generate skeleton DOM structure");
   }
 
-  const jsxAst = strippedRoot;
+  const jsxAst = htmlNodeToJsx(strippedRoot, 0);
+
   if (!jsxAst) {
     throw new Error("Failed to generate JSX AST");
   }

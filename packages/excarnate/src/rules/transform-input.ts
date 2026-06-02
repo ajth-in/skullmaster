@@ -24,7 +24,7 @@ export const transformInput: Rule = {
   description: "Convert inputs into skeleton placeholders",
 
   match: (ctx) =>
-    ctx.element.nodeType === Node.ELEMENT_NODE &&
+    ctx.element.nodeType === 1 &&
     (ctx.element as HTMLElement).tagName.toLowerCase() === "input",
 
   transform: (ctx) => {

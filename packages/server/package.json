@@ -1,7 +1,7 @@
 {
   "name": "skullmaster",
   "version": "0.0.0",
-  "private": true,
+  "private": false,
   "description": "A simple example library built by tsdown",
   "bin": {
     "skullmaster": "./dist/cli.mjs"

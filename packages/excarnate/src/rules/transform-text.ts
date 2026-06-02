@@ -7,7 +7,7 @@ export const transformText: Rule = {
   id: "transform-text",
   skipAllRest: true,
   description: "",
-  match: (ctx) => ctx.element.nodeType === Node.TEXT_NODE,
+  match: (ctx) => ctx.element.nodeType === 3,
   transform: (ctx) => {
     const text = ctx.element.textContent;
 
@@ -25,7 +25,7 @@ export const transformText: Rule = {
           ctx.parentDepth ?? String(ctx.depth),
         ),
       ],
-      children: [jsxText(text.replace(/\S/g, "."))],
+      children: [jsxText(text)],
     };
   },
 };

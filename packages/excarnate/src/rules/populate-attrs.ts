@@ -13,7 +13,7 @@ import { DEPTH_ATTRIBUTE } from "../constants";
 export const populateAttrs: Rule = {
   id: "populate-attrs",
   description: "",
-  match: (ctx) => ctx.element.nodeType === Node.ELEMENT_NODE,
+  match: (ctx) => ctx.element.nodeType === 1,
   transform: (ctx) => {
     const element = ctx.element as HTMLElement;
     const attributes: t.JSXAttribute[] = [];

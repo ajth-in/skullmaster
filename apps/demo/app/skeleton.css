@@ -265,25 +265,34 @@
 }
 
 /* ==========================================
-   Pulse animation
+   Text Parent Background Reset
    ========================================== */
 
-@keyframes empty-set-pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.75;
-  }
+/* Overrides background depth settings for the immediate parent of any text node */
+.empty-set__skeleton *:has(> [data-text-node="true"]) {
+  background-color: rgba(100, 100, 100, 0.1) !important;
 }
 
-/* Animate only actual placeholders */
+/* ==========================================
+   Color-Only Pulse Animation
+   ========================================== */
+
+@keyframes empty-set-color-pulse {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(
+      1.15
+    ); /* Slightly brightens the elements without changing opacity */
+  }
+}
 
 .empty-set__skeleton .empty-set__text,
 .empty-set__skeleton img[data-image-skeleton="true"],
 .empty-set__skeleton input[data-skeleton-input="true"],
 .empty-set__skeleton [data-skeleton-type="iframe"] {
-  animation: empty-set-pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite !important;
+  will-change: filter;
+  animation: empty-set-color-pulse 2s ease-in-out infinite !important;
 }

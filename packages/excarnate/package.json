@@ -27,7 +27,11 @@
     "release": "bumpp",
     "prepublishOnly": "pnpm run build"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "@babel/generator": "^7.29.7",
+    "@babel/types": "^7.29.7",
+    "jsdom": "^29.1.1",
     "@types/babel__generator": "^7.27.0",
     "@types/jsdom": "^28.0.3",
     "@types/node": "^25.9.1",
@@ -38,10 +42,5 @@
     "tsdown": "^0.22.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
-  },
-  "dependencies": {
-    "@babel/generator": "^7.29.7",
-    "@babel/types": "^7.29.7",
-    "jsdom": "^29.1.1"
   }
 }

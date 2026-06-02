@@ -12,8 +12,11 @@ export const transformText: Rule = {
     const text = ctx.element.textContent;
 
     if (!text?.trim()) {
-      return null;
+      return;
     }
+
+    if (ctx.parentNode?.nodeName.toLowerCase() !== "p") return;
+
     ctx.target = {
       element: "span",
       attributes: [

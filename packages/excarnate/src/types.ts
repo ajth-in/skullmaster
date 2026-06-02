@@ -5,6 +5,7 @@ export type TransformContext = {
   element: Node;
   depth: number;
   parentDepth?: string;
+  parentNode: HTMLElement | null;
   target?: {
     element: string;
     attributes?: JSXAttribute[];

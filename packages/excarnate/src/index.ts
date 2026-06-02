@@ -19,11 +19,13 @@ const executor = buildExecutor([
 export default function excarnate(
   element: Node,
   depth: number,
+  parentNode: HTMLElement | null = null,
   parentDepth?: string,
 ): JsxChild | null {
   const context: TransformContext = {
     element,
     depth,
+    parentNode,
     parentDepth,
   };
 
@@ -38,7 +40,9 @@ export default function excarnate(
   const { childNodes } = (element as HTMLElement) ?? { childNodes: [] };
 
   const existingChildren = Array.from(childNodes)
-    .map((child) => excarnate(child, depth + 1, depth.toString()))
+    .map((child) =>
+      excarnate(child, depth + 1, element as HTMLElement, depth.toString()),
+    )
     .filter(Boolean) as JsxChild[];
 
   return createJsxElement(tagName, existingChildren, attributes);

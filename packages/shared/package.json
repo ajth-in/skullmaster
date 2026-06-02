@@ -9,8 +9,7 @@
     "url": "git+https://github.com/ajth-in/skullmaster.git"
   },
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "exports": {
     ".": "./src/index.ts",

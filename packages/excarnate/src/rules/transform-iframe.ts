@@ -13,33 +13,27 @@ export const transformIframe: Rule = {
     (ctx.element as HTMLElement).tagName.toLowerCase() === "iframe",
 
   transform: (ctx) => {
-    if (!ctx.target) return;
-
-    ctx.target.element = "div";
+    if (!ctx.target) return ctx;
 
     const src = findStringJsxAttribute(
       ctx.target.attributes ?? [],
       "src",
     )?.value;
 
-    ctx.target.attributes = ctx.target.attributes?.filter((attr) => {
-      const name = isJSXIdentifier(attr.name) ? attr.name.name : undefined;
-
-      return !["src", "srcdoc", "allow", "sandbox", "loading"].includes(
-        name ?? "",
-      );
-    });
-
-    if (src) {
-      ctx.target.attributes?.push(
-        createJsxStringAttribute("data-iframe-src", src.value),
-      );
-    }
-
-    ctx.target.attributes?.push(
+    const attributes = [
+      ...(ctx.target.attributes ?? []).filter((attr) => {
+        const name = isJSXIdentifier(attr.name) ? attr.name.name : undefined;
+        return !["src", "srcdoc", "allow", "sandbox", "loading"].includes(
+          name ?? "",
+        );
+      }),
+      ...(src ? [createJsxStringAttribute("data-iframe-src", src.value)] : []),
       createJsxStringAttribute("data-skeleton-type", "iframe"),
-    );
+    ];
 
-    ctx.target.children = [];
+    return {
+      ...ctx,
+      target: { ...ctx.target, element: "div", attributes, children: [] },
+    };
   },
 };

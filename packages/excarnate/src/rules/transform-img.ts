@@ -28,9 +28,8 @@ export const transformImg: Rule = {
       "src",
     )?.value;
 
-    ctx.target.attributes = ctx.target.attributes?.filter((attr) => {
+    const filteredAttrs = (ctx.target.attributes ?? []).filter((attr) => {
       const name = isJSXIdentifier(attr.name) ? attr.name.name : undefined;
-
       return ![
         "src",
         "srcSet",
@@ -41,15 +40,16 @@ export const transformImg: Rule = {
       ].includes(name ?? "");
     });
 
-    if (src) {
-      ctx.target.attributes?.push(
-        createJsxStringAttribute("data-image-src", src.value),
-      );
-    }
-
-    ctx.target.attributes?.push(
+    const attributes = [
+      ...filteredAttrs,
+      ...(src ? [createJsxStringAttribute("data-image-src", src.value)] : []),
       createJsxStringAttribute("src", PLACEHOLDER_SRC),
       createJsxStringAttribute("data-image-skeleton", "true"),
-    );
+    ];
+
+    return {
+      ...ctx,
+      target: { ...ctx.target, attributes },
+    };
   },
 };

@@ -42,9 +42,12 @@ export const populateAttrs: Rule = {
 
       attributes.push(createJsxStringAttribute(name, value));
     }
-    ctx.target = {
-      element: tagName,
-      attributes,
+    return {
+      ...ctx,
+      target: {
+        element: tagName,
+        attributes,
+      },
     };
   },
 };

@@ -19,30 +19,31 @@ export const addRootSkeletonsAttrs: Rule = {
       throw new TargetElementMismatchError(tagName, ctx.target.element);
     }
 
-    ctx.target ??= {
-      element: tagName,
-      attributes: [],
-    };
+    const existingTarget = ctx.target ?? { element: tagName, attributes: [] };
+    const existingAttrs = existingTarget.attributes ?? [];
 
-    const classNameAttr = findStringJsxAttribute(
-      ctx.target.attributes ?? [],
-      "className",
-    );
+    const classNameAttr = findStringJsxAttribute(existingAttrs, "className");
+    const baseAttrs = classNameAttr
+      ? existingAttrs.map((attr) =>
+          attr === classNameAttr
+            ? { ...attr, value: { ...classNameAttr.value, value: `${classNameAttr.value.value} ${SKELETON_CLASSNAME}` } }
+            : attr,
+        )
+      : [
+          ...existingAttrs,
+          createJsxStringAttribute("className", SKELETON_CLASSNAME),
+        ];
 
-    if (classNameAttr) {
-      classNameAttr.value.value += ` ${SKELETON_CLASSNAME}`;
-    } else {
-      ctx.target.attributes?.push(
-        createJsxStringAttribute("className", SKELETON_CLASSNAME),
-      );
-    }
-    ctx.target.attributes = [
-      ...(ctx.target.attributes ?? []),
+    const attributes = [
+      ...baseAttrs,
       createJsxStringAttribute("role", "status"),
       createJsxStringAttribute("aria-live", "polite"),
       createJsxStringAttribute("aria-busy", "true"),
     ];
 
-    ctx.target.element = tagName;
+    return {
+      ...ctx,
+      target: { ...existingTarget, element: tagName, attributes },
+    };
   },
 };

@@ -15,7 +15,7 @@ export type TransformContext = {
 
 export type Matcher = (ctx: TransformContext) => boolean;
 
-export type Transform = (ctx: TransformContext) => void;
+export type Transform = (ctx: TransformContext) => TransformContext;
 
 export interface Rule {
   id: string;
@@ -25,4 +25,4 @@ export interface Rule {
   skipAllRest?: boolean;
 }
 
-export type RuleExecutor = (ctx: TransformContext) => void;
+export type RuleExecutor = (ctx: TransformContext) => TransformContext;

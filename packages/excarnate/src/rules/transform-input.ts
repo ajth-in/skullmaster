@@ -29,19 +29,20 @@ export const transformInput: Rule = {
 
   transform: (ctx) => {
     if (!ctx.target) {
-      return;
+      return ctx;
     }
 
-    ctx.target.attributes = ctx.target.attributes?.filter((attr) => {
-      if (!t.isJSXIdentifier(attr.name)) {
-        return false;
-      }
-
-      return shouldKeepInputAttr(attr.name.name);
-    });
-
-    ctx.target.attributes?.push(
+    const attributes = [
+      ...(ctx.target.attributes ?? []).filter((attr) => {
+        if (!t.isJSXIdentifier(attr.name)) return false;
+        return shouldKeepInputAttr(attr.name.name);
+      }),
       createJsxStringAttribute("data-skeleton-input", "true"),
-    );
+    ];
+
+    return {
+      ...ctx,
+      target: { ...ctx.target, attributes },
+    };
   },
 };

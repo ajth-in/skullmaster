@@ -11,7 +11,7 @@ const executor = buildExecutor([
   transformText,
   removeReduntantNode,
   populateAttrs,
-  transformImg,
+  // transformImg,
   transformInput,
   addRootSkeletonsAttrs,
 ]);
@@ -29,11 +29,11 @@ export default function excarnate(
     parentDepth,
   };
 
-  executor(context);
-  const target = context.target;
+  const result = executor(context);
+  const target = result.target;
   if (!target) return null;
   const { children, element: tagName, attributes } = target;
-
+  if (tagName === "TEXT") return children?.[0] ?? null;
   if (children) {
     return createJsxElement(tagName, children, attributes);
   }

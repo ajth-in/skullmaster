@@ -48,20 +48,6 @@
 }
 
 /* ==========================================
-   SVGs
-   ========================================== */
-
-.empty-set__skeleton svg {
-  opacity: 0 !important;
-}
-
-.empty-set__skeleton svg * {
-  opacity: 0 !important;
-  fill: transparent !important;
-  stroke: transparent !important;
-}
-
-/* ==========================================
    Text skeletons
    ========================================== */
 
@@ -79,16 +65,11 @@
   text-transform: inherit !important;
   text-decoration: none !important;
 
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 0 !important;
-
   vertical-align: baseline !important;
 
   color: transparent !important;
 
   border-radius: 0.25em !important;
-
   box-decoration-break: clone !important;
   -webkit-box-decoration-break: clone !important;
 }
@@ -270,7 +251,8 @@
 
 /* Overrides background depth settings for the immediate parent of any text node */
 .empty-set__skeleton *:has(> [data-text-node="true"]) {
-  background-color: rgba(100, 100, 100, 0.1) !important;
+  background-color: inherit !important;
+  box-shadow: inset 0 0 0 9999px rgb(0 0 0 / 0.01) !important;
 }
 
 /* ==========================================

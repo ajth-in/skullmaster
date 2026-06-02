@@ -7,6 +7,6 @@ export const removeReduntantNode: Rule = {
   description: "",
   match: isTagNamesIn(["script", "head", "meta"]),
   transform: (ctx) => {
-    ctx.target = null;
+    return { ...ctx, target: null };
   },
 };

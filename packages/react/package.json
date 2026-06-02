@@ -1,7 +1,7 @@
 {
   "name": "@skullmaster/react",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A starter for creating a React component library.",
   "author": "Author Name <author.name@mail.com>",
   "license": "MIT",

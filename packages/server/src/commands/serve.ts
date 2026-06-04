@@ -1,18 +1,14 @@
 import { serve } from "@hono/node-server";
-import {
-  EMPTY_SET_DEFAULT_DIR,
-  log,
-  SkeletonPayloadInputSchema,
-} from "@skullmaster/shared";
+import { EMPTY_SET_DEFAULT_DIR, log, SkeletonPayloadInputSchema } from "@skullmaster/shared";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { Project } from "ts-morph";
 import { SkeletonCacheDB } from "../cache";
 import { hashInput } from "../cache/hash";
 import generateTarget from "../generate-target";
+import { generateRegistry } from "../init/registry";
 import { transformInput } from "../transform";
 import { toPascalCase } from "../utils/to-pascal-case";
-import { generateRegistry } from "../init/registry";
 
 export async function serveCommand(port: number) {
   const app = new Hono();

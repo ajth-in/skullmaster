@@ -1,4 +1,5 @@
-import { createJsxStringAttribute } from "../helpers/jsx";
+import * as t from "@babel/types";
+import { createJsxExpressionAttribute, createJsxStringAttribute } from "../helpers/jsx";
 import type { Rule } from "../types";
 
 const INTERACTIVE_TAGS = new Set([
@@ -63,6 +64,8 @@ const ARIA_ATTRIBUTES_TO_REMOVE = new Set([
   "aria-current",
   "contenteditable",
   "tabindex",
+  "aria-hidden",
+  "data-skeleton-interactive",
 ]);
 
 export const transformInteractiveElements: Rule = {
@@ -114,7 +117,7 @@ export const transformInteractiveElements: Rule = {
     attributes.push(
       createJsxStringAttribute("data-skeleton-interactive", "true"),
       createJsxStringAttribute("aria-hidden", "true"),
-      createJsxStringAttribute("tabIndex", "-1"),
+      createJsxExpressionAttribute("tabIndex", t.numericLiteral(-1)),
     );
 
     return {

@@ -7,6 +7,7 @@ import {
   useContext,
   useMemo,
   useRef,
+  useState,
   type PropsWithChildren,
 } from "react";
 import PostSkeletons, { type PostSkeletonsProps } from "./control-panel";
@@ -18,11 +19,7 @@ type SkullMasterValue = {
 
 const SkullMasterContext = createContext<SkullMasterValue | null>(null);
 
-export function SkullMaster({
-  children,
-  isEnabled,
-  port,
-}: PropsWithChildren<PostSkeletonsProps>) {
+export function SkullMaster({ children, isEnabled, port }: PropsWithChildren<PostSkeletonsProps>) {
   const skeletonsRef = useRef<SkeletonPayloadInput>({});
 
   const registerSkeleton = useCallback((name: string, html: string) => {
@@ -40,7 +37,7 @@ export function SkullMaster({
     }),
     [registerSkeleton, getSkeletons],
   );
-  const queryClient = new QueryClient();
+  const [queryClient] = useState(() => new QueryClient());
 
   return (
     <QueryClientProvider client={queryClient}>

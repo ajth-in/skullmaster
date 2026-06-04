@@ -1,68 +1,14 @@
-import {
-  Fragment,
-  isValidElement,
-  useCallback,
-  useEffect,
-  useRef,
-} from "react";
+import { Fragment, isValidElement, useCallback, useEffect, useRef } from "react";
 import { useSkullMaster } from "./skullmaster-provider";
+import { markTransparentContainers } from "./utils/make-transparent-containers";
 
 type SkeletonProps = {
   name: string;
   children: React.ReactNode;
+  waitFor?: number;
 };
 
-const CONTAINER_TAGS = new Set([
-  "div",
-  "section",
-  "article",
-  "aside",
-  "main",
-  "nav",
-  "header",
-  "footer",
-  "form",
-  "fieldset",
-]);
-
-function hasVisibleBackgroundOrBorder(element: HTMLElement): boolean {
-  const style = getComputedStyle(element);
-
-  const isVisibleColor = (color: string) =>
-    color && color !== "transparent" && color !== "rgba(0, 0, 0, 0)";
-
-  const hasBackground = isVisibleColor(style.backgroundColor);
-
-  const sides = ["Top", "Right", "Bottom", "Left"] as const;
-
-  const hasFullBorder = sides.every((side) => {
-    const width = parseFloat(style[`border${side}Width`]);
-    const borderStyle = style[`border${side}Style`];
-    const color = style[`border${side}Color`];
-
-    return (
-      width > 0 &&
-      borderStyle !== "none" &&
-      borderStyle !== "hidden" &&
-      isVisibleColor(color)
-    );
-  });
-
-  return hasBackground || hasFullBorder;
-}
-
-function markTransparentContainers(root: HTMLElement): void {
-  const containers = root.querySelectorAll<HTMLElement>(
-    Array.from(CONTAINER_TAGS).join(","),
-  );
-  for (const el of containers) {
-    if (!hasVisibleBackgroundOrBorder(el)) {
-      el.setAttribute("data-depth", "-1");
-    }
-  }
-}
-
-export default function Skeleton(props: SkeletonProps) {
+export default function Skeleton({ name, children, waitFor = 4000 }: SkeletonProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const { registerSkeleton } = useSkullMaster();
 
@@ -71,23 +17,25 @@ export default function Skeleton(props: SkeletonProps) {
   }, []);
 
   useEffect(() => {
-    if (!ref.current) return;
+    const timeoutId = window.setTimeout(() => {
+      if (!ref.current) return;
 
-    markTransparentContainers(ref.current);
-    registerSkeleton(props.name, ref.current.innerHTML);
-  }, [props.name, registerSkeleton]);
+      markTransparentContainers(ref.current);
+      registerSkeleton(name, ref.current.innerHTML);
+    }, waitFor);
 
-  if (!isValidElement(props.children)) {
-    return <Fragment>{props.children}</Fragment>;
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [name, registerSkeleton, waitFor]);
+
+  if (!isValidElement(children)) {
+    return <Fragment>{children}</Fragment>;
   }
 
   return (
-    <div
-      ref={refCallback}
-      data-skullmaster={props.name}
-      style={{ display: "contents" }}
-    >
-      {props.children}
+    <div ref={refCallback} data-skullmaster={name} style={{ display: "contents" }}>
+      {children}
     </div>
   );
 }

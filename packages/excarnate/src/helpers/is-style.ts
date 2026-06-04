@@ -15,7 +15,7 @@ const STYLE_ATTRIBUTES = new Set([
   "stroke-dashoffset",
 
   "opacity",
-
+  "role",
   "width",
   "height",
   "x",

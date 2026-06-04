@@ -128,8 +128,6 @@
   color: transparent !important;
   caret-color: transparent !important;
 
-  background-color: inherit !important;
-
   pointer-events: none !important;
   user-select: none !important;
 }
@@ -265,9 +263,7 @@
     filter: brightness(1);
   }
   50% {
-    filter: brightness(
-      1.15
-    ); /* Slightly brightens the elements without changing opacity */
+    filter: brightness(1.15); /* Slightly brightens the elements without changing opacity */
   }
 }
 

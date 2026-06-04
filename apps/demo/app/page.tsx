@@ -1,13 +1,13 @@
-"use client"
-import { Contact7 } from "@/components/contact7"
-import { Download2 } from "@/components/download2"
-import { Pricing4 } from "@/components/pricing4"
-import { Projects5 } from "@/components/projects5"
-import { Team1 } from "@/components/team1"
-import { Testimonial10 } from "@/components/testimonial10"
-import { Button } from "@/components/ui/button"
-import SkeletonSwitch from "@/components/ui/SkeletonSwitch"
-import { SkullMaster } from "@skullmaster/react"
+"use client";
+import { BookADemo1 } from "@/components/book-a-demo1";
+import { Contact7 } from "@/components/contact7";
+import { Download2 } from "@/components/download2";
+import { Pricing4 } from "@/components/pricing4";
+import { Projects5 } from "@/components/projects5";
+import { Team1 } from "@/components/team1";
+import { Testimonial10 } from "@/components/testimonial10";
+import SkeletonSwitch from "@/components/ui/SkeletonSwitch";
+import { SkullMaster } from "@skullmaster/react";
 
 export default function Page() {
   return (
@@ -31,7 +31,10 @@ export default function Page() {
         <SkeletonSwitch name="Team1">
           <Team1 />
         </SkeletonSwitch>
+        <SkeletonSwitch name="BookADemo1">
+          <BookADemo1 />
+        </SkeletonSwitch>
       </div>
     </SkullMaster>
-  )
+  );
 }

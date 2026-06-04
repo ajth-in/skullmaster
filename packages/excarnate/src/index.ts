@@ -3,15 +3,14 @@ import { createJsxElement } from "./helpers/jsx";
 import { populateAttrs } from "./rules/populate-attrs";
 import { removeReduntantNode } from "./rules/remove-node";
 import { addRootSkeletonsAttrs } from "./rules/root-skeleton-attrs";
-import { transformInput } from "./rules/transform-input";
+import { transformFormControls } from "./rules/transform-input";
 import { transformText } from "./rules/transform-text";
 import type { JsxChild, TransformContext } from "./types";
 const executor = buildExecutor([
   transformText,
   removeReduntantNode,
   populateAttrs,
-  // transformImg,
-  transformInput,
+  transformFormControls,
   addRootSkeletonsAttrs,
 ]);
 

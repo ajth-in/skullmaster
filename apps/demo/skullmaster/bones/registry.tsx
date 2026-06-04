@@ -16,7 +16,8 @@ const registry: Record<
     "Contact7": lazy(() => import("./Contact7")),
     "Testimonial10": lazy(() => import("./Testimonial10")),
     "Download2": lazy(() => import("./Download2")),
-    "Team1": lazy(() => import("./Team1"))
+    "Team1": lazy(() => import("./Team1")),
+    "BookADemo1": lazy(() => import("./BookADemo1"))
 };
 
 

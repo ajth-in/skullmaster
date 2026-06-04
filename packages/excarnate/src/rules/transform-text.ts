@@ -16,7 +16,7 @@ export const transformText: Rule = {
     }
 
     const isHeading = ctx.parentNode?.nodeName.toLowerCase().startsWith("h");
-    if (ctx.parentNode?.nodeName.toLowerCase() !== "p" && !isHeading)
+    if (!["p", "label"].includes(ctx.parentNode?.nodeName.toLowerCase() ?? "") && !isHeading)
       return {
         ...ctx,
         target: {

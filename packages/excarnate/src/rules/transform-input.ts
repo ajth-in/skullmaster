@@ -1,31 +1,29 @@
-import * as t from "@babel/types";
-
-import type { Rule } from "../types";
 import { createJsxStringAttribute } from "../helpers/jsx";
+import type { Rule } from "../types";
 
-const KEEP_EXACT = new Set([
-  "class",
-  "className",
-  "style",
-  "width",
-  "height",
-  "type",
-  "role",
+const FORM_TAGS = new Set([
+  "input",
+  "textarea",
+  "select",
+  "option",
+  "button",
+  "label",
+  "fieldset",
+  "legend",
 ]);
 
-function shouldKeepInputAttr(name: string): boolean {
-  return (
-    KEEP_EXACT.has(name) || name.startsWith("aria-") || name.startsWith("data-")
-  );
-}
+export const transformFormControls: Rule = {
+  id: "transform-form-controls",
 
-export const transformInput: Rule = {
-  id: "transform-input",
-  description: "Convert inputs into skeleton placeholders",
+  match: (ctx) => {
+    if (ctx.element.nodeType !== 1) {
+      return false;
+    }
 
-  match: (ctx) =>
-    ctx.element.nodeType === 1 &&
-    (ctx.element as HTMLElement).tagName.toLowerCase() === "input",
+    const tag = (ctx.element as HTMLElement).tagName.toLowerCase();
+
+    return FORM_TAGS.has(tag);
+  },
 
   transform: (ctx) => {
     if (!ctx.target) {
@@ -33,16 +31,19 @@ export const transformInput: Rule = {
     }
 
     const attributes = [
-      ...(ctx.target.attributes ?? []).filter((attr) => {
-        if (!t.isJSXIdentifier(attr.name)) return false;
-        return shouldKeepInputAttr(attr.name.name);
-      }),
+      ...(ctx.target.attributes ?? []),
+
       createJsxStringAttribute("data-skeleton-input", "true"),
+      createJsxStringAttribute("aria-hidden", "true"),
+      createJsxStringAttribute("tabIndex", "-1"),
     ];
 
     return {
       ...ctx,
-      target: { ...ctx.target, attributes },
+      target: {
+        ...ctx.target,
+        attributes,
+      },
     };
   },
 };

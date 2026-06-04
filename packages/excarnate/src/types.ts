@@ -19,7 +19,6 @@ export type Transform = (ctx: TransformContext) => TransformContext;
 
 export interface Rule {
   id: string;
-  description?: string;
   match: Matcher;
   transform: Transform;
   skipAllRest?: boolean;

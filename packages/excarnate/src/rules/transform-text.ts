@@ -7,7 +7,6 @@ import type { Rule, TransformContext } from "../types";
 export const transformText: Rule = {
   id: "transform-text",
   skipAllRest: true,
-  description: "",
   match: (ctx) => ctx.element.nodeType === 3,
   transform: (ctx) => {
     const text = spacePreservedObfuscator(ctx.element.textContent?.trim());

@@ -1,8 +1,8 @@
 import { jsxText } from "@babel/types";
-import type { Rule, TransformContext } from "../types";
 import { DEPTH_ATTRIBUTE, TEXT_CLASSNAME } from "../constants";
+import spacePreservedObfuscator from "../helpers/hash";
 import { createJsxStringAttribute } from "../helpers/jsx";
-import simpleHash from "../helpers/hash";
+import type { Rule, TransformContext } from "../types";
 
 export const transformText: Rule = {
   id: "transform-text",
@@ -10,7 +10,7 @@ export const transformText: Rule = {
   description: "",
   match: (ctx) => ctx.element.nodeType === 3,
   transform: (ctx) => {
-    const text = simpleHash(ctx.element.textContent?.trim());
+    const text = spacePreservedObfuscator(ctx.element.textContent?.trim());
 
     if (!text) {
       return ctx;
@@ -33,10 +33,7 @@ export const transformText: Rule = {
         attributes: [
           createJsxStringAttribute("className", TEXT_CLASSNAME),
           createJsxStringAttribute("data-text-node", "true"),
-          createJsxStringAttribute(
-            DEPTH_ATTRIBUTE,
-            ctx.parentDepth ?? String(ctx.depth),
-          ),
+          createJsxStringAttribute(DEPTH_ATTRIBUTE, ctx.parentDepth ?? String(ctx.depth)),
         ],
         children: [jsxText(text)],
       },

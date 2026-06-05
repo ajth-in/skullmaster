@@ -1,5 +1,6 @@
 import { Fragment, isValidElement, useCallback, useEffect, useRef } from "react";
 import { useSkullMaster } from "./skullmaster-provider";
+import { injectNaturalImageDimensions } from "./utils/add-data-attrs-img";
 import { markTransparentContainers } from "./utils/make-transparent-containers";
 
 type SkeletonProps = {
@@ -17,10 +18,11 @@ export default function Skeleton({ name, children, waitFor = 4000 }: SkeletonPro
   }, []);
 
   useEffect(() => {
-    const timeoutId = window.setTimeout(() => {
+    const timeoutId = window.setTimeout(async () => {
       if (!ref.current) return;
 
       markTransparentContainers(ref.current);
+      await injectNaturalImageDimensions(ref.current);
       registerSkeleton(name, ref.current.innerHTML);
     }, waitFor);
 

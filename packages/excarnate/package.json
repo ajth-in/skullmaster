@@ -1,23 +1,23 @@
 {
   "name": "@skullmaster/excarnate",
-  "type": "module",
   "version": "0.0.0",
   "description": "A starter for creating a TypeScript package.",
   "license": "MIT",
-  "exports": {
-    ".": "./dist/index.mjs",
-    "./package.json": "./package.json"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ajth-in/skullmaster.git"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "files": [
     "dist"
   ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
@@ -26,20 +26,21 @@
     "release": "bumpp",
     "prepublishOnly": "pnpm run build"
   },
-  "devDependencies": {},
   "dependencies": {
     "@babel/generator": "^7.29.7",
     "@babel/types": "^7.29.7",
-    "jsdom": "^29.1.1",
+    "@skullmaster/shared": "workspace:*",
     "@types/babel__generator": "^7.27.0",
     "@types/jsdom": "^28.0.3",
     "@types/node": "^25.9.1",
     "@typescript/native-preview": "7.0.0-dev.20260509.2",
     "@vitest/ui": "4.1.7",
     "bumpp": "^11.1.0",
+    "jsdom": "^29.1.1",
     "lit": "^3.3.3",
     "tsdown": "^0.22.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
-  }
+  },
+  "devDependencies": {}
 }

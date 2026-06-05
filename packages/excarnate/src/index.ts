@@ -4,6 +4,7 @@ import { populateAttrs } from "./rules/populate-attrs";
 import { processSvg } from "./rules/process-svg";
 import { removeReduntantNode } from "./rules/remove-node";
 import { addRootSkeletonsAttrs } from "./rules/root-skeleton-attrs";
+import { transformImg } from "./rules/transform-img";
 import { transformInteractiveElements } from "./rules/transform-interactive";
 import { transformText } from "./rules/transform-text";
 import type { JsxChild, TransformContext } from "./types";
@@ -12,6 +13,7 @@ const executor = buildExecutor([
   removeReduntantNode,
   populateAttrs,
   processSvg,
+  transformImg,
   transformInteractiveElements,
   addRootSkeletonsAttrs,
 ]);

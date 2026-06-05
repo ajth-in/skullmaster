@@ -134,6 +134,9 @@ importers:
       '@babel/types':
         specifier: ^7.29.7
         version: 7.29.7
+      '@skullmaster/shared':
+        specifier: workspace:*
+        version: link:../shared
       '@types/babel__generator':
         specifier: ^7.27.0
         version: 7.27.0
@@ -231,6 +234,9 @@ importers:
       '@skullmaster/excarnate':
         specifier: workspace:*
         version: link:../excarnate
+      '@skullmaster/shared':
+        specifier: workspace:*
+        version: link:../shared
       '@types/lodash':
         specifier: ^4.17.24
         version: 4.17.24
@@ -259,9 +265,6 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
-      '@skullmaster/shared':
-        specifier: workspace:*
-        version: link:../shared
       '@types/babel__generator':
         specifier: ^7.27.0
         version: 7.27.0

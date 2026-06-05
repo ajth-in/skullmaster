@@ -5,7 +5,7 @@ const STYLE_ATTRIBUTES = new Set([
   "fill",
   "fill-opacity",
   "fill-rule",
-
+  "src",
   "stroke",
   "stroke-width",
   "stroke-opacity",

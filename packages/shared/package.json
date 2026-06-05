@@ -12,13 +12,15 @@
     "access": "public"
   },
   "exports": {
-    ".": "./src/index.ts",
+    ".": "./dist/index.mjs",
     "./package.json": "./package.json"
   },
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
@@ -27,6 +29,7 @@
     "@types/node": "^25.6.2",
     "@vitejs/plugin-react": "^6.0.1",
     "@vitest/browser-playwright": "^4.1.5",
+    "tsdown": "^0.22.0",
     "typescript": "^6.0.3",
     "vite": "^8.0.11",
     "vitest": "^4.1.5",

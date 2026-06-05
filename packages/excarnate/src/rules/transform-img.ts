@@ -4,12 +4,27 @@ import type { Rule } from "../types";
 export const DATA_NAT_H = "data-natural-h";
 export const DATA_NAT_W = "data-natural-w";
 
-function createPlaceholderSrc(width?: string, height?: string) {
+function createPlaceholderSrc(width?: string, height?: string, bg = "#e5e7eb", fg = "#9ca3af") {
   const w = Number(width) || 1;
   const h = Number(height) || 1;
 
   return `data:image/svg+xml,${encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"/>`,
+    `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="${w}"
+        height="${h}"
+        viewBox="0 0 ${w} ${h}"
+      >
+        <rect width="100%" height="100%" fill="${bg}" />
+        <circle cx="${w * 0.3}" cy="${h * 0.35}" r="${Math.min(w, h) * 0.08}" fill="${fg}" />
+        <path
+          d="M0 ${h * 0.8} L${w * 0.35} ${h * 0.45} L${w * 0.6} ${h * 0.7} L${w} ${h * 0.3} V${h} H0 Z"
+          fill="${fg}"
+          opacity="0.7"
+        />
+      </svg>
+    `,
   )}`;
 }
 
@@ -25,8 +40,6 @@ export const transformImg: Rule = {
     }
 
     const attrs = ctx.target.attributes ?? [];
-
-    const src = findStringJsxAttribute(attrs, "src")?.value;
 
     const naturalWidth = findStringJsxAttribute(attrs, DATA_NAT_W)?.value;
 
@@ -44,7 +57,6 @@ export const transformImg: Rule = {
 
     const attributes = [
       ...filteredAttrs,
-      ...(src ? [createJsxStringAttribute("data-image-src", src.value)] : []),
       createJsxStringAttribute("src", placeholderSrc),
       createJsxStringAttribute("data-image-skeleton", "true"),
     ];

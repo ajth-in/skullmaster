@@ -1,7 +1,14 @@
-import { Fragment, isValidElement, useCallback, useEffect, useRef } from "react";
+import {
+  Fragment,
+  isValidElement,
+  useCallback,
+  useEffect,
+  useRef,
+} from "react";
 import { useSkullMaster } from "./skullmaster-provider";
 import { injectNaturalImageDimensions } from "./utils/add-data-attrs-img";
 import { markTransparentContainers } from "./utils/make-transparent-containers";
+import { Button } from "react-aria-components";
 
 type SkeletonProps = {
   name: string;
@@ -9,7 +16,11 @@ type SkeletonProps = {
   waitFor?: number;
 };
 
-export default function Skeleton({ name, children, waitFor = 4000 }: SkeletonProps) {
+export default function Skeleton({
+  name,
+  children,
+  waitFor = 4000,
+}: SkeletonProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const { registerSkeleton } = useSkullMaster();
 
@@ -17,7 +28,7 @@ export default function Skeleton({ name, children, waitFor = 4000 }: SkeletonPro
     ref.current = node;
   }, []);
 
-  useEffect(() => {
+  const handleClick = () => {
     const timeoutId = window.setTimeout(async () => {
       if (!ref.current) return;
 
@@ -29,15 +40,20 @@ export default function Skeleton({ name, children, waitFor = 4000 }: SkeletonPro
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [name, registerSkeleton, waitFor]);
+  };
 
   if (!isValidElement(children)) {
     return <Fragment>{children}</Fragment>;
   }
 
   return (
-    <div ref={refCallback} data-skullmaster={name} style={{ display: "contents" }}>
+    <div
+      ref={refCallback}
+      data-skullmaster={name}
+      style={{ display: "contents" }}
+    >
       {children}
+      <Button onPress={handleClick}>Hello</Button>
     </div>
   );
 }

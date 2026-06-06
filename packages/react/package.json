@@ -48,7 +48,8 @@
     "vitest-browser-react": "^2.2.0"
   },
   "dependencies": {
+    "@skullmaster/shared": "workspace:*",
     "@tanstack/react-query": "^5.100.14",
-    "@skullmaster/shared": "workspace:*"
+    "react-aria-components": "^1.18.0"
   }
 }

@@ -1,5 +1,9 @@
 import { serve } from "@hono/node-server";
-import { EMPTY_SET_DEFAULT_DIR, log, SkeletonPayloadInputSchema } from "@skullmaster/shared";
+import {
+  EMPTY_SET_DEFAULT_DIR,
+  log,
+  SkeletonPayloadInputSchema,
+} from "@skullmaster/shared";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { Project } from "ts-morph";
@@ -50,7 +54,7 @@ export async function serveCommand(port: number) {
       }
 
       if (shouldSkip) {
-        // continue;
+        continue;
       }
 
       const componentName = toPascalCase(value.component);
@@ -71,7 +75,7 @@ export async function serveCommand(port: number) {
     await project.save();
 
     return c.json({
-      ok: true,
+      sucess: true,
     });
   });
 

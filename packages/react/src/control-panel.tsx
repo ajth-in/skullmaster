@@ -1,9 +1,12 @@
-import { useState, useRef } from "react";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import SkullIcon from "./icons/skull";
 import { Button } from "./ui/button";
 import ShadowRoot from "./shadow-root";
 import { css } from "lit";
 import { useSkullMaster } from "./skullmaster-provider";
+import HoverHighlighter from "./mouse-over";
 
 const BUTTON_SIZE = 48;
 const MARGIN = 16;
@@ -11,22 +14,30 @@ const MARGIN = 16;
 export default function PostSkeletons() {
   const { isEnabled, setIsEnabled } = useSkullMaster();
 
-  const [position, setPosition] = useState(() => ({
-    x: window.innerWidth - BUTTON_SIZE - MARGIN,
-    y: window.innerHeight - BUTTON_SIZE - MARGIN,
-  }));
+  const [position, setPosition] = useState({
+    x: MARGIN,
+    y: MARGIN,
+  });
 
   const dragging = useRef(false);
+  const moved = useRef(false);
   const dragOffset = useRef({ x: 0, y: 0 });
+
+  useEffect(() => {
+    setPosition({
+      x: window.innerWidth - BUTTON_SIZE - MARGIN,
+      y: window.innerHeight - BUTTON_SIZE - MARGIN,
+    });
+  }, []);
 
   const snapToNearestCorner = (x: number, y: number) => {
     const width = window.innerWidth;
     const height = window.innerHeight;
 
     const corners = [
-      { x: MARGIN, y: MARGIN }, // top-left
-      { x: width - BUTTON_SIZE - MARGIN, y: MARGIN }, // top-right
-      { x: MARGIN, y: height - BUTTON_SIZE - MARGIN }, // bottom-left
+      { x: MARGIN, y: MARGIN },
+      { x: width - BUTTON_SIZE - MARGIN, y: MARGIN },
+      { x: MARGIN, y: height - BUTTON_SIZE - MARGIN },
       {
         x: width - BUTTON_SIZE - MARGIN,
         y: height - BUTTON_SIZE - MARGIN,
@@ -34,27 +45,31 @@ export default function PostSkeletons() {
     ];
 
     const nearest = corners.reduce((best, corner) => {
-      const d1 = Math.hypot(best.x - x, best.y - y);
-      const d2 = Math.hypot(corner.x - x, corner.y - y);
-      return d2 < d1 ? corner : best;
+      const bestDistance = Math.hypot(best.x - x, best.y - y);
+      const cornerDistance = Math.hypot(corner.x - x, corner.y - y);
+
+      return cornerDistance < bestDistance ? corner : best;
     });
 
     setPosition(nearest);
   };
 
-  const onPointerDown = (e: React.PointerEvent) => {
+  const onPointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
     dragging.current = true;
+    moved.current = false;
 
     dragOffset.current = {
       x: e.clientX - position.x,
       y: e.clientY - position.y,
     };
 
-    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+    e.currentTarget.setPointerCapture(e.pointerId);
   };
 
-  const onPointerMove = (e: React.PointerEvent) => {
+  const onPointerMove = (e: React.PointerEvent<HTMLButtonElement>) => {
     if (!dragging.current) return;
+
+    moved.current = true;
 
     setPosition({
       x: e.clientX - dragOffset.current.x,
@@ -66,7 +81,14 @@ export default function PostSkeletons() {
     if (!dragging.current) return;
 
     dragging.current = false;
+
     snapToNearestCorner(position.x, position.y);
+  };
+
+  const onClick = () => {
+    if (!moved.current) {
+      setIsEnabled(!isEnabled);
+    }
   };
 
   return (
@@ -76,10 +98,9 @@ export default function PostSkeletons() {
           css`
             .control-panel-button {
               position: fixed;
-              z-index: 9999;
+              z-index: 2147483647;
               transition: all 200ms ease;
               touch-action: none;
-              z-index: 2147483647;
             }
           `.cssText
         }
@@ -96,14 +117,12 @@ export default function PostSkeletons() {
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
-        onClick={() => {
-          if (!dragging.current) {
-            setIsEnabled(!isEnabled);
-          }
-        }}
+        onClick={onClick}
       >
         <SkullIcon furious={isEnabled} size={27} />
       </Button>
+
+      {isEnabled && <HoverHighlighter />}
     </ShadowRoot>
   );
 }

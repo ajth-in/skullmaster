@@ -1,59 +1,33 @@
-import {
-  Fragment,
-  isValidElement,
-  useCallback,
-  useEffect,
-  useRef,
-} from "react";
+import { useEffect, useRef, type ReactElement } from "react";
 import { useSkullMaster } from "./skullmaster-provider";
-import { injectNaturalImageDimensions } from "./utils/add-data-attrs-img";
-import { markTransparentContainers } from "./utils/make-transparent-containers";
-import { Button } from "react-aria-components";
 
 type SkeletonProps = {
   name: string;
-  children: React.ReactNode;
-  waitFor?: number;
+  children: ReactElement;
 };
 
-export default function Skeleton({
-  name,
-  children,
-  waitFor = 4000,
-}: SkeletonProps) {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const { registerSkeleton } = useSkullMaster();
+export default function Skeleton({ name, children }: SkeletonProps) {
+  const { isEnabled } = useSkullMaster();
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
-  const refCallback = useCallback((node: HTMLDivElement | null) => {
-    ref.current = node;
-  }, []);
+  useEffect(() => {
+    if (!isEnabled || !wrapperRef.current) return;
 
-  const handleClick = () => {
-    const timeoutId = window.setTimeout(async () => {
-      if (!ref.current) return;
+    const firstElement = wrapperRef.current.firstElementChild;
 
-      markTransparentContainers(ref.current);
-      await injectNaturalImageDimensions(ref.current);
-      registerSkeleton(name, ref.current.innerHTML);
-    }, waitFor);
-
+    if (firstElement instanceof HTMLElement) {
+      firstElement.setAttribute("data-skullmaster", name);
+    }
     return () => {
-      clearTimeout(timeoutId);
+      firstElement?.removeAttribute("data-skullmaster");
     };
-  };
+  }, [isEnabled, name]);
 
-  if (!isValidElement(children)) {
-    return <Fragment>{children}</Fragment>;
-  }
+  if (!isEnabled) return children;
 
   return (
-    <div
-      ref={refCallback}
-      data-skullmaster={name}
-      style={{ display: "contents" }}
-    >
+    <div ref={wrapperRef} style={{ display: "contents" }}>
       {children}
-      <Button onPress={handleClick}>Hello</Button>
     </div>
   );
 }

@@ -1,23 +1,23 @@
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react"
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 interface Contact7Props {
-  title?: string;
-  description?: string;
-  emailLabel?: string;
-  emailDescription?: string;
-  email?: string;
-  officeLabel?: string;
-  officeDescription?: string;
-  officeAddress?: string;
-  phoneLabel?: string;
-  phoneDescription?: string;
-  phone?: string;
-  chatLabel?: string;
-  chatDescription?: string;
-  chatLink?: string;
-  className?: string;
+  title?: string
+  description?: string
+  emailLabel?: string
+  emailDescription?: string
+  email?: string
+  officeLabel?: string
+  officeDescription?: string
+  officeAddress?: string
+  phoneLabel?: string
+  phoneDescription?: string
+  phone?: string
+  chatLabel?: string
+  chatDescription?: string
+  chatLink?: string
+  className?: string
 }
 
 const Contact7 = ({
@@ -92,7 +92,7 @@ const Contact7 = ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { Contact7 };
+export { Contact7 }

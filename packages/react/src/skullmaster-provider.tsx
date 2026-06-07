@@ -8,8 +8,7 @@ import {
   useState,
   type PropsWithChildren,
 } from "react";
-import { DEFAULT_PORT } from "@skullmaster/shared";
-import PostSkeletons, { type PostSkeletonsProps } from "./control-panel";
+import PostSkeletons from "./control-panel";
 
 type SkullMasterValue = {
   isEnabled: boolean;
@@ -20,10 +19,7 @@ const SkullMasterContext = createContext<SkullMasterValue | null>(null);
 
 const STORAGE_KEY = "skullmaster-enabled";
 
-export function SkullMaster({
-  children,
-  port,
-}: PropsWithChildren<PostSkeletonsProps>) {
+export function SkullMaster({ children }: PropsWithChildren) {
   const [isEnabled, setIsEnabled] = useState(false);
 
   useEffect(() => {

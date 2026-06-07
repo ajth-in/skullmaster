@@ -1,14 +1,74 @@
+import { useState, useRef } from "react";
 import SkullIcon from "./icons/skull";
 import { Button } from "./ui/button";
 import ShadowRoot from "./shadow-root";
 import { css } from "lit";
 import { useSkullMaster } from "./skullmaster-provider";
-export type PostSkeletonsProps = {
-  isEnabled: boolean;
-  port?: number;
-};
+
+const BUTTON_SIZE = 48;
+const MARGIN = 16;
+
 export default function PostSkeletons() {
   const { isEnabled, setIsEnabled } = useSkullMaster();
+
+  const [position, setPosition] = useState(() => ({
+    x: window.innerWidth - BUTTON_SIZE - MARGIN,
+    y: window.innerHeight - BUTTON_SIZE - MARGIN,
+  }));
+
+  const dragging = useRef(false);
+  const dragOffset = useRef({ x: 0, y: 0 });
+
+  const snapToNearestCorner = (x: number, y: number) => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    const corners = [
+      { x: MARGIN, y: MARGIN }, // top-left
+      { x: width - BUTTON_SIZE - MARGIN, y: MARGIN }, // top-right
+      { x: MARGIN, y: height - BUTTON_SIZE - MARGIN }, // bottom-left
+      {
+        x: width - BUTTON_SIZE - MARGIN,
+        y: height - BUTTON_SIZE - MARGIN,
+      },
+    ];
+
+    const nearest = corners.reduce((best, corner) => {
+      const d1 = Math.hypot(best.x - x, best.y - y);
+      const d2 = Math.hypot(corner.x - x, corner.y - y);
+      return d2 < d1 ? corner : best;
+    });
+
+    setPosition(nearest);
+  };
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    dragging.current = true;
+
+    dragOffset.current = {
+      x: e.clientX - position.x,
+      y: e.clientY - position.y,
+    };
+
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+  };
+
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (!dragging.current) return;
+
+    setPosition({
+      x: e.clientX - dragOffset.current.x,
+      y: e.clientY - dragOffset.current.y,
+    });
+  };
+
+  const onPointerUp = () => {
+    if (!dragging.current) return;
+
+    dragging.current = false;
+    snapToNearestCorner(position.x, position.y);
+  };
+
   return (
     <ShadowRoot>
       <style>
@@ -16,22 +76,31 @@ export default function PostSkeletons() {
           css`
             .control-panel-button {
               position: fixed;
-              bottom: 16px;
-              right: 16px;
               z-index: 9999;
-              /* opacity: 0.5; */
-              transition: all 100ms ease-in-out;
+              transition: all 200ms ease;
+              touch-action: none;
+              z-index: 2147483647;
             }
           `.cssText
         }
       </style>
+
       <Button
         aria-label={isEnabled ? "Disable SkullMaster" : "Enable SkullMaster"}
         data-selected={isEnabled}
-        onClick={() => {
-          setIsEnabled(!isEnabled);
+        className="control-panel-button"
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
         }}
-        className={"control-panel-button"}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onClick={() => {
+          if (!dragging.current) {
+            setIsEnabled(!isEnabled);
+          }
+        }}
       >
         <SkullIcon furious={isEnabled} size={27} />
       </Button>

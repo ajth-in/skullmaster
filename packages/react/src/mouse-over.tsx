@@ -164,7 +164,7 @@ export default function HoverHighlighter() {
       const componentName = getComponentName(skeleton);
       markTransparentContainers(skeleton);
       await injectNaturalImageDimensions(skeleton);
-      const html = skeleton.innerHTML;
+      const html = skeleton.outerHTML;
 
       updateOverlay(skeleton);
       applyState("loading", componentName);

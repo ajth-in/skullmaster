@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { postSkeleton } from "./utils/post-skeleton";
+import { markTransparentContainers } from "./utils/make-transparent-containers";
+import { injectNaturalImageDimensions } from "./utils/add-data-attrs-img";
 
 type SkeletonState = "idle" | "loading" | "success" | "error";
 
@@ -160,6 +162,8 @@ export default function HoverHighlighter() {
       currentSkeleton = skeleton;
 
       const componentName = getComponentName(skeleton);
+      markTransparentContainers(skeleton);
+      await injectNaturalImageDimensions(skeleton);
       const html = skeleton.innerHTML;
 
       updateOverlay(skeleton);

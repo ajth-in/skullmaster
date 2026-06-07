@@ -1,8 +1,10 @@
+/* @import "./theme.css"; */
+
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "./skeleton.css";
 
+@import "./skeleton.css";
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

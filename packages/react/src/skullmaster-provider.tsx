@@ -1,58 +1,65 @@
 "use client";
-import { DEFAULT_PORT, type SkeletonPayloadInput } from "@skullmaster/shared";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
 import {
   createContext,
-  useCallback,
   useContext,
+  useEffect,
   useMemo,
-  useRef,
   useState,
   type PropsWithChildren,
 } from "react";
+import { DEFAULT_PORT } from "@skullmaster/shared";
 import PostSkeletons, { type PostSkeletonsProps } from "./control-panel";
 
 type SkullMasterValue = {
-  registerSkeleton: (name: string, html: string) => void;
-  getSkeletons: () => SkeletonPayloadInput;
+  isEnabled: boolean;
+  setIsEnabled: (enabled: boolean) => void;
 };
 
 const SkullMasterContext = createContext<SkullMasterValue | null>(null);
 
-export function SkullMaster({ children, isEnabled, port }: PropsWithChildren<PostSkeletonsProps>) {
-  const skeletonsRef = useRef<SkeletonPayloadInput>({});
+const STORAGE_KEY = "skullmaster-enabled";
 
-  const registerSkeleton = useCallback((name: string, html: string) => {
-    skeletonsRef.current[name] = { component: name, html };
+export function SkullMaster({
+  children,
+  port,
+}: PropsWithChildren<PostSkeletonsProps>) {
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY);
+
+    if (stored !== null) {
+      setIsEnabled(stored === "true");
+    }
   }, []);
 
-  const getSkeletons = useCallback(() => {
-    return skeletonsRef.current;
-  }, []);
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, String(isEnabled));
+  }, [isEnabled]);
 
   const value = useMemo(
     () => ({
-      registerSkeleton,
-      getSkeletons,
+      isEnabled,
+      setIsEnabled,
     }),
-    [registerSkeleton, getSkeletons],
+    [isEnabled],
   );
-  const [queryClient] = useState(() => new QueryClient());
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <SkullMasterContext.Provider value={value}>
-        {children}
-        <PostSkeletons isEnabled={isEnabled} port={port ?? DEFAULT_PORT} />
-      </SkullMasterContext.Provider>
-    </QueryClientProvider>
+    <SkullMasterContext.Provider value={value}>
+      {children}
+      <PostSkeletons />
+    </SkullMasterContext.Provider>
   );
 }
 
 export function useSkullMaster() {
   const context = useContext(SkullMasterContext);
+
   if (!context) {
-    throw new Error("useSkullMaster must be used within SkullMaster Provider");
+    throw new Error("useSkullMaster must be used within SkullMaster");
   }
+
   return context;
 }

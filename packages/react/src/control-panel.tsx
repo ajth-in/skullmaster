@@ -1,37 +1,40 @@
-"use client";
-import { log } from "@skullmaster/shared";
-import { useQuery } from "@tanstack/react-query";
+import SkullIcon from "./icons/skull";
+import { Button } from "./ui/button";
+import ShadowRoot from "./shadow-root";
+import { css } from "lit";
 import { useSkullMaster } from "./skullmaster-provider";
-
 export type PostSkeletonsProps = {
   isEnabled: boolean;
   port?: number;
 };
-export default function PostSkeletons({ isEnabled, port }: PostSkeletonsProps) {
-  const { getSkeletons } = useSkullMaster();
-
-  useQuery({
-    queryKey: ["polling-data"],
-    enabled: isEnabled,
-    queryFn: async () => {
-      const response = await fetch(`http://localhost:${port}/skeletons`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(getSkeletons()),
-      });
-
-      if (!response.ok) {
-        log.error("Request failed");
-        throw new Error("Request failed");
-      }
-
-      return response.json();
-    },
-    retry: 3,
-    refetchInterval: 10500,
-  });
-
-  return null;
+export default function PostSkeletons() {
+  const { isEnabled, setIsEnabled } = useSkullMaster();
+  return (
+    <ShadowRoot>
+      <style>
+        {
+          css`
+            .control-panel-button {
+              position: fixed;
+              bottom: 16px;
+              right: 16px;
+              z-index: 9999;
+              /* opacity: 0.5; */
+              transition: all 100ms ease-in-out;
+            }
+          `.cssText
+        }
+      </style>
+      <Button
+        aria-label={isEnabled ? "Disable SkullMaster" : "Enable SkullMaster"}
+        data-selected={isEnabled}
+        onClick={() => {
+          setIsEnabled(!isEnabled);
+        }}
+        className={"control-panel-button"}
+      >
+        <SkullIcon furious={isEnabled} size={27} />
+      </Button>
+    </ShadowRoot>
+  );
 }

@@ -179,6 +179,9 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.100.14
         version: 5.100.14(react@19.2.6)
+      lit:
+        specifier: ^3.3.3
+        version: 3.3.3
       react-aria-components:
         specifier: ^1.18.0
         version: 1.18.0(react-dom@19.2.6)(react@19.2.6)

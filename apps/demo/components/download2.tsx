@@ -1,33 +1,33 @@
-import { Download, Monitor, Smartphone, Tablet } from "lucide-react";
+import { Download, Monitor, Smartphone, Tablet } from "lucide-react"
 
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 interface Download2Props {
-  heading?: string;
-  description?: string;
+  heading?: string
+  description?: string
   platforms?: {
     desktop?: {
-      title: string;
-      subtitle: string;
-      description: string;
-      buttonText: string;
-      url: string;
-    };
+      title: string
+      subtitle: string
+      description: string
+      buttonText: string
+      url: string
+    }
     ios?: {
-      title: string;
-      subtitle: string;
-      description: string;
-      url: string;
-    };
+      title: string
+      subtitle: string
+      description: string
+      url: string
+    }
     android?: {
-      title: string;
-      subtitle: string;
-      description: string;
-      url: string;
-    };
-  };
-  className?: string;
+      title: string
+      subtitle: string
+      description: string
+      url: string
+    }
+  }
+  className?: string
 }
 
 const Download2 = ({
@@ -132,7 +132,7 @@ const Download2 = ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { Download2 };
+export { Download2 }

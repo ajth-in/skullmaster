@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
 interface CaseStudy8Props {
-  className?: string;
+  className?: string
 }
 
 const CaseStudy8 = ({ className }: CaseStudy8Props) => {
@@ -155,7 +155,7 @@ const CaseStudy8 = ({ className }: CaseStudy8Props) => {
         </aside>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { CaseStudy8 };
+export { CaseStudy8 }

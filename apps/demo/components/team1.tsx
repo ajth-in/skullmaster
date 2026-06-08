@@ -1,19 +1,19 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { cn } from "@/lib/utils"
 
 interface TeamMember {
-  id: string;
-  name: string;
-  role: string;
-  avatar: string;
+  id: string
+  name: string
+  role: string
+  avatar: string
 }
 
 interface Team1Props {
-  heading?: string;
-  subheading?: string;
-  description?: string;
-  members?: TeamMember[];
-  className?: string;
+  heading?: string
+  subheading?: string
+  description?: string
+  members?: TeamMember[]
+  className?: string
 }
 
 const Team1 = ({
@@ -88,7 +88,7 @@ const Team1 = ({
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { Team1 };
+export { Team1 }

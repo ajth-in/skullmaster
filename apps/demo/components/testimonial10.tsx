@@ -1,18 +1,18 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { cn } from "@/lib/utils"
 
 interface Testimonial10Props {
-  className?: string;
-  quote?: string;
+  className?: string
+  quote?: string
   author?: {
-    name: string;
-    role: string;
+    name: string
+    role: string
     avatar: {
-      src: string;
-      alt: string;
-      className?: string;
-    };
-  };
+      src: string
+      alt: string
+      className?: string
+    }
+  }
 }
 
 const Testimonial10 = ({
@@ -49,7 +49,7 @@ const Testimonial10 = ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { Testimonial10 };
+export { Testimonial10 }

@@ -66,7 +66,7 @@ interface Pricing3PlansProps {
   plans: Pricing3PlansPlan[]
   className?: string
 }
-
+// eslint-disable-next-line
 interface Pricing4Props extends Pricing3PlansProps {}
 type Props = Partial<Pricing4Props>
 

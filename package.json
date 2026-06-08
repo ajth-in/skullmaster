@@ -1,6 +1,7 @@
 {
   "private": false,
   "scripts": {
+    "prepare": "lefthook install",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -8,10 +9,11 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "eslint": "^8.57.0",
+    "lefthook": "^2.1.9",
     "prettier": "^3.2.5",
-    "turbo": "^2.9.14",
-    "@changesets/cli": "^2.31.0"
+    "turbo": "^2.9.14"
   },
   "packageManager": "pnpm@8.15.6",
   "name": "@skullmaster/monorepo"

@@ -1,3 +1,218 @@
 export default function Download2() {
-    return (<section data-depth="0" className="bg-muted/50 py-32 empty-set__skeleton" data-skullmaster="Download2" role="status" aria-live="polite" aria-busy="true"><div className="container" data-depth="-1"><div className="mb-20 text-center" data-depth="-1"><h2 data-depth="3" className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"><span className="empty-set__text" data-text-node="true" data-depth="3">u7z9zSZX</span></h2><p data-depth="3" className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground"><span className="empty-set__text" data-text-node="true" data-depth="3">BnjBma iL2a ol2~nxqS aZb tRPUb 8EyJX M.L w_w 803VD FvFtz FU80dwcbD Nv TJo ckJXA 0HX.ZCL .w0 UdV2eh4fL dW2fcJUH</span></p></div><div className="mx-auto grid max-w-4xl gap-12 md:grid-cols-3" data-depth="-1"><div className="text-center" data-depth="-1"><div data-depth="4" className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-background shadow-sm"><svg data-depth="5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-monitor h-10 w-10" aria-hidden="true"></svg></div><h3 data-depth="4" className="mb-2 text-xl font-semibold"><span className="empty-set__text" data-text-node="true" data-depth="4">sCLfH7</span></h3><p data-depth="4" className="mb-6 text-sm text-muted-foreground"><span className="empty-set__text" data-text-node="true" data-depth="4">XA8gkCV- TRTZMx~ 7V8V2KQdP</span></p><a data-depth="4" data-slot="button" data-variant="default" data-size="lg" className="group/button inline-flex shrink-0 items-center justify-center rounded-none border border-transparent bg-clip-padding text-xs font-medium whitespace-nowrap transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-1 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 bg-primary text-primary-foreground hover:bg-primary/80 h-9 gap-1.5 px-2.5 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}><svg data-depth="5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-download h-4 w-4" aria-hidden="true"></svg>u7z9zSZX</a></div><div className="text-center" data-depth="-1"><div data-depth="4" className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-background shadow-sm"><svg data-depth="5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-smartphone h-10 w-10" aria-hidden="true"></svg></div><h3 data-depth="4" className="mb-2 text-xl font-semibold"><span className="empty-set__text" data-text-node="true" data-depth="4">bPE</span></h3><p data-depth="4" className="mb-6 text-sm text-muted-foreground"><span className="empty-set__text" data-text-node="true" data-depth="4">ZUGsV.Bz hB5pfL1XBY0a b5. 5Ha FlI_rkW5</span></p><a data-depth="4" className="mx-auto block w-fit" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}><img data-depth="5" className="h-10" data-natural-w="1773" data-natural-h="512" src="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20width%3D%221773%22%0A%20%20%20%20%20%20%20%20height%3D%22512%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%201773%20512%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22531.9%22%20cy%3D%22179.2%22%20r%3D%2240.96%22%20fill%3D%22%239ca3af%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M0%20409.6%20L620.55%20230.4%20L1063.8%20358.4%20L1773%20153.6%20V512%20H0%20Z%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%239ca3af%22%0A%20%20%20%20%20%20%20%20%20%20opacity%3D%220.7%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20" data-image-skeleton="true"></img></a></div><div className="text-center" data-depth="-1"><div data-depth="4" className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-background shadow-sm"><svg data-depth="5" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-tablet h-10 w-10" aria-hidden="true"></svg></div><h3 data-depth="4" className="mb-2 text-xl font-semibold"><span className="empty-set__text" data-text-node="true" data-depth="4">55fBcUy</span></h3><p data-depth="4" className="mb-6 text-sm text-muted-foreground"><span className="empty-set__text" data-text-node="true" data-depth="4">KBsoH1NOV E-R v-yQkWc SpJWTBGmBD</span></p><a data-depth="4" className="mx-auto block w-fit" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}><img data-depth="5" className="h-10" data-natural-w="1770" data-natural-h="512" src="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20width%3D%221770%22%0A%20%20%20%20%20%20%20%20height%3D%22512%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%201770%20512%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22531%22%20cy%3D%22179.2%22%20r%3D%2240.96%22%20fill%3D%22%239ca3af%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M0%20409.6%20L619.5%20230.4%20L1062%20358.4%20L1770%20153.6%20V512%20H0%20Z%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%239ca3af%22%0A%20%20%20%20%20%20%20%20%20%20opacity%3D%220.7%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20" data-image-skeleton="true"></img></a></div></div></div></section>);
+  return (
+    <section
+      data-depth="0"
+      className="empty-set__skeleton bg-muted/50 py-32"
+      data-skullmaster="Download2"
+      role="status"
+      aria-live="polite"
+      aria-busy="true"
+    >
+      <div className="container" data-depth="-1">
+        <div className="mb-20 text-center" data-depth="-1">
+          <h2
+            data-depth="3"
+            className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
+          >
+            <span
+              className="empty-set__text"
+              data-text-node="true"
+              data-depth="3"
+            >
+              u7z9zSZX
+            </span>
+          </h2>
+          <p
+            data-depth="3"
+            className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground"
+          >
+            <span
+              className="empty-set__text"
+              data-text-node="true"
+              data-depth="3"
+            >
+              BnjBma iL2a ol2~nxqS aZb tRPUb 8EyJX M.L w_w 803VD FvFtz FU80dwcbD
+              Nv TJo ckJXA 0HX.ZCL .w0 UdV2eh4fL dW2fcJUH
+            </span>
+          </p>
+        </div>
+        <div
+          className="mx-auto grid max-w-4xl gap-12 md:grid-cols-3"
+          data-depth="-1"
+        >
+          <div className="text-center" data-depth="-1">
+            <div
+              data-depth="4"
+              className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-background shadow-sm"
+            >
+              <svg
+                data-depth="5"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-monitor h-10 w-10"
+                aria-hidden="true"
+              ></svg>
+            </div>
+            <h3 data-depth="4" className="mb-2 text-xl font-semibold">
+              <span
+                className="empty-set__text"
+                data-text-node="true"
+                data-depth="4"
+              >
+                sCLfH7
+              </span>
+            </h3>
+            <p data-depth="4" className="mb-6 text-sm text-muted-foreground">
+              <span
+                className="empty-set__text"
+                data-text-node="true"
+                data-depth="4"
+              >
+                XA8gkCV- TRTZMx~ 7V8V2KQdP
+              </span>
+            </p>
+            <a
+              data-depth="4"
+              data-slot="button"
+              data-variant="default"
+              data-size="lg"
+              className="group/button inline-flex h-9 shrink-0 items-center justify-center gap-1.5 rounded-none border border-transparent bg-primary bg-clip-padding px-2.5 text-xs font-medium whitespace-nowrap text-primary-foreground transition-all outline-none select-none hover:bg-primary/80 focus-visible:border-ring focus-visible:ring-1 focus-visible:ring-ring/50 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 aria-invalid:border-destructive aria-invalid:ring-1 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
+              <svg
+                data-depth="5"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-download h-4 w-4"
+                aria-hidden="true"
+              ></svg>
+              u7z9zSZX
+            </a>
+          </div>
+          <div className="text-center" data-depth="-1">
+            <div
+              data-depth="4"
+              className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-background shadow-sm"
+            >
+              <svg
+                data-depth="5"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-smartphone h-10 w-10"
+                aria-hidden="true"
+              ></svg>
+            </div>
+            <h3 data-depth="4" className="mb-2 text-xl font-semibold">
+              <span
+                className="empty-set__text"
+                data-text-node="true"
+                data-depth="4"
+              >
+                bPE
+              </span>
+            </h3>
+            <p data-depth="4" className="mb-6 text-sm text-muted-foreground">
+              <span
+                className="empty-set__text"
+                data-text-node="true"
+                data-depth="4"
+              >
+                ZUGsV.Bz hB5pfL1XBY0a b5. 5Ha FlI_rkW5
+              </span>
+            </p>
+            <a
+              data-depth="4"
+              className="mx-auto block w-fit"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
+              <img
+                data-depth="5"
+                className="h-10"
+                data-natural-w="1773"
+                data-natural-h="512"
+                src="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20width%3D%221773%22%0A%20%20%20%20%20%20%20%20height%3D%22512%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%201773%20512%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22531.9%22%20cy%3D%22179.2%22%20r%3D%2240.96%22%20fill%3D%22%239ca3af%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M0%20409.6%20L620.55%20230.4%20L1063.8%20358.4%20L1773%20153.6%20V512%20H0%20Z%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%239ca3af%22%0A%20%20%20%20%20%20%20%20%20%20opacity%3D%220.7%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                data-image-skeleton="true"
+              ></img>
+            </a>
+          </div>
+          <div className="text-center" data-depth="-1">
+            <div
+              data-depth="4"
+              className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-background shadow-sm"
+            >
+              <svg
+                data-depth="5"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-tablet h-10 w-10"
+                aria-hidden="true"
+              ></svg>
+            </div>
+            <h3 data-depth="4" className="mb-2 text-xl font-semibold">
+              <span
+                className="empty-set__text"
+                data-text-node="true"
+                data-depth="4"
+              >
+                55fBcUy
+              </span>
+            </h3>
+            <p data-depth="4" className="mb-6 text-sm text-muted-foreground">
+              <span
+                className="empty-set__text"
+                data-text-node="true"
+                data-depth="4"
+              >
+                KBsoH1NOV E-R v-yQkWc SpJWTBGmBD
+              </span>
+            </p>
+            <a
+              data-depth="4"
+              className="mx-auto block w-fit"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
+              <img
+                data-depth="5"
+                className="h-10"
+                data-natural-w="1770"
+                data-natural-h="512"
+                src="data:image/svg+xml,%0A%20%20%20%20%20%20%3Csvg%0A%20%20%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20%20%20width%3D%221770%22%0A%20%20%20%20%20%20%20%20height%3D%22512%22%0A%20%20%20%20%20%20%20%20viewBox%3D%220%200%201770%20512%22%0A%20%20%20%20%20%20%3E%0A%20%20%20%20%20%20%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%22531%22%20cy%3D%22179.2%22%20r%3D%2240.96%22%20fill%3D%22%239ca3af%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%0A%20%20%20%20%20%20%20%20%20%20d%3D%22M0%20409.6%20L619.5%20230.4%20L1062%20358.4%20L1770%20153.6%20V512%20H0%20Z%22%0A%20%20%20%20%20%20%20%20%20%20fill%3D%22%239ca3af%22%0A%20%20%20%20%20%20%20%20%20%20opacity%3D%220.7%22%0A%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%3C%2Fsvg%3E%0A%20%20%20%20"
+                data-image-skeleton="true"
+              ></img>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }

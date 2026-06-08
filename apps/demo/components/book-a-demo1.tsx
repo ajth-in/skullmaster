@@ -1,46 +1,46 @@
-"use client";
+"use client"
 
-import { ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+import { ArrowRight } from "lucide-react"
+import { motion } from "motion/react"
+import React, { useEffect, useRef, useState } from "react"
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { cn } from "@/lib/utils";
+} from "@/components/ui/select"
+import { Textarea } from "@/components/ui/textarea"
+import { cn } from "@/lib/utils"
 
 const InfiniteMovingCarousel = ({ images }: { images: string[] }) => {
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null)
+  const [width, setWidth] = useState(0)
 
   useEffect(() => {
-    if (!carouselRef.current) return;
+    if (!carouselRef.current) return
 
-    setWidth(carouselRef.current.clientWidth);
+    setWidth(carouselRef.current.clientWidth)
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setWidth(entry.target.clientWidth);
+          setWidth(entry.target.clientWidth)
         }
-      });
-    });
-    observer.observe(carouselRef.current);
+      })
+    })
+    observer.observe(carouselRef.current)
 
     return () => {
-      observer.disconnect();
-    };
-  }, []);
+      observer.disconnect()
+    }
+  }, [])
 
   return (
     <div
@@ -70,23 +70,23 @@ const InfiniteMovingCarousel = ({ images }: { images: string[] }) => {
               alt={`Company ${index + 1}`}
               className="size-24 shrink-0 object-contain dark:invert"
             />
-          );
+          )
         })}
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
 const FormGroup = ({ children }: { children: React.ReactNode }) => {
-  return <div className="flex w-full flex-col gap-2">{children}</div>;
-};
+  return <div className="flex w-full flex-col gap-2">{children}</div>
+}
 
 interface BookADemo1Props {
-  badge?: string;
-  heading?: string;
-  benefits?: string[];
-  companies?: string[];
-  className?: string;
+  badge?: string
+  heading?: string
+  benefits?: string[]
+  companies?: string[]
+  className?: string
 }
 
 const BookADemo1 = ({
@@ -132,7 +132,7 @@ const BookADemo1 = ({
                       {benefit}
                     </p>
                   </li>
-                );
+                )
               })}
             </ul>
             <div className="mt-20 hidden w-full overflow-hidden lg:block">
@@ -210,7 +210,7 @@ const BookADemo1 = ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export { BookADemo1 };
+export { BookADemo1 }

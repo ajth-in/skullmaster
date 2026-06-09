@@ -5,16 +5,20 @@ import {
 } from "@skullmaster/shared";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname } from "node:path";
+import { updateCacheRegistry } from "../init/cache-registry";
 
 export class SkeletonCacheDB {
-  private path = `${EMPTY_SET_DEFAULT_DIR}/cache.json`;
-
   private data: SkeletonCacheEntry = {};
+  outDir: string;
+  projectType: string;
 
-  private constructor() {}
+  private constructor(outDir: string, projectType: string) {
+    this.outDir = outDir;
+    this.projectType = projectType;
+  }
 
-  static async create() {
-    const db = new SkeletonCacheDB();
+  static async create(outDir: string, projectType: string) {
+    const db = new SkeletonCacheDB(outDir, projectType);
 
     await db.load();
 
@@ -23,7 +27,7 @@ export class SkeletonCacheDB {
 
   private async load() {
     try {
-      const file = await readFile(this.path, "utf8");
+      const file = await readFile(this.outDir, "utf8");
 
       const parsed = JSON.parse(file);
 
@@ -31,16 +35,11 @@ export class SkeletonCacheDB {
     } catch {
       this.data = {};
 
-      await this.persist();
+      await updateCacheRegistry(
+        { type: "replace", cacheEntry: {} },
+        this.outDir,
+      );
     }
-  }
-
-  private async persist() {
-    await mkdir(dirname(this.path), {
-      recursive: true,
-    });
-
-    await writeFile(this.path, JSON.stringify(this.data, null, 2), "utf8");
   }
 
   get(key: string) {
@@ -52,7 +51,9 @@ export class SkeletonCacheDB {
 
   async set(key: string, value: SkeletonCacheEntry[string]) {
     this.data[key] = value;
-
-    await this.persist();
+    updateCacheRegistry(
+      { type: "update", componentName: key, payload: value },
+      this.outDir,
+    );
   }
 }

@@ -4,7 +4,7 @@ export default async function defaultBone(outDir: string, projectType: string) {
   const isTs = projectType.endsWith("ts");
 
   await writeFile(
-    `${outDir}/DefaultBone.${isTs ? "tsx" : "jsx"}`,
+    `${outDir}/bones/DefaultBone.${isTs ? "tsx" : "jsx"}`,
     `/* eslint-disable */
 /* oxlint-disable */
 /* biome-ignore-all lint */

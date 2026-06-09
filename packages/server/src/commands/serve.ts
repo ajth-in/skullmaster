@@ -8,13 +8,16 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { Project } from "ts-morph";
 import { SkeletonCacheDB } from "../cache";
-import { hashInput } from "../cache/hash";
 import generateTarget from "../generate-target";
 import { generateRegistry } from "../init/registry";
 import { transformInput } from "../transform";
 import { toPascalCase } from "../utils/to-pascal-case";
+import { fnv1a } from "../utils/fnv1a";
+import { Preferences } from "../init/collect-preferences";
 
-export async function serveCommand(port: number) {
+export async function serveCommand(preferences: Preferences, port: number) {
+  const { outDir, project: projectType } = preferences;
+  const isTs = projectType.endsWith("ts");
   const app = new Hono();
 
   app.use(
@@ -26,7 +29,7 @@ export async function serveCommand(port: number) {
     }),
   );
 
-  const db = await SkeletonCacheDB.create();
+  const db = await SkeletonCacheDB.create(outDir, projectType);
 
   app.get("/health", (c) => {
     return c.json({
@@ -41,37 +44,34 @@ export async function serveCommand(port: number) {
 
     const project = new Project();
     for (const [key, value] of Object.entries(result)) {
-      const hash = hashInput(value.html);
-
+      const componentName = toPascalCase(value.component);
+      const transformedHtml = transformInput(value.html);
+      const hash = fnv1a(transformedHtml).toString();
       const cached = db.get(key);
-
       const shouldSkip = cached && cached.hash === hash;
 
       if (shouldSkip) {
-        log.gray(`Processing ${key} - skipped (cached)`);
-      } else {
-        log.success(`Processing ${key} - updated`);
+        continue;
       }
 
-      if (shouldSkip) {
-        // continue;
-      }
-
-      const componentName = toPascalCase(value.component);
       generateTarget({
         project,
-        filePath: `${EMPTY_SET_DEFAULT_DIR}/bones/${componentName}.tsx`,
+        filePath: `${outDir}/bones/${componentName}.${isTs ? "tsx" : "jsx"}`,
         componentName,
-        body: transformInput(value.html),
+        body: transformedHtml,
       });
 
       await db.set(key, {
         component: value.component,
-        html: value.html,
+        html: transformedHtml,
         hash,
       });
     }
-    generateRegistry(project, db.getComponentNames(), true);
+    generateRegistry(
+      { type: "add", components: db.getComponentNames() },
+      outDir,
+      projectType,
+    );
     await project.save();
 
     return c.json({

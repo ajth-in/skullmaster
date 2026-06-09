@@ -6,13 +6,17 @@ export type Preferences = {
   outDir: string;
   project: string;
 };
-export default async function collectPreferences(): Promise<Preferences> {
+export default async function collectPreferences(
+  shouldPrompt: boolean = true,
+): Promise<Preferences> {
   const isAlreadyInitialized = await fileExists("skullmaster.config.json");
   if (isAlreadyInitialized) {
-    const shouldOverride = await confirm({
-      message:
-        "skullmaster.config.json already exists. Do you want to override it?",
-    });
+    const shouldOverride = shouldPrompt
+      ? await confirm({
+          message:
+            "skullmaster.config.json already exists. Do you want to override it?",
+        })
+      : false;
     if (!shouldOverride) {
       return JSON.parse(await readFile("./skullmaster.config.json", "utf-8"));
     }

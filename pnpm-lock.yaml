@@ -267,6 +267,9 @@ importers:
       jsdom:
         specifier: ^29.1.1
         version: 29.1.1
+      lit:
+        specifier: ^3.3.3
+        version: 3.3.3
       lodash:
         specifier: ^4.18.1
         version: 4.18.1

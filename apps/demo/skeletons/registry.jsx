@@ -18,19 +18,15 @@
 import DefaultBone from "./DefaultBone";
 import { lazy } from "react";
 
-const registry: Record<string, any> = {
+const registry = {
     "DefaultBone": lazy(() => import("./DefaultBone"))
 };
 
 
-type SkeletonProps = {
-    name: string;
-};
-
 
 export default function Skeleton({
     name,
-}: SkeletonProps) {
+}) {
     const Component = registry[name];
 
     if (!Component) {

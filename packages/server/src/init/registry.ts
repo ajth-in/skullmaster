@@ -1,79 +1,7 @@
-import { Project } from "ts-morph";
-import { join } from "node:path";
-import { EMPTY_SET_DEFAULT_DIR } from "@skullmaster/shared";
+import { Project, SyntaxKind } from "ts-morph";
 import { writeFile } from "node:fs/promises";
-
-export function generateRegistry(
-  project: Project,
-  components: string[],
-  isTs: boolean,
-) {
-  const registryEntries = components
-    .map((component) => `"${component}": lazy(() => import("./${component}"))`)
-    .join(",\n  ");
-
-  const content = `
-  import {
-    lazy,
-    ${isTs ? "type PropsWithChildren," : ""}
-    ${isTs ? "type LazyExoticComponent," : ""}
-    ${isTs ? "type ComponentType," : ""}
-  } from "react";
-  import { Skeleton as SMSkeleton } from "@skullmaster/react";
-
-  const registry${
-    isTs
-      ? `: Record<
-    string,
-    LazyExoticComponent<ComponentType<any>>
-  >`
-      : ""
-  } = {
-    ${registryEntries}
-  };
-
-  ${
-    isTs
-      ? `
-  type SkeletonProps = PropsWithChildren<{
-    loading: boolean;
-    name: keyof typeof registry;
-  }>;
-  `
-      : ""
-  }
-
-  export default function Skeleton({
-    loading,
-    name,
-    children,
-  }${isTs ? ": SkeletonProps" : ""}) {
-    if (!loading) {
-      return (
-        <SMSkeleton name={name}>
-          {children}
-        </SMSkeleton>
-      );
-    }
-
-    const Component = registry[name];
-
-    if (!Component) {
-      return <>loading...</>;
-    }
-
-    return <Component />;
-  }
-  `;
-
-  const sourceFile = project.createSourceFile(
-    join(EMPTY_SET_DEFAULT_DIR, "bones", `registry.${isTs ? "tsx" : "jsx"}`),
-    content,
-    { overwrite: true },
-  );
-
-  sourceFile.formatText();
-}
+import fileExists from "./is-file-exists";
+import { ensureLazyImport } from "./ensure-lazy-imports";
 
 export async function generateInitialRegistry(
   outDir: string,
@@ -130,4 +58,73 @@ export default function Skeleton({
 `,
     "utf8",
   );
+}
+
+type RegistryOperation =
+  | { type: "init"; components: string[] }
+  | { type: "add"; components: string[] };
+
+export async function generateRegistry(
+  operation: RegistryOperation,
+  outDir: string,
+  projectType: string,
+) {
+  const isTs = projectType.endsWith("ts");
+  const ext = isTs ? "tsx" : "jsx";
+
+  const registryPath = `${outDir}/registry.${ext}`;
+
+  if (!fileExists(registryPath)) {
+    await generateInitialRegistry(outDir, projectType);
+  }
+
+  let project: Project;
+  if (isTs) {
+    project = new Project({
+      tsConfigFilePath: "tsconfig.json",
+    });
+  } else {
+    project = new Project();
+  }
+
+  const sourceFile = project.addSourceFileAtPath(registryPath);
+
+  ensureLazyImport(sourceFile);
+
+  const registry = sourceFile
+    .getVariableDeclaration("registry")
+    ?.getInitializerIfKind(SyntaxKind.ObjectLiteralExpression);
+
+  if (!registry) {
+    throw new Error(
+      "Unable to locate registry object, have you ran skullmaster init??",
+    );
+  }
+
+  const existingComponents = new Set(
+    registry
+      .getProperties()
+      .filter(
+        (property) => property.getKind() === SyntaxKind.PropertyAssignment,
+      )
+      .map((property) => property.asKindOrThrow(SyntaxKind.PropertyAssignment))
+      .map((property) => property.getName().replace(/['"]/g, "")),
+  );
+
+  for (const component of operation.components) {
+    if (existingComponents.has(component)) {
+      continue;
+    }
+
+    registry.addPropertyAssignment({
+      name: `"${component}"`,
+      initializer: `lazy(() => import("./${component}"))`,
+    });
+  }
+
+  sourceFile.formatText();
+
+  await sourceFile.save();
+
+  project.saveSync();
 }

@@ -16,7 +16,10 @@ export const transformText: Rule = {
     }
 
     const isHeading = ctx.parentNode?.nodeName.toLowerCase().startsWith("h");
-    if (!["p", "label"].includes(ctx.parentNode?.nodeName.toLowerCase() ?? "") && !isHeading)
+    if (
+      !["p", "label"].includes(ctx.parentNode?.nodeName.toLowerCase() ?? "") &&
+      !isHeading
+    )
       return {
         ...ctx,
         target: {
@@ -32,7 +35,10 @@ export const transformText: Rule = {
         attributes: [
           createJsxStringAttribute("className", TEXT_CLASSNAME),
           createJsxStringAttribute("data-text-node", "true"),
-          createJsxStringAttribute(DEPTH_ATTRIBUTE, ctx.parentDepth ?? String(ctx.depth)),
+          createJsxStringAttribute(
+            DEPTH_ATTRIBUTE,
+            ctx.parentDepth ?? String(ctx.depth),
+          ),
         ],
         children: [jsxText(text)],
       },

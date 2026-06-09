@@ -18,10 +18,12 @@ cli
 
 cli
   .command("init", "Initialize Ø in your project")
-  .option("--ts", "Initialize with typescript", { default: true })
+  .option("--version <version>", "Initialize with a specific version", {
+    default: "latest",
+  })
 
   .action(async (options) => {
-    await initialize(options.ts);
+    await initialize(options.version);
 
     console.log(options);
   });

@@ -26,7 +26,13 @@ export const addRootSkeletonsAttrs: Rule = {
     const baseAttrs = classNameAttr
       ? existingAttrs.map((attr) =>
           attr === classNameAttr
-            ? { ...attr, value: { ...classNameAttr.value, value: `${classNameAttr.value.value} ${SKELETON_CLASSNAME}` } }
+            ? {
+                ...attr,
+                value: {
+                  ...classNameAttr.value,
+                  value: `${classNameAttr.value.value} ${SKELETON_CLASSNAME}`,
+                },
+              }
             : attr,
         )
       : [

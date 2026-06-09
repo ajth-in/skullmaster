@@ -3,7 +3,3 @@ pre-commit:
   jobs:
     - name: lint
       run: pnpm run lint
-
-    - name: format
-      run: pnpm run format
-      stage_fixed: true

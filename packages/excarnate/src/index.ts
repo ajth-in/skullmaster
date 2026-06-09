@@ -42,7 +42,9 @@ export default function excarnate(
   const { childNodes } = (element as HTMLElement) ?? { childNodes: [] };
 
   const existingChildren = Array.from(childNodes)
-    .map((child) => excarnate(child, depth + 1, element as HTMLElement, depth.toString()))
+    .map((child) =>
+      excarnate(child, depth + 1, element as HTMLElement, depth.toString()),
+    )
     .filter(Boolean) as JsxChild[];
 
   return createJsxElement(tagName, existingChildren, attributes);

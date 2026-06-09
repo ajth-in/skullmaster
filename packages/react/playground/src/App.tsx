@@ -1,9 +1,9 @@
-import { MyButton } from '../../src'
+import { MyButton } from "../../src";
 
 export function App() {
   return (
     <>
       <MyButton type="primary" />
     </>
-  )
+  );
 }

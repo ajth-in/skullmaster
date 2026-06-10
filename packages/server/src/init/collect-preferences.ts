@@ -13,8 +13,7 @@ export default async function collectPreferences(
   if (isAlreadyInitialized) {
     const shouldOverride = shouldPrompt
       ? await confirm({
-          message:
-            "skullmaster.config.json already exists. Do you want to override it?",
+          message: "skullmaster.config.json already exists. Do you want to override it?",
         })
       : false;
     if (!shouldOverride) {
@@ -63,11 +62,7 @@ export default async function collectPreferences(
     outDir,
     project: `${projectType.toString()}-${isTypescript ? "ts" : "js"}`,
   };
-  await writeFile(
-    "./skullmaster.config.json",
-    JSON.stringify(preferences, null, 2),
-    "utf-8",
-  );
+  await writeFile("./skullmaster.config.json", JSON.stringify(preferences, null, 2), "utf-8");
 
   return preferences;
 }

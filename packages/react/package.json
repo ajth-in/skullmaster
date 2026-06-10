@@ -1,24 +1,24 @@
 {
   "name": "@skullmaster/react",
-  "type": "module",
   "version": "0.1.0",
   "description": "A starter for creating a React component library.",
-  "author": "Author Name <author.name@mail.com>",
   "license": "MIT",
+  "author": "Author Name <author.name@mail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ajth-in/skullmaster.git"
   },
-  "publishConfig": {
-    "access": "public"
-  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
   "exports": {
     ".": "./dist/index.js",
     "./package.json": "./package.json"
   },
-  "files": [
-    "dist"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
@@ -28,9 +28,11 @@
     "release": "bumpp",
     "prepublishOnly": "pnpm run build"
   },
-  "peerDependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+  "dependencies": {
+    "@skullmaster/shared": "workspace:*",
+    "@tanstack/react-query": "^5.100.14",
+    "lit": "^3.3.3",
+    "react-aria-components": "^1.18.0"
   },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.8",
@@ -47,10 +49,8 @@
     "vitest": "^4.1.5",
     "vitest-browser-react": "^2.2.0"
   },
-  "dependencies": {
-    "@skullmaster/shared": "workspace:*",
-    "@tanstack/react-query": "^5.100.14",
-    "lit": "^3.3.3",
-    "react-aria-components": "^1.18.0"
+  "peerDependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   }
 }

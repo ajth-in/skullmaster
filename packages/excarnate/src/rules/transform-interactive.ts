@@ -1,8 +1,5 @@
 import * as t from "@babel/types";
-import {
-  createJsxExpressionAttribute,
-  createJsxStringAttribute,
-} from "../helpers/jsx";
+import { createJsxExpressionAttribute, createJsxStringAttribute } from "../helpers/jsx";
 import type { Rule } from "../types";
 
 const INTERACTIVE_TAGS = new Set([

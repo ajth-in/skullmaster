@@ -13,10 +13,7 @@ type CacheOperation =
       payload: z.infer<typeof SkeletonCacheEntrySchema>[string];
     };
 
-export async function updateCacheRegistry(
-  operation: CacheOperation,
-  outDir: string,
-) {
+export async function updateCacheRegistry(operation: CacheOperation, outDir: string) {
   const cacheFilePath = `${outDir}/cache.json`;
   let cacheEntries: z.infer<typeof SkeletonCacheEntrySchema> = {};
   if (!(await fileExists(cacheFilePath))) {
@@ -28,11 +25,7 @@ export async function updateCacheRegistry(
   }
   switch (operation.type) {
     case "replace":
-      await writeFile(
-        cacheFilePath,
-        JSON.stringify(operation.cacheEntry),
-        "utf8",
-      );
+      await writeFile(cacheFilePath, JSON.stringify(operation.cacheEntry), "utf8");
       break;
     case "delete":
       delete cacheEntries[operation.componentName];

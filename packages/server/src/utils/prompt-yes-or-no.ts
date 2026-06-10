@@ -1,10 +1,7 @@
 import readline from "node:readline/promises";
 import { stdin, stdout } from "node:process";
 
-export async function askYesNo(
-  question: string,
-  defaultValue = false,
-): Promise<boolean> {
+export async function askYesNo(question: string, defaultValue = false): Promise<boolean> {
   const rl = readline.createInterface({
     input: stdin,
     output: stdout,

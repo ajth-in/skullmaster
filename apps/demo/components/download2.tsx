@@ -1,33 +1,33 @@
-import { Download, Monitor, Smartphone, Tablet } from "lucide-react"
+import { Download, Monitor, Smartphone, Tablet } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface Download2Props {
-  heading?: string
-  description?: string
+  heading?: string;
+  description?: string;
   platforms?: {
     desktop?: {
-      title: string
-      subtitle: string
-      description: string
-      buttonText: string
-      url: string
-    }
+      title: string;
+      subtitle: string;
+      description: string;
+      buttonText: string;
+      url: string;
+    };
     ios?: {
-      title: string
-      subtitle: string
-      description: string
-      url: string
-    }
+      title: string;
+      subtitle: string;
+      description: string;
+      url: string;
+    };
     android?: {
-      title: string
-      subtitle: string
-      description: string
-      url: string
-    }
-  }
-  className?: string
+      title: string;
+      subtitle: string;
+      description: string;
+      url: string;
+    };
+  };
+  className?: string;
 }
 
 const Download2 = ({
@@ -64,9 +64,7 @@ const Download2 = ({
           <h2 className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             {heading}
           </h2>
-          <p className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
-            {description}
-          </p>
+          <p className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">{description}</p>
         </div>
 
         {/* Download Options - Minimal Grid */}
@@ -76,12 +74,8 @@ const Download2 = ({
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-background shadow-sm">
               <Monitor className="h-10 w-10" />
             </div>
-            <h3 className="mb-2 text-xl font-semibold">
-              {platforms.desktop?.subtitle}
-            </h3>
-            <p className="mb-6 text-sm text-muted-foreground">
-              {platforms.desktop?.description}
-            </p>
+            <h3 className="mb-2 text-xl font-semibold">{platforms.desktop?.subtitle}</h3>
+            <p className="mb-6 text-sm text-muted-foreground">{platforms.desktop?.description}</p>
             <Button size="lg" asChild>
               <a href={platforms.desktop?.url}>
                 <Download className="h-4 w-4" />
@@ -95,12 +89,8 @@ const Download2 = ({
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-background shadow-sm">
               <Smartphone className="h-10 w-10" />
             </div>
-            <h3 className="mb-2 text-xl font-semibold">
-              {platforms.ios?.subtitle}
-            </h3>
-            <p className="mb-6 text-sm text-muted-foreground">
-              {platforms.ios?.description}
-            </p>
+            <h3 className="mb-2 text-xl font-semibold">{platforms.ios?.subtitle}</h3>
+            <p className="mb-6 text-sm text-muted-foreground">{platforms.ios?.description}</p>
             <a href={platforms.ios?.url} className="mx-auto block w-fit">
               <img
                 src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/badges/appstore.png"
@@ -115,12 +105,8 @@ const Download2 = ({
             <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-background shadow-sm">
               <Tablet className="h-10 w-10" />
             </div>
-            <h3 className="mb-2 text-xl font-semibold">
-              {platforms.android?.subtitle}
-            </h3>
-            <p className="mb-6 text-sm text-muted-foreground">
-              {platforms.android?.description}
-            </p>
+            <h3 className="mb-2 text-xl font-semibold">{platforms.android?.subtitle}</h3>
+            <p className="mb-6 text-sm text-muted-foreground">{platforms.android?.description}</p>
             <a href={platforms.android?.url} className="mx-auto block w-fit">
               <img
                 src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/badges/googleplay.png"
@@ -132,7 +118,7 @@ const Download2 = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export { Download2 }
+export { Download2 };

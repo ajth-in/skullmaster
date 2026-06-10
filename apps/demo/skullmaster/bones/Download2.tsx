@@ -14,32 +14,18 @@ export default function Download2() {
             data-depth="3"
             className="mb-6 text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl"
           >
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               u7z9zSZX
             </span>
           </h2>
-          <p
-            data-depth="3"
-            className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground"
-          >
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
-              BnjBma iL2a ol2~nxqS aZb tRPUb 8EyJX M.L w_w 803VD FvFtz FU80dwcbD
-              Nv TJo ckJXA 0HX.ZCL .w0 UdV2eh4fL dW2fcJUH
+          <p data-depth="3" className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
+              BnjBma iL2a ol2~nxqS aZb tRPUb 8EyJX M.L w_w 803VD FvFtz FU80dwcbD Nv TJo ckJXA
+              0HX.ZCL .w0 UdV2eh4fL dW2fcJUH
             </span>
           </p>
         </div>
-        <div
-          className="mx-auto grid max-w-4xl gap-12 md:grid-cols-3"
-          data-depth="-1"
-        >
+        <div className="mx-auto grid max-w-4xl gap-12 md:grid-cols-3" data-depth="-1">
           <div className="text-center" data-depth="-1">
             <div
               data-depth="4"
@@ -60,20 +46,12 @@ export default function Download2() {
               ></svg>
             </div>
             <h3 data-depth="4" className="mb-2 text-xl font-semibold">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 sCLfH7
               </span>
             </h3>
             <p data-depth="4" className="mb-6 text-sm text-muted-foreground">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 XA8gkCV- TRTZMx~ 7V8V2KQdP
               </span>
             </p>
@@ -123,20 +101,12 @@ export default function Download2() {
               ></svg>
             </div>
             <h3 data-depth="4" className="mb-2 text-xl font-semibold">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 bPE
               </span>
             </h3>
             <p data-depth="4" className="mb-6 text-sm text-muted-foreground">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 ZUGsV.Bz hB5pfL1XBY0a b5. 5Ha FlI_rkW5
               </span>
             </p>
@@ -177,20 +147,12 @@ export default function Download2() {
               ></svg>
             </div>
             <h3 data-depth="4" className="mb-2 text-xl font-semibold">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 55fBcUy
               </span>
             </h3>
             <p data-depth="4" className="mb-6 text-sm text-muted-foreground">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 KBsoH1NOV E-R v-yQkWc SpJWTBGmBD
               </span>
             </p>
@@ -214,5 +176,5 @@ export default function Download2() {
         </div>
       </div>
     </section>
-  )
+  );
 }

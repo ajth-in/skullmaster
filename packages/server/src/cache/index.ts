@@ -35,10 +35,7 @@ export class SkeletonCacheDB {
     } catch {
       this.data = {};
 
-      await updateCacheRegistry(
-        { type: "replace", cacheEntry: {} },
-        this.outDir,
-      );
+      await updateCacheRegistry({ type: "replace", cacheEntry: {} }, this.outDir);
     }
   }
 
@@ -51,9 +48,6 @@ export class SkeletonCacheDB {
 
   async set(key: string, value: SkeletonCacheEntry[string]) {
     this.data[key] = value;
-    updateCacheRegistry(
-      { type: "update", componentName: key, payload: value },
-      this.outDir,
-    );
+    updateCacheRegistry({ type: "update", componentName: key, payload: value }, this.outDir);
   }
 }

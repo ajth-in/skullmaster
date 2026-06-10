@@ -1,10 +1,7 @@
 import * as t from "@babel/types";
 import type { JsxChild } from "../types";
 
-export function createJsxStringAttribute(
-  name: string,
-  value: string,
-): t.JSXAttribute {
+export function createJsxStringAttribute(name: string, value: string): t.JSXAttribute {
   return t.jsxAttribute(t.jsxIdentifier(name), t.stringLiteral(value));
 }
 
@@ -12,10 +9,7 @@ export function createJsxExpressionAttribute(
   name: string,
   expression: t.Expression,
 ): t.JSXAttribute {
-  return t.jsxAttribute(
-    t.jsxIdentifier(name),
-    t.jsxExpressionContainer(expression),
-  );
+  return t.jsxAttribute(t.jsxIdentifier(name), t.jsxExpressionContainer(expression));
 }
 
 export function findJsxAttribute(
@@ -24,9 +18,7 @@ export function findJsxAttribute(
 ): t.JSXAttribute | undefined {
   return attributes.find(
     (attr): attr is t.JSXAttribute =>
-      t.isJSXAttribute(attr) &&
-      t.isJSXIdentifier(attr.name) &&
-      attr.name.name === name,
+      t.isJSXAttribute(attr) && t.isJSXIdentifier(attr.name) && attr.name.name === name,
   );
 }
 

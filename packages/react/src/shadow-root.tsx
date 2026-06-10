@@ -1,9 +1,4 @@
-import {
-  useRef,
-  useState,
-  useLayoutEffect,
-  type PropsWithChildren,
-} from "react";
+import { useRef, useState, useLayoutEffect, type PropsWithChildren } from "react";
 import { createPortal } from "react-dom";
 
 export default function ShadowRoot({ children }: PropsWithChildren) {
@@ -16,7 +11,5 @@ export default function ShadowRoot({ children }: PropsWithChildren) {
     }
   }, [shadowRoot]);
 
-  return (
-    <div ref={hostRef}>{shadowRoot && createPortal(children, shadowRoot)}</div>
-  );
+  return <div ref={hostRef}>{shadowRoot && createPortal(children, shadowRoot)}</div>;
 }

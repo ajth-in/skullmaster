@@ -8,26 +8,296 @@
  * Changes may be overwritten on the next generation.
  */
 export default function Projects() {
-    return (<section data-depth="0" className="py-32 empty-set__skeleton" data-skullmaster="Projects" role="status" aria-live="polite" aria-busy="true"><div className="container" data-depth="-1"><h1 data-depth="2" className="text-7xl leading-tight uppercase"><span className="empty-set__text" data-text-node="true" data-depth="2">Go72BTHe</span></h1><div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2" data-depth="-1"><div data-depth="3" className="group overflow-hidden rounded-lg border border-border bg-background" style={{
-            opacity: "1",
-            transform: "none"
-          }}><a data-depth="4" className="block overflow-hidden" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}><img data-depth="5" className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" data-natural-w="1200" data-natural-h="686" src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%221200%22%0A%20%20%20%20%20%20height%3D%22686%22%0A%20%20%20%20%20%20viewBox%3D%220%200%201200%20686%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20" data-image-skeleton="true"></img></a><div className="flex items-center justify-between px-5 py-4" data-depth="-1"><div data-depth="-1"><h2 data-depth="6" className="text-lg font-semibold"><span className="empty-set__text" data-text-node="true" data-depth="6">JXZZE_ t1Re1BMo ~6Xs9EvK</span></h2><p data-depth="6" className="text-muted-foreground"><span className="empty-set__text" data-text-node="true" data-depth="6">4.Zs.aTtn1VR</span></p></div><div data-depth="5" className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold">KPwq</div></div></div><div data-depth="3" className="group overflow-hidden rounded-lg border border-border bg-background" style={{
-            opacity: "1",
-            transform: "none"
-          }}><a data-depth="4" className="block overflow-hidden" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}><img data-depth="5" className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" data-natural-w="1200" data-natural-h="686" src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%221200%22%0A%20%20%20%20%20%20height%3D%22686%22%0A%20%20%20%20%20%20viewBox%3D%220%200%201200%20686%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20" data-image-skeleton="true"></img></a><div className="flex items-center justify-between px-5 py-4" data-depth="-1"><div data-depth="-1"><h2 data-depth="6" className="text-lg font-semibold"><span className="empty-set__text" data-text-node="true" data-depth="6">fF_vX5n6 SJF5C 93FdNI</span></h2><p data-depth="6" className="text-muted-foreground"><span className="empty-set__text" data-text-node="true" data-depth="6">sUd38 _.EpKt</span></p></div><div data-depth="5" className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold">KPwq</div></div></div><div data-depth="3" className="group overflow-hidden rounded-lg border border-border bg-background" style={{
-            opacity: "1",
-            transform: "none"
-          }}><a data-depth="4" className="block overflow-hidden" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}><img data-depth="5" className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" data-natural-w="1200" data-natural-h="904" src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%221200%22%0A%20%20%20%20%20%20height%3D%22904%22%0A%20%20%20%20%20%20viewBox%3D%220%200%201200%20904%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20" data-image-skeleton="true"></img></a><div className="flex items-center justify-between px-5 py-4" data-depth="-1"><div data-depth="-1"><h2 data-depth="6" className="text-lg font-semibold"><span className="empty-set__text" data-text-node="true" data-depth="6">5qszoJ2HL. QNgA Xd06w5.</span></h2><p data-depth="6" className="text-muted-foreground"><span className="empty-set__text" data-text-node="true" data-depth="6">XzHtLt6f</span></p></div><div data-depth="5" className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold">KPwq</div></div></div><div data-depth="3" className="group overflow-hidden rounded-lg border border-border bg-background" style={{
-            opacity: "1",
-            transform: "none"
-          }}><a data-depth="4" className="block overflow-hidden" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}><img data-depth="5" className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" data-natural-w="5472" data-natural-h="3648" src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%225472%22%0A%20%20%20%20%20%20height%3D%223648%22%0A%20%20%20%20%20%20viewBox%3D%220%200%205472%203648%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20" data-image-skeleton="true"></img></a><div className="flex items-center justify-between px-5 py-4" data-depth="-1"><div data-depth="-1"><h2 data-depth="6" className="text-lg font-semibold"><span className="empty-set__text" data-text-node="true" data-depth="6">mdGY- iJuIKIKb 9.J~i</span></h2><p data-depth="6" className="text-muted-foreground"><span className="empty-set__text" data-text-node="true" data-depth="6">BfONe~Q whv~QD</span></p></div><div data-depth="5" className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold">KPwq</div></div></div><div data-depth="3" className="group overflow-hidden rounded-lg border border-border bg-background" style={{
-            opacity: "1",
-            transform: "none"
-          }}><a data-depth="4" className="block overflow-hidden" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}><img data-depth="5" className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" data-natural-w="1200" data-natural-h="673" src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%221200%22%0A%20%20%20%20%20%20height%3D%22673%22%0A%20%20%20%20%20%20viewBox%3D%220%200%201200%20673%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20" data-image-skeleton="true"></img></a><div className="flex items-center justify-between px-5 py-4" data-depth="-1"><div data-depth="-1"><h2 data-depth="6" className="text-lg font-semibold"><span className="empty-set__text" data-text-node="true" data-depth="6">dcYB8u Ejj75hJ4 Ycn</span></h2><p data-depth="6" className="text-muted-foreground"><span className="empty-set__text" data-text-node="true" data-depth="6">-a14htbp8J8</span></p></div><div data-depth="5" className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold">KPwq</div></div></div><div data-depth="3" className="group overflow-hidden rounded-lg border border-border bg-background" style={{
-            opacity: "1",
-            transform: "none"
-          }}><a data-depth="4" className="block overflow-hidden" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}><img data-depth="5" className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105" data-natural-w="1200" data-natural-h="992" src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%221200%22%0A%20%20%20%20%20%20height%3D%22992%22%0A%20%20%20%20%20%20viewBox%3D%220%200%201200%20992%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20" data-image-skeleton="true"></img></a><div className="flex items-center justify-between px-5 py-4" data-depth="-1"><div data-depth="-1"><h2 data-depth="6" className="text-lg font-semibold"><span className="empty-set__text" data-text-node="true" data-depth="6">0zzbwHjbwG oB .hYFXm</span></h2><p data-depth="6" className="text-muted-foreground"><span className="empty-set__text" data-text-node="true" data-depth="6">vYNc_WW-jsK r1.RLJ</span></p></div><div data-depth="5" className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold">KPwq</div></div></div></div></div></section>);
+  return (
+    <section
+      data-depth="0"
+      className="py-32 empty-set__skeleton"
+      data-skullmaster="Projects"
+      role="status"
+      aria-live="polite"
+      aria-busy="true"
+    >
+      <div className="container" data-depth="-1">
+        <h1 data-depth="2" className="text-7xl leading-tight uppercase">
+          <span className="empty-set__text" data-text-node="true" data-depth="2">
+            Go72BTHe
+          </span>
+        </h1>
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2" data-depth="-1">
+          <div
+            data-depth="3"
+            className="group overflow-hidden rounded-lg border border-border bg-background"
+            style={{
+              opacity: "1",
+              transform: "none",
+            }}
+          >
+            <a
+              data-depth="4"
+              className="block overflow-hidden"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
+              <img
+                data-depth="5"
+                className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                data-natural-w="1200"
+                data-natural-h="686"
+                src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%221200%22%0A%20%20%20%20%20%20height%3D%22686%22%0A%20%20%20%20%20%20viewBox%3D%220%200%201200%20686%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20"
+                data-image-skeleton="true"
+              ></img>
+            </a>
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
+              <div data-depth="-1">
+                <h2 data-depth="6" className="text-lg font-semibold">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    JXZZE_ t1Re1BMo ~6Xs9EvK
+                  </span>
+                </h2>
+                <p data-depth="6" className="text-muted-foreground">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    4.Zs.aTtn1VR
+                  </span>
+                </p>
+              </div>
+              <div
+                data-depth="5"
+                className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold"
+              >
+                KPwq
+              </div>
+            </div>
+          </div>
+          <div
+            data-depth="3"
+            className="group overflow-hidden rounded-lg border border-border bg-background"
+            style={{
+              opacity: "1",
+              transform: "none",
+            }}
+          >
+            <a
+              data-depth="4"
+              className="block overflow-hidden"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
+              <img
+                data-depth="5"
+                className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                data-natural-w="1200"
+                data-natural-h="686"
+                src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%221200%22%0A%20%20%20%20%20%20height%3D%22686%22%0A%20%20%20%20%20%20viewBox%3D%220%200%201200%20686%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20"
+                data-image-skeleton="true"
+              ></img>
+            </a>
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
+              <div data-depth="-1">
+                <h2 data-depth="6" className="text-lg font-semibold">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    fF_vX5n6 SJF5C 93FdNI
+                  </span>
+                </h2>
+                <p data-depth="6" className="text-muted-foreground">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    sUd38 _.EpKt
+                  </span>
+                </p>
+              </div>
+              <div
+                data-depth="5"
+                className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold"
+              >
+                KPwq
+              </div>
+            </div>
+          </div>
+          <div
+            data-depth="3"
+            className="group overflow-hidden rounded-lg border border-border bg-background"
+            style={{
+              opacity: "1",
+              transform: "none",
+            }}
+          >
+            <a
+              data-depth="4"
+              className="block overflow-hidden"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
+              <img
+                data-depth="5"
+                className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                data-natural-w="1200"
+                data-natural-h="904"
+                src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%221200%22%0A%20%20%20%20%20%20height%3D%22904%22%0A%20%20%20%20%20%20viewBox%3D%220%200%201200%20904%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20"
+                data-image-skeleton="true"
+              ></img>
+            </a>
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
+              <div data-depth="-1">
+                <h2 data-depth="6" className="text-lg font-semibold">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    5qszoJ2HL. QNgA Xd06w5.
+                  </span>
+                </h2>
+                <p data-depth="6" className="text-muted-foreground">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    XzHtLt6f
+                  </span>
+                </p>
+              </div>
+              <div
+                data-depth="5"
+                className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold"
+              >
+                KPwq
+              </div>
+            </div>
+          </div>
+          <div
+            data-depth="3"
+            className="group overflow-hidden rounded-lg border border-border bg-background"
+            style={{
+              opacity: "1",
+              transform: "none",
+            }}
+          >
+            <a
+              data-depth="4"
+              className="block overflow-hidden"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
+              <img
+                data-depth="5"
+                className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                data-natural-w="5472"
+                data-natural-h="3648"
+                src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%225472%22%0A%20%20%20%20%20%20height%3D%223648%22%0A%20%20%20%20%20%20viewBox%3D%220%200%205472%203648%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20"
+                data-image-skeleton="true"
+              ></img>
+            </a>
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
+              <div data-depth="-1">
+                <h2 data-depth="6" className="text-lg font-semibold">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    mdGY- iJuIKIKb 9.J~i
+                  </span>
+                </h2>
+                <p data-depth="6" className="text-muted-foreground">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    BfONe~Q whv~QD
+                  </span>
+                </p>
+              </div>
+              <div
+                data-depth="5"
+                className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold"
+              >
+                KPwq
+              </div>
+            </div>
+          </div>
+          <div
+            data-depth="3"
+            className="group overflow-hidden rounded-lg border border-border bg-background"
+            style={{
+              opacity: "1",
+              transform: "none",
+            }}
+          >
+            <a
+              data-depth="4"
+              className="block overflow-hidden"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
+              <img
+                data-depth="5"
+                className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                data-natural-w="1200"
+                data-natural-h="673"
+                src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%221200%22%0A%20%20%20%20%20%20height%3D%22673%22%0A%20%20%20%20%20%20viewBox%3D%220%200%201200%20673%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20"
+                data-image-skeleton="true"
+              ></img>
+            </a>
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
+              <div data-depth="-1">
+                <h2 data-depth="6" className="text-lg font-semibold">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    dcYB8u Ejj75hJ4 Ycn
+                  </span>
+                </h2>
+                <p data-depth="6" className="text-muted-foreground">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    -a14htbp8J8
+                  </span>
+                </p>
+              </div>
+              <div
+                data-depth="5"
+                className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold"
+              >
+                KPwq
+              </div>
+            </div>
+          </div>
+          <div
+            data-depth="3"
+            className="group overflow-hidden rounded-lg border border-border bg-background"
+            style={{
+              opacity: "1",
+              transform: "none",
+            }}
+          >
+            <a
+              data-depth="4"
+              className="block overflow-hidden"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
+              <img
+                data-depth="5"
+                className="h-96 w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
+                data-natural-w="1200"
+                data-natural-h="992"
+                src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%221200%22%0A%20%20%20%20%20%20height%3D%22992%22%0A%20%20%20%20%20%20viewBox%3D%220%200%201200%20992%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%20%20%3ClinearGradient%20id%3D%22shimmer%22%20x1%3D%22-100%25%22%20y1%3D%220%22%20x2%3D%22100%25%22%20y2%3D%220%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2245%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23f3f4f6%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%2255%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23e5e7eb%22%20%2F%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%3CanimateTransform%0A%20%20%20%20%20%20%20%20%20%20%20%20attributeName%3D%22gradientTransform%22%0A%20%20%20%20%20%20%20%20%20%20%20%20type%3D%22translate%22%0A%20%20%20%20%20%20%20%20%20%20%20%20from%3D%22-1%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20to%3D%221%200%22%0A%20%20%20%20%20%20%20%20%20%20%20%20dur%3D%221.5s%22%0A%20%20%20%20%20%20%20%20%20%20%20%20repeatCount%3D%22indefinite%22%0A%20%20%20%20%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3C%2Fdefs%3E%0A%0A%20%20%20%20%20%20%3Crect%0A%20%20%20%20%20%20%20%20width%3D%22100%25%22%0A%20%20%20%20%20%20%20%20height%3D%22100%25%22%0A%20%20%20%20%20%20%20%20fill%3D%22url(%23shimmer)%22%0A%20%20%20%20%20%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20"
+                data-image-skeleton="true"
+              ></img>
+            </a>
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
+              <div data-depth="-1">
+                <h2 data-depth="6" className="text-lg font-semibold">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    0zzbwHjbwG oB .hYFXm
+                  </span>
+                </h2>
+                <p data-depth="6" className="text-muted-foreground">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
+                    vYNc_WW-jsK r1.RLJ
+                  </span>
+                </p>
+              </div>
+              <div
+                data-depth="5"
+                className="rounded-2xl border border-border px-5 py-2 text-sm font-semibold"
+              >
+                KPwq
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 /* prettier-ignore-end */
-

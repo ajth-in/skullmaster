@@ -1,9 +1,5 @@
 import { serve } from "@hono/node-server";
-import {
-  EMPTY_SET_DEFAULT_DIR,
-  log,
-  SkeletonPayloadInputSchema,
-} from "@skullmaster/shared";
+import { EMPTY_SET_DEFAULT_DIR, log, SkeletonPayloadInputSchema } from "@skullmaster/shared";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { Project } from "ts-morph";
@@ -67,11 +63,7 @@ export async function serveCommand(preferences: Preferences, port: number) {
         hash,
       });
     }
-    generateRegistry(
-      { type: "add", components: db.getComponentNames() },
-      outDir,
-      projectType,
-    );
+    generateRegistry({ type: "add", components: db.getComponentNames() }, outDir, projectType);
     await project.save();
 
     return c.json({

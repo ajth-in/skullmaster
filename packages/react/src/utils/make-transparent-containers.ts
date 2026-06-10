@@ -26,21 +26,14 @@ function hasVisibleBackgroundOrBorder(element: HTMLElement): boolean {
     const borderStyle = style[`border${side}Style`];
     const color = style[`border${side}Color`];
 
-    return (
-      width > 0 &&
-      borderStyle !== "none" &&
-      borderStyle !== "hidden" &&
-      isVisibleColor(color)
-    );
+    return width > 0 && borderStyle !== "none" && borderStyle !== "hidden" && isVisibleColor(color);
   });
 
   return hasBackground || hasFullBorder;
 }
 
 export function markTransparentContainers(root: HTMLElement): void {
-  const containers = root.querySelectorAll<HTMLElement>(
-    Array.from(CONTAINER_TAGS).join(","),
-  );
+  const containers = root.querySelectorAll<HTMLElement>(Array.from(CONTAINER_TAGS).join(","));
   for (const el of containers) {
     if (!hasVisibleBackgroundOrBorder(el)) {
       el.setAttribute("data-depth", "-1");

@@ -1,10 +1,5 @@
-import {
-  lazy,
-  type PropsWithChildren,
-  type LazyExoticComponent,
-  type ComponentType,
-} from "react"
-import { Skeleton as SMSkeleton } from "@skullmaster/react"
+import { lazy, type PropsWithChildren, type LazyExoticComponent, type ComponentType } from "react";
+import { Skeleton as SMSkeleton } from "@skullmaster/react";
 // eslint-disable-next-line
 const registry: Record<string, LazyExoticComponent<ComponentType<any>>> = {
   Projects: lazy(() => import("./Projects")),
@@ -14,12 +9,12 @@ const registry: Record<string, LazyExoticComponent<ComponentType<any>>> = {
   Download2: lazy(() => import("./Download2")),
   Team1: lazy(() => import("./Team1")),
   BookADemo1: lazy(() => import("./BookADemo1")),
-}
+};
 
 type SkeletonProps = PropsWithChildren<{
-  loading: boolean
-  name: keyof typeof registry
-}>
+  loading: boolean;
+  name: keyof typeof registry;
+}>;
 
 export default function Skeleton({ loading, name, children }: SkeletonProps) {
   if (!loading) {
@@ -28,14 +23,14 @@ export default function Skeleton({ loading, name, children }: SkeletonProps) {
         {/* @ts-expect-error sample */}
         {children}
       </SMSkeleton>
-    )
+    );
   }
 
-  const Component = registry[name]
+  const Component = registry[name];
 
   if (!Component) {
-    return <>loading...</>
+    return <>loading...</>;
   }
 
-  return <Component />
+  return <Component />;
 }

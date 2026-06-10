@@ -40,9 +40,7 @@ export async function postSkeleton(
     };
   } catch (error) {
     const message =
-      error instanceof Error
-        ? error.message
-        : "Failed to generate skeleton from supplied markup";
+      error instanceof Error ? error.message : "Failed to generate skeleton from supplied markup";
 
     throw new Error(message);
   }

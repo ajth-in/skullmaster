@@ -1,10 +1,7 @@
 import { TargetElementMismatchError } from "../exceptions/target-mismatch";
 import { atDepth } from "../matchers";
 import type { Rule } from "../types";
-import {
-  createJsxStringAttribute,
-  findStringJsxAttribute,
-} from "../helpers/jsx";
+import { createJsxStringAttribute, findStringJsxAttribute } from "../helpers/jsx";
 import { SKELETON_CLASSNAME } from "../constants";
 
 export const addRootSkeletonsAttrs: Rule = {
@@ -34,10 +31,7 @@ export const addRootSkeletonsAttrs: Rule = {
               }
             : attr,
         )
-      : [
-          ...existingAttrs,
-          createJsxStringAttribute("className", SKELETON_CLASSNAME),
-        ];
+      : [...existingAttrs, createJsxStringAttribute("className", SKELETON_CLASSNAME)];
 
     const attributes = [
       ...baseAttrs,

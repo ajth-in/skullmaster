@@ -3,15 +3,12 @@
   "version": "0.1.0",
   "private": false,
   "description": "A simple example library built by tsdown",
-  "bin": {
-    "skullmaster": "./dist/cli.mjs"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ajth-in/skullmaster.git"
   },
-  "publishConfig": {
-    "access": "public"
+  "bin": {
+    "skullmaster": "./dist/cli.mjs"
   },
   "files": [
     "dist"
@@ -21,6 +18,9 @@
     ".": "./dist/index.mjs",
     "./cli": "./dist/cli.mjs",
     "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "tsdown",

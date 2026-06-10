@@ -28,27 +28,13 @@
   --tint-700: oklch(from var(--tint) var(--lightness-700) var(--chroma-700) h);
   --tint-800: oklch(from var(--tint) var(--lightness-800) var(--chroma-800) h);
   --tint-900: oklch(from var(--tint) var(--lightness-900) var(--chroma-900) h);
-  --tint-1000: oklch(
-    from var(--tint) var(--lightness-1000) var(--chroma-1000) h
-  );
-  --tint-1100: oklch(
-    from var(--tint) var(--lightness-1100) var(--chroma-1100) h
-  );
-  --tint-1200: oklch(
-    from var(--tint) var(--lightness-1200) var(--chroma-1200) h
-  );
-  --tint-1300: oklch(
-    from var(--tint) var(--lightness-1300) var(--chroma-1300) h
-  );
-  --tint-1400: oklch(
-    from var(--tint) var(--lightness-1400) var(--chroma-1400) h
-  );
-  --tint-1500: oklch(
-    from var(--tint) var(--lightness-1500) var(--chroma-1500) h
-  );
-  --tint-1600: oklch(
-    from var(--tint) var(--lightness-1600) var(--chroma-1600) h
-  );
+  --tint-1000: oklch(from var(--tint) var(--lightness-1000) var(--chroma-1000) h);
+  --tint-1100: oklch(from var(--tint) var(--lightness-1100) var(--chroma-1100) h);
+  --tint-1200: oklch(from var(--tint) var(--lightness-1200) var(--chroma-1200) h);
+  --tint-1300: oklch(from var(--tint) var(--lightness-1300) var(--chroma-1300) h);
+  --tint-1400: oklch(from var(--tint) var(--lightness-1400) var(--chroma-1400) h);
+  --tint-1500: oklch(from var(--tint) var(--lightness-1500) var(--chroma-1500) h);
+  --tint-1600: oklch(from var(--tint) var(--lightness-1600) var(--chroma-1600) h);
 
   /* gray scale */
   --gray-100: oklch(from var(--gray) var(--lightness-100) c h);
@@ -167,9 +153,7 @@
    * to ensure contrast with the foreground color */
   --highlight-background: oklch(from var(--tint) 55% c h);
   --highlight-background-pressed: oklch(from var(--tint) 50% c h);
-  --highlight-background-invalid: oklch(
-    from var(--red) var(--lightness-900) c h
-  );
+  --highlight-background-invalid: oklch(from var(--red) var(--lightness-900) c h);
   --highlight-foreground: white;
   --highlight-overlay: oklch(from var(--tint-1000) l c h / 15%);
   --invalid-color: oklch(from var(--red) var(--lightness-1000) c h);
@@ -242,36 +226,23 @@
   /* utility that creates a button-like element, which can be optionally selected */
   .button-base {
     --button-color: var(--tint);
-    --button-background: oklch(
-      from var(--button-color) var(--lightness-100) var(--chroma-100) h
-    );
-    --button-gradient: oklch(
-      from var(--button-color) var(--lightness-200) var(--chroma-200) h
-    );
-    --button-border: oklch(
-      from var(--button-color) var(--lightness-300) var(--chroma-300) h
-    );
+    --button-background: oklch(from var(--button-color) var(--lightness-100) var(--chroma-100) h);
+    --button-gradient: oklch(from var(--button-color) var(--lightness-200) var(--chroma-200) h);
+    --button-border: oklch(from var(--button-color) var(--lightness-300) var(--chroma-300) h);
     --button-highlight: rgb(255 255 255 / 0.8);
-    --button-shadow: oklch(
-      from var(--button-color) var(--lightness-400) var(--chroma-400) h
-    );
+    --button-shadow: oklch(from var(--button-color) var(--lightness-400) var(--chroma-400) h);
     --button-border-size: 1px;
-    --button-text: oklch(
-      from var(--button-color) var(--lightness-1400) var(--chroma-1400) h
-    );
+    --button-text: oklch(from var(--button-color) var(--lightness-1400) var(--chroma-1400) h);
     --button-gradient-size: 8px;
 
     background: var(--button-background);
     color: var(--button-text);
     box-shadow:
       inset 0 -1px 0 var(--button-shadow),
-      /* bottom shadow */ inset 0 0 0 var(--button-border-size)
-        var(--button-border),
-      /* border */ inset 0px calc(var(--button-border-size) + 1px) 0px
-        var(--button-highlight),
-      /* top specular highlight */ inset 0px
-        calc(-1 * var(--button-gradient-size)) var(--button-gradient-size) -2px
-        var(--button-gradient); /* inner gradient */
+      /* bottom shadow */ inset 0 0 0 var(--button-border-size) var(--button-border),
+      /* border */ inset 0px calc(var(--button-border-size) + 1px) 0px var(--button-highlight),
+      /* top specular highlight */ inset 0px calc(-1 * var(--button-gradient-size))
+        var(--button-gradient-size) -2px var(--button-gradient); /* inner gradient */
     outline: none;
     transition-property: background, color, scale, box-shadow;
     transition-duration: 200ms;
@@ -280,24 +251,19 @@
     -webkit-tap-highlight-color: transparent;
 
     @media (prefers-color-scheme: dark) {
-      --button-shadow: oklch(
-        from var(--button-color) var(--lightness-200) var(--chroma-200) h
-      );
+      --button-shadow: oklch(from var(--button-color) var(--lightness-200) var(--chroma-200) h);
       --button-highlight: rgb(255 255 255 / 0.15);
       box-shadow:
         inset 0 var(--button-border-size) 0 var(--button-highlight),
-        /* top specular highlight */ inset 0
-          calc(-1 * var(--button-border-size)) 0 var(--button-shadow),
-        /* bottom shadow */ inset 0 0 0 var(--button-border-size)
-          var(--button-border),
-        /* border */ inset 0 var(--button-gradient-size)
-          var(--button-gradient-size) -2px var(--button-gradient); /* inner gradient */
+        /* top specular highlight */ inset 0 calc(-1 * var(--button-border-size)) 0
+          var(--button-shadow),
+        /* bottom shadow */ inset 0 0 0 var(--button-border-size) var(--button-border),
+        /* border */ inset 0 var(--button-gradient-size) var(--button-gradient-size) -2px
+          var(--button-gradient); /* inner gradient */
     }
 
     &:where([data-pressed]) {
-      --button-background: oklch(
-        from var(--button-color) var(--lightness-200) var(--chroma-200) h
-      );
+      --button-background: oklch(from var(--button-color) var(--lightness-200) var(--chroma-200) h);
     }
 
     &:where([data-focus-visible]) {
@@ -333,9 +299,8 @@
         inset 0 -1px 0 var(--button-shadow),
         /* bottom shadow */ inset 0 0 0 1px var(--button-border),
         /* border */ inset 0 2px 0 var(--button-highlight),
-        /* top specular highlight */ inset 0
-          calc(-1 * var(--button-gradient-size)) var(--button-gradient-size)
-          var(--button-gradient); /* inner gradient */
+        /* top specular highlight */ inset 0 calc(-1 * var(--button-gradient-size))
+          var(--button-gradient-size) var(--button-gradient); /* inner gradient */
 
       @media (prefers-color-scheme: dark) {
         --button-highlight: rgb(255 255 255 / 0.4);
@@ -400,9 +365,7 @@
     --indicator-background: oklch(
       from var(--indicator-color) var(--lightness-100) var(--chroma-100) h
     );
-    --indicator-border: oklch(
-      from var(--indicator-color) var(--lightness-800) var(--chroma-800) h
-    );
+    --indicator-border: oklch(from var(--indicator-color) var(--lightness-800) var(--chroma-800) h);
     --indicator-drop-shadow: 0 0;
 
     background: var(--indicator-background);
@@ -494,8 +457,7 @@
     background: var(--inset-background);
     box-shadow:
       inset 0 0 0 var(--inset-border-size) var(--inset-border),
-      /* border */ inset 0 var(--inset-shadow-offset) var(--inset-shadow-size)
-        rgb(0 0 0 / 0.15),
+      /* border */ inset 0 var(--inset-shadow-offset) var(--inset-shadow-size) rgb(0 0 0 / 0.15),
       /* inner shadow */ 0 1px 0 var(--gray-50); /* bottom specular highlight */
     transition: box-shadow 200ms;
     forced-color-adjust: none;
@@ -507,8 +469,7 @@
       --inset-shadow-size: 6px;
       box-shadow:
         inset 0 calc(-1 * var(--inset-border-size)) 0 var(--inset-highlight),
-        /* bottom specular highlight */ inset 0 0 0 var(--inset-border-size)
-          var(--inset-border),
+        /* bottom specular highlight */ inset 0 0 0 var(--inset-border-size) var(--inset-border),
         /* border */ inset 0 1px var(--inset-shadow-size) rgb(0 0 0); /* inner shadow */
     }
 

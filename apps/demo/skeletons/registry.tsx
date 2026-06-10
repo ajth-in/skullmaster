@@ -13,29 +13,29 @@
  *   pnpm skeleton prune
  */
 
-import DefaultBone from "./DefaultBone"
-import { lazy } from "react"
+import DefaultBone from "./DefaultBone";
+import { lazy } from "react";
 
 const registry: Record<string, any> = {
-    Projects: lazy(() => import("./bones/Projects")),
-    Pricing: lazy(() => import("./bones/Pricing")),
-    Contact7: lazy(() => import("./bones/Contact7")),
-    Testimonial10: lazy(() => import("./bones/Testimonial10")),
-    Download2: lazy(() => import("./bones/Download2")),
-    Team1: lazy(() => import("./bones/Team1")),
-    BookADemo1: lazy(() => import("./bones/BookADemo1")),
-}
+  Projects: lazy(() => import("./bones/Projects")),
+  Pricing: lazy(() => import("./bones/Pricing")),
+  Contact7: lazy(() => import("./bones/Contact7")),
+  Testimonial10: lazy(() => import("./bones/Testimonial10")),
+  Download2: lazy(() => import("./bones/Download2")),
+  Team1: lazy(() => import("./bones/Team1")),
+  BookADemo1: lazy(() => import("./bones/BookADemo1")),
+};
 
 type SkeletonProps = {
-    name: string
-}
+  name: string;
+};
 
 export default function Skeleton({ name }: SkeletonProps) {
-    const Component = registry[name]
+  const Component = registry[name];
 
-    if (!Component) {
-        return <DefaultBone />
-    }
+  if (!Component) {
+    return <DefaultBone />;
+  }
 
-    return <Component />
+  return <Component />;
 }

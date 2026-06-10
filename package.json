@@ -1,20 +1,21 @@
 {
+  "name": "@skullmaster/monorepo",
   "private": false,
   "scripts": {
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
     "prepare": "lefthook install",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "typecheck": "turbo run typecheck",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\" --ignore-path .gitignore"
+    "typecheck": "turbo run typecheck"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",
     "eslint": "^8.57.0",
     "lefthook": "^2.1.9",
-    "prettier": "^3.2.5",
+    "oxfmt": "^0.52.0",
     "turbo": "^2.9.14"
   },
-  "packageManager": "pnpm@8.15.6",
-  "name": "@skullmaster/monorepo"
+  "packageManager": "pnpm@8.15.6"
 }

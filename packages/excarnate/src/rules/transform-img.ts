@@ -1,8 +1,5 @@
 import { isJSXIdentifier } from "@babel/types";
-import {
-  createJsxStringAttribute,
-  findStringJsxAttribute,
-} from "../helpers/jsx";
+import { createJsxStringAttribute, findStringJsxAttribute } from "../helpers/jsx";
 import type { Rule } from "../types";
 export const DATA_NAT_H = "data-natural-h";
 export const DATA_NAT_W = "data-natural-w";
@@ -55,14 +52,11 @@ export const transformImg: Rule = {
   id: "transform-img",
 
   match: (ctx) =>
-    ctx.element.nodeType === 1 &&
-    (ctx.element as HTMLElement).tagName.toLowerCase() === "img",
+    ctx.element.nodeType === 1 && (ctx.element as HTMLElement).tagName.toLowerCase() === "img",
 
   transform: (ctx) => {
     if (!ctx.target) {
-      throw new Error(
-        "Target must be defined before transforming an image element.",
-      );
+      throw new Error("Target must be defined before transforming an image element.");
     }
 
     const attrs = ctx.target.attributes ?? [];
@@ -71,22 +65,14 @@ export const transformImg: Rule = {
 
     const naturalHeight = findStringJsxAttribute(attrs, DATA_NAT_H)?.value;
 
-    const placeholderSrc = createSkeletonSrc(
-      naturalWidth?.value,
-      naturalHeight?.value,
-    );
+    const placeholderSrc = createSkeletonSrc(naturalWidth?.value, naturalHeight?.value);
 
     const filteredAttrs = attrs.filter((attr) => {
       const name = isJSXIdentifier(attr.name) ? attr.name.name : undefined;
 
-      return ![
-        "src",
-        "srcSet",
-        "sizes",
-        "loading",
-        "decoding",
-        "fetchPriority",
-      ].includes(name ?? "");
+      return !["src", "srcSet", "sizes", "loading", "decoding", "fetchPriority"].includes(
+        name ?? "",
+      );
     });
 
     const attributes = [

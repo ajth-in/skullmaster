@@ -46,11 +46,7 @@ export default function HoverHighlighter() {
     const getComponentName = (element: HTMLElement) =>
       element.dataset["skullmaster"] ?? "Unknown Component";
 
-    const updateLabel = (
-      componentName: string,
-      state: SkeletonState,
-      error?: string | null,
-    ) => {
+    const updateLabel = (componentName: string, state: SkeletonState, error?: string | null) => {
       switch (state) {
         case "idle":
           label.textContent = componentName;
@@ -70,11 +66,7 @@ export default function HoverHighlighter() {
       }
     };
 
-    const applyState = (
-      state: SkeletonState,
-      componentName?: string,
-      error?: string | null,
-    ) => {
+    const applyState = (state: SkeletonState, componentName?: string, error?: string | null) => {
       currentState = state;
       currentError = error ?? null;
 
@@ -132,9 +124,7 @@ export default function HoverHighlighter() {
 
       if (
         currentSkeleton === skeleton &&
-        (currentState === "loading" ||
-          currentState === "success" ||
-          currentState === "error")
+        (currentState === "loading" || currentState === "success" || currentState === "error")
       ) {
         return;
       }
@@ -174,8 +164,7 @@ export default function HoverHighlighter() {
 
         applyState("success", componentName);
       } catch (error) {
-        const message =
-          error instanceof Error ? error.message : "Unknown error occurred";
+        const message = error instanceof Error ? error.message : "Unknown error occurred";
 
         applyState("error", componentName, message);
 

@@ -10,18 +10,11 @@ export default function Projects() {
     >
       <div className="container" data-depth="-1">
         <h1 data-depth="2" className="text-7xl leading-tight uppercase">
-          <span
-            className="empty-set__text"
-            data-text-node="true"
-            data-depth="2"
-          >
+          <span className="empty-set__text" data-text-node="true" data-depth="2">
             Go72BTHe
           </span>
         </h1>
-        <div
-          className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2"
-          data-depth="-1"
-        >
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2" data-depth="-1">
           <div
             data-depth="3"
             className="group overflow-hidden rounded-lg border border-border bg-background"
@@ -46,26 +39,15 @@ export default function Projects() {
                 data-image-skeleton="true"
               ></img>
             </a>
-            <div
-              className="flex items-center justify-between px-5 py-4"
-              data-depth="-1"
-            >
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
               <div data-depth="-1">
                 <h2 data-depth="6" className="text-lg font-semibold">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     JXZZE_ t1Re1BMo ~6Xs9EvK
                   </span>
                 </h2>
                 <p data-depth="6" className="text-muted-foreground">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     4.Zs.aTtn1VR
                   </span>
                 </p>
@@ -102,26 +84,15 @@ export default function Projects() {
                 data-image-skeleton="true"
               ></img>
             </a>
-            <div
-              className="flex items-center justify-between px-5 py-4"
-              data-depth="-1"
-            >
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
               <div data-depth="-1">
                 <h2 data-depth="6" className="text-lg font-semibold">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     fF_vX5n6 SJF5C 93FdNI
                   </span>
                 </h2>
                 <p data-depth="6" className="text-muted-foreground">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     sUd38 _.EpKt
                   </span>
                 </p>
@@ -158,26 +129,15 @@ export default function Projects() {
                 data-image-skeleton="true"
               ></img>
             </a>
-            <div
-              className="flex items-center justify-between px-5 py-4"
-              data-depth="-1"
-            >
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
               <div data-depth="-1">
                 <h2 data-depth="6" className="text-lg font-semibold">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     5qszoJ2HL. QNgA Xd06w5.
                   </span>
                 </h2>
                 <p data-depth="6" className="text-muted-foreground">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     XzHtLt6f
                   </span>
                 </p>
@@ -214,26 +174,15 @@ export default function Projects() {
                 data-image-skeleton="true"
               ></img>
             </a>
-            <div
-              className="flex items-center justify-between px-5 py-4"
-              data-depth="-1"
-            >
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
               <div data-depth="-1">
                 <h2 data-depth="6" className="text-lg font-semibold">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     mdGY- iJuIKIKb 9.J~i
                   </span>
                 </h2>
                 <p data-depth="6" className="text-muted-foreground">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     BfONe~Q whv~QD
                   </span>
                 </p>
@@ -270,26 +219,15 @@ export default function Projects() {
                 data-image-skeleton="true"
               ></img>
             </a>
-            <div
-              className="flex items-center justify-between px-5 py-4"
-              data-depth="-1"
-            >
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
               <div data-depth="-1">
                 <h2 data-depth="6" className="text-lg font-semibold">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     dcYB8u Ejj75hJ4 Ycn
                   </span>
                 </h2>
                 <p data-depth="6" className="text-muted-foreground">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     -a14htbp8J8
                   </span>
                 </p>
@@ -326,26 +264,15 @@ export default function Projects() {
                 data-image-skeleton="true"
               ></img>
             </a>
-            <div
-              className="flex items-center justify-between px-5 py-4"
-              data-depth="-1"
-            >
+            <div className="flex items-center justify-between px-5 py-4" data-depth="-1">
               <div data-depth="-1">
                 <h2 data-depth="6" className="text-lg font-semibold">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     0zzbwHjbwG oB .hYFXm
                   </span>
                 </h2>
                 <p data-depth="6" className="text-muted-foreground">
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     vYNc_WW-jsK r1.RLJ
                   </span>
                 </p>
@@ -361,5 +288,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

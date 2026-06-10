@@ -19,14 +19,10 @@ export function parseStyle(style: string): t.ObjectExpression {
     const rawKey = trimmedRule.slice(0, colonIndex).trim();
     const rawValue = trimmedRule.slice(colonIndex + 1).trim();
 
-    const key = rawKey.replace(/-([a-z])/g, (_, char: string) =>
-      char.toUpperCase(),
-    );
+    const key = rawKey.replace(/-([a-z])/g, (_, char: string) => char.toUpperCase());
 
     const keyNode =
-      key.startsWith("--") || key.includes("-")
-        ? t.stringLiteral(key)
-        : t.identifier(key);
+      key.startsWith("--") || key.includes("-") ? t.stringLiteral(key) : t.identifier(key);
 
     properties.push(t.objectProperty(keyNode, t.stringLiteral(rawValue)));
   }

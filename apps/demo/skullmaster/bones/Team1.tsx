@@ -8,33 +8,16 @@ export default function Team1() {
       aria-live="polite"
       aria-busy="true"
     >
-      <div
-        className="container flex flex-col items-center text-center"
-        data-depth="-1"
-      >
-        <h2
-          data-depth="2"
-          className="my-6 text-2xl font-bold text-pretty lg:text-4xl"
-        >
-          <span
-            className="empty-set__text"
-            data-text-node="true"
-            data-depth="2"
-          >
+      <div className="container flex flex-col items-center text-center" data-depth="-1">
+        <h2 data-depth="2" className="my-6 text-2xl font-bold text-pretty lg:text-4xl">
+          <span className="empty-set__text" data-text-node="true" data-depth="2">
             sFBe
           </span>
         </h2>
-        <p
-          data-depth="2"
-          className="mb-8 max-w-3xl text-muted-foreground lg:text-xl"
-        >
-          <span
-            className="empty-set__text"
-            data-text-node="true"
-            data-depth="2"
-          >
-            PXF mvOSaKD z3R8 bj W9tdTUg 2xr7Ez kV_TgcKz alpeJvL VL eUOhv39DAC kF
-            .YHJcT9 drN8iRqujbV6 Lto IPjC4cV 0eXJqDT4Ffgn
+        <p data-depth="2" className="mb-8 max-w-3xl text-muted-foreground lg:text-xl">
+          <span className="empty-set__text" data-text-node="true" data-depth="2">
+            PXF mvOSaKD z3R8 bj W9tdTUg 2xr7Ez kV_TgcKz alpeJvL VL eUOhv39DAC kF .YHJcT9
+            drN8iRqujbV6 Lto IPjC4cV 0eXJqDT4Ffgn
           </span>
         </p>
       </div>
@@ -60,20 +43,12 @@ export default function Team1() {
             ></img>
           </span>
           <p data-depth="3" className="text-center font-medium">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               0v4HJ odJ8
             </span>
           </p>
           <p data-depth="3" className="text-center text-muted-foreground">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               EVH p zmGPCpy
             </span>
           </p>
@@ -96,20 +71,12 @@ export default function Team1() {
             ></img>
           </span>
           <p data-depth="3" className="text-center font-medium">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               X0iZYX CvUdhLsDR
             </span>
           </p>
           <p data-depth="3" className="text-center text-muted-foreground">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               SWc
             </span>
           </p>
@@ -132,20 +99,12 @@ export default function Team1() {
             ></img>
           </span>
           <p data-depth="3" className="text-center font-medium">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               utw0R 9s~H4F
             </span>
           </p>
           <p data-depth="3" className="text-center text-muted-foreground">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               kJEX .v 45CjdX
             </span>
           </p>
@@ -168,20 +127,12 @@ export default function Team1() {
             ></img>
           </span>
           <p data-depth="3" className="text-center font-medium">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               HIwaR 62J
             </span>
           </p>
           <p data-depth="3" className="text-center text-muted-foreground">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               ~FjW pO9967sj
             </span>
           </p>
@@ -204,20 +155,12 @@ export default function Team1() {
             ></img>
           </span>
           <p data-depth="3" className="text-center font-medium">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               y3bT lfh.TdPC
             </span>
           </p>
           <p data-depth="3" className="text-center text-muted-foreground">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               JXg8Q0d cI3aQyY
             </span>
           </p>
@@ -240,25 +183,17 @@ export default function Team1() {
             ></img>
           </span>
           <p data-depth="3" className="text-center font-medium">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               Wr6M tf4KVUS
             </span>
           </p>
           <p data-depth="3" className="text-center text-muted-foreground">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               3p V~OLl7QC
             </span>
           </p>
         </div>
       </div>
     </section>
-  )
+  );
 }

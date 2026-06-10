@@ -10,18 +10,10 @@ export default function Testimonial10() {
     >
       <div className="container" data-depth="-1">
         <div className="flex flex-col items-center text-center" data-depth="-1">
-          <p
-            data-depth="3"
-            className="mb-16 max-w-4xl px-8 font-medium lg:text-3xl"
-          >
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
-              6zVouT 2S4Xo s3_FS 1mZ lSF3 IA49XICp8_R morBjz76I9Z 2VfZV u.E5
-              scOOYuOxGj HdOdyT7t BP~pLI wk_8Pi hroNU b34~-GK TEQ ymz9G
-              cFiYlQ9MSX_6 IDLp~waj7Uj
+          <p data-depth="3" className="mb-16 max-w-4xl px-8 font-medium lg:text-3xl">
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
+              6zVouT 2S4Xo s3_FS 1mZ lSF3 IA49XICp8_R morBjz76I9Z 2VfZV u.E5 scOOYuOxGj HdOdyT7t
+              BP~pLI wk_8Pi hroNU b34~-GK TEQ ymz9G cFiYlQ9MSX_6 IDLp~waj7Uj
             </span>
           </p>
           <div className="flex items-center gap-2 md:gap-4" data-depth="-1">
@@ -43,23 +35,12 @@ export default function Testimonial10() {
             </span>
             <div className="text-left" data-depth="-1">
               <p data-depth="5" className="text-sm font-medium md:text-base">
-                <span
-                  className="empty-set__text"
-                  data-text-node="true"
-                  data-depth="5"
-                >
+                <span className="empty-set__text" data-text-node="true" data-depth="5">
                   mP11IE2X 3Jgj
                 </span>
               </p>
-              <p
-                data-depth="5"
-                className="text-sm text-muted-foreground md:text-base"
-              >
-                <span
-                  className="empty-set__text"
-                  data-text-node="true"
-                  data-depth="5"
-                >
+              <p data-depth="5" className="text-sm text-muted-foreground md:text-base">
+                <span className="empty-set__text" data-text-node="true" data-depth="5">
                   jQ__
                 </span>
               </p>
@@ -68,5 +49,5 @@ export default function Testimonial10() {
         </div>
       </div>
     </section>
-  )
+  );
 }

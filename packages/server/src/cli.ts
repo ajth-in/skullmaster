@@ -15,8 +15,7 @@ cli
   })
   .action(async (options) => {
     const preferences = await collectPreferences(false);
-    if (!preferences)
-      throw new Error("Invalid preferences!! have you ran skullmaster init");
+    if (!preferences) throw new Error("Invalid preferences!! have you ran skullmaster init");
     await serveCommand(preferences, Number(options.port));
   });
 

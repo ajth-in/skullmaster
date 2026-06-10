@@ -1,23 +1,23 @@
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react"
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 interface Contact7Props {
-  title?: string
-  description?: string
-  emailLabel?: string
-  emailDescription?: string
-  email?: string
-  officeLabel?: string
-  officeDescription?: string
-  officeAddress?: string
-  phoneLabel?: string
-  phoneDescription?: string
-  phone?: string
-  chatLabel?: string
-  chatDescription?: string
-  chatLink?: string
-  className?: string
+  title?: string;
+  description?: string;
+  emailLabel?: string;
+  emailDescription?: string;
+  email?: string;
+  officeLabel?: string;
+  officeDescription?: string;
+  officeAddress?: string;
+  phoneLabel?: string;
+  phoneDescription?: string;
+  phone?: string;
+  chatLabel?: string;
+  chatDescription?: string;
+  chatLink?: string;
+  className?: string;
 }
 
 const Contact7 = ({
@@ -42,18 +42,14 @@ const Contact7 = ({
       <div className="container">
         <div className="mx-auto max-w-6xl">
           <div className="mb-14">
-            <h1 className="mb-4 text-4xl font-medium tracking-tight md:text-5xl">
-              {title}
-            </h1>
+            <h1 className="mb-4 text-4xl font-medium tracking-tight md:text-5xl">{title}</h1>
             <p className="text-muted-foreground">{description}</p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-xl bg-muted/50 p-8">
               <Mail className="mb-4 size-5 text-muted-foreground" />
               <p className="mb-1 font-medium">{emailLabel}</p>
-              <p className="mb-4 text-sm text-muted-foreground">
-                {emailDescription}
-              </p>
+              <p className="mb-4 text-sm text-muted-foreground">{emailDescription}</p>
               <a href={`mailto:${email}`} className="hover:underline">
                 {email}
               </a>
@@ -61,9 +57,7 @@ const Contact7 = ({
             <div className="rounded-xl bg-muted/50 p-8">
               <MapPin className="mb-4 size-5 text-muted-foreground" />
               <p className="mb-1 font-medium">{officeLabel}</p>
-              <p className="mb-4 text-sm text-muted-foreground">
-                {officeDescription}
-              </p>
+              <p className="mb-4 text-sm text-muted-foreground">{officeDescription}</p>
               <a href="#" className="hover:underline">
                 {officeAddress}
               </a>
@@ -71,9 +65,7 @@ const Contact7 = ({
             <div className="rounded-xl bg-muted/50 p-8">
               <Phone className="mb-4 size-5 text-muted-foreground" />
               <p className="mb-1 font-medium">{phoneLabel}</p>
-              <p className="mb-4 text-sm text-muted-foreground">
-                {phoneDescription}
-              </p>
+              <p className="mb-4 text-sm text-muted-foreground">{phoneDescription}</p>
               <a href={`tel:${phone}`} className="hover:underline">
                 {phone}
               </a>
@@ -81,9 +73,7 @@ const Contact7 = ({
             <div className="rounded-xl bg-muted/50 p-8">
               <MessageCircle className="mb-4 size-5 text-muted-foreground" />
               <p className="mb-1 font-medium">{chatLabel}</p>
-              <p className="mb-4 text-sm text-muted-foreground">
-                {chatDescription}
-              </p>
+              <p className="mb-4 text-sm text-muted-foreground">{chatDescription}</p>
               <a href="#" className="hover:underline">
                 {chatLink}
               </a>
@@ -92,7 +82,7 @@ const Contact7 = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export { Contact7 }
+export { Contact7 };

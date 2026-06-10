@@ -9,26 +9,14 @@ export default function Contact7() {
     >
       <div className="mx-auto max-w-6xl" data-depth="-1">
         <div className="mb-14" data-depth="-1">
-          <h1
-            data-depth="3"
-            className="mb-4 text-4xl font-medium tracking-tight md:text-5xl"
-          >
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+          <h1 data-depth="3" className="mb-4 text-4xl font-medium tracking-tight md:text-5xl">
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               KQS_mnN Zd
             </span>
           </h1>
           <p data-depth="3" className="text-muted-foreground">
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
-              RRLv 2 Jt6dr8GC xY p6V4 Wn2HfbzV90c fr_CG b3s A6UbEAq sd- i- uG_
-              31u--l71 kRUmuh
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
+              RRLv 2 Jt6dr8GC xY p6V4 Wn2HfbzV90c fr_CG b3s A6UbEAq sd- i- uG_ 31u--l71 kRUmuh
             </span>
           </p>
         </div>
@@ -48,20 +36,12 @@ export default function Contact7() {
               aria-hidden="true"
             ></svg>
             <p data-depth="4" className="mb-1 font-medium">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 T3y~8
               </span>
             </p>
             <p data-depth="4" className="mb-4 text-sm text-muted-foreground">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 bj 9swsBd_ 9n Ckj y3J9CK LRWIr8 aF _.KmUu
               </span>
             </p>
@@ -90,20 +70,12 @@ export default function Contact7() {
               aria-hidden="true"
             ></svg>
             <p data-depth="4" className="mb-1 font-medium">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 owjahR
               </span>
             </p>
             <p data-depth="4" className="mb-4 text-sm text-muted-foreground">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 c3Xr C9 e_Q hBEXRl SZK C t79U_
               </span>
             </p>
@@ -132,20 +104,12 @@ export default function Contact7() {
               aria-hidden="true"
             ></svg>
             <p data-depth="4" className="mb-1 font-medium">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 _KS-R
               </span>
             </p>
             <p data-depth="4" className="mb-4 text-sm text-muted-foreground">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 G7ml6 cKCmsrXdc 6agrxk2y E4tjyqep
               </span>
             </p>
@@ -174,20 +138,12 @@ export default function Contact7() {
               aria-hidden="true"
             ></svg>
             <p data-depth="4" className="mb-1 font-medium">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 E_36 0UFD
               </span>
             </p>
             <p data-depth="4" className="mb-4 text-sm text-muted-foreground">
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 zFx KZN~ZbO ~jb9 lxzu Wzj XeXrv21 46uyw
               </span>
             </p>
@@ -204,5 +160,5 @@ export default function Contact7() {
         </div>
       </div>
     </div>
-  )
+  );
 }

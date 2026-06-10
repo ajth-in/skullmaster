@@ -9,14 +9,8 @@ export default function BookADemo1() {
       aria-busy="true"
     >
       <div className="container" data-depth="-1">
-        <div
-          className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-4"
-          data-depth="-1"
-        >
-          <div
-            className="flex flex-col items-center gap-4 lg:items-start lg:gap-8"
-            data-depth="-1"
-          >
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-4" data-depth="-1">
+          <div className="flex flex-col items-center gap-4 lg:items-start lg:gap-8" data-depth="-1">
             <span
               data-depth="4"
               data-slot="badge"
@@ -29,11 +23,7 @@ export default function BookADemo1() {
               data-depth="4"
               className="mt-2 max-w-md text-center text-3xl font-medium lg:mt-0 lg:max-w-xl lg:text-left lg:text-5xl"
             >
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
                 B4wV_w7bK0 VtAd hlBJlD~Q08Q iHc2pHKU
               </span>
             </h3>
@@ -55,15 +45,8 @@ export default function BookADemo1() {
                   className="lucide lucide-arrow-right hidden size-6 shrink-0 lg:block"
                   aria-hidden="true"
                 ></svg>
-                <p
-                  data-depth="6"
-                  className="text-center font-medium lg:text-left"
-                >
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                <p data-depth="6" className="text-center font-medium lg:text-left">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     W988 pbKNYY~ZB AV _U1900Zo1a LERwt .GJ XWUJqidFV
                   </span>
                 </p>
@@ -85,24 +68,14 @@ export default function BookADemo1() {
                   className="lucide lucide-arrow-right hidden size-6 shrink-0 lg:block"
                   aria-hidden="true"
                 ></svg>
-                <p
-                  data-depth="6"
-                  className="text-center font-medium lg:text-left"
-                >
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                <p data-depth="6" className="text-center font-medium lg:text-left">
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     j~F p sWIT4WzJEjIm MgU4 wvG ~eXJ TIC~YE
                   </span>
                 </p>
               </li>
             </ul>
-            <div
-              className="mt-20 hidden w-full overflow-hidden lg:block"
-              data-depth="-1"
-            >
+            <div className="mt-20 hidden w-full overflow-hidden lg:block" data-depth="-1">
               <div
                 style={{
                   maskImage:
@@ -267,11 +240,7 @@ export default function BookADemo1() {
                     aria-hidden="true"
                     tabIndex={-1}
                   >
-                    <span
-                      className="empty-set__text"
-                      data-text-node="true"
-                      data-depth="7"
-                    >
+                    <span className="empty-set__text" data-text-node="true" data-depth="7">
                       jzGxT Wmu5
                     </span>
                   </label>
@@ -294,11 +263,7 @@ export default function BookADemo1() {
                     aria-hidden="true"
                     tabIndex={-1}
                   >
-                    <span
-                      className="empty-set__text"
-                      data-text-node="true"
-                      data-depth="7"
-                    >
+                    <span className="empty-set__text" data-text-node="true" data-depth="7">
                       XIsH qI36
                     </span>
                   </label>
@@ -322,11 +287,7 @@ export default function BookADemo1() {
                   aria-hidden="true"
                   tabIndex={-1}
                 >
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     K3FW eu.3G
                   </span>
                 </label>
@@ -349,11 +310,7 @@ export default function BookADemo1() {
                   aria-hidden="true"
                   tabIndex={-1}
                 >
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     qk. XZ~NG
                   </span>
                 </label>
@@ -376,11 +333,7 @@ export default function BookADemo1() {
                   aria-hidden="true"
                   tabIndex={-1}
                 >
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     rEY9 kvY CK. l5-cot9 y8 ppuHvd
                   </span>
                 </label>
@@ -402,11 +355,7 @@ export default function BookADemo1() {
                   aria-hidden="true"
                   tabIndex={-1}
                 >
-                  <span
-                    className="empty-set__text"
-                    data-text-node="true"
-                    data-depth="6"
-                  >
+                  <span className="empty-set__text" data-text-node="true" data-depth="6">
                     H-2 Y6E mjK hdwtID7r pJF
                   </span>
                 </label>
@@ -543,10 +492,7 @@ export default function BookADemo1() {
               </button>
             </form>
           </div>
-          <div
-            className="mt-20 block w-full overflow-hidden lg:hidden"
-            data-depth="-1"
-          >
+          <div className="mt-20 block w-full overflow-hidden lg:hidden" data-depth="-1">
             <div
               style={{
                 maskImage:
@@ -696,5 +642,5 @@ export default function BookADemo1() {
         </div>
       </div>
     </section>
-  )
+  );
 }

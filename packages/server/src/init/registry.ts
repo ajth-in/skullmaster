@@ -3,10 +3,7 @@ import { writeFile } from "node:fs/promises";
 import fileExists from "./is-file-exists";
 import { ensureLazyImport } from "./ensure-lazy-imports";
 
-export async function generateInitialRegistry(
-  outDir: string,
-  projectType: string,
-) {
+export async function generateInitialRegistry(outDir: string, projectType: string) {
   const isTs = projectType.endsWith("ts");
 
   const ext = isTs ? "tsx" : "jsx";
@@ -96,17 +93,13 @@ export async function generateRegistry(
     ?.getInitializerIfKind(SyntaxKind.ObjectLiteralExpression);
 
   if (!registry) {
-    throw new Error(
-      "Unable to locate registry object, have you ran skullmaster init??",
-    );
+    throw new Error("Unable to locate registry object, have you ran skullmaster init??");
   }
 
   const existingComponents = new Set(
     registry
       .getProperties()
-      .filter(
-        (property) => property.getKind() === SyntaxKind.PropertyAssignment,
-      )
+      .filter((property) => property.getKind() === SyntaxKind.PropertyAssignment)
       .map((property) => property.asKindOrThrow(SyntaxKind.PropertyAssignment))
       .map((property) => property.getName().replace(/['"]/g, "")),
   );

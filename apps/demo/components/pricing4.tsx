@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
   Bell,
@@ -19,69 +19,66 @@ import {
   Settings2,
   Users,
   Zap,
-} from "lucide-react"
-import { ElementType, useState } from "react"
+} from "lucide-react";
+import { ElementType, useState } from "react";
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-type IconComponent = ElementType<{ className?: string }>
+type IconComponent = ElementType<{ className?: string }>;
 type Pricing3PlanFeature =
   | string
   | {
-      text: string
-      icon?: IconComponent
-    }
+      text: string;
+      icon?: IconComponent;
+    };
 interface Pricing3PlansPlan {
-  name: string
-  monthlyPrice: string
-  yearlyPrice: string
+  name: string;
+  monthlyPrice: string;
+  yearlyPrice: string;
   period: {
-    monthly: string
-    yearly: string
-  }
+    monthly: string;
+    yearly: string;
+  };
   description: {
-    monthly: string
-    yearly: string
-  }
-  buttonText: string
-  buttonUrl?: string
-  highlighted?: boolean
-  highlightedLabel?: string
-  icon?: IconComponent
-  image?: string
-  features: Pricing3PlanFeature[]
-  tagline?: string
-  bestFor?: string
-  planCode?: string
+    monthly: string;
+    yearly: string;
+  };
+  buttonText: string;
+  buttonUrl?: string;
+  highlighted?: boolean;
+  highlightedLabel?: string;
+  icon?: IconComponent;
+  image?: string;
+  features: Pricing3PlanFeature[];
+  tagline?: string;
+  bestFor?: string;
+  planCode?: string;
 }
 
 interface Pricing3PlansProps {
-  heading: string
-  description?: string
-  plans: Pricing3PlansPlan[]
-  className?: string
+  heading: string;
+  description?: string;
+  plans: Pricing3PlansPlan[];
+  className?: string;
 }
 // eslint-disable-next-line
 interface Pricing4Props extends Pricing3PlansProps {}
-type Props = Partial<Pricing4Props>
+type Props = Partial<Pricing4Props>;
 
 export function pricing3PlanFeatureText(feature: Pricing3PlanFeature): string {
-  return typeof feature === "string" ? feature : feature.text
+  return typeof feature === "string" ? feature : feature.text;
 }
-export function pricing3PlanFeatureIcon(
-  feature: Pricing3PlanFeature
-): IconComponent | undefined {
-  return typeof feature === "string" ? undefined : feature.icon
+export function pricing3PlanFeatureIcon(feature: Pricing3PlanFeature): IconComponent | undefined {
+  return typeof feature === "string" ? undefined : feature.icon;
 }
 const defaultProps: Pricing4Props = {
   heading: "Simple Pricing Plans",
-  description:
-    "Choose the plan that fits your needs. Start free and scale as you grow.",
+  description: "Choose the plan that fits your needs. Start free and scale as you grow.",
   plans: [
     {
       icon: Rocket,
@@ -95,10 +92,8 @@ const defaultProps: Pricing4Props = {
         yearly: "Per year",
       },
       description: {
-        monthly:
-          "Ideal for individuals getting started. No credit card required.",
-        yearly:
-          "Ideal for individuals getting started. No credit card required.",
+        monthly: "Ideal for individuals getting started. No credit card required.",
+        yearly: "Ideal for individuals getting started. No credit card required.",
       },
       buttonText: "Start for Free",
       buttonUrl: "#",
@@ -126,10 +121,8 @@ const defaultProps: Pricing4Props = {
         yearly: "Per year",
       },
       description: {
-        monthly:
-          "For growing teams that need more power. Start with a 30-day free trial.",
-        yearly:
-          "For growing teams that need more power. Save 16% compared to monthly.",
+        monthly: "For growing teams that need more power. Start with a 30-day free trial.",
+        yearly: "For growing teams that need more power. Save 16% compared to monthly.",
       },
       buttonText: "Get Started",
       buttonUrl: "#",
@@ -160,8 +153,7 @@ const defaultProps: Pricing4Props = {
       description: {
         monthly:
           "For large organizations with advanced needs. Everything in Standard plus dedicated support.",
-        yearly:
-          "For large organizations with advanced needs. Save 16% compared to monthly.",
+        yearly: "For large organizations with advanced needs. Save 16% compared to monthly.",
       },
       buttonText: "Buy Now",
       buttonUrl: "#",
@@ -178,33 +170,27 @@ const defaultProps: Pricing4Props = {
       ],
     },
   ],
-}
+};
 
 const Pricing4 = (props: Props) => {
   const { heading, description, plans, className } = {
     ...defaultProps,
     ...props,
-  }
-  const firstHighlightedIndex = plans.findIndex((p) => p.highlighted)
-  const [isAnnually, setIsAnnually] = useState(false)
+  };
+  const firstHighlightedIndex = plans.findIndex((p) => p.highlighted);
+  const [isAnnually, setIsAnnually] = useState(false);
   return (
     <section className={cn("py-32", className)}>
       <div className="container mx-auto">
         <div className="flex flex-col gap-6">
-          <h2 className="text-3xl font-medium tracking-tight text-pretty lg:text-5xl">
-            {heading}
-          </h2>
+          <h2 className="text-3xl font-medium tracking-tight text-pretty lg:text-5xl">{heading}</h2>
           <div className="flex flex-col justify-between gap-10 md:flex-row">
             {description && (
-              <p className="max-w-3xl text-muted-foreground lg:text-xl">
-                {description}
-              </p>
+              <p className="max-w-3xl text-muted-foreground lg:text-xl">{description}</p>
             )}
             <Tabs
               value={isAnnually ? "annually" : "monthly"}
-              onValueChange={(value: string) =>
-                setIsAnnually(value === "annually")
-              }
+              onValueChange={(value: string) => setIsAnnually(value === "annually")}
               className="w-fit shrink-0"
               aria-label="Billing period"
             >
@@ -226,14 +212,13 @@ const Pricing4 = (props: Props) => {
           </div>
           <div className="flex w-full flex-col items-stretch gap-6 md:flex-row">
             {plans.map((plan, index) => {
-              const isHighlighted =
-                firstHighlightedIndex !== -1 && index === firstHighlightedIndex
+              const isHighlighted = firstHighlightedIndex !== -1 && index === firstHighlightedIndex;
               return (
                 <div
                   key={plan.name}
                   className={cn(
                     "flex w-full flex-col rounded-lg border p-6 text-left",
-                    isHighlighted && "bg-muted"
+                    isHighlighted && "bg-muted",
                   )}
                 >
                   <Badge
@@ -249,7 +234,7 @@ const Pricing4 = (props: Props) => {
                     data-depth={"-1"}
                     className={cn(
                       "text-muted-foreground",
-                      plan.monthlyPrice === "$0" && "invisible"
+                      plan.monthlyPrice === "$0" && "invisible",
                     )}
                   >
                     {isAnnually ? plan.period.yearly : plan.period.monthly}
@@ -266,29 +251,23 @@ const Pricing4 = (props: Props) => {
                           key={featureIndex}
                           className="flex items-center gap-2"
                         >
-                          <Check
-                            className="size-4 shrink-0"
-                            aria-hidden="true"
-                          />
+                          <Check className="size-4 shrink-0" aria-hidden="true" />
                           <span>{pricing3PlanFeatureText(feature)}</span>
                         </li>
                       ))}
                     </ul>
-                    <Button
-                      className="w-full"
-                      variant={isHighlighted ? "default" : "outline"}
-                    >
+                    <Button className="w-full" variant={isHighlighted ? "default" : "outline"}>
                       {plan.buttonText}
                     </Button>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export { Pricing4 }
+export { Pricing4 };

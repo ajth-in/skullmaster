@@ -170,13 +170,7 @@ test("adds skeleton class to root and transforms images", () => {
       transform(
         html`<div>
           <p>Hello</p>
-          <img
-            src="/hero.jpg"
-            alt="Hero image"
-            class="rounded-xl"
-            width="320"
-            height="180"
-          />
+          <img src="/hero.jpg" alt="Hero image" class="rounded-xl" width="320" height="180" />
           <script>
             alert("Hello");
           </script>

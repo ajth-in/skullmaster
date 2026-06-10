@@ -14,9 +14,7 @@ export function ensureLazyImport(sourceFile: SourceFile) {
     return;
   }
 
-  const hasLazy = reactImport
-    .getNamedImports()
-    .some((i) => i.getName() === "lazy");
+  const hasLazy = reactImport.getNamedImports().some((i) => i.getName() === "lazy");
 
   if (!hasLazy) {
     reactImport.addNamedImport("lazy");

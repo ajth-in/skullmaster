@@ -1,52 +1,51 @@
-"use client"
+"use client";
 
-import { ArrowRight } from "lucide-react"
-import { motion } from "motion/react"
-import React, { useEffect, useRef, useState } from "react"
+import { ArrowRight } from "lucide-react";
+import { motion } from "motion/react";
+import React, { useEffect, useRef, useState } from "react";
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
-import { Textarea } from "@/components/ui/textarea"
-import { cn } from "@/lib/utils"
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
 
 const InfiniteMovingCarousel = ({ images }: { images: string[] }) => {
-  const carouselRef = useRef<HTMLDivElement>(null)
-  const [width, setWidth] = useState(0)
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    if (!carouselRef.current) return
+    if (!carouselRef.current) return;
 
-    setWidth(carouselRef.current.clientWidth)
+    setWidth(carouselRef.current.clientWidth);
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setWidth(entry.target.clientWidth)
+          setWidth(entry.target.clientWidth);
         }
-      })
-    })
-    observer.observe(carouselRef.current)
+      });
+    });
+    observer.observe(carouselRef.current);
 
     return () => {
-      observer.disconnect()
-    }
-  }, [])
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div
       style={{
-        maskImage:
-          "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
+        maskImage: "linear-gradient(to right, transparent, black 15%, black 85%, transparent)",
       }}
       className={cn("w-full overflow-hidden")}
     >
@@ -70,23 +69,23 @@ const InfiniteMovingCarousel = ({ images }: { images: string[] }) => {
               alt={`Company ${index + 1}`}
               className="size-24 shrink-0 object-contain dark:invert"
             />
-          )
+          );
         })}
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
 const FormGroup = ({ children }: { children: React.ReactNode }) => {
-  return <div className="flex w-full flex-col gap-2">{children}</div>
-}
+  return <div className="flex w-full flex-col gap-2">{children}</div>;
+};
 
 interface BookADemo1Props {
-  badge?: string
-  heading?: string
-  benefits?: string[]
-  companies?: string[]
-  className?: string
+  badge?: string;
+  heading?: string;
+  benefits?: string[];
+  companies?: string[];
+  className?: string;
 }
 
 const BookADemo1 = ({
@@ -124,15 +123,10 @@ const BookADemo1 = ({
                     key={`bookademo1-benefit-${index}`}
                     className="flex max-w-md items-start gap-2 px-4 last:hidden last:border-b-0 lg:border-b lg:py-6 last:lg:flex"
                   >
-                    <ArrowRight
-                      className="hidden size-6 shrink-0 lg:block"
-                      strokeWidth={1}
-                    />
-                    <p className="text-center font-medium lg:text-left">
-                      {benefit}
-                    </p>
+                    <ArrowRight className="hidden size-6 shrink-0 lg:block" strokeWidth={1} />
+                    <p className="text-center font-medium lg:text-left">{benefit}</p>
                   </li>
-                )
+                );
               })}
             </ul>
             <div className="mt-20 hidden w-full overflow-hidden lg:block">
@@ -144,19 +138,11 @@ const BookADemo1 = ({
               <div className="flex w-full items-center gap-4">
                 <FormGroup>
                   <Label>First Name</Label>
-                  <Input
-                    type="text"
-                    placeholder="Alex"
-                    className="bg-background"
-                  />
+                  <Input type="text" placeholder="Alex" className="bg-background" />
                 </FormGroup>
                 <FormGroup>
                   <Label>Last Name</Label>
-                  <Input
-                    type="text"
-                    placeholder="Smith"
-                    className="bg-background"
-                  />
+                  <Input type="text" placeholder="Smith" className="bg-background" />
                 </FormGroup>
               </div>
               <FormGroup>
@@ -169,11 +155,7 @@ const BookADemo1 = ({
               </FormGroup>
               <FormGroup>
                 <Label>Job Title</Label>
-                <Input
-                  type="text"
-                  placeholder="Full Stack Developer"
-                  className="bg-background"
-                />
+                <Input type="text" placeholder="Full Stack Developer" className="bg-background" />
               </FormGroup>
               <FormGroup>
                 <Label>What are you looking to build?</Label>
@@ -210,7 +192,7 @@ const BookADemo1 = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export { BookADemo1 }
+export { BookADemo1 };

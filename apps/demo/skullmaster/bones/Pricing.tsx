@@ -14,29 +14,14 @@ export default function Pricing() {
             data-depth="3"
             className="text-3xl font-medium tracking-tight text-pretty lg:text-5xl"
           >
-            <span
-              className="empty-set__text"
-              data-text-node="true"
-              data-depth="3"
-            >
+            <span className="empty-set__text" data-text-node="true" data-depth="3">
               8iZIRz aeKAtAk 0s257
             </span>
           </h2>
-          <div
-            className="flex flex-col justify-between gap-10 md:flex-row"
-            data-depth="-1"
-          >
-            <p
-              data-depth="4"
-              className="max-w-3xl text-muted-foreground lg:text-xl"
-            >
-              <span
-                className="empty-set__text"
-                data-text-node="true"
-                data-depth="4"
-              >
-                qzT1RN 7bO wr2x CfLj Le2~ IGn~ PW2YfN vRqw3 Jw~i zzm FQ1ns 69
-                ijN M8Tsz
+          <div className="flex flex-col justify-between gap-10 md:flex-row" data-depth="-1">
+            <p data-depth="4" className="max-w-3xl text-muted-foreground lg:text-xl">
+              <span className="empty-set__text" data-text-node="true" data-depth="4">
+                qzT1RN 7bO wr2x CfLj Le2~ IGn~ PW2YfN vRqw3 Jw~i zzm FQ1ns 69 ijN M8Tsz
               </span>
             </p>
             <div
@@ -91,14 +76,8 @@ export default function Pricing() {
               </div>
             </div>
           </div>
-          <div
-            className="flex w-full flex-col items-stretch gap-6 md:flex-row"
-            data-depth="-1"
-          >
-            <div
-              data-depth="4"
-              className="flex w-full flex-col rounded-lg border p-6 text-left"
-            >
+          <div className="flex w-full flex-col items-stretch gap-6 md:flex-row" data-depth="-1">
+            <div data-depth="4" className="flex w-full flex-col rounded-lg border p-6 text-left">
               <span
                 data-depth="5"
                 data-slot="badge"
@@ -107,24 +86,13 @@ export default function Pricing() {
               >
                 KzVie 5JFc
               </span>
-              <h3
-                data-depth="5"
-                className="text-4xl font-semibold tracking-tight lg:text-5xl"
-              >
-                <span
-                  className="empty-set__text"
-                  data-text-node="true"
-                  data-depth="5"
-                >
+              <h3 data-depth="5" className="text-4xl font-semibold tracking-tight lg:text-5xl">
+                <span className="empty-set__text" data-text-node="true" data-depth="5">
                   hY
                 </span>
               </h3>
               <p data-depth="-1" className="invisible text-muted-foreground">
-                <span
-                  className="empty-set__text"
-                  data-text-node="true"
-                  data-depth="5"
-                >
+                <span className="empty-set__text" data-text-node="true" data-depth="5">
                   8EO SNg~2
                 </span>
               </p>
@@ -135,14 +103,8 @@ export default function Pricing() {
                 data-slot="separator"
                 className="my-6 shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"
               ></div>
-              <div
-                className="flex h-full flex-col justify-between gap-20"
-                data-depth="-1"
-              >
-                <ul
-                  data-depth="-1"
-                  className="space-y-4 text-muted-foreground md:leading-snug"
-                >
+              <div className="flex h-full flex-col justify-between gap-20" data-depth="-1">
+                <ul data-depth="-1" className="space-y-4 text-muted-foreground md:leading-snug">
                   <li data-depth="-1" className="flex items-center gap-2">
                     <svg
                       data-depth="8"
@@ -250,24 +212,13 @@ export default function Pricing() {
               >
                 -hfFwGE. vqqz
               </span>
-              <h3
-                data-depth="5"
-                className="text-4xl font-semibold tracking-tight lg:text-5xl"
-              >
-                <span
-                  className="empty-set__text"
-                  data-text-node="true"
-                  data-depth="5"
-                >
+              <h3 data-depth="5" className="text-4xl font-semibold tracking-tight lg:text-5xl">
+                <span className="empty-set__text" data-text-node="true" data-depth="5">
                   UcF
                 </span>
               </h3>
               <p data-depth="-1" className="text-muted-foreground">
-                <span
-                  className="empty-set__text"
-                  data-text-node="true"
-                  data-depth="5"
-                >
+                <span className="empty-set__text" data-text-node="true" data-depth="5">
                   8EO SNg~2
                 </span>
               </p>
@@ -278,14 +229,8 @@ export default function Pricing() {
                 data-slot="separator"
                 className="my-6 shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"
               ></div>
-              <div
-                className="flex h-full flex-col justify-between gap-20"
-                data-depth="-1"
-              >
-                <ul
-                  data-depth="-1"
-                  className="space-y-4 text-muted-foreground md:leading-snug"
-                >
+              <div className="flex h-full flex-col justify-between gap-20" data-depth="-1">
+                <ul data-depth="-1" className="space-y-4 text-muted-foreground md:leading-snug">
                   <li data-depth="-1" className="flex items-center gap-2">
                     <svg
                       data-depth="8"
@@ -381,10 +326,7 @@ export default function Pricing() {
                 </button>
               </div>
             </div>
-            <div
-              data-depth="4"
-              className="flex w-full flex-col rounded-lg border p-6 text-left"
-            >
+            <div data-depth="4" className="flex w-full flex-col rounded-lg border p-6 text-left">
               <span
                 data-depth="5"
                 data-slot="badge"
@@ -393,24 +335,13 @@ export default function Pricing() {
               >
                 UnSoucr B--Q
               </span>
-              <h3
-                data-depth="5"
-                className="text-4xl font-semibold tracking-tight lg:text-5xl"
-              >
-                <span
-                  className="empty-set__text"
-                  data-text-node="true"
-                  data-depth="5"
-                >
+              <h3 data-depth="5" className="text-4xl font-semibold tracking-tight lg:text-5xl">
+                <span className="empty-set__text" data-text-node="true" data-depth="5">
                   8SC
                 </span>
               </h3>
               <p data-depth="-1" className="text-muted-foreground">
-                <span
-                  className="empty-set__text"
-                  data-text-node="true"
-                  data-depth="5"
-                >
+                <span className="empty-set__text" data-text-node="true" data-depth="5">
                   8EO SNg~2
                 </span>
               </p>
@@ -421,14 +352,8 @@ export default function Pricing() {
                 data-slot="separator"
                 className="my-6 shrink-0 bg-border data-horizontal:h-px data-horizontal:w-full data-vertical:w-px data-vertical:self-stretch"
               ></div>
-              <div
-                className="flex h-full flex-col justify-between gap-20"
-                data-depth="-1"
-              >
-                <ul
-                  data-depth="-1"
-                  className="space-y-4 text-muted-foreground md:leading-snug"
-                >
+              <div className="flex h-full flex-col justify-between gap-20" data-depth="-1">
+                <ul data-depth="-1" className="space-y-4 text-muted-foreground md:leading-snug">
                   <li data-depth="-1" className="flex items-center gap-2">
                     <svg
                       data-depth="8"
@@ -528,5 +453,5 @@ export default function Pricing() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const projects5prop = [
   {
@@ -47,10 +47,10 @@ const projects5prop = [
     type: "Sustainable Design",
     url: "#",
   },
-]
+];
 
 interface Projects5Props {
-  className?: string
+  className?: string;
 }
 
 const Projects5 = ({ className }: Projects5Props) => {
@@ -90,7 +90,7 @@ const Projects5 = ({ className }: Projects5Props) => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export { Projects5 }
+export { Projects5 };

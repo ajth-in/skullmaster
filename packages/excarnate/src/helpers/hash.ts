@@ -1,9 +1,6 @@
-const SAFE_CHARS =
-  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.~";
+const SAFE_CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.~";
 
-export default function spacePreservedObfuscator(
-  input?: string,
-): string | null {
+export default function spacePreservedObfuscator(input?: string): string | null {
   if (!input) return null;
 
   let seed = 2166136261;

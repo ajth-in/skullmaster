@@ -3,3 +3,5 @@ pre-commit:
   jobs:
     - name: lint
       run: pnpm run lint
+    - name: typecheck
+      run: pnpm run typecheck

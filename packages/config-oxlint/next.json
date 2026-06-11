@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {},
+  "ignorePatterns": ["node_modules/", ".next/", "out/", "build/", "dist/"]
+}

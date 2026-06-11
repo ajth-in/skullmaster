@@ -24,6 +24,7 @@
     "dev": "tsdown --watch",
     "play": "vite",
     "test": "vitest",
+    "lint": "oxlint -D correctness -W suspicious -W perf --react-plugin --config oxlint.json src",
     "typecheck": "tsc --noEmit",
     "release": "bumpp",
     "prepublishOnly": "pnpm run build"
@@ -35,12 +36,13 @@
     "react-aria-components": "^1.18.0"
   },
   "devDependencies": {
-    "@tsconfig/strictest": "^2.0.8",
+    "@skullmaster/typescript-config": "workspace:*",
     "@types/node": "^25.6.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
     "@vitest/browser-playwright": "^4.1.5",
+    "oxlint": "^1.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tsdown": "^0.22.0",

@@ -24,7 +24,8 @@
   },
   "scripts": {
     "build": "tsdown",
-    "dev": "tsdown --watch"
+    "dev": "tsdown --watch",
+    "lint": "oxlint -D correctness -W suspicious -W perf --config oxlint.json src"
   },
   "dependencies": {
     "@babel/generator": "^7.29.7",
@@ -46,9 +47,11 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@skullmaster/typescript-config": "workspace:*",
     "@types/babel__generator": "^7.27.0",
     "@types/jsdom": "^28.0.3",
     "@types/node": "^25.9.1",
+    "oxlint": "^1.0.0",
     "tsdown": "^0.22.0",
     "typescript": "^6.0.3"
   }

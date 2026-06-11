@@ -1,13 +1,12 @@
 {
-  "name": "@skullmaster/typescript-config",
+  "name": "@skullmaster/oxlint-config",
   "version": "0.0.0",
   "private": false,
   "license": "MIT",
   "files": [
     "base.json",
-    "nextjs.json",
-    "node-library.json",
-    "react-library.json"
+    "react-library.json",
+    "next.json"
   ],
   "publishConfig": {
     "access": "public"

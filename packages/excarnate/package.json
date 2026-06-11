@@ -19,6 +19,7 @@
     "build": "tsdown",
     "dev": "tsdown --watch",
     "test": "vitest",
+    "lint": "oxlint -D correctness -W suspicious -W perf --config oxlint.json src",
     "typecheck": "tsc --noEmit",
     "release": "bumpp",
     "prepublishOnly": "pnpm run build"
@@ -39,5 +40,8 @@
     "typescript": "^6.0.3",
     "vitest": "^4.1.5"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@skullmaster/typescript-config": "workspace:*",
+    "oxlint": "^1.0.0"
+  }
 }

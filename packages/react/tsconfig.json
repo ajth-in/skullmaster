@@ -1,16 +1,8 @@
 {
-  "extends": "@tsconfig/strictest/tsconfig.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@skullmaster/typescript-config/react-library.json",
   "compilerOptions": {
-    "target": "esnext",
-    "jsx": "react-jsx",
-    "lib": ["es2023", "DOM", "DOM.Iterable"],
     "moduleDetection": "force",
-    "module": "preserve",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "types": [],
-    "declaration": true,
-    "emitDeclarationOnly": true,
     "verbatimModuleSyntax": true
   },
   "include": ["src"]

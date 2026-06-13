@@ -11,11 +11,11 @@ const CONTAINER_TAGS = new Set([
   "fieldset",
 ]);
 
+const isVisibleColor = (color: string) =>
+  color && color !== "transparent" && color !== "rgba(0, 0, 0, 0)";
+
 function hasVisibleBackgroundOrBorder(element: HTMLElement): boolean {
   const style = getComputedStyle(element);
-
-  const isVisibleColor = (color: string) =>
-    color && color !== "transparent" && color !== "rgba(0, 0, 0, 0)";
 
   const hasBackground = isVisibleColor(style.backgroundColor);
 

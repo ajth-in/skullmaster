@@ -15,17 +15,19 @@ interface Testimonial10Props {
   };
 }
 
+const DEFAULT_AUTHOR = {
+  name: "Customer Name",
+  role: "Role",
+  avatar: {
+    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp",
+    alt: "Customer Name",
+  },
+};
+
 const Testimonial10 = ({
   className,
   quote = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Elig doloremque mollitia fugiat omnis! Porro facilis quo animi consequatur. Explicabo.",
-  author = {
-    name: "Customer Name",
-    role: "Role",
-    avatar: {
-      src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/avatar-1.webp",
-      alt: "Customer Name",
-    },
-  },
+  author = DEFAULT_AUTHOR,
 }: Testimonial10Props) => {
   return (
     <section className={cn("py-32", className)}>

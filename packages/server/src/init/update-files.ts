@@ -1,4 +1,3 @@
-import { Project } from "ts-morph";
 import { Preferences } from "./collect-preferences";
 import { updateCacheRegistry } from "./cache-registry";
 import defaultBone from "./default-bone";

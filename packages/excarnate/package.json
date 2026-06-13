@@ -41,6 +41,7 @@
     "vitest": "^4.1.5"
   },
   "devDependencies": {
+    "@skullmaster/oxlint-config": "workspace:*",
     "@skullmaster/typescript-config": "workspace:*",
     "oxlint": "^1.0.0"
   }

@@ -1,9 +1,15 @@
 {
   "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
-  "env": {
-    "browser": true,
-    "node": true
+  "extends": ["./node_modules/@skullmaster/oxlint-config/next.json"],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
   },
-  "rules": {},
-  "ignorePatterns": ["node_modules/", ".next/", "out/", "build/"]
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "out/",
+    "build/",
+    "skullmaster/bones/",
+    "skeletons/bones/"
+  ]
 }

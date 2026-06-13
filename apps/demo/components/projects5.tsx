@@ -62,7 +62,7 @@ const Projects5 = ({ className }: Projects5Props) => {
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           {projects5prop.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.title}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}

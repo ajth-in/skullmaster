@@ -245,10 +245,10 @@ const Pricing4 = (props: Props) => {
                       data-depth={"-1"}
                       className="space-y-4 text-muted-foreground md:leading-snug"
                     >
-                      {plan.features.map((feature, featureIndex) => (
+                      {plan.features.map((feature) => (
                         <li
                           data-depth={"-1"}
-                          key={featureIndex}
+                          key={pricing3PlanFeatureText(feature)}
                           className="flex items-center gap-2"
                         >
                           <Check className="size-4 shrink-0" aria-hidden="true" />

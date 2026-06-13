@@ -1,10 +1,5 @@
-import {
-  EMPTY_SET_DEFAULT_DIR,
-  SkeletonCacheEntry,
-  SkeletonCacheEntrySchema,
-} from "@skullmaster/shared";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { dirname } from "node:path";
+import { SkeletonCacheEntry, SkeletonCacheEntrySchema } from "@skullmaster/shared";
+import { readFile } from "node:fs/promises";
 import { updateCacheRegistry } from "../init/cache-registry";
 
 export class SkeletonCacheDB {

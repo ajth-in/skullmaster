@@ -30,30 +30,32 @@ interface Download2Props {
   className?: string;
 }
 
+const DEFAULT_PLATFORMS = {
+  desktop: {
+    title: "Desktop",
+    subtitle: "PC/Mac",
+    description: "Complete desktop solution.",
+    buttonText: "Download",
+    url: "https://www.shadcnblocks.com",
+  },
+  ios: {
+    title: "Mobile Phone",
+    subtitle: "iOS",
+    description: "Designed specifically for iOS devices.",
+    url: "#",
+  },
+  android: {
+    title: "Mobile Phone / Tablet",
+    subtitle: "Android",
+    description: "Optimized for Android ecosystem.",
+    url: "#",
+  },
+};
+
 const Download2 = ({
   heading = "Download",
   description = "Choose your platform and start using our app right away. Available on all major devices and operating systems.",
-  platforms = {
-    desktop: {
-      title: "Desktop",
-      subtitle: "PC/Mac",
-      description: "Complete desktop solution.",
-      buttonText: "Download",
-      url: "https://www.shadcnblocks.com",
-    },
-    ios: {
-      title: "Mobile Phone",
-      subtitle: "iOS",
-      description: "Designed specifically for iOS devices.",
-      url: "#",
-    },
-    android: {
-      title: "Mobile Phone / Tablet",
-      subtitle: "Android",
-      description: "Optimized for Android ecosystem.",
-      url: "#",
-    },
-  },
+  platforms = DEFAULT_PLATFORMS,
   className,
 }: Download2Props) => {
   return (

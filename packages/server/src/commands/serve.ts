@@ -1,5 +1,5 @@
 import { serve } from "@hono/node-server";
-import { EMPTY_SET_DEFAULT_DIR, log, SkeletonPayloadInputSchema } from "@skullmaster/shared";
+import { log, SkeletonPayloadInputSchema } from "@skullmaster/shared";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { Project } from "ts-morph";
@@ -39,7 +39,7 @@ export async function serveCommand(preferences: Preferences, port: number) {
     const result = SkeletonPayloadInputSchema.parse(body);
 
     const project = new Project();
-    for (const [key, value] of Object.entries(result)) {
+    const entries = Object.entries(result).map(async ([key, value]) => {
       const componentName = toPascalCase(value.component);
       const transformedHtml = transformInput(value.html);
       const hash = fnv1a(transformedHtml).toString();
@@ -47,7 +47,7 @@ export async function serveCommand(preferences: Preferences, port: number) {
       const shouldSkip = cached && cached.hash === hash;
 
       if (shouldSkip) {
-        continue;
+        return;
       }
 
       generateTarget({
@@ -62,7 +62,8 @@ export async function serveCommand(preferences: Preferences, port: number) {
         html: transformedHtml,
         hash,
       });
-    }
+    });
+    await Promise.all(entries);
     generateRegistry({ type: "add", components: db.getComponentNames() }, outDir, projectType);
     await project.save();
 

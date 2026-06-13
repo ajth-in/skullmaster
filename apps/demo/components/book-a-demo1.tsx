@@ -64,6 +64,7 @@ const InfiniteMovingCarousel = ({ images }: { images: string[] }) => {
         {[...images, ...images].map((image, index) => {
           return (
             <img
+              // oxlint-disable-next-line react/no-array-index-key
               key={`bookademo1-company-${index}`}
               src={image}
               alt={`Company ${index + 1}`}
@@ -75,6 +76,22 @@ const InfiniteMovingCarousel = ({ images }: { images: string[] }) => {
     </div>
   );
 };
+
+const DEFAULT_BENEFITS = [
+  "Join thousands of developers using our platform.",
+  "Get a personalized demo for your needs.",
+];
+
+const DEFAULT_COMPANIES = [
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-1.svg",
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-2.svg",
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-3.svg",
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-4.svg",
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-5.svg",
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-6.svg",
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-7.svg",
+  "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-8.svg",
+];
 
 const FormGroup = ({ children }: { children: React.ReactNode }) => {
   return <div className="flex w-full flex-col gap-2">{children}</div>;
@@ -91,20 +108,8 @@ interface BookADemo1Props {
 const BookADemo1 = ({
   badge = "GET STARTED",
   heading = "Streamline your development workflow",
-  benefits = [
-    "Join thousands of developers using our platform.",
-    "Get a personalized demo for your needs.",
-  ],
-  companies = [
-    "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-1.svg",
-    "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-2.svg",
-    "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-3.svg",
-    "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-4.svg",
-    "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-5.svg",
-    "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-6.svg",
-    "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-7.svg",
-    "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/company/fictional-company-logo-8.svg",
-  ],
+  benefits = DEFAULT_BENEFITS,
+  companies = DEFAULT_COMPANIES,
   className,
 }: BookADemo1Props) => {
   return (
@@ -120,6 +125,7 @@ const BookADemo1 = ({
               {benefits.map((benefit, index) => {
                 return (
                   <li
+                    // oxlint-disable-next-line react/no-array-index-key
                     key={`bookademo1-benefit-${index}`}
                     className="flex max-w-md items-start gap-2 px-4 last:hidden last:border-b-0 lg:border-b lg:py-6 last:lg:flex"
                   >

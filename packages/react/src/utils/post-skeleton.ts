@@ -42,6 +42,6 @@ export async function postSkeleton(
     const message =
       error instanceof Error ? error.message : "Failed to generate skeleton from supplied markup";
 
-    throw new Error(message);
+    throw new Error(message, { cause: error });
   }
 }

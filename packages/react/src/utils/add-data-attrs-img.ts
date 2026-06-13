@@ -13,15 +13,15 @@ export async function injectNaturalImageDimensions(root: HTMLElement) {
       const probe = new Image();
 
       await new Promise<void>((resolve) => {
-        probe.onload = () => {
+        probe.addEventListener("load", () => {
           img.setAttribute(DATA_NAT_W, String(probe.naturalWidth));
 
           img.setAttribute(DATA_NAT_H, String(probe.naturalHeight));
 
           resolve();
-        };
+        });
 
-        probe.onerror = () => resolve();
+        probe.addEventListener("error", () => resolve());
 
         probe.src = src;
       });

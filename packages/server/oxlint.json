@@ -1,5 +1,4 @@
 {
   "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
-  "rules": {},
-  "ignorePatterns": ["node_modules/", "dist/"]
+  "extends": ["./node_modules/@skullmaster/oxlint-config/base.json"]
 }

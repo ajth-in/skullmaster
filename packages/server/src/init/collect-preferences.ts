@@ -1,4 +1,4 @@
-import { cancel, confirm, isCancel, outro, select, text } from "@clack/prompts";
+import { cancel, confirm, isCancel, select, text } from "@clack/prompts";
 import fileExists from "./is-file-exists";
 import { readFile, writeFile } from "fs/promises";
 

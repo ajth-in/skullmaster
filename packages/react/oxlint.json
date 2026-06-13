@@ -1,8 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
-  "env": {
-    "browser": true
-  },
-  "rules": {},
-  "ignorePatterns": ["node_modules/", "dist/"]
+  "extends": ["./node_modules/@skullmaster/oxlint-config/react-library.json"],
+  "rules": {
+    "react/react-in-jsx-scope": "off"
+  }
 }

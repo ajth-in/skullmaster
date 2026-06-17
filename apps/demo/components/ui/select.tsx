@@ -4,7 +4,14 @@ import * as React from "react";
 import { Select as SelectPrimitive } from "radix-ui";
 
 import { cn } from "@/lib/utils";
-import { ChevronDownIcon, CheckIcon, ChevronUpIcon } from "lucide-react";
+import {
+  ChevronDownIcon as ChevronDownIconOrig,
+  CheckIcon as CheckIconOrig,
+  ChevronUpIcon as ChevronUpIconOrig,
+} from "lucide-react";
+const ChevronDownIcon = ChevronDownIconOrig as React.ElementType;
+const CheckIcon = CheckIconOrig as React.ElementType;
+const ChevronUpIcon = ChevronUpIconOrig as React.ElementType;
 
 function Select({ ...props }: React.ComponentProps<typeof SelectPrimitive.Root>) {
   return <SelectPrimitive.Root data-slot="select" {...props} />;

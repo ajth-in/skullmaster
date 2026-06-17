@@ -26,7 +26,7 @@ export default function Skeleton({ loading, name, children }: SkeletonProps) {
     );
   }
 
-  const Component = registry[name];
+  const Component = registry[name] as React.ElementType | undefined;
 
   if (!Component) {
     return <>loading...</>;

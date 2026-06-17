@@ -1,8 +1,9 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { ArrowRight as ArrowRightIcon } from "lucide-react";
+const ArrowRight = ArrowRightIcon as React.ElementType;
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

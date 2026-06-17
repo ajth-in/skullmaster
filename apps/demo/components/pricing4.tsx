@@ -20,7 +20,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
-import { ElementType, useState } from "react";
+import { useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -29,7 +29,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { cn } from "@/lib/utils";
 
-type IconComponent = ElementType<{ className?: string }>;
+type IconComponent = React.ElementType;
 type Pricing3PlanFeature =
   | string
   | {

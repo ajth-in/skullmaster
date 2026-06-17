@@ -1,4 +1,4 @@
-import { Preferences } from "./collect-preferences";
+import { type Preferences } from "./collect-preferences";
 import { updateCacheRegistry } from "./cache-registry";
 import defaultBone from "./default-bone";
 import { generateInitialRegistry, generateRegistry } from "./registry";

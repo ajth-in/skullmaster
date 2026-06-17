@@ -9,7 +9,7 @@ import { generateRegistry } from "../init/registry";
 import { transformInput } from "../transform";
 import { toPascalCase } from "../utils/to-pascal-case";
 import { fnv1a } from "../utils/fnv1a";
-import { Preferences } from "../init/collect-preferences";
+import { type Preferences } from "../init/collect-preferences";
 
 export async function serveCommand(preferences: Preferences, port: number) {
   const { outDir, project: projectType } = preferences;

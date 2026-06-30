@@ -208,8 +208,8 @@ export default function Projects() {
             data-depth="3"
             className="group overflow-hidden rounded-lg border border-border bg-background"
             style={{
-              opacity: "1",
-              transform: "none",
+              opacity: "0",
+              transform: "translateY(50px)",
             }}
           >
             <a
@@ -253,8 +253,8 @@ export default function Projects() {
             data-depth="3"
             className="group overflow-hidden rounded-lg border border-border bg-background"
             style={{
-              opacity: "1",
-              transform: "none",
+              opacity: "0",
+              transform: "translateY(50px)",
             }}
           >
             <a

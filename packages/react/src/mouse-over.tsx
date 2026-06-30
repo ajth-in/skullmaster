@@ -12,7 +12,33 @@ export default function HoverHighlighter() {
     let currentError: string | null = null;
 
     const overlay = document.createElement("div");
-    const label = document.createElement("div");
+    const downloadBtn = document.createElement("div");
+    const btnText = document.createElement("span");
+
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("width", "14");
+    svg.setAttribute("height", "14");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "2");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+
+    const path1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path1.setAttribute("d", "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4");
+    svg.appendChild(path1);
+
+    const polyline = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+    polyline.setAttribute("points", "7 10 12 15 17 10");
+    svg.appendChild(polyline);
+
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", "12");
+    line.setAttribute("y1", "15");
+    line.setAttribute("x2", "12");
+    line.setAttribute("y2", "3");
+    svg.appendChild(line);
 
     Object.assign(overlay.style, {
       position: "fixed",
@@ -25,22 +51,35 @@ export default function HoverHighlighter() {
       transition: "all 150ms ease",
     });
 
-    Object.assign(label.style, {
-      padding: "8px 12px",
-      borderRadius: "8px",
+    Object.assign(downloadBtn.style, {
+      position: "absolute",
+      top: "8px",
+      right: "8px",
+      pointerEvents: "auto",
+      cursor: "pointer",
+      display: "flex",
+      alignItems: "center",
+      gap: "6px",
+      padding: "6px 10px",
+      borderRadius: "6px",
       background: "rgba(0,0,0,0.85)",
       color: "white",
-      fontSize: "14px",
+      fontSize: "12px",
       fontWeight: "600",
       fontFamily: "system-ui, sans-serif",
-      textAlign: "center",
-      maxWidth: "80%",
-      whiteSpace: "pre-wrap",
-      wordBreak: "break-word",
-      pointerEvents: "none",
+      lineHeight: "1",
     });
 
-    overlay.appendChild(label);
+    downloadBtn.addEventListener("mouseenter", () => {
+      downloadBtn.style.background = "rgba(50,50,50,0.9)";
+    });
+    downloadBtn.addEventListener("mouseleave", () => {
+      downloadBtn.style.background = "rgba(0,0,0,0.85)";
+    });
+
+    downloadBtn.appendChild(btnText);
+    downloadBtn.appendChild(svg);
+    overlay.appendChild(downloadBtn);
     document.body.appendChild(overlay);
 
     const getComponentName = (element: HTMLElement) =>
@@ -49,19 +88,19 @@ export default function HoverHighlighter() {
     const updateLabel = (componentName: string, state: SkeletonState, error?: string | null) => {
       switch (state) {
         case "idle":
-          label.textContent = componentName;
+          btnText.textContent = `Download ${componentName}`;
           break;
 
         case "loading":
-          label.textContent = "Defleshing...";
+          btnText.textContent = "Defleshing...";
           break;
 
         case "success":
-          label.textContent = `${componentName} saved! Check your project directory.`;
+          btnText.textContent = `${componentName} saved! Check your project directory.`;
           break;
 
         case "error":
-          label.textContent = `${error ?? "Generation failed"}`;
+          btnText.textContent = `${error ?? "Generation failed"}`;
           break;
       }
     };
@@ -112,6 +151,8 @@ export default function HoverHighlighter() {
 
       if (!target) return;
 
+      if (overlay.contains(target)) return;
+
       const skeleton = target.closest<HTMLElement>("[data-skullmaster]");
 
       if (!skeleton) {
@@ -142,21 +183,19 @@ export default function HoverHighlighter() {
 
       if (!target) return;
 
-      const skeleton = target.closest<HTMLElement>("[data-skullmaster]");
+      if (!downloadBtn.contains(target)) return;
 
-      if (!skeleton) return;
+      if (!currentSkeleton) return;
 
       event.preventDefault();
       event.stopPropagation();
 
-      currentSkeleton = skeleton;
+      const componentName = getComponentName(currentSkeleton);
+      markTransparentContainers(currentSkeleton);
+      await injectNaturalImageDimensions(currentSkeleton);
+      const html = currentSkeleton.outerHTML;
 
-      const componentName = getComponentName(skeleton);
-      markTransparentContainers(skeleton);
-      await injectNaturalImageDimensions(skeleton);
-      const html = skeleton.outerHTML;
-
-      updateOverlay(skeleton);
+      updateOverlay(currentSkeleton);
       applyState("loading", componentName);
 
       try {

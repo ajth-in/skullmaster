@@ -11,7 +11,7 @@ export default function Contact7() {
   return (
     <section
       data-depth="0"
-      className="empty-set__skeleton py-32"
+      className="py-32 empty-set__skeleton"
       data-skullmaster="Contact7"
       role="status"
       aria-live="polite"

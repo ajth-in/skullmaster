@@ -1,7 +1,7 @@
 {
   "name": "@skullmaster/typescript-config",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
   "license": "MIT",
   "files": [
     "base.json",

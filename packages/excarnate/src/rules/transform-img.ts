@@ -4,12 +4,7 @@ import type { Rule } from "../types";
 export const DATA_NAT_H = "data-natural-h";
 export const DATA_NAT_W = "data-natural-w";
 
-function createSkeletonSrc(
-  width?: string,
-  height?: string,
-  base = "#e5e7eb",
-  highlight = "#f3f4f6",
-) {
+function createSkeletonSrc(width?: string, height?: string, color = "#e5e7eb") {
   const w = Number(width) || 400;
   const h = Number(height) || 300;
 
@@ -21,30 +16,7 @@ function createSkeletonSrc(
       viewBox="0 0 ${w} ${h}"
       preserveAspectRatio="none"
     >
-      <defs>
-        <linearGradient id="shimmer" x1="-100%" y1="0" x2="100%" y2="0">
-          <stop offset="0%" stop-color="${base}" />
-          <stop offset="45%" stop-color="${base}" />
-          <stop offset="50%" stop-color="${highlight}" />
-          <stop offset="55%" stop-color="${base}" />
-          <stop offset="100%" stop-color="${base}" />
-
-          <animateTransform
-            attributeName="gradientTransform"
-            type="translate"
-            from="-1 0"
-            to="1 0"
-            dur="1.5s"
-            repeatCount="indefinite"
-          />
-        </linearGradient>
-      </defs>
-
-      <rect
-        width="100%"
-        height="100%"
-        fill="url(#shimmer)"
-      />
+      <rect width="100%" height="100%" fill="${color}" />
     </svg>
   `)}`;
 }

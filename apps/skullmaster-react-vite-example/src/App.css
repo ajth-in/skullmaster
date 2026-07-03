@@ -1,0 +1,529 @@
+/* ─── Loading Toggle ─── */
+
+.loading-toggle {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 1000;
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border: 3px solid #000;
+  background: #fff;
+  color: #000;
+  box-shadow: 5px 5px 0 #000;
+  transition:
+    box-shadow 0.1s,
+    transform 0.1s;
+}
+
+.loading-toggle:active {
+  box-shadow: 2px 2px 0 #000;
+  transform: translate(3px, 3px);
+}
+
+/* ─── Overlay / Spinner ─── */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 6px solid #fff;
+  border-top-color: #ff0055;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ─── Hero ─── */
+
+.hero-section {
+  border: 4px solid #000;
+  margin: 24px;
+  padding: 64px 32px;
+  background: #ff0055;
+  box-shadow: 10px 10px 0 #000;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: -3px;
+  margin: 0 0 8px;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0 #000;
+}
+
+.hero-subtitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-desc {
+  font-size: 18px;
+  max-width: 500px;
+  margin: 0 auto 32px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ─── Buttons ─── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  transition:
+    box-shadow 0.1s,
+    transform 0.1s;
+  text-decoration: none;
+}
+
+.btn:active {
+  box-shadow: 2px 2px 0 #000;
+  transform: translate(3px, 3px);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-primary {
+  background: #000;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #ff0055;
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #000;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #000;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.btn-ghost:hover {
+  background: #eee;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: #fff;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+/* ─── Cards ─── */
+
+.card {
+  border: 4px solid #000;
+  background: #fff;
+  box-shadow: 8px 8px 0 #000;
+  padding: 32px;
+}
+
+/* ─── Profile Card ─── */
+
+.profile-card {
+  margin: 0 24px 24px;
+  text-align: center;
+  max-width: 360px;
+}
+
+.profile-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 4px solid #000;
+  background: linear-gradient(135deg, #ff0055, #ffaa00);
+  margin: 0 auto 16px;
+}
+
+.profile-name {
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 0 4px;
+  color: #000;
+}
+
+.profile-role {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border: 2px solid #000;
+  background: #ffea00;
+  margin-bottom: 16px;
+}
+
+.profile-bio {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 20px;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat strong {
+  font-size: 20px;
+  color: #000;
+}
+
+.stat span {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+/* ─── Components Section ─── */
+
+.components-section {
+  padding: 0 24px 24px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  color: #000;
+  margin: 0 0 24px;
+  text-align: center;
+  text-shadow: 3px 3px 0 #ff0055;
+}
+
+.components-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.component-card {
+  text-align: left;
+}
+
+.component-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #000;
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #000;
+}
+
+.card-wide {
+  grid-column: 1 / -1;
+}
+
+.component-demo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ─── Form Controls ─── */
+
+.form-demo {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-demo label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #000;
+}
+
+.form-demo input[type="text"],
+.form-demo select {
+  padding: 10px 12px;
+  font-family: inherit;
+  font-size: 15px;
+  border: 3px solid #000;
+  background: #fff;
+  box-shadow: 4px 4px 0 #000;
+  outline: none;
+}
+
+.form-demo input[type="text"]:focus,
+.form-demo select:focus {
+  box-shadow: 2px 2px 0 #000;
+  transform: translate(2px, 2px);
+}
+
+.checkbox-label {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 8px !important;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #000;
+}
+
+/* ─── Badges ─── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid #000;
+}
+
+.badge-default {
+  background: #f3f3f3;
+  color: #000;
+}
+
+.badge-primary {
+  background: #000;
+  color: #fff;
+}
+
+.badge-success {
+  background: #16a34a;
+  color: #fff;
+}
+
+.badge-warning {
+  background: #f59e0b;
+  color: #000;
+}
+
+.badge-danger {
+  background: #dc2626;
+  color: #fff;
+}
+
+.badge-info {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* ─── Alerts ─── */
+
+.alert-demo {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.alert {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+}
+
+.alert-info {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.alert-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.alert-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ─── Progress ─── */
+
+.progress-demo {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.progress {
+  width: 100%;
+  height: 28px;
+  border: 3px solid #000;
+  appearance: none;
+}
+
+.progress::-webkit-progress-bar {
+  background: #fff;
+}
+
+.progress::-webkit-progress-value {
+  background: #000;
+  transition: width 0.3s;
+}
+
+.progress::-moz-progress-bar {
+  background: #000;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  margin-top: 4px;
+}
+
+/* ─── Mini Cards ─── */
+
+.cards-demo {
+  gap: 16px;
+}
+
+.mini-card {
+  flex: 1;
+  min-width: 140px;
+  padding: 16px;
+  border: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  background: #fff;
+}
+
+.mini-card h4 {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 0 0 8px;
+  color: #000;
+}
+
+.mini-card p {
+  font-size: 13px;
+  color: #333;
+  margin: 0;
+}
+
+.mini-card-accent {
+  border-color: #ff0055;
+}
+
+/* ─── Footer ─── */
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  border-top: 4px solid #000;
+  margin: 0 24px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+/* ─── Responsive ─── */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .components-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    margin: 16px;
+    padding: 40px 20px;
+  }
+
+  .profile-card {
+    margin: 0 16px 16px;
+  }
+
+  .components-section {
+    padding: 0 16px 16px;
+  }
+
+  .footer {
+    margin: 0 16px;
+  }
+}

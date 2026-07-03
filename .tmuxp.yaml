@@ -7,16 +7,10 @@ windows:
     panes:
       - pnpm run dev
       - cd apps/demo && pnpm skullmaster serve
+      - lazygit
       - opencode .
 
   - window_name: editor
     focus: true
     panes:
       - nvim .
-
-  - window_name: workspace
-    layout: main-vertical
-    focus: true
-    panes:
-      - lazygit
-      -

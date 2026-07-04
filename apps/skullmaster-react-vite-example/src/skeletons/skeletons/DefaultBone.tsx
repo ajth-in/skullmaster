@@ -1,9 +1,4 @@
-import { writeFile } from "node:fs/promises";
-
-export default async function defaultBone(target: string) {
-  await writeFile(
-    target,
-    `/* eslint-disable */
+/* eslint-disable */
 /* oxlint-disable */
 /* biome-ignore-all lint */
 /* @ts-nocheck */
@@ -19,8 +14,4 @@ export default async function defaultBone(target: string) {
  */
 export default function DefaultBone() {
   return <div>loading...</div>;
-}
-`,
-    "utf8",
-  );
 }

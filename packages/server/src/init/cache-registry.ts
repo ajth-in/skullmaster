@@ -1,10 +1,10 @@
 import { SkeletonCacheEntrySchema } from "@skullmaster/shared";
 import z from "zod";
-import fileExists from "./is-file-exists";
 import { readFile, writeFile } from "node:fs/promises";
+import fileExists from "./is-file-exists";
 import { fnv1a } from "../utils/fnv1a";
 
-type CacheOperation =
+export type CacheOperation =
   | { type: "replace"; cacheEntry: z.infer<typeof SkeletonCacheEntrySchema> }
   | { type: "delete"; componentName: string }
   | {
@@ -14,7 +14,7 @@ type CacheOperation =
     };
 
 export async function updateCacheRegistry(operation: CacheOperation, outDir: string) {
-  const cacheFilePath = `${outDir}/cache.json`;
+  const cacheFilePath = outDir;
   let cacheEntries: z.infer<typeof SkeletonCacheEntrySchema> = {};
   if (!(await fileExists(cacheFilePath))) {
     await writeFile(cacheFilePath, JSON.stringify({}), "utf8");

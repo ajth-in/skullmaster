@@ -1,5 +1,6 @@
 import { useLoading } from "./context/LoadingContext";
 import "./App.css";
+import { SkullMaster } from "@skullmaster/react";
 
 function LoadingToggle() {
   const { isLoading, toggleLoading } = useLoading();
@@ -10,19 +11,9 @@ function LoadingToggle() {
   );
 }
 
-function Overlay() {
-  const { isLoading } = useLoading();
-  if (!isLoading) return null;
-  return (
-    <div className="overlay">
-      <div className="spinner" />
-    </div>
-  );
-}
-
 function Hero() {
   return (
-    <section className="hero-section">
+    <section className="hero-section" data-skullmaster="Hero">
       <div className="hero-content">
         <h1 className="hero-title">SKULLMASTER</h1>
         <p className="hero-subtitle">Neo Brutalist UI Showcase</p>
@@ -158,7 +149,7 @@ function UIComponents() {
 
 function App() {
   return (
-    <>
+    <SkullMaster>
       <LoadingToggle />
       <Hero />
       <UserProfileCard />
@@ -166,7 +157,7 @@ function App() {
       <footer className="footer">
         <p>Built with React + TypeScript &bull; Neo Brutalism Edition</p>
       </footer>
-    </>
+    </SkullMaster>
   );
 }
 

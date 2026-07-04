@@ -1,6 +1,5 @@
 import { Project, SyntaxKind } from "ts-morph";
 import { writeFile } from "node:fs/promises";
-import fileExists from "./is-file-exists";
 import { ensureLazyImport } from "./ensure-lazy-imports";
 
 export async function generateInitialRegistry(outDir: string, projectType: string) {
@@ -35,7 +34,7 @@ type SkeletonProps = {
  */
 
 
-import DefaultBone from "./DefaultBone";
+import DefaultBone from "./skeletons/DefaultBone";
 
 const registry${isTs ? ": Record<string, any>" : ""} = {};
 
@@ -57,24 +56,15 @@ export default function Skeleton({
   );
 }
 
-type RegistryOperation =
+export type RegistryOperation =
   | { type: "init"; components: string[] }
   | { type: "add"; components: string[] };
 
 export async function generateRegistry(
   operation: RegistryOperation,
-  outDir: string,
-  projectType: string,
+  isTs: boolean,
+  registryPath: string,
 ) {
-  const isTs = projectType.endsWith("ts");
-  const ext = isTs ? "tsx" : "jsx";
-
-  const registryPath = `${outDir}/registry.${ext}`;
-
-  if (!fileExists(registryPath)) {
-    await generateInitialRegistry(outDir, projectType);
-  }
-
   let project: Project;
   if (isTs) {
     project = new Project({

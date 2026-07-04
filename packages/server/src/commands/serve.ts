@@ -5,15 +5,12 @@ import { cors } from "hono/cors";
 import { Project } from "ts-morph";
 import { SkeletonCacheDB } from "../cache";
 import generateTarget from "../generate-target";
-import { generateRegistry } from "../init/registry";
 import { transformInput } from "../transform";
 import { toPascalCase } from "../utils/to-pascal-case";
 import { fnv1a } from "../utils/fnv1a";
-import { type Preferences } from "../init/collect-preferences";
+import type { Config } from "../init/preferences";
 
-export async function serveCommand(preferences: Preferences, port: number) {
-  const { outDir, project: projectType } = preferences;
-  const isTs = projectType.endsWith("ts");
+export async function serveCommand(config: Config, port: number) {
   const app = new Hono();
 
   app.use(
@@ -25,7 +22,7 @@ export async function serveCommand(preferences: Preferences, port: number) {
     }),
   );
 
-  const db = await SkeletonCacheDB.create(outDir, projectType);
+  const db = await SkeletonCacheDB.create(config);
 
   app.get("/health", (c) => {
     return c.json({
@@ -52,7 +49,7 @@ export async function serveCommand(preferences: Preferences, port: number) {
 
       generateTarget({
         project,
-        filePath: `${outDir}/bones/${componentName}.${isTs ? "tsx" : "jsx"}`,
+        filePath: `${config.getSkeletonPath()}/${componentName}.${config.getExt()}`,
         componentName,
         body: transformedHtml,
       });
@@ -64,7 +61,7 @@ export async function serveCommand(preferences: Preferences, port: number) {
       });
     });
     await Promise.all(entries);
-    generateRegistry({ type: "add", components: db.getComponentNames() }, outDir, projectType);
+    config.registry({ type: "add", components: db.getComponentNames() });
     await project.save();
 
     return c.json({

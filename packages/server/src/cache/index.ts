@@ -1,19 +1,16 @@
-import { SkeletonCacheEntry, SkeletonCacheEntrySchema } from "@skullmaster/shared";
+import { type SkeletonCacheEntry, SkeletonCacheEntrySchema } from "@skullmaster/shared";
 import { readFile } from "node:fs/promises";
-import { updateCacheRegistry } from "../init/cache-registry";
+import type { Config } from "../init/preferences";
 
 export class SkeletonCacheDB {
   private data: SkeletonCacheEntry = {};
-  outDir: string;
-  projectType: string;
-
-  private constructor(outDir: string, projectType: string) {
-    this.outDir = outDir;
-    this.projectType = projectType;
+  config: Config;
+  private constructor(config: Config) {
+    this.config = config;
   }
 
-  static async create(outDir: string, projectType: string) {
-    const db = new SkeletonCacheDB(outDir, projectType);
+  static async create(config: Config) {
+    const db = new SkeletonCacheDB(config);
 
     await db.load();
 
@@ -22,7 +19,7 @@ export class SkeletonCacheDB {
 
   private async load() {
     try {
-      const file = await readFile(this.outDir, "utf8");
+      const file = await readFile(this.config.getCachePath(), "utf8");
 
       const parsed = JSON.parse(file);
 
@@ -30,7 +27,7 @@ export class SkeletonCacheDB {
     } catch {
       this.data = {};
 
-      await updateCacheRegistry({ type: "replace", cacheEntry: {} }, this.outDir);
+      await this.config.cache({ type: "replace", cacheEntry: {} });
     }
   }
 
@@ -43,6 +40,6 @@ export class SkeletonCacheDB {
 
   async set(key: string, value: SkeletonCacheEntry[string]) {
     this.data[key] = value;
-    updateCacheRegistry({ type: "update", componentName: key, payload: value }, this.outDir);
+    this.config.cache({ type: "update", componentName: key, payload: value });
   }
 }

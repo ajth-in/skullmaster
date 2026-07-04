@@ -101,7 +101,7 @@ export async function generateRegistry(
 
     registry.addPropertyAssignment({
       name: `"${component}"`,
-      initializer: `lazy(() => import("./bones/${component}"))`,
+      initializer: `lazy(() => import("./skeletons/${component}"))`,
     });
   }
 

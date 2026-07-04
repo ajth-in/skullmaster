@@ -1,6 +1,7 @@
 import { useLoading } from "./context/LoadingContext";
 import "./App.css";
 import { SkullMaster } from "@skullmaster/react";
+import Skeleton from "./skeletons/registry";
 
 function LoadingToggle() {
   const { isLoading, toggleLoading } = useLoading();
@@ -12,6 +13,10 @@ function LoadingToggle() {
 }
 
 function Hero() {
+  const { isLoading } = useLoading();
+  if (isLoading) {
+    return <Skeleton name={"Hero"} />;
+  }
   return (
     <section className="hero-section" data-skullmaster="Hero">
       <div className="hero-content">

@@ -14,8 +14,11 @@
  */
 
 import DefaultBone from "./skeletons/DefaultBone";
+import { lazy } from "react";
 
-const registry: Record<string, any> = {};
+const registry: Record<string, any> = {
+  Hero: lazy(() => import("./skeletons/Hero")),
+};
 
 type SkeletonProps = {
   name: string;

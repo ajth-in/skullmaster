@@ -52,7 +52,7 @@ export class Config {
     log.success("Initialization complete");
   }
   async cache(op: CacheOperation) {
-    return await updateCacheRegistry(op, this.outDir);
+    return await updateCacheRegistry(op, this.getCachePath());
   }
   async registry(op: RegistryOperation) {
     return generateRegistry(op, this.projectType.endsWith("ts"), this.getRegistryPath());

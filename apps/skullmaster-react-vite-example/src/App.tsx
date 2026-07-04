@@ -2,7 +2,7 @@ import { useLoading } from "./context/LoadingContext";
 import "./App.css";
 import { SkullMaster } from "@skullmaster/react";
 import Skeleton from "./skeletons/registry";
-
+import "@skullmaster/react/style.css";
 function LoadingToggle() {
   const { isLoading, toggleLoading } = useLoading();
   return (

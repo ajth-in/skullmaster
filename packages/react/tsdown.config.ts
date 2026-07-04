@@ -5,7 +5,10 @@ export default defineConfig({
   platform: "neutral",
   dts: true,
   exports: true,
-  entry: ["src/index.ts"],
+  entry: ["src/index.ts", "src/styles.css"],
   format: ["esm"],
   deps: { neverBundle: ["react", "react-dom"] },
+  css: {
+    minify: true,
+  },
 });

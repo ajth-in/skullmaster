@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       data-depth="0"
-      className="hero-section empty-set__skeleton empty-set__skeleton empty-set__skeleton"
+      className="hero-section empty-set__skeleton empty-set__skeleton empty-set__skeleton empty-set__skeleton"
       data-skullmaster="Hero"
       role="status"
       aria-live="polite"
@@ -23,17 +23,17 @@ export default function Hero() {
       <div className="hero-content" data-depth="-1">
         <h1 data-depth="2" className="hero-title">
           <span className="empty-set__text" data-text-node="true" data-depth="2">
-            UiiGEk2ygFp
+            84jQ76PbHUY
           </span>
         </h1>
         <p data-depth="2" className="hero-subtitle">
           <span className="empty-set__text" data-text-node="true" data-depth="2">
-            cnJ T9cawZKXv C- bFo8f1wg
+            hrB 0fxYkaQOC -d ~QF9JAK~
           </span>
         </p>
         <p data-depth="2" className="hero-desc">
           <span className="empty-set__text" data-text-node="true" data-depth="2">
-            L I4EDnmX7X- CN VOr-U- N51 XsnpG7Fa_J RBC~89~TQs uavq gV7v- 6fsU0kZS8ZES RNWoEc7
+            m eTTUb~gh2r Dh i2qVF3 EWM -A~Ne9sjLF .Me-DfbP0f P-mi AWqdD MTRfxK3LzrIR DW_obwA
           </span>
         </p>
         <div className="hero-actions" data-depth="-1">
@@ -44,7 +44,7 @@ export default function Hero() {
             aria-hidden="true"
             tabIndex={-1}
           >
-            Fb1 _L5jXe6
+            CcH hyMROlH
           </button>
           <button
             data-depth="3"
@@ -53,7 +53,7 @@ export default function Hero() {
             aria-hidden="true"
             tabIndex={-1}
           >
-            gQ7nF WJum
+            UxIRp 5V1U
           </button>
         </div>
       </div>

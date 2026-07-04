@@ -166,6 +166,9 @@ importers:
       '@skullmaster/typescript-config':
         specifier: workspace:*
         version: link:../config-typescript
+      '@tsdown/css':
+        specifier: ^0.22.3
+        version: 0.22.3(tsdown@0.22.0)
       '@types/node':
         specifier: ^25.6.2
         version: 25.9.1
@@ -192,7 +195,7 @@ importers:
         version: 19.2.6(react@19.2.6)
       tsdown:
         specifier: ^0.22.0
-        version: 0.22.0(@typescript/native-preview@7.0.0-dev.20260509.2)(typescript@6.0.3)
+        version: 0.22.0(@tsdown/css@0.22.3)(typescript@6.0.3)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -280,7 +283,7 @@ importers:
         version: 1.69.0
       tsdown:
         specifier: ^0.22.0
-        version: 0.22.0(@typescript/native-preview@7.0.0-dev.20260509.2)(typescript@6.0.3)
+        version: 0.22.0(@tsdown/css@0.22.3)(typescript@6.0.3)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -311,7 +314,7 @@ importers:
         version: 1.69.0
       tsdown:
         specifier: ^0.22.0
-        version: 0.22.0(@typescript/native-preview@7.0.0-dev.20260509.2)(typescript@6.0.3)
+        version: 0.22.0(@tsdown/css@0.22.3)(typescript@6.0.3)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -2075,6 +2078,38 @@ packages:
       path-browserify: 1.0.1
       tinyglobby: 0.2.16
     dev: false
+
+  /@tsdown/css@0.22.3(tsdown@0.22.0):
+    resolution: {integrity: sha512-kmb/31lcI/Pk26WeWJxQDLy8qkvoyfBkw3n9aN6bflKkoeLqnV2BRbndzfPRJY+Ziahi796gfgDVc+ftLIgWVw==}
+    engines: {node: ^22.18.0 || >=24.11.0}
+    peerDependencies:
+      postcss: ^8.4.0
+      postcss-import: ^16.0.0
+      postcss-modules: ^6.0.0
+      sass: '*'
+      sass-embedded: '*'
+      tsdown: 0.22.3
+    peerDependenciesMeta:
+      postcss:
+        optional: true
+      postcss-import:
+        optional: true
+      postcss-modules:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+    dependencies:
+      lightningcss: 1.32.0
+      postcss-load-config: 6.0.1
+      rolldown: 1.1.4
+      tsdown: 0.22.0(@tsdown/css@0.22.3)(typescript@6.0.3)
+    transitivePeerDependencies:
+      - jiti
+      - tsx
+      - yaml
+    dev: true
 
   /@turbo/darwin-64@2.9.14:
     resolution: {integrity: sha512-t7QiPflaEyBE4oayeZtSmu4mEfjgIrcNlNNl1z1dmIVPqEdtA7+CfTf8d7KXsOGPh6aNgWjKxyvQg9uGfDQF+A==}
@@ -4317,7 +4352,6 @@ packages:
   /lilconfig@3.1.3:
     resolution: {integrity: sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==}
     engines: {node: '>=14'}
-    dev: false
 
   /lines-and-columns@2.0.4:
     resolution: {integrity: sha512-wM1+Z03eypVAVUCE7QdSqpVIvelbOakn1M0bPDoA4SGWPx3sNDVUiMo3L6To6WWGClB7VyXnhQ4Sn7gxiJbE6A==}
@@ -5061,6 +5095,27 @@ packages:
     dependencies:
       postcss: 8.5.16
     dev: false
+
+  /postcss-load-config@6.0.1:
+    resolution: {integrity: sha512-oPtTM4oerL+UXmx+93ytZVN82RrlY/wPUV8IeDxFrzIjXOLF1pN+EmKPLbubvKHT2HC20xXsCAH2Z+CKV6Oz/g==}
+    engines: {node: '>= 18'}
+    peerDependencies:
+      jiti: '>=1.21.0'
+      postcss: '>=8.0.9'
+      tsx: ^4.8.1
+      yaml: ^2.4.2
+    peerDependenciesMeta:
+      jiti:
+        optional: true
+      postcss:
+        optional: true
+      tsx:
+        optional: true
+      yaml:
+        optional: true
+    dependencies:
+      lilconfig: 3.1.3
+    dev: true
 
   /postcss-merge-longhand@7.0.7(postcss@8.5.16):
     resolution: {integrity: sha512-b3mfYUxR388u5Pt0HPcVIUtUDn/k15UfTY9M+ORW+meCR6JLNxoZffiYvXyOYQoRYQNZyX/UFkMCM/mNHxe1qA==}
@@ -6076,6 +6131,64 @@ packages:
       code-block-writer: 13.0.3
     dev: false
 
+  /tsdown@0.22.0(@tsdown/css@0.22.3)(typescript@6.0.3):
+    resolution: {integrity: sha512-FgW0hHb27nGQA/+F3d5+U9wKXkfilk9DVkc5+7x/ZqF03g+Hoz/eeApT32jqxATt9eRoR+1jxk7MUMON+O4CXw==}
+    engines: {node: ^22.18.0 || >=24.0.0}
+    hasBin: true
+    peerDependencies:
+      '@arethetypeswrong/core': ^0.18.1
+      '@tsdown/css': 0.22.0
+      '@tsdown/exe': 0.22.0
+      '@vitejs/devtools': '*'
+      publint: ^0.3.8
+      tsx: '*'
+      typescript: ^5.0.0 || ^6.0.0
+      unplugin-unused: ^0.5.0
+      unrun: '*'
+    peerDependenciesMeta:
+      '@arethetypeswrong/core':
+        optional: true
+      '@tsdown/css':
+        optional: true
+      '@tsdown/exe':
+        optional: true
+      '@vitejs/devtools':
+        optional: true
+      publint:
+        optional: true
+      tsx:
+        optional: true
+      typescript:
+        optional: true
+      unplugin-unused:
+        optional: true
+      unrun:
+        optional: true
+    dependencies:
+      '@tsdown/css': 0.22.3(tsdown@0.22.0)
+      ansis: 4.3.0
+      cac: 7.0.0
+      defu: 6.1.7
+      empathic: 2.0.1
+      hookable: 6.1.1
+      import-without-cache: 0.4.0
+      obug: 2.1.1
+      picomatch: 4.0.4
+      rolldown: 1.0.2
+      rolldown-plugin-dts: 0.25.1(@typescript/native-preview@7.0.0-dev.20260509.2)(rolldown@1.0.2)(typescript@6.0.3)
+      semver: 7.8.1
+      tinyexec: 1.2.2
+      tinyglobby: 0.2.16
+      tree-kill: 1.2.2
+      typescript: 6.0.3
+      unconfig-core: 7.5.0
+    transitivePeerDependencies:
+      - '@ts-macro/tsc'
+      - '@typescript/native-preview'
+      - oxc-resolver
+      - vue-tsc
+    dev: true
+
   /tsdown@0.22.0(@typescript/native-preview@7.0.0-dev.20260509.2)(typescript@6.0.3):
     resolution: {integrity: sha512-FgW0hHb27nGQA/+F3d5+U9wKXkfilk9DVkc5+7x/ZqF03g+Hoz/eeApT32jqxATt9eRoR+1jxk7MUMON+O4CXw==}
     engines: {node: ^22.18.0 || >=24.0.0}
@@ -6131,6 +6244,7 @@ packages:
       - '@typescript/native-preview'
       - oxc-resolver
       - vue-tsc
+    dev: false
 
   /tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}

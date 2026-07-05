@@ -1,5 +1,11 @@
 # skullmaster
 
+## 0.1.4
+
+### Patch Changes
+
+- 9c553a5: made excarnate package baked into server
+
 ## 0.1.3
 
 ### Patch Changes

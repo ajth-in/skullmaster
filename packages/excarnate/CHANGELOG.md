@@ -1,5 +1,11 @@
 # @skullmaster/excarnate
 
+## 0.1.2
+
+### Patch Changes
+
+- 37b4fd4: Remove the shared dependency package and bake it to the prod package
+
 ## 0.1.1
 
 ### Patch Changes

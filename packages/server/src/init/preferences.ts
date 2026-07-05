@@ -1,9 +1,9 @@
 import { mkdirSync, writeFileSync } from "node:fs";
-import { log } from "@skullmaster/shared";
 import fileExists from "./is-file-exists";
 import { generateInitialRegistry, generateRegistry, type RegistryOperation } from "./registry";
 import { updateCacheRegistry, type CacheOperation } from "./cache-registry";
 import defaultBone from "./default-bone";
+import { log } from "../shared";
 
 export class Config {
   outDir: string;

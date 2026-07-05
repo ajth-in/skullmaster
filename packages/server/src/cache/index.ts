@@ -1,6 +1,6 @@
-import { type SkeletonCacheEntry, SkeletonCacheEntrySchema } from "@skullmaster/shared";
 import { readFile } from "node:fs/promises";
 import type { Config } from "../init/preferences";
+import { type SkeletonCacheEntry, SkeletonCacheEntrySchema } from "../shared";
 
 export class SkeletonCacheDB {
   private data: SkeletonCacheEntry = {};

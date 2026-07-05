@@ -27,7 +27,6 @@
   "dependencies": {
     "@babel/generator": "^7.29.7",
     "@babel/types": "^7.29.7",
-    "@skullmaster/shared": "workspace:*",
     "@types/babel__generator": "^7.27.0",
     "@types/jsdom": "^28.0.3",
     "@types/node": "^25.9.1",

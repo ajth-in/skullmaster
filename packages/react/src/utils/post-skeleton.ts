@@ -1,4 +1,4 @@
-import { DEFAULT_PORT } from "@skullmaster/shared";
+import { DEFAULT_PORT } from "../constants";
 
 export type GenerateSkeletonResponse = {
   success: true;

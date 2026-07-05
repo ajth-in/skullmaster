@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import { DEFAULT_PORT } from "@skullmaster/shared";
 import { cac } from "cac";
 import { serveCommand } from "./commands/serve";
 import collectPreferences from "./init/collect-preferences";
 import { Config } from "./init/preferences";
+import { DEFAULT_PORT } from "./shared";
 
 const cli = cac("💀");
 

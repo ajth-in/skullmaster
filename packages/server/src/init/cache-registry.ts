@@ -1,8 +1,8 @@
-import { SkeletonCacheEntrySchema } from "@skullmaster/shared";
-import z from "zod";
 import { readFile, writeFile } from "node:fs/promises";
+import z from "zod";
 import fileExists from "./is-file-exists";
 import { fnv1a } from "../utils/fnv1a";
+import { SkeletonCacheEntrySchema } from "../shared";
 
 export type CacheOperation =
   | { type: "replace"; cacheEntry: z.infer<typeof SkeletonCacheEntrySchema> }

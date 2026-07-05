@@ -1,5 +1,4 @@
 import { serve } from "@hono/node-server";
-import { log, SkeletonPayloadInputSchema } from "@skullmaster/shared";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { Project } from "ts-morph";
@@ -9,6 +8,7 @@ import { transformInput } from "../transform";
 import { toPascalCase } from "../utils/to-pascal-case";
 import { fnv1a } from "../utils/fnv1a";
 import type { Config } from "../init/preferences";
+import { log, SkeletonPayloadInputSchema } from "../shared";
 
 export async function serveCommand(config: Config, port: number) {
   const app = new Hono();

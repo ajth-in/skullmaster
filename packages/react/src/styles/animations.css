@@ -1,5 +1,5 @@
 .empty-set__skeleton {
-  animation: pulse 1.5s ease-in-out infinite;
+  animation: pulse 1.5s linear infinite;
 }
 @keyframes pulse {
   0%,
@@ -8,6 +8,6 @@
   }
 
   50% {
-    opacity: 0.5;
+    opacity: 0.7;
   }
 }

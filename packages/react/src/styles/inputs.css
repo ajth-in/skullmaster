@@ -1,26 +1,3 @@
-.empty-set__skeleton input[data-skeleton-input="true"] {
-  color: transparent !important;
-  caret-color: transparent !important;
-
-  pointer-events: none !important;
-  user-select: none !important;
-}
-
 .empty-set__skeleton input[data-skeleton-input="true"]::placeholder {
   color: transparent !important;
-}
-
-.empty-set__skeleton input[data-skeleton-input="true"][type="checkbox"] {
-  appearance: none !important;
-  border: none !important;
-}
-
-.empty-set__skeleton input[data-skeleton-input="true"][type="radio"] {
-  appearance: none !important;
-  border: none !important;
-  border-radius: 9999px !important;
-}
-
-.empty-set__skeleton input[data-skeleton-input="true"][type="range"] {
-  appearance: none !important;
 }

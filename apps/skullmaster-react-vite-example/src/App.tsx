@@ -2,6 +2,7 @@ import { useLoading } from "./context/LoadingContext";
 import "./App.css";
 import { SkullMaster } from "@skullmaster/react";
 import Skeleton from "./skeletons/registry";
+import { ImageCard } from "./common/components";
 import "@skullmaster/react/style.css";
 function LoadingToggle() {
   const { isLoading, toggleLoading } = useLoading();
@@ -149,6 +150,7 @@ function UIComponents() {
               <h4>Card Two</h4>
               <p>This one has an accent border.</p>
             </div>
+            <ImageCard />
           </div>
         </div>
       </div>
@@ -158,15 +160,17 @@ function UIComponents() {
 
 function App() {
   return (
-    <SkullMaster>
-      <LoadingToggle />
-      <Hero />
-      <UserProfileCard />
-      <UIComponents />
-      <footer className="footer">
-        <p>Built with React + TypeScript &bull; Neo Brutalism Edition</p>
-      </footer>
-    </SkullMaster>
+    <main className="">
+      <SkullMaster>
+        <LoadingToggle />
+        <Hero />
+        <UserProfileCard />
+        <UIComponents />
+        <footer className="footer">
+          <p>Built with React + TypeScript &bull; Neo Brutalism Edition</p>
+        </footer>
+      </SkullMaster>
+    </main>
   );
 }
 

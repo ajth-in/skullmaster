@@ -6,7 +6,7 @@ windows:
     layout: tiled
     panes:
       - pnpm run dev
-      - cd apps/demo && pnpm skullmaster serve
+      - cd apps/skullmaster-react-vite-example && pnpm skullmaster serve
       - lazygit
       - opencode .
 

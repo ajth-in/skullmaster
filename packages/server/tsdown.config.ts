@@ -4,5 +4,8 @@ export default defineConfig({
   dts: true,
   exports: true,
   entry: ["src/index.ts", "src/cli.ts"],
-  deps: { neverBundle: ["react", "react-dom"] },
+  deps: {
+    alwaysBundle: ["@skullmaster/excarnate"],
+    neverBundle: ["react", "react-dom"],
+  },
 });

@@ -25,7 +25,8 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
-    "lint": "oxlint -D correctness -W suspicious -W perf --config oxlint.json src"
+    "lint": "oxlint -D correctness -W suspicious -W perf --config oxlint.json src",
+    "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
     "@babel/generator": "^7.29.7",

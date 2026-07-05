@@ -20,6 +20,7 @@ const registry: Record<string, any> = {
   Hero: lazy(() => import("./skeletons/Hero")),
   UserProfileCard: lazy(() => import("./skeletons/UserProfileCard")),
   UI: lazy(() => import("./skeletons/UI")),
+  ImageCard: lazy(() => import("./skeletons/ImageCard")),
 };
 
 type SkeletonProps = {

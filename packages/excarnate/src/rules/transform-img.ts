@@ -1,25 +1,23 @@
-import { isJSXIdentifier } from "@babel/types";
+import * as t from "@babel/types";
 import { createJsxStringAttribute, findStringJsxAttribute } from "../helpers/jsx";
 import type { Rule } from "../types";
 export const DATA_NAT_H = "data-natural-h";
 export const DATA_NAT_W = "data-natural-w";
+export const DATA_IMAGE_SKELETON = "data-image-skeleton";
 
 function createSkeletonSrc(width?: string, height?: string, color = "#e5e7eb") {
   const w = Number(width) || 400;
   const h = Number(height) || 300;
 
-  return `data:image/svg+xml,${encodeURIComponent(`
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="${w}"
-      height="${h}"
-      viewBox="0 0 ${w} ${h}"
-      preserveAspectRatio="none"
-    >
-      <rect width="100%" height="100%" fill="${color}" />
-    </svg>
-  `)}`;
+  return `data:image/svg+xml,${encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><rect width="100%" height="100%" fill="${color}"/></svg>`,
+  )}`;
 }
+
+function hasAttribute(attrs: readonly t.JSXAttribute[], name: string) {
+  return attrs.some((attr) => t.isJSXIdentifier(attr.name) && attr.name.name === name);
+}
+
 export const transformImg: Rule = {
   id: "transform-img",
 
@@ -33,25 +31,45 @@ export const transformImg: Rule = {
 
     const attrs = ctx.target.attributes ?? [];
 
-    const naturalWidth = findStringJsxAttribute(attrs, DATA_NAT_W)?.value;
+    const naturalWidthAttr = findStringJsxAttribute(attrs, DATA_NAT_W);
+    const naturalHeightAttr = findStringJsxAttribute(attrs, DATA_NAT_H);
 
-    const naturalHeight = findStringJsxAttribute(attrs, DATA_NAT_H)?.value;
+    const naturalWidth = naturalWidthAttr?.value?.value;
+    const naturalHeight = naturalHeightAttr?.value?.value;
 
-    const placeholderSrc = createSkeletonSrc(naturalWidth?.value, naturalHeight?.value);
+    const placeholderSrc = createSkeletonSrc(naturalWidth, naturalHeight);
 
-    const filteredAttrs = attrs.filter((attr) => {
-      const name = isJSXIdentifier(attr.name) ? attr.name.name : undefined;
+    const filteredAttrs: t.JSXAttribute[] = attrs.filter((attr): attr is t.JSXAttribute => {
+      if (!t.isJSXAttribute(attr)) return false;
+      const name = t.isJSXIdentifier(attr.name) ? attr.name.name : undefined;
 
-      return !["src", "srcSet", "sizes", "loading", "decoding", "fetchPriority"].includes(
-        name ?? "",
-      );
+      return ![
+        "src",
+        "srcSet",
+        "sizes",
+        "loading",
+        "decoding",
+        "fetchPriority",
+        DATA_NAT_W,
+        DATA_NAT_H,
+        DATA_IMAGE_SKELETON,
+      ].includes(name ?? "");
     });
 
-    const attributes = [
+    const attributes: t.JSXAttribute[] = [
       ...filteredAttrs,
       createJsxStringAttribute("src", placeholderSrc),
-      createJsxStringAttribute("data-image-skeleton", "true"),
+      createJsxStringAttribute(DATA_IMAGE_SKELETON, "true"),
     ];
+
+    if (naturalWidth && naturalHeight) {
+      if (!hasAttribute(filteredAttrs, "width")) {
+        attributes.push(createJsxStringAttribute("width", naturalWidth));
+      }
+      if (!hasAttribute(filteredAttrs, "height")) {
+        attributes.push(createJsxStringAttribute("height", naturalHeight));
+      }
+    }
 
     return {
       ...ctx,

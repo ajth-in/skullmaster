@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useLoading } from "./context/LoadingContext";
 import "./App.css";
 import { SkullMaster } from "@skullmaster/react";
@@ -8,7 +9,7 @@ function LoadingToggle() {
   const { isLoading, toggleLoading } = useLoading();
   return (
     <button className="loading-toggle" onClick={toggleLoading}>
-      {isLoading ? "Stop Loading" : "Start Loading"}
+      {isLoading ? "Hide" : "Show"}
     </button>
   );
 }
@@ -158,11 +159,24 @@ function UIComponents() {
   );
 }
 
+function DarkModeToggle() {
+  const [dark, setDark] = useState(false);
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", dark);
+  }, [dark]);
+  return (
+    <button className="dark-toggle" onClick={() => setDark((d) => !d)}>
+      {dark ? "☀️ Light" : "🌙 Dark"}
+    </button>
+  );
+}
+
 function App() {
   return (
-    <main className="">
+    <main>
       <SkullMaster>
         <LoadingToggle />
+        <DarkModeToggle />
         <Hero />
         <UserProfileCard />
         <UIComponents />

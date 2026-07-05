@@ -1,0 +1,25 @@
+:root {
+  --skeleton-bg-100: rgb(230, 230, 230);
+  --skeleton-bg-200: rgb(200, 200, 200);
+  --skeleton-bg-300: rgb(195, 195, 195);
+  --skeleton-bg-400: rgb(170, 170, 170);
+  --skeleton-bg-500: rgb(145, 145, 145);
+  --skeleton-bg-600: rgb(120, 120, 120);
+  --skeleton-bg-700: rgb(95, 95, 95);
+  --skeleton-bg-800: rgb(70, 70, 70);
+  --skeleton-bg-900: rgb(45, 45, 45);
+  --skeleton-bg-1000: rgb(25, 25, 25);
+}
+
+.dark {
+  --skeleton-bg-100: rgb(25, 25, 25);
+  --skeleton-bg-200: rgb(50, 50, 50);
+  --skeleton-bg-300: rgb(75, 75, 75);
+  --skeleton-bg-400: rgb(100, 100, 100);
+  --skeleton-bg-500: rgb(125, 125, 125);
+  --skeleton-bg-600: rgb(150, 150, 150);
+  --skeleton-bg-700: rgb(175, 175, 175);
+  --skeleton-bg-800: rgb(200, 200, 200);
+  --skeleton-bg-900: rgb(220, 220, 220);
+  --skeleton-bg-1000: rgb(240, 240, 240);
+}

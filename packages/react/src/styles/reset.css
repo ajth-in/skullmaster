@@ -1,0 +1,8 @@
+.empty-set__skeleton,
+.empty-set__skeleton * {
+  color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  outline: none !important;
+}

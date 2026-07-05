@@ -10,5 +10,6 @@ export default defineConfig({
   deps: { neverBundle: ["react", "react-dom"] },
   css: {
     minify: true,
+    target: ["chrome80", "firefox75", "safari13.1"],
   },
 });

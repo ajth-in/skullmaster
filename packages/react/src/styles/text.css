@@ -1,0 +1,22 @@
+.empty-set__skeleton .empty-set__text {
+  display: inline !important;
+
+  font: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  font-style: inherit !important;
+  font-family: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  word-spacing: inherit !important;
+  text-transform: inherit !important;
+  text-decoration: none !important;
+
+  vertical-align: baseline !important;
+
+  color: transparent !important;
+
+  border-radius: 0.25em !important;
+  box-decoration-break: clone !important;
+  -webkit-box-decoration-break: clone !important;
+}

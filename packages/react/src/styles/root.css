@@ -1,0 +1,5 @@
+.empty-set__skeleton {
+  pointer-events: none;
+  user-select: none;
+  cursor: default;
+}

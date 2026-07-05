@@ -35,8 +35,10 @@ function Hero() {
 }
 
 function UserProfileCard() {
+  const { isLoading } = useLoading();
+  if (isLoading) return <Skeleton name="UserProfileCard" />;
   return (
-    <div className="card profile-card">
+    <div data-skullmaster="UserProfileCard" className="card profile-card">
       <div className="profile-avatar" />
       <h2 className="profile-name">Jane Doe</h2>
       <span className="profile-role">Principal Engineer</span>
@@ -63,8 +65,10 @@ function UserProfileCard() {
 }
 
 function UIComponents() {
+  const { isLoading } = useLoading();
+  if (isLoading) return <Skeleton name="UI" />;
   return (
-    <section className="components-section">
+    <section className="components-section" data-skullmaster="UI">
       <h2 className="section-title">Common Components</h2>
       <div className="components-grid">
         <div className="card component-card">

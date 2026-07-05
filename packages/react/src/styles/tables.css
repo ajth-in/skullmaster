@@ -1,0 +1,8 @@
+.empty-set__skeleton table {
+  border-collapse: collapse !important;
+}
+
+.empty-set__skeleton th,
+.empty-set__skeleton td {
+  color: transparent !important;
+}

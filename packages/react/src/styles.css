@@ -1,3 +1,14 @@
-body {
-  background-color: red;
-}
+@import "./styles/variables.css";
+@import "./styles/root.css";
+@import "./styles/reset.css";
+@import "./styles/text.css";
+@import "./styles/interactive.css";
+@import "./styles/images.css";
+@import "./styles/inputs.css";
+@import "./styles/progress.css";
+@import "./styles/lists.css";
+@import "./styles/tables.css";
+@import "./styles/media.css";
+@import "./styles/iframes.css";
+@import "./styles/depth.css";
+@import "./styles/text-parent.css";

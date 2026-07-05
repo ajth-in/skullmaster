@@ -1,0 +1,6 @@
+.empty-set__skeleton [data-skeleton-type="iframe"] {
+  display: block !important;
+  width: 100%;
+  height: 100%;
+  background-color: inherit !important;
+}

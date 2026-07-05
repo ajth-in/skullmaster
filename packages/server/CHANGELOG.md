@@ -1,5 +1,11 @@
 # skullmaster
 
+## 0.1.3
+
+### Patch Changes
+
+- 069dbbc: Build the server package before publish so the deployed package includes the dist output.
+
 ## 0.1.2
 
 ### Patch Changes

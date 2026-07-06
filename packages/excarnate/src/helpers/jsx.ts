@@ -1,8 +1,9 @@
 import * as t from "@babel/types";
 import type { JsxChild } from "../types";
+import { sanitizeAttrValue } from "./sanitize-attr-value";
 
 export function createJsxStringAttribute(name: string, value: string): t.JSXAttribute {
-  return t.jsxAttribute(t.jsxIdentifier(name), t.stringLiteral(value));
+  return t.jsxAttribute(t.jsxIdentifier(name), t.stringLiteral(sanitizeAttrValue(value)));
 }
 
 export function createJsxExpressionAttribute(

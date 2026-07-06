@@ -1,6 +1,6 @@
 # skullmaster
 
-## 0.1.4
+## 0.1.4-next.0
 
 ### Patch Changes
 

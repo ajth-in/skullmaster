@@ -19,14 +19,14 @@ export default function UI() {
     >
       <h2 data-depth="1" className="section-title">
         <span className="empty-set__text" data-text-node="true" data-depth="1">
-          KGqOtL b0y74kF.e4
+          ██████ ██████████
         </span>
       </h2>
       <div className="components-grid" data-depth="-1">
         <div data-depth="2" className="card component-card">
           <h3 data-depth="3">
             <span className="empty-set__text" data-text-node="true" data-depth="3">
-              RVojF3T
+              ███████
             </span>
           </h3>
           <div className="component-demo" data-depth="-1">
@@ -37,7 +37,7 @@ export default function UI() {
               aria-hidden="true"
               tabIndex={-1}
             >
-              p7u.LKu
+              ███████
             </button>
             <button
               data-depth="4"
@@ -46,7 +46,7 @@ export default function UI() {
               aria-hidden="true"
               tabIndex={-1}
             >
-              mW~h.8vJ5
+              █████████
             </button>
             <button
               data-depth="4"
@@ -55,7 +55,7 @@ export default function UI() {
               aria-hidden="true"
               tabIndex={-1}
             >
-              c8WxbKF
+              ███████
             </button>
             <button
               data-depth="4"
@@ -64,7 +64,7 @@ export default function UI() {
               aria-hidden="true"
               tabIndex={-1}
             >
-              Uy2e1
+              █████
             </button>
             <button
               data-depth="4"
@@ -73,7 +73,7 @@ export default function UI() {
               aria-hidden="true"
               tabIndex={-1}
             >
-              8RY.6R
+              ██████
             </button>
             <button
               data-depth="4"
@@ -82,20 +82,20 @@ export default function UI() {
               aria-hidden="true"
               tabIndex={-1}
             >
-              yldRal4a
+              ████████
             </button>
           </div>
         </div>
         <div data-depth="2" className="card component-card">
           <h3 data-depth="3">
             <span className="empty-set__text" data-text-node="true" data-depth="3">
-              9iJ5 6_XiH1tD
+              ████ ████████
             </span>
           </h3>
           <div className="component-demo form-demo" data-depth="-1">
             <label data-depth="4" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}>
               <span className="empty-set__text" data-text-node="true" data-depth="4">
-                hh.Q Jm~Vz
+                ████ █████
               </span>
               <input
                 data-depth="5"
@@ -107,7 +107,7 @@ export default function UI() {
             </label>
             <label data-depth="4" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}>
               <span className="empty-set__text" data-text-node="true" data-depth="4">
-                vryGh-
+                ██████
               </span>
               <select
                 data-depth="5"
@@ -121,7 +121,7 @@ export default function UI() {
                   aria-hidden="true"
                   tabIndex={-1}
                 >
-                  4pd.vO R
+                  ██████ █
                 </option>
                 <option
                   data-depth="6"
@@ -129,7 +129,7 @@ export default function UI() {
                   aria-hidden="true"
                   tabIndex={-1}
                 >
-                  6rq6DK r
+                  ██████ █
                 </option>
                 <option
                   data-depth="6"
@@ -137,7 +137,7 @@ export default function UI() {
                   aria-hidden="true"
                   tabIndex={-1}
                 >
-                  cIjuRH x
+                  ██████ █
                 </option>
               </select>
             </label>
@@ -156,7 +156,7 @@ export default function UI() {
                 tabIndex={-1}
               ></input>
               <span className="empty-set__text" data-text-node="true" data-depth="4">
-                OqJIwV gmBRs
+                ██████ █████
               </span>
             </label>
           </div>
@@ -164,92 +164,92 @@ export default function UI() {
         <div data-depth="2" className="card component-card">
           <h3 data-depth="3">
             <span className="empty-set__text" data-text-node="true" data-depth="3">
-              U~YNoK Y FmCp
+              ██████ █ ████
             </span>
           </h3>
           <div className="component-demo" data-depth="-1">
             <span data-depth="4" className="badge badge-default">
-              ~1Z2LX9
+              ███████
             </span>
             <span data-depth="4" className="badge badge-primary">
-              p7u.LKu
+              ███████
             </span>
             <span data-depth="4" className="badge badge-success">
-              -3iLwPn
+              ███████
             </span>
             <span data-depth="4" className="badge badge-warning">
-              Hei9WlS
+              ███████
             </span>
             <span data-depth="4" className="badge badge-danger">
-              8RY.6R
+              ██████
             </span>
             <span data-depth="4" className="badge badge-info">
-              9onG
+              ████
             </span>
           </div>
         </div>
         <div data-depth="2" className="card component-card">
           <h3 data-depth="3">
             <span className="empty-set__text" data-text-node="true" data-depth="3">
-              z3iTVy
+              ██████
             </span>
           </h3>
           <div className="component-demo alert-demo" data-depth="-1">
             <div data-depth="4" className="alert alert-info">
-              N- XaoS r3 Kp 6Kv3 Vhyy2m
+              ██ ████ ██ ██ ████ ██████
             </div>
             <div data-depth="4" className="alert alert-success">
-              E Wj5cGX5nh KWh6ULq.54
+              █ █████████ ██████████
             </div>
             <div data-depth="4" className="alert alert-warning">
-              VT YUSMk ZEv9 54vgn2
+              ██ █████ ████ ██████
             </div>
             <div data-depth="4" className="alert alert-error">
-              0 14eg9D4Nl tjOp HlY03R
+              █ █████████ ████ ██████
             </div>
           </div>
         </div>
         <div data-depth="2" className="card component-card card-wide">
           <h3 data-depth="3">
             <span className="empty-set__text" data-text-node="true" data-depth="3">
-              ~TwmHI8I
+              ████████
             </span>
           </h3>
           <div className="component-demo progress-demo" data-depth="-1">
             <progress data-depth="4" className="progress"></progress>
             <div className="progress-labels" data-depth="-1">
-              <span data-depth="5">XYr L-zRa2qq</span>
+              <span data-depth="5">███ ████████</span>
             </div>
           </div>
         </div>
         <div data-depth="2" className="card component-card card-wide">
           <h3 data-depth="3">
             <span className="empty-set__text" data-text-node="true" data-depth="3">
-              dldj5
+              █████
             </span>
           </h3>
           <div className="component-demo cards-demo" data-depth="-1">
             <div data-depth="4" className="mini-card">
               <h4 data-depth="5">
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
-                  A~MU M_j
+                  ████ ███
                 </span>
               </h4>
               <p data-depth="5">
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
-                  eu.0Np VZpV x33w O 8fz_2 wTd ovhMF
+                  ██████ ████ ████ █ █████ ███ █████
                 </span>
               </p>
             </div>
             <div data-depth="4" className="mini-card mini-card-accent">
               <h4 data-depth="5">
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
-                  xVzT Lzs
+                  ████ ███
                 </span>
               </h4>
               <p data-depth="5">
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
-                  ~21k iRu bH0 at R21bO6 gfmiC05
+                  ████ ███ ███ ██ ██████ ███████
                 </span>
               </p>
             </div>
@@ -257,20 +257,20 @@ export default function UI() {
               <img
                 data-depth="5"
                 className="image-card-img"
-                data-natural-w="400"
-                data-natural-h="300"
-                src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%22400%22%0A%20%20%20%20%20%20height%3D%22300%22%0A%20%20%20%20%20%20viewBox%3D%220%200%20400%20300%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20"
+                src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%2F%3E%3C%2Fsvg%3E"
                 data-image-skeleton="true"
+                width="400"
+                height="300"
               ></img>
               <div className="image-card-body" data-depth="-1">
                 <h3 data-depth="6" className="image-card-title">
                   <span className="empty-set__text" data-text-node="true" data-depth="6">
-                    pCVf9 IxAK
+                    █████ ████
                   </span>
                 </h3>
                 <p data-depth="6" className="image-card-desc">
                   <span className="empty-set__text" data-text-node="true" data-depth="6">
-                    D E2ts QEA-yhyCm r UY~F 5UTZX t3FY U5.matFnbbutE ZzcauXNg
+                    █ ████ █████████ █ ████ █████ ████ █████████████ ████████
                   </span>
                 </p>
               </div>

@@ -171,6 +171,100 @@ function DarkModeToggle() {
   );
 }
 
+function Dashboard() {
+  const { isLoading } = useLoading();
+  if (isLoading) return <Skeleton name="Dashboard" />;
+  const stats = [
+    { label: "Total Revenue", value: "$128.5K", trend: "+12.5%", up: true },
+    { label: "Active Users", value: "24,890", trend: "+8.2%", up: true },
+    { label: "Orders", value: "1,432", trend: "-3.1%", up: false },
+    { label: "Conversion", value: "3.24%", trend: "+1.8%", up: true },
+  ];
+  const rows = [
+    {
+      name: "John Doe",
+      email: "john@example.com",
+      role: "Admin",
+      status: "Active",
+      spent: "$4,320",
+    },
+    {
+      name: "Jane Smith",
+      email: "jane@example.com",
+      role: "Editor",
+      status: "Active",
+      spent: "$2,150",
+    },
+    {
+      name: "Bob Johnson",
+      email: "bob@example.com",
+      role: "Viewer",
+      status: "Inactive",
+      spent: "$890",
+    },
+    {
+      name: "Alice Brown",
+      email: "alice@example.com",
+      role: "Editor",
+      status: "Active",
+      spent: "$3,670",
+    },
+    {
+      name: "Charlie Lee",
+      email: "charlie@example.com",
+      role: "Admin",
+      status: "Suspended",
+      spent: "$12,400",
+    },
+  ];
+  return (
+    <section className="dashboard-section" data-skullmaster="Dashboard">
+      <h2 className="section-title">Dashboard</h2>
+      <div className="stats-grid">
+        {stats.map((s) => (
+          <div className="stat-card" key={s.label}>
+            <span className="stat-label">{s.label}</span>
+            <span className="stat-value">{s.value}</span>
+            <span className={`stat-trend ${s.up ? "trend-up" : "trend-down"}`}>{s.trend}</span>
+          </div>
+        ))}
+      </div>
+      <div className="table-card">
+        <div className="table-header">
+          <span>Name</span>
+          <span>Email</span>
+          <span>Role</span>
+          <span>Status</span>
+          <span>Spent</span>
+        </div>
+        {rows.map((r) => (
+          <div className="table-row" key={r.name}>
+            <span className="cell-name">{r.name}</span>
+            <span className="cell-email">{r.email}</span>
+            <span>
+              <span className="badge badge-primary">{r.role}</span>
+            </span>
+            <span>
+              <span
+                className={`badge ${
+                  r.status === "Active"
+                    ? "badge-success"
+                    : r.status === "Suspended"
+                      ? "badge-danger"
+                      : "badge-default"
+                }`}
+              >
+                {r.status}
+              </span>
+            </span>
+            <span className="cell-spent">{r.spent}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function App() {
   return (
     <main>
@@ -180,6 +274,7 @@ function App() {
         <Hero />
         <UserProfileCard />
         <UIComponents />
+        <Dashboard />
         <footer className="footer">
           <p>Built with React + TypeScript &bull; Neo Brutalism Edition</p>
         </footer>

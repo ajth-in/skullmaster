@@ -21,6 +21,7 @@ const registry: Record<string, any> = {
   UserProfileCard: lazy(() => import("./skeletons/UserProfileCard")),
   UI: lazy(() => import("./skeletons/UI")),
   ImageCard: lazy(() => import("./skeletons/ImageCard")),
+  Dashboard: lazy(() => import("./skeletons/Dashboard")),
 };
 
 type SkeletonProps = {

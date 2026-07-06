@@ -12,4 +12,7 @@ export default defineConfig({
     minify: true,
     target: ["chrome80", "firefox75", "safari13.1"],
   },
+  banner: {
+    js: '"use client";',
+  },
 });

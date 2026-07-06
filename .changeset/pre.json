@@ -1,0 +1,14 @@
+{
+  "mode": "pre",
+  "tag": "next",
+  "initialVersions": {
+    "skullmaster-react-vite-example": "0.0.3",
+    "@skullmaster/browser": "0.0.0",
+    "@skullmaster/oxlint-config": "0.0.0",
+    "@skullmaster/typescript-config": "0.0.0",
+    "@skullmaster/excarnate": "0.1.2",
+    "@skullmaster/react": "0.1.2",
+    "skullmaster": "0.1.3"
+  },
+  "changesets": ["green-badgers-press"]
+}

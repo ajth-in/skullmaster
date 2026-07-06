@@ -20,29 +20,29 @@ export default function UserProfileCard() {
       <div data-depth="1" className="profile-avatar"></div>
       <h2 data-depth="1" className="profile-name">
         <span className="empty-set__text" data-text-node="true" data-depth="1">
-          ls1B RGm
+          ████ ███
         </span>
       </h2>
       <span data-depth="1" className="profile-role">
-        JcdUSYysP ol~JjeXZ
+        █████████ ████████
       </span>
       <p data-depth="1" className="profile-bio">
         <span className="empty-set__text" data-text-node="true" data-depth="1">
-          09Eq~P-Y nzI2QFOac ke1DGDs LhY 1V2rv3vc9dz l0f8ts33z shE-mZ81mC mJGocs 46b CXZGp5NaIrg7h
+          ████████ █████████ ███████ ███ ███████████ █████████ ██████████ ██████ ███ █████████████
         </span>
       </p>
       <div className="profile-stats" data-depth="-1">
         <div className="stat" data-depth="-1">
-          <strong data-depth="3">~sVp</strong>
-          <span data-depth="3">fJj.qOQ-U</span>
+          <strong data-depth="3">████</strong>
+          <span data-depth="3">█████████</span>
         </div>
         <div className="stat" data-depth="-1">
-          <strong data-depth="3">6dY</strong>
-          <span data-depth="3">aGZ1T~jnN</span>
+          <strong data-depth="3">███</strong>
+          <span data-depth="3">█████████</span>
         </div>
         <div className="stat" data-depth="-1">
-          <strong data-depth="3">6_</strong>
-          <span data-depth="3">Go72BTHe</span>
+          <strong data-depth="3">██</strong>
+          <span data-depth="3">████████</span>
         </div>
       </div>
       <button
@@ -52,7 +52,7 @@ export default function UserProfileCard() {
         aria-hidden="true"
         tabIndex={-1}
       >
-        bOVMs_
+        ██████
       </button>
     </div>
   );

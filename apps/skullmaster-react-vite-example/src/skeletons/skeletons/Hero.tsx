@@ -20,17 +20,17 @@ export default function Hero() {
       <div className="hero-content" data-depth="-1">
         <h1 data-depth="2" className="hero-title">
           <span className="empty-set__text" data-text-node="true" data-depth="2">
-            OssJZKRy8s~
+            ███████████
           </span>
         </h1>
         <p data-depth="2" className="hero-subtitle">
           <span className="empty-set__text" data-text-node="true" data-depth="2">
-            hi5 BnrUNTxdC ca 5eZ55W0y
+            ███ █████████ ██ ████████
           </span>
         </p>
         <p data-depth="2" className="hero-desc">
           <span className="empty-set__text" data-text-node="true" data-depth="2">
-            V fH4XbVLEg8 4x 7HoHss Vcy R4dq0pfaC0 XUhe-2i61r MWv2 ktzUH DlPl8dml-OMF TVk-V.d
+            █ ██████████ ██ ██████ ███ ██████████ ██████████ ████ █████ ████████████ ███████
           </span>
         </p>
         <div className="hero-actions" data-depth="-1">
@@ -41,7 +41,7 @@ export default function Hero() {
             aria-hidden="true"
             tabIndex={-1}
           >
-            oe6 i5fUPcD
+            ███ ███████
           </button>
           <button
             data-depth="3"
@@ -50,7 +50,7 @@ export default function Hero() {
             aria-hidden="true"
             tabIndex={-1}
           >
-            3Am1N MC1v
+            █████ ████
           </button>
         </div>
       </div>

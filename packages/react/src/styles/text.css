@@ -1,3 +1,4 @@
+span[data-text-node="true"],
 .empty-set__skeleton .empty-set__text {
   display: inline !important;
 
@@ -16,6 +17,6 @@
 
   color: transparent !important;
 
-  border-radius: 0.25em !important;
+  border-radius: 0.375em !important;
   box-decoration-break: clone !important;
 }

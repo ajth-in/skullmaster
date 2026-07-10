@@ -9,6 +9,8 @@ export async function generateInitialRegistry(outDir: string, projectType: strin
 
   const skeletonPropsType = isTs
     ? `
+import "@skullmaster/react/style.css"
+
 type SkeletonProps = {
   name: string;
 };

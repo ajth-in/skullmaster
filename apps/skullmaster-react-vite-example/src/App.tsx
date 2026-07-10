@@ -4,7 +4,6 @@ import "./App.css";
 import { SkullMaster } from "@skullmaster/react";
 import Skeleton from "./skeletons/registry";
 import { ImageCard } from "./common/components";
-import "@skullmaster/react/style.css";
 function LoadingToggle() {
   const { isLoading, toggleLoading } = useLoading();
   return (

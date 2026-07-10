@@ -14,15 +14,16 @@
  */
 
 import DefaultBone from "./skeletons/DefaultBone";
-import { lazy } from "react";
 
 const registry: Record<string, any> = {
   Hero: lazy(() => import("./skeletons/Hero")),
   UserProfileCard: lazy(() => import("./skeletons/UserProfileCard")),
   UI: lazy(() => import("./skeletons/UI")),
-  ImageCard: lazy(() => import("./skeletons/ImageCard")),
   Dashboard: lazy(() => import("./skeletons/Dashboard")),
 };
+
+import "@skullmaster/react/style.css";
+import { lazy } from "react";
 
 type SkeletonProps = {
   name: string;

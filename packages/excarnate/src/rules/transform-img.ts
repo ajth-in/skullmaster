@@ -14,10 +14,6 @@ function createSkeletonSrc(width?: string, height?: string, color = "#e5e7eb") {
   )}`;
 }
 
-function hasAttribute(attrs: readonly t.JSXAttribute[], name: string) {
-  return attrs.some((attr) => t.isJSXIdentifier(attr.name) && attr.name.name === name);
-}
-
 export const transformImg: Rule = {
   id: "transform-img",
 
@@ -61,15 +57,6 @@ export const transformImg: Rule = {
       createJsxStringAttribute("src", placeholderSrc),
       createJsxStringAttribute(DATA_IMAGE_SKELETON, "true"),
     ];
-
-    if (naturalWidth && naturalHeight) {
-      if (!hasAttribute(filteredAttrs, "width")) {
-        attributes.push(createJsxStringAttribute("width", naturalWidth));
-      }
-      if (!hasAttribute(filteredAttrs, "height")) {
-        attributes.push(createJsxStringAttribute("height", naturalHeight));
-      }
-    }
 
     return {
       ...ctx,

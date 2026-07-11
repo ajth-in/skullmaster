@@ -11,8 +11,8 @@ export default function CityLights() {
   return (
     <div
       data-depth="0"
-      className="card image-card-grid  empty-set__skeleton"
       data-skullmaster="CityLights"
+      className="card image-card-grid  empty-set__skeleton"
       data-seed="city"
       data-skeleton-interactive="true"
       aria-hidden="true"
@@ -26,8 +26,6 @@ export default function CityLights() {
         className="image-card-grid-img"
         src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22500%22%20height%3D%22350%22%20viewBox%3D%220%200%20500%20350%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%2F%3E%3C%2Fsvg%3E"
         data-image-skeleton="true"
-        width="500"
-        height="350"
       ></img>
       <div className="image-card-grid-body" data-depth="-1">
         <h3 data-depth="2" className="image-card-grid-title">

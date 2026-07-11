@@ -259,8 +259,6 @@ export default function UI() {
                 className="image-card-img"
                 src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%2F%3E%3C%2Fsvg%3E"
                 data-image-skeleton="true"
-                width="400"
-                height="300"
               ></img>
               <div className="image-card-body" data-depth="-1">
                 <h3 data-depth="6" className="image-card-title">

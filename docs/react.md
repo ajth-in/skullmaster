@@ -27,7 +27,9 @@ You'll be asked to choose:
 
 After setup, the following file will be created:
 
+```
 ## <outDir>/skeletons/DefaultBone.tsx
+```
 
 `DefaultBone.tsx` is the fallback skeleton that is rendered whenever a generated skeleton does not exist.
 

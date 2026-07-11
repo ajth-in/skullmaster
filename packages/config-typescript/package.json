@@ -2,7 +2,15 @@
   "name": "@skullmaster/typescript-config",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://www.ajth.in/skullmaster/",
+  "bugs": {
+    "url": "https://github.com/ajth-in/skullmaster/issues"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajth-in/skullmaster.git"
+  },
   "files": [
     "base.json",
     "nextjs.json",

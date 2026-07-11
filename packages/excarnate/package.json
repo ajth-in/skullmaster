@@ -2,6 +2,10 @@
   "name": "@skullmaster/excarnate",
   "version": "0.1.3-next.0",
   "description": "A starter for creating a TypeScript package.",
+  "homepage": "https://www.ajth.in/skullmaster/",
+  "bugs": {
+    "url": "https://github.com/ajth-in/skullmaster/issues"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",

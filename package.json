@@ -1,6 +1,14 @@
 {
   "name": "@skullmaster/monorepo",
   "private": false,
+  "homepage": "https://www.ajth.in/skullmaster/",
+  "bugs": {
+    "url": "https://github.com/ajth-in/skullmaster/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajth-in/skullmaster.git"
+  },
   "scripts": {
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",

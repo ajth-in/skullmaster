@@ -2,8 +2,11 @@
   "name": "@skullmaster/react",
   "version": "0.2.0-next.1",
   "description": "A starter for creating a React component library.",
+  "homepage": "https://www.ajth.in/skullmaster/",
+  "bugs": {
+    "url": "https://github.com/ajth-in/skullmaster/issues"
+  },
   "license": "MIT",
-  "author": "Author Name <author.name@mail.com>",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ajth-in/skullmaster.git"

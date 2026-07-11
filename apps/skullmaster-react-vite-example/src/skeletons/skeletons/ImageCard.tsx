@@ -20,21 +20,17 @@ export default function ImageCard() {
       <img
         data-depth="1"
         className="image-card-img"
-        data-natural-w="400"
-        data-natural-h="300"
-        src="data:image/svg+xml,%0A%20%20%20%20%3Csvg%0A%20%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%0A%20%20%20%20%20%20width%3D%22400%22%0A%20%20%20%20%20%20height%3D%22300%22%0A%20%20%20%20%20%20viewBox%3D%220%200%20400%20300%22%0A%20%20%20%20%20%20preserveAspectRatio%3D%22none%22%0A%20%20%20%20%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%20%2F%3E%0A%20%20%20%20%3C%2Fsvg%3E%0A%20%20"
+        src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%2F%3E%3C%2Fsvg%3E"
         data-image-skeleton="true"
+        width="400"
+        height="300"
       ></img>
       <div className="image-card-body" data-depth="-1">
-        <h3 data-depth="2" className="image-card-title">
-          <span className="empty-set__text" data-text-node="true" data-depth="2">
-            pCVf9 IxAK
-          </span>
+        <h3 data-depth="2" className="image-card-title empty-set__text">
+          █████ ████
         </h3>
-        <p data-depth="2" className="image-card-desc">
-          <span className="empty-set__text" data-text-node="true" data-depth="2">
-            D E2ts QEA-yhyCm r UY~F 5UTZX t3FY U5.matFnbbutE ZzcauXNg
-          </span>
+        <p data-depth="2" className="image-card-desc empty-set__text">
+          █ ████ █████████ █ ████ █████ ████ █████████████ ████████
         </p>
       </div>
     </div>

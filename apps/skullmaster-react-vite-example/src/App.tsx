@@ -4,6 +4,65 @@ import "./App.css";
 import { SkullMaster } from "@skullmaster/react";
 import Skeleton from "./skeletons/registry";
 import { ImageCard } from "./common/components";
+
+type Tab = "components" | "images";
+
+const IMAGES = [
+  {
+    name: "MountainRange",
+    seed: "mountains",
+    w: 600,
+    h: 400,
+    title: "Mountain Range",
+    desc: "Snow-capped peaks under a golden sunrise.",
+    footer: "Northern Alps",
+  },
+  {
+    name: "DeepOcean",
+    seed: "ocean",
+    w: 400,
+    h: 600,
+    title: "Deep Ocean",
+    desc: "Crystal clear waters revealing vibrant coral reefs.",
+    footer: "Pacific Ridge",
+  },
+  {
+    name: "CityLights",
+    seed: "city",
+    w: 500,
+    h: 350,
+    title: "City Lights",
+    desc: "Neon-drenched streets in the heart of the metropolis.",
+    footer: "Downtown Core",
+  },
+  {
+    name: "ForestCanopy",
+    seed: "forest",
+    w: 450,
+    h: 450,
+    title: "Forest Canopy",
+    desc: "Dense woodland bathed in dappled afternoon light.",
+    footer: "Redwood National",
+  },
+  {
+    name: "DesertDunes",
+    seed: "desert",
+    w: 550,
+    h: 300,
+    title: "Desert Dunes",
+    desc: "Endless waves of sand stretching to the horizon.",
+    footer: "Sahara Basin",
+  },
+  {
+    name: "NightSky",
+    seed: "aurora",
+    w: 350,
+    h: 500,
+    title: "Night Sky",
+    desc: "Aurora borealis dancing across the arctic sky.",
+    footer: "Iceland Highlands",
+  },
+];
 function LoadingToggle() {
   const { isLoading, toggleLoading } = useLoading();
   return (
@@ -264,16 +323,96 @@ function Dashboard() {
   );
 }
 
+function ImagesGrid() {
+  const { isLoading } = useLoading();
+  const [activeImage, setActiveImage] = useState<string | null>(null);
+
+  if (isLoading) {
+    return (
+      <section className="images-section">
+        <h2 className="section-title">Image Gallery</h2>
+        <div className="images-grid">
+          {IMAGES.map((img) => (
+            <div key={img.seed} className="card image-card-grid" data-skullmaster={img.name}>
+              <Skeleton name={img.name} />
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="images-section">
+      <h2 className="section-title">Image Gallery</h2>
+      <div className="images-grid">
+        {IMAGES.map((img) => (
+          <div
+            key={img.seed}
+            className={`card image-card-grid ${activeImage === img.seed ? "image-card--active" : ""}`}
+            data-skullmaster={img.name}
+            data-seed={img.seed}
+            onClick={() => setActiveImage(activeImage === img.seed ? null : img.seed)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                setActiveImage(activeImage === img.seed ? null : img.seed);
+              }
+            }}
+          >
+            <img
+              className="image-card-grid-img"
+              src={`https://picsum.photos/seed/${img.seed}/${img.w}/${img.h}`}
+              alt={img.title}
+              loading="lazy"
+            />
+            <div className="image-card-grid-body">
+              <h3 className="image-card-grid-title">{img.title}</h3>
+              <p className="image-card-grid-desc">{img.desc}</p>
+            </div>
+            <div className="image-card-grid-footer">
+              <span>{img.footer}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function App() {
+  const [activeTab, setActiveTab] = useState<Tab>("components");
+
   return (
     <main>
       <SkullMaster>
         <LoadingToggle />
         <DarkModeToggle />
-        <Hero />
-        <UserProfileCard />
-        <UIComponents />
-        <Dashboard />
+        <nav className="tab-bar">
+          <button
+            className={`tab-btn ${activeTab === "components" ? "tab-btn--active" : ""}`}
+            onClick={() => setActiveTab("components")}
+          >
+            Components
+          </button>
+          <button
+            className={`tab-btn ${activeTab === "images" ? "tab-btn--active" : ""}`}
+            onClick={() => setActiveTab("images")}
+          >
+            Images
+          </button>
+        </nav>
+        {activeTab === "components" && (
+          <>
+            <Hero />
+            <UserProfileCard />
+            <UIComponents />
+            <Dashboard />
+          </>
+        )}
+        {activeTab === "images" && <ImagesGrid />}
         <footer className="footer">
           <p>Built with React + TypeScript &bull; Neo Brutalism Edition</p>
         </footer>

@@ -55,13 +55,11 @@ Render the skeleton anywhere in your application using the generated registry.
 
 Import the `Skeleton` component from:
 
----
-
-## <outDir>/registry.tsx
+```
+<outDir>/registry.tsx
+```
 
 Until the skeleton is generated, `DefaultBone` will be rendered.
-
-# Generate Skeletons
 
 ## Step 5: Install the React Runtime
 
@@ -81,14 +79,6 @@ In your application's entry file (`App.tsx`, `main.tsx`, or `layout.tsx`), add t
 import { Skullmaster } from "@skullmaster/react";
 
 <Skullmaster isEnabled={process.env.NODE_ENV === "development"} />;
-```
-
-## Step 7: Import the Styles
-
-Import the default stylesheet once in your root entry file.
-
-```jsx
-import "@skullmaster/react/styles.css";
 ```
 
 ## Step 8: Generate Your First Skeleton
@@ -121,7 +111,3 @@ Once generated, rendering:
 ```
 
 will display the generated skeleton instead of `DefaultBone`.
-
-## Next Steps
-
-Repeat Steps 3 through 9 for any component you want to support. Every generated skeleton is added to your project's registry and can be reused anywhere in your application.

@@ -1,3 +1,6 @@
+> [!WARNING]
+> **Experimental:** This package is under active development. APIs and generated output may change between releases.
+
 # Skullmaster
 
 Skullmaster is a CLI tool that lets you generate customizable skeleton loaders for your UI components directly from the browser. Instead of manually creating placeholder components, Skullmaster analyzes the rendered component and generates a matching skeleton that you can customize further with data attributes.
@@ -6,10 +9,10 @@ Skullmaster is a CLI tool that lets you generate customizable skeleton loaders f
 
 Choose the guide for your framework to install Skullmaster, configure the development server, and generate your first skeleton component.
 
-- ⚛️ **[React](/docs/react)**
+- ⚛️ **[React](/docs/react.md)**
   Learn how to install Skullmaster in a React project, start the development server, and generate customizable skeleton components.
 
-- 🔶 **[Svelte](/docs/svelte)**
+- 🔶 **[Svelte](/docs/svelte.md)**
   Set up Skullmaster in a Svelte project and generate framework-native skeleton components from your application's rendered UI.
 
 ## How it works

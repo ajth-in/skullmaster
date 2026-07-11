@@ -1,5 +1,3 @@
-import { DEFAULT_PORT } from "../constants";
-
 export type GenerateSkeletonResponse = {
   success: true;
 };
@@ -7,6 +5,7 @@ export type GenerateSkeletonResponse = {
 export async function postSkeleton(
   componentName: string,
   html: string,
+  port: number,
 ): Promise<GenerateSkeletonResponse> {
   const payload = {
     [componentName]: {
@@ -16,7 +15,7 @@ export async function postSkeleton(
   };
 
   try {
-    const response = await fetch(`http://localhost:${DEFAULT_PORT}/skeletons`, {
+    const response = await fetch(`http://localhost:${port}/skeletons`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

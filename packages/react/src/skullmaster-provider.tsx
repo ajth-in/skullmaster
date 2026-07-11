@@ -3,48 +3,38 @@
 import {
   createContext,
   useContext,
-  useEffect,
   useMemo,
   useState,
-  type PropsWithChildren,
+  type Dispatch,
+  type SetStateAction,
 } from "react";
 import PostSkeletons from "./control-panel";
+import { DEFAULT_PORT } from "./constants";
 
 type SkullMasterValue = {
   isEnabled: boolean;
-  setIsEnabled: (enabled: boolean) => void;
+  port: number;
+  setIsEnabled: Dispatch<SetStateAction<boolean>>;
 };
 
 const SkullMasterContext = createContext<SkullMasterValue | null>(null);
 
-const STORAGE_KEY = "skullmaster-enabled";
-
-export function SkullMaster({ children }: PropsWithChildren) {
-  const [isEnabled, setIsEnabled] = useState(false);
-
-  useEffect(() => {
-    const stored = localStorage.getItem(STORAGE_KEY);
-
-    if (stored !== null) {
-      setIsEnabled(stored === "true");
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, String(isEnabled));
-  }, [isEnabled]);
-
+export function SkullMaster({
+  port = DEFAULT_PORT,
+  isEnabled: defautIsEnabled = true,
+}: Partial<Pick<SkullMasterValue, "port" | "isEnabled">>) {
+  const [isEnabled, setIsEnabled] = useState(defautIsEnabled);
   const value = useMemo(
     () => ({
-      isEnabled,
+      port,
       setIsEnabled,
+      isEnabled,
     }),
-    [isEnabled],
+    [isEnabled, port],
   );
 
   return (
     <SkullMasterContext.Provider value={value}>
-      {children}
       <PostSkeletons />
     </SkullMasterContext.Provider>
   );

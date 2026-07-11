@@ -3,6 +3,7 @@ import { postSkeleton } from "./utils/post-skeleton";
 import { createOverlay } from "./utils/create-overlay";
 import { markTransparentContainers } from "./utils/make-transparent-containers";
 import { injectNaturalImageDimensions } from "./utils/add-data-attrs-img";
+import { useSkullMaster } from "./skullmaster-provider";
 
 type SkeletonState = "idle" | "loading" | "success" | "error";
 
@@ -26,6 +27,7 @@ const STATE_STYLES: Record<SkeletonState, { background: string; border: string }
 };
 
 export default function HoverHighlighter() {
+  const { port } = useSkullMaster();
   useEffect(() => {
     let currentSkeleton: HTMLElement | null = null;
     let currentState: SkeletonState = "idle";
@@ -132,7 +134,7 @@ export default function HoverHighlighter() {
       applyState("loading", componentName);
 
       try {
-        await postSkeleton(componentName, html);
+        await postSkeleton(componentName, html, port);
 
         applyState("success", componentName);
       } catch (error) {
@@ -172,7 +174,7 @@ export default function HoverHighlighter() {
 
       overlay.remove();
     };
-  }, []);
+  }, [port]);
 
   return null;
 }

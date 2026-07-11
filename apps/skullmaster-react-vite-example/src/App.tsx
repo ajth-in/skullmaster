@@ -333,8 +333,8 @@ function ImagesGrid() {
         <h2 className="section-title">Image Gallery</h2>
         <div className="images-grid">
           {IMAGES.map((img) => (
-            <div key={img.seed} className="card image-card-grid" data-skullmaster={img.name}>
-              <Skeleton name={img.name} />
+            <div key={img.seed} data-skullmaster={img.name}>
+              <Skeleton name="ImageCard" />
             </div>
           ))}
         </div>
@@ -387,36 +387,35 @@ function App() {
 
   return (
     <main>
-      <SkullMaster>
-        <LoadingToggle />
-        <DarkModeToggle />
-        <nav className="tab-bar">
-          <button
-            className={`tab-btn ${activeTab === "components" ? "tab-btn--active" : ""}`}
-            onClick={() => setActiveTab("components")}
-          >
-            Components
-          </button>
-          <button
-            className={`tab-btn ${activeTab === "images" ? "tab-btn--active" : ""}`}
-            onClick={() => setActiveTab("images")}
-          >
-            Images
-          </button>
-        </nav>
-        {activeTab === "components" && (
-          <>
-            <Hero />
-            <UserProfileCard />
-            <UIComponents />
-            <Dashboard />
-          </>
-        )}
-        {activeTab === "images" && <ImagesGrid />}
-        <footer className="footer">
-          <p>Built with React + TypeScript &bull; Neo Brutalism Edition</p>
-        </footer>
-      </SkullMaster>
+      <SkullMaster />
+      <LoadingToggle />
+      <DarkModeToggle />
+      <nav className="tab-bar">
+        <button
+          className={`tab-btn ${activeTab === "components" ? "tab-btn--active" : ""}`}
+          onClick={() => setActiveTab("components")}
+        >
+          Components
+        </button>
+        <button
+          className={`tab-btn ${activeTab === "images" ? "tab-btn--active" : ""}`}
+          onClick={() => setActiveTab("images")}
+        >
+          Images
+        </button>
+      </nav>
+      {activeTab === "components" && (
+        <>
+          <Hero />
+          <UserProfileCard />
+          <UIComponents />
+          <Dashboard />
+        </>
+      )}
+      {activeTab === "images" && <ImagesGrid />}
+      <footer className="footer">
+        <p>Built with React + TypeScript &bull; Neo Brutalism Edition</p>
+      </footer>
     </main>
   );
 }

@@ -21,6 +21,12 @@ const registry: Record<string, any> = {
   UI: lazy(() => import("./skeletons/UI")),
   Dashboard: lazy(() => import("./skeletons/Dashboard")),
   ImageCard: lazy(() => import("./skeletons/ImageCard")),
+  MountainRange: lazy(() => import("./skeletons/MountainRange")),
+  CityLights: lazy(() => import("./skeletons/CityLights")),
+  DeepOcean: lazy(() => import("./skeletons/DeepOcean")),
+  ForestCanopy: lazy(() => import("./skeletons/ForestCanopy")),
+  DesertDunes: lazy(() => import("./skeletons/DesertDunes")),
+  NightSky: lazy(() => import("./skeletons/NightSky")),
 };
 
 import "@skullmaster/react/style.css";

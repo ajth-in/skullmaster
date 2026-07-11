@@ -11,8 +11,8 @@ export default function MountainRange() {
   return (
     <div
       data-depth="0"
-      className="card image-card-grid  empty-set__skeleton"
       data-skullmaster="MountainRange"
+      className="card image-card-grid  empty-set__skeleton"
       data-seed="mountains"
       data-skeleton-interactive="true"
       aria-hidden="true"

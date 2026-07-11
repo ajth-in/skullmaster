@@ -1,6 +1,7 @@
 import { Project, SyntaxKind } from "ts-morph";
 import { writeFile } from "node:fs/promises";
 import { ensureLazyImport } from "./ensure-lazy-imports";
+import { toPascalCase } from "../utils/to-pascal-case";
 
 export async function generateInitialRegistry(outDir: string, projectType: string) {
   const isTs = projectType.endsWith("ts");
@@ -96,7 +97,8 @@ export async function generateRegistry(
       .map((property) => property.getName().replace(/['"]/g, "")),
   );
 
-  for (const component of operation.components) {
+  for (let component of operation.components) {
+    component = toPascalCase(component);
     if (existingComponents.has(component)) {
       continue;
     }

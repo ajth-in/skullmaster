@@ -334,7 +334,7 @@ function ImagesGrid() {
         <div className="images-grid">
           {IMAGES.map((img) => (
             <div key={img.seed} data-skullmaster={img.name}>
-              <Skeleton name="ImageCard" />
+              <Skeleton name={img.name} />
             </div>
           ))}
         </div>

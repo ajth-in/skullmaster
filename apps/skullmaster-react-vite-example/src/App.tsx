@@ -652,7 +652,7 @@ function InteractiveElements() {
               );
             }}
           >
-            <fieldset className="interactive-fieldset">
+            <fieldset data-skip-skull className="interactive-fieldset">
               <legend>Login Form</legend>
               <label className="interactive-label">
                 Username

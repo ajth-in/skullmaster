@@ -22,78 +22,7 @@ export default function FieldsetForm() {
           ████████ █ ████
         </span>
       </h3>
-      <form className="interactive-form" data-depth="-1">
-        <fieldset
-          data-depth="2"
-          className="interactive-fieldset"
-          data-skeleton-interactive="true"
-          aria-hidden="true"
-          tabIndex={-1}
-        >
-          <legend data-depth="3" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}>
-            █████ ████
-          </legend>
-          <label
-            data-depth="3"
-            className="interactive-label"
-            data-skeleton-interactive="true"
-            aria-hidden="true"
-            tabIndex={-1}
-          >
-            <span className="empty-set__text" data-text-node="true" data-depth="3">
-              ████████
-            </span>
-            <input
-              data-depth="4"
-              className="interactive-input"
-              type="text"
-              data-skeleton-interactive="true"
-              aria-hidden="true"
-              tabIndex={-1}
-            ></input>
-          </label>
-          <label
-            data-depth="3"
-            className="interactive-check-label"
-            data-skeleton-interactive="true"
-            aria-hidden="true"
-            tabIndex={-1}
-          >
-            <input
-              data-depth="4"
-              type="checkbox"
-              data-skeleton-interactive="true"
-              aria-hidden="true"
-              tabIndex={-1}
-            ></input>
-            <span className="empty-set__text" data-text-node="true" data-depth="3">
-              █████ ██ █████
-            </span>
-          </label>
-          <menu data-depth="3" className="interactive-menu">
-            <button
-              data-depth="4"
-              className="btn btn-primary"
-              type="submit"
-              data-skeleton-interactive="true"
-              aria-hidden="true"
-              tabIndex={-1}
-            >
-              ██████
-            </button>
-            <button
-              data-depth="4"
-              className="btn btn-outline"
-              type="reset"
-              data-skeleton-interactive="true"
-              aria-hidden="true"
-              tabIndex={-1}
-            >
-              █████
-            </button>
-          </menu>
-        </fieldset>
-      </form>
+      <form className="interactive-form" data-depth="-1"></form>
     </div>
   );
 }

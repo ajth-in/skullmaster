@@ -27,6 +27,18 @@ const registry: Record<string, any> = {
   ForestCanopy: lazy(() => import("./skeletons/ForestCanopy")),
   DesertDunes: lazy(() => import("./skeletons/DesertDunes")),
   NightSky: lazy(() => import("./skeletons/NightSky")),
+  Buttons: lazy(() => import("./skeletons/Buttons")),
+  AnchorLinks: lazy(() => import("./skeletons/AnchorLinks")),
+  TextInputs: lazy(() => import("./skeletons/TextInputs")),
+  FileColor: lazy(() => import("./skeletons/FileColor")),
+  RangeInput: lazy(() => import("./skeletons/RangeInput")),
+  ChoiceInputs: lazy(() => import("./skeletons/ChoiceInputs")),
+  SelectMenu: lazy(() => import("./skeletons/SelectMenu")),
+  Textarea: lazy(() => import("./skeletons/Textarea")),
+  DetailsSummary: lazy(() => import("./skeletons/DetailsSummary")),
+  FieldsetForm: lazy(() => import("./skeletons/FieldsetForm")),
+  ProgressMeter: lazy(() => import("./skeletons/ProgressMeter")),
+  Dialog: lazy(() => import("./skeletons/Dialog")),
 };
 
 import "@skullmaster/react/style.css";

@@ -1,3 +1,92 @@
 .empty-set__skeleton input[data-skeleton-input="true"]::placeholder {
   color: transparent !important;
 }
+.empty-set__skeleton input[type="number"][data-skeleton-input="true"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.empty-set__skeleton input[type="number"][data-skeleton-input="true"]::-webkit-outer-spin-button,
+.empty-set__skeleton input[type="number"][data-skeleton-input="true"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.empty-set__skeleton input[type="number"]::-webkit-outer-spin-button,
+.empty-set__skeleton input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+.empty-set__skeleton input[type="number"] {
+  -moz-appearance: textfield !important;
+  appearance: textfield !important;
+}
+
+.empty-set__skeleton input[type="checkbox"],
+.empty-set__skeleton input[type="radio"] {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-color: transparent !important;
+}
+
+.empty-set__skeleton input[type="file"] {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.empty-set__skeleton input[type="file"]::file-selector-button {
+  background-color: transparent !important;
+  color: inherit !important;
+  cursor: pointer !important;
+}
+
+.empty-set__skeleton input[type="file"]::-webkit-file-upload-button {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.empty-set__skeleton input[type="range"] {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background: transparent !important;
+}
+
+.empty-set__skeleton input[type="range"]::-webkit-slider-runnable-track {
+  background-color: transparent !important;
+}
+
+.empty-set__skeleton input[type="range"]::-moz-range-track {
+  background-color: transparent !important;
+}
+
+.empty-set__skeleton input[type="range"]::-webkit-slider-thumb {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  background-color: transparent !important;
+}
+
+.empty-set__skeleton input[type="range"]::-moz-range-thumb {
+  background-color: transparent !important;
+}
+
+.empty-set__skeleton input[type="color"] {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.empty-set__skeleton input[type="color"]::-webkit-color-swatch-wrapper {
+  background-color: transparent !important;
+}
+
+.empty-set__skeleton input[type="color"]::-webkit-color-swatch {
+  border: none !important;
+}
+
+.empty-set__skeleton input[type="color"]::-moz-color-swatch {
+  border: none !important;
+}

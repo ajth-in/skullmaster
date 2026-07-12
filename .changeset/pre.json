@@ -10,5 +10,10 @@
     "@skullmaster/react": "0.1.2",
     "skullmaster": "0.1.3"
   },
-  "changesets": ["eager-breads-fetch"]
+  "changesets": [
+    "eager-breads-fetch",
+    "grumpy-lights-appear",
+    "red-forks-report",
+    "silver-poems-tap"
+  ]
 }

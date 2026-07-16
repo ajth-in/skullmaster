@@ -31,7 +31,7 @@ export default function UI() {
           </h3>
           <div className="component-demo" data-depth="-1">
             <button
-              data-depth="4"
+              data-depth="0"
               className="btn btn-primary"
               data-skeleton-interactive="true"
               aria-hidden="true"
@@ -40,7 +40,7 @@ export default function UI() {
               ███████
             </button>
             <button
-              data-depth="4"
+              data-depth="0"
               className="btn btn-secondary"
               data-skeleton-interactive="true"
               aria-hidden="true"
@@ -49,7 +49,7 @@ export default function UI() {
               █████████
             </button>
             <button
-              data-depth="4"
+              data-depth="0"
               className="btn btn-outline"
               data-skeleton-interactive="true"
               aria-hidden="true"
@@ -58,7 +58,7 @@ export default function UI() {
               ███████
             </button>
             <button
-              data-depth="4"
+              data-depth="0"
               className="btn btn-ghost"
               data-skeleton-interactive="true"
               aria-hidden="true"
@@ -67,7 +67,7 @@ export default function UI() {
               █████
             </button>
             <button
-              data-depth="4"
+              data-depth="0"
               className="btn btn-danger"
               data-skeleton-interactive="true"
               aria-hidden="true"
@@ -76,7 +76,7 @@ export default function UI() {
               ██████
             </button>
             <button
-              data-depth="4"
+              data-depth="0"
               className="btn btn-primary"
               data-skeleton-interactive="true"
               aria-hidden="true"
@@ -93,30 +93,30 @@ export default function UI() {
             </span>
           </h3>
           <div className="component-demo form-demo" data-depth="-1">
-            <label data-depth="4" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}>
+            <label data-depth="0" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}>
               <span className="empty-set__text" data-text-node="true" data-depth="4">
                 ████ █████
               </span>
               <input
-                data-depth="5"
+                data-depth="1"
                 type="text"
                 data-skeleton-interactive="true"
                 aria-hidden="true"
                 tabIndex={-1}
               ></input>
             </label>
-            <label data-depth="4" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}>
+            <label data-depth="0" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}>
               <span className="empty-set__text" data-text-node="true" data-depth="4">
                 ██████
               </span>
               <select
-                data-depth="5"
+                data-depth="1"
                 data-skeleton-interactive="true"
                 aria-hidden="true"
                 tabIndex={-1}
               >
                 <option
-                  data-depth="6"
+                  data-depth="2"
                   data-skeleton-interactive="true"
                   aria-hidden="true"
                   tabIndex={-1}
@@ -124,7 +124,7 @@ export default function UI() {
                   ██████ █
                 </option>
                 <option
-                  data-depth="6"
+                  data-depth="2"
                   data-skeleton-interactive="true"
                   aria-hidden="true"
                   tabIndex={-1}
@@ -132,7 +132,7 @@ export default function UI() {
                   ██████ █
                 </option>
                 <option
-                  data-depth="6"
+                  data-depth="2"
                   data-skeleton-interactive="true"
                   aria-hidden="true"
                   tabIndex={-1}
@@ -142,14 +142,14 @@ export default function UI() {
               </select>
             </label>
             <label
-              data-depth="4"
+              data-depth="0"
               className="checkbox-label"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
             >
               <input
-                data-depth="5"
+                data-depth="1"
                 type="checkbox"
                 data-skeleton-interactive="true"
                 aria-hidden="true"
@@ -168,22 +168,22 @@ export default function UI() {
             </span>
           </h3>
           <div className="component-demo" data-depth="-1">
-            <span data-depth="4" className="badge badge-default">
+            <span data-depth="0" className="badge badge-default">
               ███████
             </span>
-            <span data-depth="4" className="badge badge-primary">
+            <span data-depth="0" className="badge badge-primary">
               ███████
             </span>
-            <span data-depth="4" className="badge badge-success">
+            <span data-depth="0" className="badge badge-success">
               ███████
             </span>
-            <span data-depth="4" className="badge badge-warning">
+            <span data-depth="0" className="badge badge-warning">
               ███████
             </span>
-            <span data-depth="4" className="badge badge-danger">
+            <span data-depth="0" className="badge badge-danger">
               ██████
             </span>
-            <span data-depth="4" className="badge badge-info">
+            <span data-depth="0" className="badge badge-info">
               ████
             </span>
           </div>
@@ -195,16 +195,16 @@ export default function UI() {
             </span>
           </h3>
           <div className="component-demo alert-demo" data-depth="-1">
-            <div data-depth="4" className="alert alert-info">
+            <div data-depth="0" className="alert alert-info">
               ██ ████ ██ ██ ████ ██████
             </div>
-            <div data-depth="4" className="alert alert-success">
+            <div data-depth="0" className="alert alert-success">
               █ █████████ ██████████
             </div>
-            <div data-depth="4" className="alert alert-warning">
+            <div data-depth="0" className="alert alert-warning">
               ██ █████ ████ ██████
             </div>
-            <div data-depth="4" className="alert alert-error">
+            <div data-depth="0" className="alert alert-error">
               █ █████████ ████ ██████
             </div>
           </div>
@@ -216,9 +216,9 @@ export default function UI() {
             </span>
           </h3>
           <div className="component-demo progress-demo" data-depth="-1">
-            <progress data-depth="4" className="progress"></progress>
+            <progress data-depth="0" className="progress"></progress>
             <div className="progress-labels" data-depth="-1">
-              <span data-depth="5">███ ████████</span>
+              <span data-depth="1">███ ████████</span>
             </div>
           </div>
         </div>
@@ -229,44 +229,44 @@ export default function UI() {
             </span>
           </h3>
           <div className="component-demo cards-demo" data-depth="-1">
-            <div data-depth="4" className="mini-card">
-              <h4 data-depth="5">
+            <div data-depth="0" className="mini-card">
+              <h4 data-depth="1">
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
                   ████ ███
                 </span>
               </h4>
-              <p data-depth="5">
+              <p data-depth="1">
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
                   ██████ ████ ████ █ █████ ███ █████
                 </span>
               </p>
             </div>
-            <div data-depth="4" className="mini-card mini-card-accent">
-              <h4 data-depth="5">
+            <div data-depth="0" className="mini-card mini-card-accent">
+              <h4 data-depth="1">
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
                   ████ ███
                 </span>
               </h4>
-              <p data-depth="5">
+              <p data-depth="1">
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
                   ████ ███ ███ ██ ██████ ███████
                 </span>
               </p>
             </div>
-            <div data-depth="4" data-skullmaster="ImageCard" className="card image-card">
+            <div data-depth="0" data-skullmaster="ImageCard" className="card image-card">
               <img
-                data-depth="5"
+                data-depth="1"
                 className="image-card-img"
                 src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23e5e7eb%22%2F%3E%3C%2Fsvg%3E"
                 data-image-skeleton="true"
               ></img>
               <div className="image-card-body" data-depth="-1">
-                <h3 data-depth="6" className="image-card-title">
+                <h3 data-depth="2" className="image-card-title">
                   <span className="empty-set__text" data-text-node="true" data-depth="6">
                     █████ ████
                   </span>
                 </h3>
-                <p data-depth="6" className="image-card-desc">
+                <p data-depth="2" className="image-card-desc">
                   <span className="empty-set__text" data-text-node="true" data-depth="6">
                     █ ████ █████████ █ ████ █████ ████ █████████████ ████████
                   </span>

@@ -17,7 +17,7 @@ export const populateAttrs: Rule = {
     if (ctx.target?.element && ctx.target?.element !== tagName)
       throw new TargetElementMismatchError(tagName, ctx.target.element);
     if (!element.hasAttribute(DEPTH_ATTRIBUTE)) {
-      attributes.push(createJsxStringAttribute(DEPTH_ATTRIBUTE, String(ctx.depth)));
+      attributes.push(createJsxStringAttribute(DEPTH_ATTRIBUTE, String(ctx.depth % 4)));
     }
     for (const attr of element.attributes) {
       if (!shouldKeepAttribute(attr.name)) {

@@ -84,12 +84,12 @@ export default function Dashboard() {
             ████████████████
           </span>
           <span data-depth="3">
-            <span data-depth="4" className="badge badge-primary">
+            <span data-depth="0" className="badge badge-primary">
               █████
             </span>
           </span>
           <span data-depth="3">
-            <span data-depth="4" className="badge badge-success">
+            <span data-depth="0" className="badge badge-success">
               ██████
             </span>
           </span>
@@ -105,12 +105,12 @@ export default function Dashboard() {
             ████████████████
           </span>
           <span data-depth="3">
-            <span data-depth="4" className="badge badge-primary">
+            <span data-depth="0" className="badge badge-primary">
               ██████
             </span>
           </span>
           <span data-depth="3">
-            <span data-depth="4" className="badge badge-success">
+            <span data-depth="0" className="badge badge-success">
               ██████
             </span>
           </span>
@@ -126,12 +126,12 @@ export default function Dashboard() {
             ███████████████
           </span>
           <span data-depth="3">
-            <span data-depth="4" className="badge badge-primary">
+            <span data-depth="0" className="badge badge-primary">
               ██████
             </span>
           </span>
           <span data-depth="3">
-            <span data-depth="4" className="badge badge-default">
+            <span data-depth="0" className="badge badge-default">
               ████████
             </span>
           </span>
@@ -147,12 +147,12 @@ export default function Dashboard() {
             █████████████████
           </span>
           <span data-depth="3">
-            <span data-depth="4" className="badge badge-primary">
+            <span data-depth="0" className="badge badge-primary">
               ██████
             </span>
           </span>
           <span data-depth="3">
-            <span data-depth="4" className="badge badge-success">
+            <span data-depth="0" className="badge badge-success">
               ██████
             </span>
           </span>
@@ -168,12 +168,12 @@ export default function Dashboard() {
             ███████████████████
           </span>
           <span data-depth="3">
-            <span data-depth="4" className="badge badge-primary">
+            <span data-depth="0" className="badge badge-primary">
               █████
             </span>
           </span>
           <span data-depth="3">
-            <span data-depth="4" className="badge badge-danger">
+            <span data-depth="0" className="badge badge-danger">
               █████████
             </span>
           </span>

@@ -3,12 +3,6 @@
   --skeleton-bg-200: rgb(210, 210, 210);
   --skeleton-bg-300: rgb(200, 200, 200);
   --skeleton-bg-400: rgb(190, 190, 190);
-  --skeleton-bg-500: rgb(185, 185, 185);
-  --skeleton-bg-600: rgb(180, 180, 180);
-  --skeleton-bg-700: rgb(170, 170, 170);
-  --skeleton-bg-800: rgb(160, 160, 160);
-  --skeleton-bg-900: rgb(150, 150, 150);
-  --skeleton-bg-1000: rgb(150, 150, 150);
 }
 
 .dark {
@@ -16,10 +10,4 @@
   --skeleton-bg-200: rgb(45, 45, 45);
   --skeleton-bg-300: rgb(55, 55, 55);
   --skeleton-bg-400: rgb(65, 65, 65);
-  --skeleton-bg-500: rgb(70, 70, 70);
-  --skeleton-bg-600: rgb(75, 75, 75);
-  --skeleton-bg-700: rgb(85, 85, 85);
-  --skeleton-bg-800: rgb(95, 95, 95);
-  --skeleton-bg-900: rgb(105, 105, 105);
-  --skeleton-bg-1000: rgb(105, 105, 105);
 }

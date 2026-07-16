@@ -3,6 +3,7 @@
   background: unset !important;
   background-color: transparent !important;
   background-image: unset !important;
+  border-radius: var(--skeleton-radius) !important;
 }
 
 .empty-set__skeleton[data-depth="0"],
@@ -10,6 +11,7 @@
   background: unset !important;
   background-color: var(--skeleton-bg-100) !important;
   background-image: unset !important;
+  border-radius: var(--skeleton-radius) !important;
 }
 
 .empty-set__skeleton[data-depth="1"],
@@ -17,6 +19,7 @@
   background: unset !important;
   background-color: var(--skeleton-bg-200) !important;
   background-image: unset !important;
+  border-radius: var(--skeleton-radius) !important;
 }
 
 .empty-set__skeleton[data-depth="2"],
@@ -24,6 +27,7 @@
   background: unset !important;
   background-color: var(--skeleton-bg-300) !important;
   background-image: unset !important;
+  border-radius: var(--skeleton-radius) !important;
 }
 
 .empty-set__skeleton[data-depth="3"],
@@ -31,4 +35,5 @@
   background: unset !important;
   background-color: var(--skeleton-bg-400) !important;
   background-image: unset !important;
+  border-radius: var(--skeleton-radius) !important;
 }

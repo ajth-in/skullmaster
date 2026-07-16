@@ -10,9 +10,9 @@
 export default function UI() {
   return (
     <section
-      data-depth="0"
       className="components-section empty-set__skeleton"
       data-skullmaster="UI"
+      data-depth="-1"
       role="status"
       aria-live="polite"
       aria-busy="true"

@@ -41,13 +41,13 @@ export default function SelectMenu() {
             tabIndex={-1}
           >
             <optgroup
-              data-depth="4"
+              data-depth="0"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
             >
               <option
-                data-depth="5"
+                data-depth="1"
                 data-skeleton-interactive="true"
                 aria-hidden="true"
                 tabIndex={-1}
@@ -55,7 +55,7 @@ export default function SelectMenu() {
                 ██████ ███
               </option>
               <option
-                data-depth="5"
+                data-depth="1"
                 data-skeleton-interactive="true"
                 aria-hidden="true"
                 tabIndex={-1}
@@ -64,13 +64,13 @@ export default function SelectMenu() {
               </option>
             </optgroup>
             <optgroup
-              data-depth="4"
+              data-depth="0"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
             >
               <option
-                data-depth="5"
+                data-depth="1"
                 data-skeleton-interactive="true"
                 aria-hidden="true"
                 tabIndex={-1}
@@ -78,7 +78,7 @@ export default function SelectMenu() {
                 ██████ █████
               </option>
               <option
-                data-depth="5"
+                data-depth="1"
                 data-skeleton-interactive="true"
                 aria-hidden="true"
                 tabIndex={-1}
@@ -112,25 +112,25 @@ export default function SelectMenu() {
             tabIndex={-1}
           >
             <option
-              data-depth="4"
+              data-depth="0"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
             ></option>
             <option
-              data-depth="4"
+              data-depth="0"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
             ></option>
             <option
-              data-depth="4"
+              data-depth="0"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
             ></option>
             <option
-              data-depth="4"
+              data-depth="0"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}

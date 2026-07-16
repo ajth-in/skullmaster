@@ -11,8 +11,8 @@ export default function NightSky() {
   return (
     <div
       data-depth="0"
-      data-skullmaster="NightSky"
       className="card image-card-grid  empty-set__skeleton"
+      data-skullmaster="NightSky"
       data-seed="aurora"
       data-skeleton-interactive="true"
       aria-hidden="true"

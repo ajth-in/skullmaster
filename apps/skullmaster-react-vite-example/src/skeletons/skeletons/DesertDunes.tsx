@@ -11,8 +11,8 @@ export default function DesertDunes() {
   return (
     <div
       data-depth="0"
-      data-skullmaster="DesertDunes"
       className="card image-card-grid  empty-set__skeleton"
+      data-skullmaster="DesertDunes"
       data-seed="desert"
       data-skeleton-interactive="true"
       aria-hidden="true"

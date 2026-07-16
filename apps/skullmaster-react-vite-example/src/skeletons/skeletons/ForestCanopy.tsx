@@ -11,8 +11,8 @@ export default function ForestCanopy() {
   return (
     <div
       data-depth="0"
-      data-skullmaster="ForestCanopy"
       className="card image-card-grid  empty-set__skeleton"
+      data-skullmaster="ForestCanopy"
       data-seed="forest"
       data-skeleton-interactive="true"
       aria-hidden="true"

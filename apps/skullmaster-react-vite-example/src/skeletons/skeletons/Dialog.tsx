@@ -50,14 +50,14 @@ export default function Dialog() {
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               ████ ██ █ ██████ ████████ ███████ ██████ ████
             </span>
-            <code data-depth="4">███████████</code>
+            <code data-depth="0">███████████</code>
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               █
             </span>
           </p>
           <form data-depth="-1">
             <button
-              data-depth="4"
+              data-depth="0"
               className="btn btn-primary"
               data-skeleton-interactive="true"
               aria-hidden="true"

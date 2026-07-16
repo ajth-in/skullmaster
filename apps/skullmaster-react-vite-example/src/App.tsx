@@ -128,7 +128,7 @@ function UIComponents() {
   const { isLoading } = useLoading();
   if (isLoading) return <Skeleton name="UI" />;
   return (
-    <section className="components-section" data-skullmaster="UI">
+    <section className="components-section" data-depth="-1" data-skullmaster="UI">
       <h2 className="section-title">Common Components</h2>
       <div className="components-grid">
         <div className="card component-card">

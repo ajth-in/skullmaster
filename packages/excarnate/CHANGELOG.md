@@ -1,5 +1,19 @@
 # @skullmaster/excarnate
 
+## 0.2.0-next.2
+
+### Minor Changes
+
+- 3283809: Remove NPM_TOKEN for publishing and use trusted publishing
+
+### Patch Changes
+
+- dd50246: Test trusted publishing
+- 9b485ec: - Improved the visual consistency of generated skeletons with a more balanced depth system, refined component styling, and a new default loading animation.
+  - Changed depth assignment from incrementing values to a cyclic pattern across four depth levels, resulting in a more consistent visual hierarchy regardless of DOM depth.
+  - Added a subtle border radius to generated skeleton components to better match the appearance of modern UI elements.
+  - Replaced the pulse animation with a transform based swish animation, providing a smoother and more natural loading effect.
+
 ## 0.2.0-next.1
 
 ### Minor Changes

@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "description": "manifest.json description",
+  "homepage": "https://www.ajth.in/skullmaster/",
+  "bugs": {
+    "url": "https://github.com/ajth-in/skullmaster/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajth-in/skullmaster.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "wxt",

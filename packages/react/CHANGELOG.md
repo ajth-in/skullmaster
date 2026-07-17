@@ -1,5 +1,11 @@
 # @skullmaster/react
 
+## 0.2.0-next.4
+
+### Patch Changes
+
+- 9c00452: test npm trusted publishing
+
 ## 0.2.0-next.3
 
 ### Minor Changes

@@ -52,7 +52,24 @@ The generated skeleton is intended to be a starting point. Depending on your com
 
 To reduce unnecessary visual noise, SkullMaster automatically assigns `data-depth="-1"` to elements that are used only for layout or are not visually significant. These elements are rendered as transparent while still preserving the layout.
 
-You can also use this attribute yourself to fine tune the generated skeleton:
+You can also control these attributes yourself instead of writing them by hand. The `@skullmaster/<framework>` package exports two helpers that apply the attributes as type-safe props:
+
+- `markAsSkull(name, tweaks?)` — registers an component for skeleton generation. It also accepts the tweaks for the top level element:
+  ```tsx
+  <section {...markAsSkull("Hero", { isTransparent: true })}>...</section>
+  ```
+- `tweakForSkull(tweaks?)` — applies tweaks to a child element of a registered parent
+  ```tsx
+  <fieldset {...tweakForSkull({ hideSubTree: true })}>...</fieldset>
+  ```
+
+Both accept a `SkullTweaks` object:
+
+- `hideSubTree` — exclude the element and its entire subtree from generation (sets `data-skip-skull`).
+- `isTransparent` — render the element as transparent while preserving its layout (sets `data-depth="-1"`).
+- `margin` — apply a margin to the generated skeleton without disturbing the layout, e.g. `margin: 1`. Useful when there are elements touching each other you want some spacings only in skeletons.
+
+If you prefer to set the attributes manually, you can still do so:
 
 - Set `data-depth="-1"` on elements you want to remain transparent while preserving their layout.
 - Remove or change the attribute on elements that should render a visible skeleton placeholder.

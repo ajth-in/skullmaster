@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLoading } from "./context/LoadingContext";
 import "./App.css";
-import { SkullMaster } from "@skullmaster/react";
+import { SkullMaster, markAsSkull, tweakForSkull } from "@skullmaster/react";
 import Skeleton from "./skeletons/registry";
 import { ImageCard } from "./common/components";
 
@@ -78,7 +78,7 @@ function Hero() {
     return <Skeleton name={"Hero"} />;
   }
   return (
-    <section className="hero-section" data-skullmaster="Hero">
+    <section className="hero-section" {...markAsSkull("Hero")}>
       <div className="hero-content">
         <h1 className="hero-title">SKULLMASTER</h1>
         <p className="hero-subtitle">Neo Brutalist UI Showcase</p>
@@ -98,7 +98,7 @@ function UserProfileCard() {
   const { isLoading } = useLoading();
   if (isLoading) return <Skeleton name="UserProfileCard" />;
   return (
-    <div data-skullmaster="UserProfileCard" className="card profile-card">
+    <div className="card profile-card" {...markAsSkull("UserProfileCard")}>
       <div className="profile-avatar" />
       <h2 className="profile-name">Jane Doe</h2>
       <span className="profile-role">Principal Engineer</span>
@@ -128,7 +128,7 @@ function UIComponents() {
   const { isLoading } = useLoading();
   if (isLoading) return <Skeleton name="UI" />;
   return (
-    <section className="components-section" data-depth="-1" data-skullmaster="UI">
+    <section className="components-section" {...markAsSkull("UI", { isTransparent: true })}>
       <h2 className="section-title">Common Components</h2>
       <div className="components-grid">
         <div className="card component-card">
@@ -276,7 +276,7 @@ function Dashboard() {
     },
   ];
   return (
-    <section className="dashboard-section" data-skullmaster="Dashboard">
+    <section className="dashboard-section" {...markAsSkull("Dashboard")}>
       <h2 className="section-title">Dashboard</h2>
       <div className="stats-grid">
         {stats.map((s) => (
@@ -333,7 +333,7 @@ function ImagesGrid() {
         <h2 className="section-title">Image Gallery</h2>
         <div className="images-grid">
           {IMAGES.map((img) => (
-            <div key={img.seed} data-skullmaster={img.name}>
+            <div key={img.seed} {...markAsSkull(img.name)}>
               <Skeleton name={img.name} />
             </div>
           ))}
@@ -350,7 +350,7 @@ function ImagesGrid() {
           <div
             key={img.seed}
             className={`card image-card-grid ${activeImage === img.seed ? "image-card--active" : ""}`}
-            data-skullmaster={img.name}
+            {...markAsSkull(img.name)}
             data-seed={img.seed}
             onClick={() => setActiveImage(activeImage === img.seed ? null : img.seed)}
             role="button"
@@ -404,7 +404,7 @@ function InteractiveElements() {
     ];
 
     return (
-      <section className="interactive-section" data-skullmaster="InteractiveElements">
+      <section className="interactive-section" {...markAsSkull("InteractiveElements")}>
         <h2 className="section-title">Interactive Elements</h2>
         <div className="interactive-grid">
           {cardNames.map((name) => (
@@ -416,10 +416,10 @@ function InteractiveElements() {
   }
 
   return (
-    <section className="interactive-section" data-skullmaster="InteractiveElements">
+    <section className="interactive-section" {...markAsSkull("InteractiveElements")}>
       <h2 className="section-title">Interactive Elements</h2>
       <div className="interactive-grid">
-        <div className="card interactive-card" data-skullmaster="Buttons">
+        <div className="card interactive-card" {...markAsSkull("Buttons")}>
           <h3>Buttons</h3>
           <div className="interactive-demo">
             <button className="btn btn-primary">Button</button>
@@ -430,7 +430,7 @@ function InteractiveElements() {
           </div>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="AnchorLinks">
+        <div className="card interactive-card" {...markAsSkull("AnchorLinks")}>
           <h3>Anchor Links</h3>
           <div className="interactive-demo">
             <a href="#" className="btn btn-ghost">
@@ -445,7 +445,7 @@ function InteractiveElements() {
           </div>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="TextInputs">
+        <div className="card interactive-card" {...markAsSkull("TextInputs")}>
           <h3>Text Inputs</h3>
           <div className="interactive-demo interactive-stack">
             <label className="interactive-label">
@@ -479,7 +479,7 @@ function InteractiveElements() {
           </div>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="ChoiceInputs">
+        <div className="card interactive-card" {...markAsSkull("ChoiceInputs")}>
           <h3>Choice Inputs</h3>
           <div className="interactive-demo interactive-stack">
             <label className="interactive-check-label">
@@ -500,7 +500,7 @@ function InteractiveElements() {
           </div>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="RangeInput">
+        <div className="card interactive-card" {...markAsSkull("RangeInput")}>
           <h3>Range</h3>
           <div className="interactive-demo interactive-stack">
             <input
@@ -515,7 +515,7 @@ function InteractiveElements() {
           </div>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="FileColor">
+        <div className="card interactive-card" {...markAsSkull("FileColor")}>
           <h3>File &amp; Color</h3>
           <div className="interactive-demo interactive-stack">
             <label className="interactive-label">
@@ -533,7 +533,7 @@ function InteractiveElements() {
           </div>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="SelectMenu">
+        <div className="card interactive-card" {...markAsSkull("SelectMenu")}>
           <h3>Select &amp; Datalist</h3>
           <div className="interactive-demo interactive-stack">
             <label className="interactive-label">
@@ -566,7 +566,7 @@ function InteractiveElements() {
           </div>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="Textarea">
+        <div className="card interactive-card" {...markAsSkull("Textarea")}>
           <h3>Textarea</h3>
           <div className="interactive-demo interactive-stack">
             <textarea
@@ -578,7 +578,7 @@ function InteractiveElements() {
           </div>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="DetailsSummary">
+        <div className="card interactive-card" {...markAsSkull("DetailsSummary")}>
           <h3>Details / Summary</h3>
           <details
             className="interactive-details"
@@ -595,7 +595,7 @@ function InteractiveElements() {
           </details>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="Dialog">
+        <div className="card interactive-card" {...markAsSkull("Dialog")}>
           <h3>Dialog</h3>
           <div className="interactive-demo">
             <button
@@ -618,7 +618,7 @@ function InteractiveElements() {
           </dialog>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="ProgressMeter">
+        <div className="card interactive-card" {...markAsSkull("ProgressMeter")}>
           <h3>Progress &amp; Meter</h3>
           <div className="interactive-demo interactive-stack">
             <label className="interactive-label">
@@ -640,7 +640,7 @@ function InteractiveElements() {
           </div>
         </div>
 
-        <div className="card interactive-card" data-skullmaster="FieldsetForm">
+        <div className="card interactive-card" {...markAsSkull("FieldsetForm")}>
           <h3>Fieldset &amp; Form</h3>
           <form
             className="interactive-form"
@@ -652,7 +652,7 @@ function InteractiveElements() {
               );
             }}
           >
-            <fieldset data-skip-skull className="interactive-fieldset">
+            <fieldset className="interactive-fieldset" {...tweakForSkull({ hideSubTree: true })}>
               <legend>Login Form</legend>
               <label className="interactive-label">
                 Username

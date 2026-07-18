@@ -10,8 +10,6 @@ export async function generateInitialRegistry(outDir: string, projectType: strin
 
   const skeletonPropsType = isTs
     ? `
-import "@skullmaster/react/style.css"
-
 type SkeletonProps = {
   name: string;
 };
@@ -37,9 +35,12 @@ type SkeletonProps = {
  */
 
 
+import "@skullmaster/react/style.css"
 import DefaultBone from "./skeletons/DefaultBone";
 
 const registry${isTs ? ": Record<string, any>" : ""} = {};
+
+
 
 ${skeletonPropsType}
 

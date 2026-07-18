@@ -41,13 +41,25 @@ http://localhost:8080
 
 ## Step 3: Mark a Component
 
-Add the `data-skullmaster` attribute to any component you want to generate a skeleton for.
+Register any element you want to generate a skeleton for using the `markAsSkull` helper from `@skullmaster/react`. Spread the returned props onto the element:
 
 ```jsx
-<div data-skullmaster="ProfileCard">...</div>
+import { markAsSkull } from "@skullmaster/react";
+
+<div {...markAsSkull("ProfileCard")}>...</div>;
 ```
 
-The attribute value becomes the skeleton name.
+The `name` argument becomes the skeleton name.
+
+You can also fine-tune an element without registering it as a named component using `tweakForSkull`:
+
+```jsx
+import { tweakForSkull } from "@skullmaster/react";
+
+<fieldset {...tweakForSkull({ hideSubTree: true })}>...</fieldset>;
+```
+
+Both helpers accept a `tweaks` object: `hideSubTree` (sets `data-skip-skull`), `isTransparent` (sets `data-depth="-1"`). If you prefer, you can still set these `data-*` attributes manually instead.
 
 ## Step 4: Render the Skeleton
 

@@ -5,7 +5,7 @@ export const DATA_NAT_H = "data-natural-h";
 export const DATA_NAT_W = "data-natural-w";
 export const DATA_IMAGE_SKELETON = "data-image-skeleton";
 
-function createSkeletonSrc(width?: string, height?: string, color = "#e5e7eb") {
+function createSkeletonSrc(width?: string, height?: string, color = "#808080") {
   const w = Number(width) || 400;
   const h = Number(height) || 300;
 

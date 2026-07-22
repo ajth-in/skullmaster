@@ -12,9 +12,6 @@ Choose the guide for your framework to install Skullmaster, configure the develo
 - ⚛️ **[React](/docs/react.md)**
   Learn how to install Skullmaster in a React project, start the development server, and generate customizable skeleton components.
 
-- 🔶 **[Svelte](/docs/svelte.md)**
-  Set up Skullmaster in a Svelte project and generate framework-native skeleton components from your application's rendered UI.
-
 ## How it works
 
 Generating an accurate skeleton requires runtime information that only exists after your application has been rendered by the browser. This includes the final HTML structure, computed styles, image dimensions, text layout, and other rendering details.

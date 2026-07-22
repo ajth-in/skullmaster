@@ -87,12 +87,12 @@ This package sends component information from your React application to the runn
 
 ## Step 6: Add the Provider
 
-In your application's entry file (`App.tsx`, `main.tsx`, or `layout.tsx`), add the provider.
+In your application's entry file (`App.tsx`, `main.tsx`, or `layout.tsx`), add the skullmaster compinent.
 
 ```jsx
 import { Skullmaster } from "@skullmaster/react";
 
-<Skullmaster isEnabled={process.env.NODE_ENV === "development"} />;
+<Skullmaster />;
 ```
 
 ## Step 8: Generate Your First Skeleton

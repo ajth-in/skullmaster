@@ -13,39 +13,13 @@
  *   pnpm skeleton prune
  */
 
+import "@skullmaster/react/style.css";
 import DefaultBone from "./skeletons/DefaultBone";
 
-const registry: Record<string, any> = {
-  Hero: lazy(() => import("./skeletons/Hero")),
-  UserProfileCard: lazy(() => import("./skeletons/UserProfileCard")),
-  UI: lazy(() => import("./skeletons/UI")),
-  Dashboard: lazy(() => import("./skeletons/Dashboard")),
-  ImageCard: lazy(() => import("./skeletons/ImageCard")),
-  MountainRange: lazy(() => import("./skeletons/MountainRange")),
-  CityLights: lazy(() => import("./skeletons/CityLights")),
-  DeepOcean: lazy(() => import("./skeletons/DeepOcean")),
-  ForestCanopy: lazy(() => import("./skeletons/ForestCanopy")),
-  DesertDunes: lazy(() => import("./skeletons/DesertDunes")),
-  NightSky: lazy(() => import("./skeletons/NightSky")),
-  Buttons: lazy(() => import("./skeletons/Buttons")),
-  AnchorLinks: lazy(() => import("./skeletons/AnchorLinks")),
-  TextInputs: lazy(() => import("./skeletons/TextInputs")),
-  FileColor: lazy(() => import("./skeletons/FileColor")),
-  RangeInput: lazy(() => import("./skeletons/RangeInput")),
-  ChoiceInputs: lazy(() => import("./skeletons/ChoiceInputs")),
-  SelectMenu: lazy(() => import("./skeletons/SelectMenu")),
-  Textarea: lazy(() => import("./skeletons/Textarea")),
-  DetailsSummary: lazy(() => import("./skeletons/DetailsSummary")),
-  FieldsetForm: lazy(() => import("./skeletons/FieldsetForm")),
-  ProgressMeter: lazy(() => import("./skeletons/ProgressMeter")),
-  Dialog: lazy(() => import("./skeletons/Dialog")),
-};
-
-import "@skullmaster/react/style.css";
-import { lazy } from "react";
+const registry = {} as const;
 
 type SkeletonProps = {
-  name: string;
+  name: keyof typeof registry | (string & {});
 };
 
 export default function Skeleton({ name }: SkeletonProps) {

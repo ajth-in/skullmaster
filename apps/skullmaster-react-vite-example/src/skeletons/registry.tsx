@@ -15,8 +15,17 @@
 
 import "@skullmaster/react/style.css";
 import DefaultBone from "./skeletons/DefaultBone";
+import { lazy } from "react";
 
-const registry = {} as const;
+const registry = {
+  ImageCard: lazy(() => import("./skeletons/ImageCard")),
+  MountainRange: lazy(() => import("./skeletons/MountainRange")),
+  DeepOcean: lazy(() => import("./skeletons/DeepOcean")),
+  CityLights: lazy(() => import("./skeletons/CityLights")),
+  NightSky: lazy(() => import("./skeletons/NightSky")),
+  DesertDunes: lazy(() => import("./skeletons/DesertDunes")),
+  ForestCanopy: lazy(() => import("./skeletons/ForestCanopy")),
+} as const;
 
 type SkeletonProps = {
   name: keyof typeof registry | (string & {});

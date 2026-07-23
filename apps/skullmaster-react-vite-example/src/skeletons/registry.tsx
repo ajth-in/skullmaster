@@ -15,7 +15,7 @@
 
 import "@skullmaster/react/style.css";
 import DefaultBone from "./skeletons/DefaultBone";
-import { lazy } from "react";
+import { lazy, type ComponentProps } from "react";
 
 const registry = {
   ImageCard: lazy(() => import("./skeletons/ImageCard")),
@@ -26,16 +26,16 @@ const registry = {
   DesertDunes: lazy(() => import("./skeletons/DesertDunes")),
   ForestCanopy: lazy(() => import("./skeletons/ForestCanopy")),
 } as const;
-
 type SkeletonProps = {
   name: keyof typeof registry | (string & {});
+  defaultBoneProps?: ComponentProps<typeof DefaultBone>;
 };
 
-export default function Skeleton({ name }: SkeletonProps) {
+export default function Skeleton({ name, defaultBoneProps = {} }: SkeletonProps) {
   const Component = registry[name];
 
   if (!Component) {
-    return <DefaultBone />;
+    return <DefaultBone {...defaultBoneProps} />;
   }
 
   return <Component />;

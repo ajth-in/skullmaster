@@ -5,26 +5,21 @@ export type SkullTweaks = {
   hideSubTree?: boolean;
   /** Render this element as transparent (layout preserved) in the skeleton. */
   isTransparent?: boolean;
-  /** Margin applied to the generated skeleton via `data-skull-styles`. */
-  insetMargin?: number;
 };
 
 export type WithDataSkull = HTMLAttributes<HTMLElement> & {
   "data-skullmaster": string;
   "data-skip-skull"?: boolean;
   "data-depth"?: "-1";
-  "data-inset-margin"?: number;
 };
 
 const buildSkullAttributes = ({
   hideSubTree,
   isTransparent,
-  insetMargin,
 }: SkullTweaks): Omit<WithDataSkull, "data-skullmaster"> => {
   return {
     "data-skip-skull": hideSubTree,
     "data-depth": isTransparent ? "-1" : undefined,
-    "data-inset-margin": insetMargin,
   };
 };
 

@@ -64,7 +64,6 @@ Both accept a `SkullTweaks` object:
 
 - `hideSubTree` — exclude the element and its entire subtree from generation (sets `data-skip-skull`).
 - `isTransparent` — render the element as transparent while preserving its layout (sets `data-depth="-1"`).
-- `margin` — apply a margin to the generated skeleton without disturbing the layout, e.g. `margin: 1`. Useful when there are elements touching each other you want some spacings only in skeletons.
 
 If you prefer to set the attributes manually, you can still do so:
 

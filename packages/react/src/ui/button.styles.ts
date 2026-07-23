@@ -1,6 +1,4 @@
-import { css } from "lit";
-
-export const buttonStyles = css`
+export const buttonStyles = `
   .btn {
     border: 2px solid black;
 
@@ -47,4 +45,4 @@ export const buttonStyles = css`
     opacity: 0.45;
     cursor: not-allowed;
   }
-`.cssText;
+`;

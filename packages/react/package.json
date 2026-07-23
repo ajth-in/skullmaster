@@ -33,11 +33,6 @@
     "release": "bumpp",
     "prepublishOnly": "pnpm run build"
   },
-  "dependencies": {
-    "@tanstack/react-query": "^5.100.14",
-    "lit": "^3.3.3",
-    "react-aria-components": "^1.18.0"
-  },
   "devDependencies": {
     "@skullmaster/oxlint-config": "workspace:*",
     "@skullmaster/typescript-config": "workspace:*",

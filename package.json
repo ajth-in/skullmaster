@@ -9,6 +9,10 @@
     "type": "git",
     "url": "git+https://github.com/ajth-in/skullmaster.git"
   },
+  "exports": {
+    ".": "./packages/excarnate/dist/index.mjs",
+    "./package.json": "./package.json"
+  },
   "scripts": {
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
@@ -24,5 +28,10 @@
     "oxfmt": "^0.52.0",
     "turbo": "^2.9.14"
   },
-  "packageManager": "pnpm@11.11.0"
+  "packageManager": "pnpm@11.11.0",
+  "inlinedDependencies": {
+    "@babel/helper-string-parser": "7.29.7",
+    "@babel/helper-validator-identifier": "7.29.7",
+    "@babel/types": "7.29.7"
+  }
 }

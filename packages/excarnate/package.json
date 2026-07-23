@@ -34,18 +34,17 @@
     "@types/babel__generator": "^7.27.0",
     "@types/jsdom": "^28.0.3",
     "@types/node": "^25.9.1",
-    "@typescript/native-preview": "7.0.0-dev.20260509.2",
-    "@vitest/ui": "4.1.7",
-    "bumpp": "^11.1.0",
-    "jsdom": "^29.1.1",
-    "lit": "^3.3.3",
-    "tsdown": "^0.22.0",
-    "typescript": "^6.0.3",
-    "vitest": "^4.1.5"
+    "jsdom": "^29.1.1"
   },
   "devDependencies": {
     "@skullmaster/oxlint-config": "workspace:*",
     "@skullmaster/typescript-config": "workspace:*",
-    "oxlint": "^1.0.0"
+    "@typescript/native-preview": "7.0.0-dev.20260509.2",
+    "@vitest/ui": "4.1.7",
+    "bumpp": "^11.1.0",
+    "oxlint": "^1.0.0",
+    "tsdown": "^0.22.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
   }
 }

@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import SkullIcon from "./icons/skull";
 import { Button } from "./ui/button";
 import ShadowRoot from "./shadow-root";
-import { css } from "lit";
 import { useSkullMaster } from "./skullmaster-provider";
 import HoverHighlighter from "./mouse-over";
 
@@ -94,16 +93,14 @@ export default function PostSkeletons() {
   return (
     <ShadowRoot>
       <style>
-        {
-          css`
+        {`
             .control-panel-button {
               position: fixed;
               z-index: 2147483647;
               transition: all 200ms ease;
               touch-action: none;
             }
-          `.cssText
-        }
+          `}
       </style>
 
       <Button

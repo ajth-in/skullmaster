@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import fileExists from "./is-file-exists";
 import { generateInitialRegistry, generateRegistry, type RegistryOperation } from "./registry";
 import { updateCacheRegistry, type CacheOperation } from "./cache-registry";
@@ -13,7 +13,7 @@ export class Config {
     this.outDir = outDir;
     this.projectType = projectType;
   }
-  async initialize() {
+  async initialize(forceReset?: boolean) {
     log.info("Initializing project structure...");
     if (!(await fileExists(this.outDir))) {
       mkdirSync(this.outDir, { recursive: true });
@@ -25,25 +25,30 @@ export class Config {
     if (!(await fileExists(skeletonsDirectoryPath))) {
       mkdirSync(skeletonsDirectoryPath, { recursive: true });
       log.success(`Created skeletons directory: ${skeletonsDirectoryPath}`);
+    } else if (forceReset) {
+      for (const file of readdirSync(skeletonsDirectoryPath)) {
+        rmSync(`${skeletonsDirectoryPath}/${file}`, { recursive: true });
+      }
+      log.success(`Cleared skeletons directory: ${skeletonsDirectoryPath}`);
     } else {
       log.gray(`Skeletons directory exists: ${skeletonsDirectoryPath}`);
     }
     const registryFilePath = this.getRegistryPath();
-    if (!(await fileExists(registryFilePath))) {
+    if (forceReset || !(await fileExists(registryFilePath))) {
       await generateInitialRegistry(this.outDir, this.projectType);
       log.success(`Created registry: ${registryFilePath}`);
     } else {
       log.gray(`Registry exists: ${registryFilePath}`);
     }
     const cachePath = this.getCachePath();
-    if (!(await fileExists(cachePath))) {
+    if (forceReset || !(await fileExists(cachePath))) {
       writeFileSync(cachePath, JSON.stringify({}), "utf8");
       log.success(`Created cache: ${cachePath}`);
     } else {
       log.gray(`Cache exists: ${cachePath}`);
     }
     const defaultBonePath = this.getDefSkeletonPath();
-    if (!(await fileExists(defaultBonePath))) {
+    if (forceReset || !(await fileExists(defaultBonePath))) {
       await defaultBone(defaultBonePath);
       log.success(`Created default bone: ${defaultBonePath}`);
     } else {

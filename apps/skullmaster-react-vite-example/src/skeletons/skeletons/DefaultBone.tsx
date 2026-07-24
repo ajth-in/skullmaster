@@ -15,6 +15,7 @@ import type { HTMLProps } from "react";
  * loading experience of your application.
  */
 type DefaultBoneProps = HTMLProps<HTMLDivElement>;
+
 export default function DefaultBone(props: DefaultBoneProps) {
   return <div {...props}>loading...</div>;
 }

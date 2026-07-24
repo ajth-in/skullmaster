@@ -5,7 +5,7 @@
 Run:
 
 ```bash
-npm install skullmaster --save-dev
+npm install skullmaster@next --save-dev
 ```
 
 ## Step 2: Start the Development Server
@@ -80,7 +80,7 @@ Until the skeleton is generated, `DefaultBone` will be rendered.
 Install the React integration.
 
 ```bash
-npm install @skullmaster/react
+npm install @skullmaster/react@next
 ```
 
 This package sends component information from your React application to the running Skullmaster development server.

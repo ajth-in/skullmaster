@@ -49,8 +49,6 @@ export function createOverlay(): OverlayElements {
     position: "absolute",
     top: "8px",
     right: "8px",
-    pointerEvents: "auto",
-    cursor: "pointer",
     display: "flex",
     alignItems: "center",
     gap: "6px",
@@ -62,13 +60,6 @@ export function createOverlay(): OverlayElements {
     fontWeight: "600",
     fontFamily: "system-ui, sans-serif",
     lineHeight: "1",
-  });
-
-  downloadBtn.addEventListener("mouseenter", () => {
-    downloadBtn.style.background = "rgba(50,50,50,0.9)";
-  });
-  downloadBtn.addEventListener("mouseleave", () => {
-    downloadBtn.style.background = "rgba(0,0,0,0.85)";
   });
 
   downloadBtn.appendChild(btnText);

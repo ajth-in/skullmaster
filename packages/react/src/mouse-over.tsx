@@ -33,7 +33,7 @@ export default function HoverHighlighter() {
     let currentState: SkeletonState = "idle";
     let currentError: string | null = null;
 
-    const { overlay, downloadBtn, btnText } = createOverlay();
+    const { overlay, btnText } = createOverlay();
 
     const getComponentName = (element: HTMLElement) =>
       element.dataset["skullmaster"] ?? "Unknown Component";
@@ -114,13 +114,18 @@ export default function HoverHighlighter() {
     };
 
     const handleClick = async (event: MouseEvent) => {
-      const target = event.target as HTMLElement | null;
+      if (!currentSkeleton || currentState !== "idle") return;
 
-      if (!target) return;
+      if (overlay.style.display === "none") return;
 
-      if (!downloadBtn.contains(target)) return;
-
-      if (!currentSkeleton) return;
+      const rect = overlay.getBoundingClientRect();
+      if (
+        event.clientX < rect.left ||
+        event.clientX > rect.right ||
+        event.clientY < rect.top ||
+        event.clientY > rect.bottom
+      )
+        return;
 
       event.preventDefault();
       event.stopPropagation();

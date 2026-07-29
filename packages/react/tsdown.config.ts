@@ -7,7 +7,10 @@ export default defineConfig({
   exports: true,
   entry: ["src/index.ts", "src/styles.css"],
   format: ["esm"],
-  deps: { neverBundle: ["react", "react-dom"] },
+  deps: {
+    neverBundle: ["react", "react-dom"],
+    alwaysBundle: ["@skullmaster/exacarnate-client"],
+  },
   css: {
     minify: true,
     target: ["chrome80", "firefox75", "safari13.1"],

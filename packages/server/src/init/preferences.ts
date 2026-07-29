@@ -77,4 +77,7 @@ export class Config {
   getRegistryPath() {
     return `${this.outDir}/registry.${this.getExt()}`;
   }
+  configJson() {
+    return { projectType: this.projectType, outDir: this.outDir };
+  }
 }

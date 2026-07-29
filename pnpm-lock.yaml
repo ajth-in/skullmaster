@@ -70,6 +70,9 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3(postcss@8.5.16)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
+      '@skullmaster/exacarnate-client':
+        specifier: workspace:*
+        version: link:../exacarnate-client
       '@types/react':
         specifier: ^19.2.14
         version: 19.2.17
@@ -89,6 +92,18 @@ importers:
   packages/config-oxlint: {}
 
   packages/config-typescript: {}
+
+  packages/exacarnate-client:
+    devDependencies:
+      '@skullmaster/typescript-config':
+        specifier: workspace:*
+        version: link:../config-typescript
+      tsdown:
+        specifier: ^0.22.0
+        version: 0.22.4(@tsdown/css@0.22.4)(@typescript/native-preview@7.0.0-dev.20260509.2)(typescript@6.0.3)
+      typescript:
+        specifier: ^6.0.3
+        version: 6.0.3
 
   packages/excarnate:
     dependencies:
@@ -141,6 +156,9 @@ importers:
 
   packages/react:
     devDependencies:
+      '@skullmaster/exacarnate-client':
+        specifier: workspace:*
+        version: link:../exacarnate-client
       '@skullmaster/oxlint-config':
         specifier: workspace:*
         version: link:../config-oxlint

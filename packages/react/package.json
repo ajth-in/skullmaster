@@ -34,6 +34,7 @@
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
+    "@skullmaster/exacarnate-client": "workspace:*",
     "@skullmaster/oxlint-config": "workspace:*",
     "@skullmaster/typescript-config": "workspace:*",
     "@tsdown/css": "^0.22.3",

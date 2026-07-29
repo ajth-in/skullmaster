@@ -27,6 +27,7 @@ export async function serveCommand(config: Config, port: number) {
   app.get("/health", (c) => {
     return c.json({
       ok: true,
+      config: config.configJson(),
     });
   });
 

@@ -28,6 +28,7 @@
     "reshaped": "^4.0.3"
   },
   "devDependencies": {
+    "@skullmaster/exacarnate-client": "workspace:*",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@wxt-dev/module-react": "^1.1.5",

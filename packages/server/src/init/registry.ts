@@ -8,6 +8,49 @@ export async function generateInitialRegistry(outDir: string, projectType: strin
 
   const ext = isTs ? "tsx" : "jsx";
 
+  const skullTypes = isTs
+    ? `
+export type SkullTweaks = {
+  /** Exclude this element and its entire subtree from skeleton generation. */
+  hideSubTree?: boolean;
+  /** Render this element as transparent (layout preserved) in the skeleton. */
+  isTransparent?: boolean;
+};
+
+export type WithDataSkull = HTMLAttributes<HTMLElement> & {
+  "data-skullmaster": string;
+  "data-skip-skull"?: boolean;
+  "data-depth"?: "-1";
+};
+`
+    : "";
+
+  const skullUtils = `
+const buildSkullAttributes = ({ hideSubTree, isTransparent }${
+    isTs ? ": SkullTweaks" : ""
+  })${isTs ? ': Omit<WithDataSkull, "data-skullmaster">' : ""} => {
+  return {
+    "data-skip-skull": hideSubTree,
+    "data-depth": isTransparent ? "-1" : undefined,
+  };
+};
+
+export const markAsSkull = (name: string, tweaks${
+    isTs ? ": SkullTweaks" : ""
+  } = {})${isTs ? ": WithDataSkull" : ""} => {
+  return {
+    "data-skullmaster": name,
+    ...buildSkullAttributes(tweaks),
+  };
+};
+
+export const tweakForSkull = (tweaks${
+    isTs ? ": SkullTweaks" : ""
+  } = {})${isTs ? ': Omit<WithDataSkull, "data-skullmaster">' : ""} => {
+  return buildSkullAttributes(tweaks);
+};
+`;
+
   const skeletonPropsType = isTs
     ? `
 type SkeletonProps = {
@@ -35,12 +78,11 @@ type SkeletonProps = {
 
 import "@skullmaster/react/style.css";
 import DefaultBone from "./skeletons/DefaultBone";
-${isTs ? 'import { type ComponentProps } from "react";' : ""}
+${isTs ? 'import { type ComponentProps, type HTMLAttributes } from "react";' : ""}
 
 const registry = {}${isTs ? " as const" : ""};
 
-${skeletonPropsType}
-
+${skullTypes}${skeletonPropsType}${skullUtils}
 export default function Skeleton({
   name,
   defaultBoneProps = {},

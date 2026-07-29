@@ -13,37 +13,49 @@
 
 import "@skullmaster/react/style.css";
 import DefaultBone from "./skeletons/DefaultBone";
-import { type ComponentProps, lazy } from "react";
+import { type ComponentProps, type HTMLAttributes } from "react";
 
-const registry = {
-  Hero: lazy(() => import("./skeletons/Hero")),
-  UserProfileCard: lazy(() => import("./skeletons/UserProfileCard")),
-  Dashboard: lazy(() => import("./skeletons/Dashboard")),
-  UI: lazy(() => import("./skeletons/UI")),
-  MountainRange: lazy(() => import("./skeletons/MountainRange")),
-  DeepOcean: lazy(() => import("./skeletons/DeepOcean")),
-  CityLights: lazy(() => import("./skeletons/CityLights")),
-  ForestCanopy: lazy(() => import("./skeletons/ForestCanopy")),
-  DesertDunes: lazy(() => import("./skeletons/DesertDunes")),
-  NightSky: lazy(() => import("./skeletons/NightSky")),
-  InteractiveElements: lazy(() => import("./skeletons/InteractiveElements")),
-  Buttons: lazy(() => import("./skeletons/Buttons")),
-  AnchorLinks: lazy(() => import("./skeletons/AnchorLinks")),
-  TextInputs: lazy(() => import("./skeletons/TextInputs")),
-  ChoiceInputs: lazy(() => import("./skeletons/ChoiceInputs")),
-  RangeInput: lazy(() => import("./skeletons/RangeInput")),
-  FileColor: lazy(() => import("./skeletons/FileColor")),
-  SelectMenu: lazy(() => import("./skeletons/SelectMenu")),
-  Textarea: lazy(() => import("./skeletons/Textarea")),
-  FieldsetForm: lazy(() => import("./skeletons/FieldsetForm")),
-  ProgressMeter: lazy(() => import("./skeletons/ProgressMeter")),
-  Dialog: lazy(() => import("./skeletons/Dialog")),
-  DetailsSummary: lazy(() => import("./skeletons/DetailsSummary")),
-} as const;
+const registry = {} as const;
+
+export type SkullTweaks = {
+  /** Exclude this element and its entire subtree from skeleton generation. */
+  hideSubTree?: boolean;
+  /** Render this element as transparent (layout preserved) in the skeleton. */
+  isTransparent?: boolean;
+};
+
+export type WithDataSkull = HTMLAttributes<HTMLElement> & {
+  "data-skullmaster": string;
+  "data-skip-skull"?: boolean;
+  "data-depth"?: "-1";
+};
 
 type SkeletonProps = {
   name: keyof typeof registry | (string & {});
   defaultBoneProps?: ComponentProps<typeof DefaultBone>;
+};
+
+const buildSkullAttributes = ({
+  hideSubTree,
+  isTransparent,
+}: SkullTweaks): Omit<WithDataSkull, "data-skullmaster"> => {
+  return {
+    "data-skip-skull": hideSubTree,
+    "data-depth": isTransparent ? "-1" : undefined,
+  };
+};
+
+export const markAsSkull = (name: string, tweaks: SkullTweaks = {}): WithDataSkull => {
+  return {
+    "data-skullmaster": name,
+    ...buildSkullAttributes(tweaks),
+  };
+};
+
+export const tweakForSkull = (
+  tweaks: SkullTweaks = {},
+): Omit<WithDataSkull, "data-skullmaster"> => {
+  return buildSkullAttributes(tweaks);
 };
 
 export default function Skeleton({ name, defaultBoneProps = {} }: SkeletonProps) {

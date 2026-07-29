@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLoading } from "./context/LoadingContext";
 import "./App.css";
-import { SkullMaster, markAsSkull, tweakForSkull } from "@skullmaster/react";
-import Skeleton from "./skeletons/registry";
+import Skeleton, { markAsSkull, tweakForSkull } from "./skeletons/registry";
 import { ImageCard } from "./common/components";
 
 type Tab = "components" | "images" | "interactive";

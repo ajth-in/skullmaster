@@ -1,15 +1,13 @@
 import { expect, test } from "vitest";
 import { render } from "vitest-browser-react";
-import { MyButton } from "../src";
+import { Button } from "../src/ui/button";
 
 test("button", async () => {
-  const screen = await render(<MyButton type="primary" />);
+  const screen = await render(<Button className="primary">Click me</Button>);
   const buttonElement = screen.getByRole("button");
 
   expect(buttonElement).toBeInTheDocument();
-  expect(buttonElement).toHaveTextContent("my button type: primary count: 0");
-  expect(screen.container.innerHTML).toMatchInlineSnapshot(
-    `"<button class="my-button">my button<br> type: primary<br> count: 0</button>"`,
-  );
-  expect(buttonElement).toHaveClass("my-button");
+  expect(buttonElement).toHaveTextContent("Click me");
+  expect(buttonElement).toHaveClass("btn");
+  expect(buttonElement).toHaveClass("primary");
 });

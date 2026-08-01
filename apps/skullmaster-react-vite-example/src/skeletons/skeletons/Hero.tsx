@@ -17,7 +17,7 @@ export default function Hero() {
       aria-live="polite"
       aria-busy="true"
     >
-      <div className="hero-content" data-depth="-1">
+      <div data-depth="1" className="hero-content">
         <h1 data-depth="2" className="hero-title">
           <span className="empty-set__text" data-text-node="true" data-depth="2">
             ███████████
@@ -33,7 +33,7 @@ export default function Hero() {
             █ ██████████ ██ ██████ ███ ██████████ ██████████ ████ █████ ████████████ ███████
           </span>
         </p>
-        <div className="hero-actions" data-depth="-1">
+        <div data-depth="2" className="hero-actions">
           <button
             data-depth="3"
             className="btn btn-primary"

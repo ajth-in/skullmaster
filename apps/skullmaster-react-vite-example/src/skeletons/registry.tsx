@@ -18,6 +18,15 @@ import { type ComponentProps, type HTMLAttributes, lazy } from "react";
 const registry = {
   default: lazy(() => import("./skeletons/DefaultBone")),
   Hero: lazy(() => import("./skeletons/Hero")),
+  UserProfileCard: lazy(() => import("./skeletons/UserProfileCard")),
+  UI: lazy(() => import("./skeletons/UI")),
+  MountainRange: lazy(() => import("./skeletons/MountainRange")),
+  DeepOcean: lazy(() => import("./skeletons/DeepOcean")),
+  CityLights: lazy(() => import("./skeletons/CityLights")),
+  ForestCanopy: lazy(() => import("./skeletons/ForestCanopy")),
+  DesertDunes: lazy(() => import("./skeletons/DesertDunes")),
+  NightSky: lazy(() => import("./skeletons/NightSky")),
+  Dashboard: lazy(() => import("./skeletons/Dashboard")),
 } as const;
 
 export type SkullTweaks = {

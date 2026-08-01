@@ -12,6 +12,7 @@
     "@skullmaster/exacarnate-client": "0.1.0"
   },
   "changesets": [
+    "dirty-seas-build",
     "eager-breads-fetch",
     "grumpy-lights-appear",
     "legal-phones-cover",

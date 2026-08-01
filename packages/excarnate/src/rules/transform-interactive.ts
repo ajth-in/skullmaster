@@ -122,7 +122,7 @@ export const transformInteractiveElements: Rule = {
 
     /* 3. Browser & password manager suppression */
     const passwordManagerAttributes = [
-      createJsxStringAttribute("autoComplete", "off"),
+      createJsxStringAttribute("autocomplete", "off"),
       createJsxStringAttribute("data-1p-ignore", "true"),
       createJsxStringAttribute("data-lpignore", "true"),
       createJsxStringAttribute("data-bwignore", "true"),

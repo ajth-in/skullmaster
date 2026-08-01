@@ -1,5 +1,4 @@
 import { expect, test } from "vitest";
-import { html } from "lit";
 import { normalize, transform } from "./utils";
 
 test("adds skeleton class to root and transforms images", () => {
@@ -168,7 +167,7 @@ test("adds skeleton class to root and transforms images", () => {
   expect(
     normalize(
       transform(
-        html`<div>
+        `<div>
           <p>Hello</p>
           <img src="/hero.jpg" alt="Hero image" class="rounded-xl" width="320" height="180" />
           <script>
@@ -179,7 +178,7 @@ test("adds skeleton class to root and transforms images", () => {
     ),
   ).toBe(
     normalize(
-      html`<div
+      `<div
         data-depth="0"
         className="empty-set__skeleton"
         role="status"
@@ -188,7 +187,7 @@ test("adds skeleton class to root and transforms images", () => {
       >
         <p data-depth="1">
           <span className="empty-set__text" data-text-node="true" data-depth="1"
-            >.....</span
+            >█████</span
           >
         </p>
 
@@ -197,10 +196,24 @@ test("adds skeleton class to root and transforms images", () => {
           className="rounded-xl"
           width="320"
           height="180"
-          src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+          src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23808080%22%2F%3E%3C%2Fsvg%3E"
           data-image-skeleton="true"
         ></img>
       </div>`,
     ),
   );
+});
+
+test("adds browser and password manager suppression attributes to interactive elements", () => {
+  const output = transform(`<form>
+    <input type="password" autocomplete="new-password" />
+  </form>`);
+
+  expect(output).toContain('autoComplete="off"');
+  expect(output).toContain('data-1p-ignore="true"');
+  expect(output).toContain('data-lpignore="true"');
+  expect(output).toContain('data-bwignore="true"');
+  expect(output).toContain('data-protonpass-ignore="true"');
+  expect(output).toContain('form="none"');
+  expect(output).not.toContain('autoComplete="new-password"');
 });

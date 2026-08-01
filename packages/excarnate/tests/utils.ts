@@ -1,9 +1,8 @@
 import generate from "@babel/generator";
 import { JSDOM } from "jsdom";
 import fn from "../src";
-import { TemplateResult } from "lit";
-export function transform(html: TemplateResult<1> | string): string {
-  const dom = new JSDOM(typeof html === "string" ? html : html.strings[0]);
+export function transform(html: string): string {
+  const dom = new JSDOM(html);
 
   const root = dom.window.document.body.firstElementChild;
 
@@ -19,9 +18,6 @@ export function transform(html: TemplateResult<1> | string): string {
 
   return generate(ast).code;
 }
-export function normalize(str: TemplateResult<1> | string): string {
-  if (typeof str === "string") {
-    return str.replace(/\s+/g, "");
-  }
-  return str.strings[0].replace(/\s+/g, "");
+export function normalize(str: string): string {
+  return str.replace(/\s+/g, "");
 }

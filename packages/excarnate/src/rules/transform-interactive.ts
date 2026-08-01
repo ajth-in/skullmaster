@@ -50,6 +50,8 @@ const INTERACTIVE_ROLES = new Set([
   "columnheader",
 ]);
 
+const PASSWORD_MANAGER_TAGS = new Set(["input", "select", "textarea"]);
+
 const ARIA_ATTRIBUTES_TO_REMOVE = new Set([
   "role",
   "aria-label",
@@ -121,27 +123,29 @@ export const transformInteractiveElements: Rule = {
     );
 
     /* 3. Browser & password manager suppression */
-    const passwordManagerAttributes = [
-      createJsxStringAttribute("autocomplete", "off"),
-      createJsxStringAttribute("data-1p-ignore", "true"),
-      createJsxStringAttribute("data-lpignore", "true"),
-      createJsxStringAttribute("data-bwignore", "true"),
-      createJsxStringAttribute("data-protonpass-ignore", "true"),
-      createJsxStringAttribute("form", "none"),
-    ];
+    if (ctx.target.element && PASSWORD_MANAGER_TAGS.has(ctx.target.element)) {
+      const passwordManagerAttributes = [
+        createJsxStringAttribute("autoComplete", "off"),
+        createJsxStringAttribute("data-1p-ignore", "true"),
+        createJsxStringAttribute("data-lpignore", "true"),
+        createJsxStringAttribute("data-bwignore", "true"),
+        createJsxStringAttribute("data-protonpass-ignore", "true"),
+        createJsxStringAttribute("form", "none"),
+      ];
 
-    for (const attribute of passwordManagerAttributes) {
-      const name = attribute.name?.name ? String(attribute.name.name).toLowerCase() : "";
-      const existingIndex = attributes.findIndex(
-        (existing) =>
-          existing.type === "JSXAttribute" &&
-          existing.name?.name &&
-          String(existing.name.name).toLowerCase() === name,
-      );
-      if (existingIndex >= 0) {
-        attributes[existingIndex] = attribute;
-      } else {
-        attributes.push(attribute);
+      for (const attribute of passwordManagerAttributes) {
+        const name = attribute.name?.name ? String(attribute.name.name).toLowerCase() : "";
+        const existingIndex = attributes.findIndex(
+          (existing) =>
+            existing.type === "JSXAttribute" &&
+            existing.name?.name &&
+            String(existing.name.name).toLowerCase() === name,
+        );
+        if (existingIndex >= 0) {
+          attributes[existingIndex] = attribute;
+        } else {
+          attributes.push(attribute);
+        }
       }
     }
 

@@ -205,9 +205,13 @@ test("adds skeleton class to root and transforms images", () => {
   );
 });
 
-test("adds browser and password manager suppression attributes to interactive elements", () => {
+test("adds browser and password manager suppression attributes to form fields only", () => {
   const output = transform(`<form>
     <input type="password" autocomplete="new-password" />
+    <textarea></textarea>
+    <select><option>a</option></select>
+    <button type="submit">Save</button>
+    <a href="/">Link</a>
   </form>`);
 
   expect(output).toContain('autoComplete="off"');
@@ -217,4 +221,13 @@ test("adds browser and password manager suppression attributes to interactive el
   expect(output).toContain('data-protonpass-ignore="true"');
   expect(output).toContain('form="none"');
   expect(output).not.toContain('autoComplete="new-password"');
+
+  const button = output.match(/<button[^>]*>/)?.[0] ?? "";
+  expect(button).not.toContain("autoComplete");
+  expect(button).not.toContain("data-1p-ignore");
+  expect(button).not.toContain("form=");
+
+  const link = output.match(/<a[^>]*>/)?.[0] ?? "";
+  expect(link).not.toContain("autoComplete");
+  expect(link).not.toContain("data-1p-ignore");
 });

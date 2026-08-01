@@ -3,6 +3,7 @@ import { useLoading } from "./context/LoadingContext";
 import "./App.css";
 import Skeleton, { markAsSkull, tweakForSkull } from "./skeletons/registry";
 import { ImageCard } from "./common/components";
+import { SkullMaster } from "@skullmaster/react";
 
 type Tab = "components" | "images" | "interactive";
 

@@ -13,9 +13,12 @@
 
 import "@skullmaster/react/style.css";
 import DefaultBone from "./skeletons/DefaultBone";
-import { type ComponentProps, type HTMLAttributes } from "react";
+import { type ComponentProps, type HTMLAttributes, lazy } from "react";
 
-const registry = {} as const;
+const registry = {
+  default: lazy(() => import("./skeletons/DefaultBone")),
+  Hero: lazy(() => import("./skeletons/Hero")),
+} as const;
 
 export type SkullTweaks = {
   /** Exclude this element and its entire subtree from skeleton generation. */

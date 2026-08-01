@@ -78,9 +78,9 @@ type SkeletonProps = {
 
 import "@skullmaster/react/style.css";
 import DefaultBone from "./skeletons/DefaultBone";
-${isTs ? 'import { type ComponentProps, type HTMLAttributes } from "react";' : ""}
+${isTs ? 'import { type ComponentProps, type HTMLAttributes, lazy } from "react";' : ""}
 
-const registry = {}${isTs ? " as const" : ""};
+const registry = {default: lazy(() => import("./skeletons/DefaultBone"))}${isTs ? " as const" : ""};
 
 ${skullTypes}${skeletonPropsType}${skullUtils}
 export default function Skeleton({

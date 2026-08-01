@@ -196,6 +196,7 @@ test("adds skeleton class to root and transforms images", () => {
           className="rounded-xl"
           width="320"
           height="180"
+          alt=""
           src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23808080%22%2F%3E%3C%2Fsvg%3E"
           data-image-skeleton="true"
         ></img>

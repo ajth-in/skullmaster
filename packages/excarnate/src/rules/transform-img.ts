@@ -54,6 +54,7 @@ export const transformImg: Rule = {
 
     const attributes: t.JSXAttribute[] = [
       ...filteredAttrs,
+      createJsxStringAttribute("alt", ""),
       createJsxStringAttribute("src", placeholderSrc),
       createJsxStringAttribute(DATA_IMAGE_SKELETON, "true"),
     ];

@@ -1,5 +1,11 @@
 # @skullmaster/react
 
+## 0.2.0-next.6
+
+### Patch Changes
+
+- 45a516b: test excarnate-client deployment
+
 ## 0.2.0-next.5
 
 ### Minor Changes

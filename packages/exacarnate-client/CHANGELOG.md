@@ -1,5 +1,11 @@
 # @skullmaster/exacarnate-client
 
+## 0.2.0-next.1
+
+### Patch Changes
+
+- 45a516b: test excarnate-client deployment
+
 ## 0.2.0-next.0
 
 ### Minor Changes

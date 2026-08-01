@@ -1,5 +1,11 @@
 # @skullmaster/react
 
+## 0.2.0-next.7
+
+### Patch Changes
+
+- dab4cb0: prebundle excarnate client
+
 ## 0.2.0-next.6
 
 ### Patch Changes

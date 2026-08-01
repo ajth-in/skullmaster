@@ -1,5 +1,5 @@
 import { postSkeleton } from "./post-skeleton";
-import { createOverlay, type OverlayElements } from "./create-overlay";
+import { createOverlay } from "./create-overlay";
 import { markTransparentContainers } from "./make-transparent-containers";
 import { injectNaturalImageDimensions } from "./add-data-attrs-img";
 

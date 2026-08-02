@@ -9,11 +9,13 @@
     "@skullmaster/excarnate": "0.1.2",
     "@skullmaster/react": "0.1.2",
     "skullmaster": "0.1.3",
-    "@skullmaster/exacarnate-client": "0.1.0"
+    "@skullmaster/exacarnate-client": "0.1.0",
+    "skullmaster-nextjs-example": "0.0.1"
   },
   "changesets": [
     "dirty-seas-build",
     "eager-breads-fetch",
+    "fruity-beers-dream",
     "grumpy-lights-appear",
     "legal-phones-cover",
     "moody-cows-laugh",

@@ -32,3 +32,23 @@
   background-color: var(--skeleton-bg-400) !important;
   background-image: unset !important;
 }
+
+.empty-set__skeleton[data-skull-btlr="0"],
+.empty-set__skeleton [data-skull-btlr="0"] {
+  border-top-left-radius: var(--skeleton-border-radius) !important;
+}
+
+.empty-set__skeleton[data-skull-btrr="0"],
+.empty-set__skeleton [data-skull-btrr="0"] {
+  border-top-right-radius: var(--skeleton-border-radius) !important;
+}
+
+.empty-set__skeleton[data-skull-bbrr="0"],
+.empty-set__skeleton [data-skull-bbrr="0"] {
+  border-bottom-right-radius: var(--skeleton-border-radius) !important;
+}
+
+.empty-set__skeleton[data-skull-bblr="0"],
+.empty-set__skeleton [data-skull-bblr="0"] {
+  border-bottom-left-radius: var(--skeleton-border-radius) !important;
+}

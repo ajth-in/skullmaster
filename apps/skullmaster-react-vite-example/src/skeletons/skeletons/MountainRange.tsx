@@ -14,6 +14,10 @@ export default function MountainRange() {
       className="card image-card-grid  empty-set__skeleton"
       data-skullmaster="MountainRange"
       data-seed="mountains"
+      data-skull-btlr="0"
+      data-skull-btrr="0"
+      data-skull-bbrr="0"
+      data-skull-bblr="0"
       data-skeleton-interactive="true"
       aria-hidden="true"
       tabIndex={-1}

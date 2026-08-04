@@ -138,12 +138,21 @@ importers:
       '@skullmaster/typescript-config':
         specifier: workspace:*
         version: link:../config-typescript
+      '@types/jsdom':
+        specifier: ^28.0.3
+        version: 28.0.3
+      jsdom:
+        specifier: ^29.1.1
+        version: 29.1.1
       tsdown:
         specifier: ^0.22.0
         version: 0.22.4(@tsdown/css@0.22.4)(@typescript/native-preview@7.0.0-dev.20260509.2)(typescript@6.0.3)
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
+      vitest:
+        specifier: ^4.1.5
+        version: 4.1.10(@types/node@25.9.5)(@vitest/browser-playwright@4.1.10)(@vitest/ui@4.1.7)(jsdom@29.1.1)(vite@8.1.4(@types/node@25.9.5)(esbuild@0.27.7)(jiti@2.7.0)(yaml@2.9.0))
 
   packages/excarnate:
     dependencies:

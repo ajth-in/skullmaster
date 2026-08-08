@@ -1,5 +1,13 @@
 # skullmaster-react-vite-example
 
+## 0.0.4-next.9
+
+### Patch Changes
+
+- Updated dependencies [1db051e]
+  - skullmaster@0.2.0-next.8
+  - @skullmaster/react@0.2.0-next.9
+
 ## 0.0.4-next.8
 
 ### Patch Changes

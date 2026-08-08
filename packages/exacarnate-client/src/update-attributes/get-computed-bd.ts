@@ -18,12 +18,12 @@ const CORNER_ATTRIBUTES: ReadonlyArray<
   ["borderBottomLeftRadius", "data-skull-bblr"],
 ] as const;
 
-export const setComputedBd = (root: HTMLElement) => {
-  const style = getComputedStyle(root);
+export const applyComputedBd = (element: HTMLElement) => {
+  const style = getComputedStyle(element);
 
   for (const [prop, attribute] of CORNER_ATTRIBUTES) {
     if (isZeroRadius(style[prop])) {
-      root.setAttribute(attribute, "0");
+      element.setAttribute(attribute, "0");
     }
   }
 };

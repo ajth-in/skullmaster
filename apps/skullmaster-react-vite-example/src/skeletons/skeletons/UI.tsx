@@ -13,30 +13,70 @@ export default function UI() {
       className="components-section empty-set__skeleton"
       data-skullmaster="UI"
       data-depth="-1"
-      data-skull-btlr="0"
-      data-skull-btrr="0"
-      data-skull-bbrr="0"
-      data-skull-bblr="0"
       role="status"
       aria-live="polite"
       aria-busy="true"
     >
-      <h2 data-depth="1" className="section-title">
+      <h2
+        data-depth="1"
+        className="section-title"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.20"
+      >
         <span className="empty-set__text" data-text-node="true" data-depth="1">
           ██████ ██████████
         </span>
       </h2>
-      <div data-depth="1" className="components-grid">
-        <div data-depth="2" className="card component-card">
-          <h3 data-depth="3">
+      <div
+        className="components-grid"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.00"
+        data-depth="-1"
+      >
+        <div
+          data-depth="2"
+          className="card component-card"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.26"
+        >
+          <h3
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.24"
+          >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               ███████
             </span>
           </h3>
-          <div data-depth="3" className="component-demo">
+          <div
+            className="component-demo"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
             <button
               data-depth="0"
               className="btn btn-primary"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.70"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -46,6 +86,11 @@ export default function UI() {
             <button
               data-depth="0"
               className="btn btn-secondary"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.50"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -55,6 +100,11 @@ export default function UI() {
             <button
               data-depth="0"
               className="btn btn-outline"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.45"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -64,6 +114,11 @@ export default function UI() {
             <button
               data-depth="0"
               className="btn btn-ghost"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.35"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -73,6 +128,11 @@ export default function UI() {
             <button
               data-depth="0"
               className="btn btn-danger"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.51"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -82,6 +142,11 @@ export default function UI() {
             <button
               data-depth="0"
               className="btn btn-primary"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.24"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -90,20 +155,58 @@ export default function UI() {
             </button>
           </div>
         </div>
-        <div data-depth="2" className="card component-card">
-          <h3 data-depth="3">
+        <div
+          data-depth="2"
+          className="card component-card"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.26"
+        >
+          <h3
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.24"
+          >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               ████ ████████
             </span>
           </h3>
-          <div data-depth="3" className="component-demo form-demo">
-            <label data-depth="0" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}>
+          <div
+            className="component-demo form-demo"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <label
+              data-depth="0"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.20"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
               <span className="empty-set__text" data-text-node="true" data-depth="4">
                 ████ █████
               </span>
               <input
                 data-depth="1"
                 type="text"
+                data-skull-btlr="0"
+                data-skull-btrr="0"
+                data-skull-bbrr="0"
+                data-skull-bblr="0"
+                data-visual-significance="0.46"
                 data-skeleton-interactive="true"
                 aria-hidden="true"
                 tabIndex={-1}
@@ -115,12 +218,27 @@ export default function UI() {
                 form="none"
               ></input>
             </label>
-            <label data-depth="0" data-skeleton-interactive="true" aria-hidden="true" tabIndex={-1}>
+            <label
+              data-depth="0"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.20"
+              data-skeleton-interactive="true"
+              aria-hidden="true"
+              tabIndex={-1}
+            >
               <span className="empty-set__text" data-text-node="true" data-depth="4">
                 ██████
               </span>
               <select
                 data-depth="1"
+                data-skull-btlr="0"
+                data-skull-btrr="0"
+                data-skull-bbrr="0"
+                data-skull-bblr="0"
+                data-visual-significance="0.46"
                 data-skeleton-interactive="true"
                 aria-hidden="true"
                 tabIndex={-1}
@@ -133,6 +251,11 @@ export default function UI() {
               >
                 <option
                   data-depth="2"
+                  data-skull-btlr="0"
+                  data-skull-btrr="0"
+                  data-skull-bbrr="0"
+                  data-skull-bblr="0"
+                  data-visual-significance="0.20"
                   data-skeleton-interactive="true"
                   aria-hidden="true"
                   tabIndex={-1}
@@ -141,6 +264,11 @@ export default function UI() {
                 </option>
                 <option
                   data-depth="2"
+                  data-skull-btlr="0"
+                  data-skull-btrr="0"
+                  data-skull-bbrr="0"
+                  data-skull-bblr="0"
+                  data-visual-significance="0.20"
                   data-skeleton-interactive="true"
                   aria-hidden="true"
                   tabIndex={-1}
@@ -149,6 +277,11 @@ export default function UI() {
                 </option>
                 <option
                   data-depth="2"
+                  data-skull-btlr="0"
+                  data-skull-btrr="0"
+                  data-skull-bbrr="0"
+                  data-skull-bblr="0"
+                  data-visual-significance="0.20"
                   data-skeleton-interactive="true"
                   aria-hidden="true"
                   tabIndex={-1}
@@ -160,6 +293,11 @@ export default function UI() {
             <label
               data-depth="0"
               className="checkbox-label"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.20"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -167,6 +305,11 @@ export default function UI() {
               <input
                 data-depth="1"
                 type="checkbox"
+                data-skull-btlr="0"
+                data-skull-btrr="0"
+                data-skull-bbrr="0"
+                data-skull-bblr="0"
+                data-visual-significance="0.20"
                 data-skeleton-interactive="true"
                 aria-hidden="true"
                 tabIndex={-1}
@@ -183,113 +326,392 @@ export default function UI() {
             </label>
           </div>
         </div>
-        <div data-depth="2" className="card component-card">
-          <h3 data-depth="3">
+        <div
+          data-depth="2"
+          className="card component-card"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.26"
+        >
+          <h3
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.24"
+          >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               ██████ █ ████
             </span>
           </h3>
-          <div data-depth="3" className="component-demo">
-            <span data-depth="0" className="badge badge-default">
+          <div
+            className="component-demo"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-default"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.36"
+            >
               ███████
             </span>
-            <span data-depth="0" className="badge badge-primary">
+            <span
+              data-depth="0"
+              className="badge badge-primary"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.60"
+            >
               ███████
             </span>
-            <span data-depth="0" className="badge badge-success">
+            <span
+              data-depth="0"
+              className="badge badge-success"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.39"
+            >
               ███████
             </span>
-            <span data-depth="0" className="badge badge-warning">
+            <span
+              data-depth="0"
+              className="badge badge-warning"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.38"
+            >
               ███████
             </span>
-            <span data-depth="0" className="badge badge-danger">
+            <span
+              data-depth="0"
+              className="badge badge-danger"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.41"
+            >
               ██████
             </span>
-            <span data-depth="0" className="badge badge-info">
+            <span
+              data-depth="0"
+              className="badge badge-info"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.41"
+            >
               ████
             </span>
           </div>
         </div>
-        <div data-depth="2" className="card component-card">
-          <h3 data-depth="3">
+        <div
+          data-depth="2"
+          className="card component-card"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.26"
+        >
+          <h3
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.24"
+          >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               ██████
             </span>
           </h3>
-          <div data-depth="3" className="component-demo alert-demo">
-            <div data-depth="0" className="alert alert-info">
+          <div
+            className="component-demo alert-demo"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <div
+              data-depth="0"
+              className="alert alert-info"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.46"
+            >
               ██ ████ ██ ██ ████ ██████
             </div>
-            <div data-depth="0" className="alert alert-success">
+            <div
+              data-depth="0"
+              className="alert alert-success"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.46"
+            >
               █ █████████ ██████████
             </div>
-            <div data-depth="0" className="alert alert-warning">
+            <div
+              data-depth="0"
+              className="alert alert-warning"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.46"
+            >
               ██ █████ ████ ██████
             </div>
-            <div data-depth="0" className="alert alert-error">
+            <div
+              data-depth="0"
+              className="alert alert-error"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.46"
+            >
               █ █████████ ████ ██████
             </div>
           </div>
         </div>
-        <div data-depth="2" className="card component-card card-wide">
-          <h3 data-depth="3">
+        <div
+          data-depth="2"
+          className="card component-card card-wide"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.26"
+        >
+          <h3
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.24"
+          >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               ████████
             </span>
           </h3>
-          <div data-depth="3" className="component-demo progress-demo">
-            <progress data-depth="0" className="progress"></progress>
-            <div data-depth="0" className="progress-labels">
-              <span data-depth="1">███ ████████</span>
+          <div
+            className="component-demo progress-demo"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <progress
+              data-depth="0"
+              className="progress"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.16"
+            ></progress>
+            <div
+              className="progress-labels"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.00"
+              data-depth="-1"
+            >
+              <span
+                data-depth="1"
+                data-skull-btlr="0"
+                data-skull-btrr="0"
+                data-skull-bbrr="0"
+                data-skull-bblr="0"
+                data-visual-significance="0.20"
+              >
+                ███ ████████
+              </span>
             </div>
           </div>
         </div>
-        <div data-depth="2" className="card component-card card-wide">
-          <h3 data-depth="3">
+        <div
+          data-depth="2"
+          className="card component-card card-wide"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.26"
+        >
+          <h3
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.24"
+          >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               █████
             </span>
           </h3>
-          <div data-depth="3" className="component-demo cards-demo">
-            <div data-depth="0" className="mini-card">
-              <h4 data-depth="1">
+          <div
+            className="component-demo cards-demo"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <div
+              data-depth="0"
+              className="mini-card"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.26"
+            >
+              <h4
+                data-depth="1"
+                data-skull-btlr="0"
+                data-skull-btrr="0"
+                data-skull-bbrr="0"
+                data-skull-bblr="0"
+                data-visual-significance="0.20"
+              >
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
                   ████ ███
                 </span>
               </h4>
-              <p data-depth="1">
+              <p
+                data-depth="1"
+                data-skull-btlr="0"
+                data-skull-btrr="0"
+                data-skull-bbrr="0"
+                data-skull-bblr="0"
+                data-visual-significance="0.20"
+              >
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
                   ██████ ████ ████ █ █████ ███ █████
                 </span>
               </p>
             </div>
-            <div data-depth="0" className="mini-card mini-card-accent">
-              <h4 data-depth="1">
+            <div
+              data-depth="0"
+              className="mini-card mini-card-accent"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.26"
+            >
+              <h4
+                data-depth="1"
+                data-skull-btlr="0"
+                data-skull-btrr="0"
+                data-skull-bbrr="0"
+                data-skull-bblr="0"
+                data-visual-significance="0.20"
+              >
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
                   ████ ███
                 </span>
               </h4>
-              <p data-depth="1">
+              <p
+                data-depth="1"
+                data-skull-btlr="0"
+                data-skull-btrr="0"
+                data-skull-bbrr="0"
+                data-skull-bblr="0"
+                data-visual-significance="0.20"
+              >
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
                   ████ ███ ███ ██ ██████ ███████
                 </span>
               </p>
             </div>
-            <div data-depth="0" data-skullmaster="ImageCard" className="card image-card">
+            <div
+              data-depth="0"
+              data-skullmaster="ImageCard"
+              className="card image-card"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.26"
+            >
               <img
                 data-depth="1"
                 className="image-card-img"
+                data-skull-btlr="0"
+                data-skull-btrr="0"
+                data-skull-bbrr="0"
+                data-skull-bblr="0"
+                data-visual-significance="0.24"
                 alt=""
                 src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23808080%22%2F%3E%3C%2Fsvg%3E"
                 data-image-skeleton="true"
               ></img>
-              <div data-depth="1" className="image-card-body">
-                <h3 data-depth="2" className="image-card-title">
+              <div
+                className="image-card-body"
+                data-skull-btlr="0"
+                data-skull-btrr="0"
+                data-skull-bbrr="0"
+                data-skull-bblr="0"
+                data-visual-significance="0.00"
+                data-depth="-1"
+              >
+                <h3
+                  data-depth="2"
+                  className="image-card-title"
+                  data-skull-btlr="0"
+                  data-skull-btrr="0"
+                  data-skull-bbrr="0"
+                  data-skull-bblr="0"
+                  data-visual-significance="0.24"
+                >
                   <span className="empty-set__text" data-text-node="true" data-depth="6">
                     █████ ████
                   </span>
                 </h3>
-                <p data-depth="2" className="image-card-desc">
+                <p
+                  data-depth="2"
+                  className="image-card-desc"
+                  data-skull-btlr="0"
+                  data-skull-btrr="0"
+                  data-skull-bbrr="0"
+                  data-skull-bblr="0"
+                  data-visual-significance="0.20"
+                >
                   <span className="empty-set__text" data-text-node="true" data-depth="6">
                     █ ████ █████████ █ ████ █████ ████ █████████████ ████████
                   </span>

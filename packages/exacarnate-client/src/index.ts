@@ -1,8 +1,6 @@
 import { postSkeleton } from "./post-skeleton";
 import { createOverlay } from "./create-overlay";
-// import { markTransparentContainers } from "./make-transparent-containers";
-import { injectNaturalImageDimensions } from "./add-data-attrs-img";
-import { setComputedBd } from "./get-computed-bd";
+import { updateAttributes } from "./update-attributes";
 
 type SkeletonState = "idle" | "loading" | "success" | "error";
 
@@ -128,9 +126,7 @@ export function activateMouseOver(port: number): () => void {
     event.stopPropagation();
 
     const componentName = getComponentName(currentSkeleton);
-    // markTransparentContainers(currentSkeleton);
-    await injectNaturalImageDimensions(currentSkeleton);
-    setComputedBd(currentSkeleton);
+    await updateAttributes(currentSkeleton);
     const html = currentSkeleton.outerHTML;
 
     updateOverlay(currentSkeleton);

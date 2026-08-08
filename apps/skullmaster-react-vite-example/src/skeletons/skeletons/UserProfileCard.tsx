@@ -13,45 +13,156 @@ export default function UserProfileCard() {
       data-depth="0"
       className="card profile-card empty-set__skeleton"
       data-skullmaster="UserProfileCard"
-      data-skull-btlr="0"
-      data-skull-btrr="0"
-      data-skull-bbrr="0"
-      data-skull-bblr="0"
       role="status"
       aria-live="polite"
       aria-busy="true"
     >
-      <div data-depth="1" className="profile-avatar"></div>
-      <h2 data-depth="1" className="profile-name">
+      <div data-depth="1" className="profile-avatar" data-visual-significance="0.35"></div>
+      <h2
+        data-depth="1"
+        className="profile-name"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.20"
+      >
         <span className="empty-set__text" data-text-node="true" data-depth="1">
           ████ ███
         </span>
       </h2>
-      <span data-depth="1" className="profile-role">
+      <span
+        data-depth="1"
+        className="profile-role"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.36"
+      >
         █████████ ████████
       </span>
-      <p data-depth="1" className="profile-bio">
+      <p
+        data-depth="1"
+        className="profile-bio"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.20"
+      >
         <span className="empty-set__text" data-text-node="true" data-depth="1">
           ████████ █████████ ███████ ███ ███████████ █████████ ██████████ ██████ ███ █████████████
         </span>
       </p>
-      <div data-depth="1" className="profile-stats">
-        <div data-depth="2" className="stat">
-          <strong data-depth="3">████</strong>
-          <span data-depth="3">█████████</span>
+      <div
+        className="profile-stats"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.00"
+        data-depth="-1"
+      >
+        <div
+          className="stat"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.00"
+          data-depth="-1"
+        >
+          <strong
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            ████
+          </strong>
+          <span
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            █████████
+          </span>
         </div>
-        <div data-depth="2" className="stat">
-          <strong data-depth="3">███</strong>
-          <span data-depth="3">█████████</span>
+        <div
+          className="stat"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.00"
+          data-depth="-1"
+        >
+          <strong
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            ███
+          </strong>
+          <span
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            █████████
+          </span>
         </div>
-        <div data-depth="2" className="stat">
-          <strong data-depth="3">██</strong>
-          <span data-depth="3">████████</span>
+        <div
+          className="stat"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.00"
+          data-depth="-1"
+        >
+          <strong
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            ██
+          </strong>
+          <span
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            ████████
+          </span>
         </div>
       </div>
       <button
         data-depth="1"
         className="btn btn-primary btn-full"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.70"
         data-skeleton-interactive="true"
         aria-hidden="true"
         tabIndex={-1}

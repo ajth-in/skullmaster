@@ -13,34 +13,75 @@ export default function Hero() {
       data-depth="0"
       className="hero-section empty-set__skeleton"
       data-skullmaster="Hero"
-      data-skull-btlr="0"
-      data-skull-btrr="0"
-      data-skull-bbrr="0"
-      data-skull-bblr="0"
       role="status"
       aria-live="polite"
       aria-busy="true"
     >
-      <div data-depth="1" className="hero-content">
-        <h1 data-depth="2" className="hero-title">
+      <div
+        className="hero-content"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.00"
+        data-depth="-1"
+      >
+        <h1
+          data-depth="2"
+          className="hero-title"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.20"
+        >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
             ███████████
           </span>
         </h1>
-        <p data-depth="2" className="hero-subtitle">
+        <p
+          data-depth="2"
+          className="hero-subtitle"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.20"
+        >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
             ███ █████████ ██ ████████
           </span>
         </p>
-        <p data-depth="2" className="hero-desc">
+        <p
+          data-depth="2"
+          className="hero-desc"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.20"
+        >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
             █ ██████████ ██ ██████ ███ ██████████ ██████████ ████ █████ ████████████ ███████
           </span>
         </p>
-        <div data-depth="2" className="hero-actions">
+        <div
+          className="hero-actions"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.00"
+          data-depth="-1"
+        >
           <button
             data-depth="3"
             className="btn btn-primary"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.51"
             data-skeleton-interactive="true"
             aria-hidden="true"
             tabIndex={-1}
@@ -50,6 +91,11 @@ export default function Hero() {
           <button
             data-depth="3"
             className="btn btn-secondary"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.46"
             data-skeleton-interactive="true"
             aria-hidden="true"
             tabIndex={-1}

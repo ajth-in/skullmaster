@@ -11,8 +11,8 @@ export default function DesertDunes() {
   return (
     <div
       data-depth="0"
-      className="card image-card-grid  empty-set__skeleton"
       data-skullmaster="DesertDunes"
+      className="card image-card-grid  empty-set__skeleton"
       data-seed="desert"
       data-skeleton-interactive="true"
       aria-hidden="true"
@@ -24,24 +24,70 @@ export default function DesertDunes() {
       <img
         data-depth="1"
         className="image-card-grid-img"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.24"
         alt=""
         src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22550%22%20height%3D%22300%22%20viewBox%3D%220%200%20550%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23808080%22%2F%3E%3C%2Fsvg%3E"
         data-image-skeleton="true"
       ></img>
-      <div data-depth="1" className="image-card-grid-body">
-        <h3 data-depth="2" className="image-card-grid-title">
+      <div
+        className="image-card-grid-body"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.00"
+        data-depth="-1"
+      >
+        <h3
+          data-depth="2"
+          className="image-card-grid-title"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.20"
+        >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
             ██████ █████
           </span>
         </h3>
-        <p data-depth="2" className="image-card-grid-desc">
+        <p
+          data-depth="2"
+          className="image-card-grid-desc"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.20"
+        >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
             ███████ █████ ██ ████ ██████████ ██ ███ ████████
           </span>
         </p>
       </div>
-      <div data-depth="1" className="image-card-grid-footer">
-        <span data-depth="2">██████ █████</span>
+      <div
+        data-depth="1"
+        className="image-card-grid-footer"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.04"
+      >
+        <span
+          data-depth="2"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.20"
+        >
+          ██████ █████
+        </span>
       </div>
     </div>
   );

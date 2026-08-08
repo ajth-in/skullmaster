@@ -13,175 +13,686 @@ export default function Dashboard() {
       data-depth="0"
       className="dashboard-section empty-set__skeleton"
       data-skullmaster="Dashboard"
-      data-skull-btlr="0"
-      data-skull-btrr="0"
-      data-skull-bbrr="0"
-      data-skull-bblr="0"
       role="status"
       aria-live="polite"
       aria-busy="true"
     >
-      <h2 data-depth="1" className="section-title">
+      <h2
+        data-depth="1"
+        className="section-title"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.20"
+      >
         <span className="empty-set__text" data-text-node="true" data-depth="1">
           █████████
         </span>
       </h2>
-      <div data-depth="1" className="stats-grid">
-        <div data-depth="2" className="stat-card">
-          <span data-depth="3" className="stat-label">
+      <div
+        className="stats-grid"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.00"
+        data-depth="-1"
+      >
+        <div
+          data-depth="2"
+          className="stat-card"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.26"
+        >
+          <span
+            data-depth="3"
+            className="stat-label"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             █████ ███████
           </span>
-          <span data-depth="3" className="stat-value">
+          <span
+            data-depth="3"
+            className="stat-value"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ███████
           </span>
-          <span data-depth="3" className="stat-trend trend-up">
+          <span
+            data-depth="3"
+            className="stat-trend trend-up"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ██████
           </span>
         </div>
-        <div data-depth="2" className="stat-card">
-          <span data-depth="3" className="stat-label">
+        <div
+          data-depth="2"
+          className="stat-card"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.26"
+        >
+          <span
+            data-depth="3"
+            className="stat-label"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ██████ █████
           </span>
-          <span data-depth="3" className="stat-value">
+          <span
+            data-depth="3"
+            className="stat-value"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ██████
           </span>
-          <span data-depth="3" className="stat-trend trend-up">
+          <span
+            data-depth="3"
+            className="stat-trend trend-up"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             █████
           </span>
         </div>
-        <div data-depth="2" className="stat-card">
-          <span data-depth="3" className="stat-label">
+        <div
+          data-depth="2"
+          className="stat-card"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.26"
+        >
+          <span
+            data-depth="3"
+            className="stat-label"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ██████
           </span>
-          <span data-depth="3" className="stat-value">
+          <span
+            data-depth="3"
+            className="stat-value"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             █████
           </span>
-          <span data-depth="3" className="stat-trend trend-down">
+          <span
+            data-depth="3"
+            className="stat-trend trend-down"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             █████
           </span>
         </div>
-        <div data-depth="2" className="stat-card">
-          <span data-depth="3" className="stat-label">
+        <div
+          data-depth="2"
+          className="stat-card"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.26"
+        >
+          <span
+            data-depth="3"
+            className="stat-label"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ██████████
           </span>
-          <span data-depth="3" className="stat-value">
+          <span
+            data-depth="3"
+            className="stat-value"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             █████
           </span>
-          <span data-depth="3" className="stat-trend trend-up">
+          <span
+            data-depth="3"
+            className="stat-trend trend-up"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             █████
           </span>
         </div>
       </div>
-      <div data-depth="1" className="table-card">
-        <div data-depth="2" className="table-header">
-          <span data-depth="3">████</span>
-          <span data-depth="3">█████</span>
-          <span data-depth="3">████</span>
-          <span data-depth="3">██████</span>
-          <span data-depth="3">█████</span>
+      <div
+        data-depth="1"
+        className="table-card"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.26"
+      >
+        <div
+          data-depth="2"
+          className="table-header"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.25"
+        >
+          <span
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            ████
+          </span>
+          <span
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            █████
+          </span>
+          <span
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            ████
+          </span>
+          <span
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            ██████
+          </span>
+          <span
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            █████
+          </span>
         </div>
-        <div data-depth="2" className="table-row">
-          <span data-depth="3" className="cell-name">
+        <div
+          data-depth="2"
+          className="table-row"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.04"
+        >
+          <span
+            data-depth="3"
+            className="cell-name"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ████ ███
           </span>
-          <span data-depth="3" className="cell-email">
+          <span
+            data-depth="3"
+            className="cell-email"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ████████████████
           </span>
-          <span data-depth="3">
-            <span data-depth="0" className="badge badge-primary">
+          <span
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-primary"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.60"
+            >
               █████
             </span>
           </span>
-          <span data-depth="3">
-            <span data-depth="0" className="badge badge-success">
+          <span
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-success"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.39"
+            >
               ██████
             </span>
           </span>
-          <span data-depth="3" className="cell-spent">
+          <span
+            data-depth="3"
+            className="cell-spent"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ██████
           </span>
         </div>
-        <div data-depth="2" className="table-row">
-          <span data-depth="3" className="cell-name">
+        <div
+          data-depth="2"
+          className="table-row"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.04"
+        >
+          <span
+            data-depth="3"
+            className="cell-name"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ████ █████
           </span>
-          <span data-depth="3" className="cell-email">
+          <span
+            data-depth="3"
+            className="cell-email"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ████████████████
           </span>
-          <span data-depth="3">
-            <span data-depth="0" className="badge badge-primary">
+          <span
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-primary"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.60"
+            >
               ██████
             </span>
           </span>
-          <span data-depth="3">
-            <span data-depth="0" className="badge badge-success">
+          <span
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-success"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.39"
+            >
               ██████
             </span>
           </span>
-          <span data-depth="3" className="cell-spent">
+          <span
+            data-depth="3"
+            className="cell-spent"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ██████
           </span>
         </div>
-        <div data-depth="2" className="table-row">
-          <span data-depth="3" className="cell-name">
+        <div
+          data-depth="2"
+          className="table-row"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.04"
+        >
+          <span
+            data-depth="3"
+            className="cell-name"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ███ ███████
           </span>
-          <span data-depth="3" className="cell-email">
+          <span
+            data-depth="3"
+            className="cell-email"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ███████████████
           </span>
-          <span data-depth="3">
-            <span data-depth="0" className="badge badge-primary">
+          <span
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-primary"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.60"
+            >
               ██████
             </span>
           </span>
-          <span data-depth="3">
-            <span data-depth="0" className="badge badge-default">
+          <span
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-default"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.36"
+            >
               ████████
             </span>
           </span>
-          <span data-depth="3" className="cell-spent">
+          <span
+            data-depth="3"
+            className="cell-spent"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ████
           </span>
         </div>
-        <div data-depth="2" className="table-row">
-          <span data-depth="3" className="cell-name">
+        <div
+          data-depth="2"
+          className="table-row"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.04"
+        >
+          <span
+            data-depth="3"
+            className="cell-name"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             █████ █████
           </span>
-          <span data-depth="3" className="cell-email">
+          <span
+            data-depth="3"
+            className="cell-email"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             █████████████████
           </span>
-          <span data-depth="3">
-            <span data-depth="0" className="badge badge-primary">
+          <span
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-primary"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.60"
+            >
               ██████
             </span>
           </span>
-          <span data-depth="3">
-            <span data-depth="0" className="badge badge-success">
+          <span
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-success"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.39"
+            >
               ██████
             </span>
           </span>
-          <span data-depth="3" className="cell-spent">
+          <span
+            data-depth="3"
+            className="cell-spent"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ██████
           </span>
         </div>
-        <div data-depth="2" className="table-row">
-          <span data-depth="3" className="cell-name">
+        <div
+          className="table-row"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.00"
+          data-depth="-1"
+        >
+          <span
+            data-depth="3"
+            className="cell-name"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ███████ ███
           </span>
-          <span data-depth="3" className="cell-email">
+          <span
+            data-depth="3"
+            className="cell-email"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ███████████████████
           </span>
-          <span data-depth="3">
-            <span data-depth="0" className="badge badge-primary">
+          <span
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-primary"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.60"
+            >
               █████
             </span>
           </span>
-          <span data-depth="3">
-            <span data-depth="0" className="badge badge-danger">
+          <span
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <span
+              data-depth="0"
+              className="badge badge-danger"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.41"
+            >
               █████████
             </span>
           </span>
-          <span data-depth="3" className="cell-spent">
+          <span
+            data-depth="3"
+            className="cell-spent"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ███████
           </span>
         </div>

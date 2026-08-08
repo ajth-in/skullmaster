@@ -27,6 +27,18 @@ const registry = {
   DesertDunes: lazy(() => import("./skeletons/DesertDunes")),
   NightSky: lazy(() => import("./skeletons/NightSky")),
   Dashboard: lazy(() => import("./skeletons/Dashboard")),
+  Buttons: lazy(() => import("./skeletons/Buttons")),
+  AnchorLinks: lazy(() => import("./skeletons/AnchorLinks")),
+  TextInputs: lazy(() => import("./skeletons/TextInputs")),
+  ChoiceInputs: lazy(() => import("./skeletons/ChoiceInputs")),
+  RangeInput: lazy(() => import("./skeletons/RangeInput")),
+  FileColor: lazy(() => import("./skeletons/FileColor")),
+  SelectMenu: lazy(() => import("./skeletons/SelectMenu")),
+  Textarea: lazy(() => import("./skeletons/Textarea")),
+  DetailsSummary: lazy(() => import("./skeletons/DetailsSummary")),
+  Dialog: lazy(() => import("./skeletons/Dialog")),
+  ProgressMeter: lazy(() => import("./skeletons/ProgressMeter")),
+  FieldsetForm: lazy(() => import("./skeletons/FieldsetForm")),
 } as const;
 
 export type SkullTweaks = {

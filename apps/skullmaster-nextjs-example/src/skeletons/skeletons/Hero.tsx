@@ -17,50 +17,102 @@ export default function Hero() {
       aria-live="polite"
       aria-busy="true"
     >
-      <div data-depth="1" className="flex flex-col gap-2">
-        <h1 data-depth="2" className="text-5xl font-black tracking-tight">
+      <div
+        className="flex flex-col gap-2"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.00"
+        data-depth="-1"
+      >
+        <span
+          data-depth="2"
+          className="w-fit border-[3px] border-black bg-black px-3 py-1 text-xs font-black uppercase tracking-widest text-white"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.37"
+        >
+          ██████ ████ █ ███ █ ████ ███
+        </span>
+        <h1
+          data-depth="2"
+          className="text-5xl font-black tracking-tight"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.20"
+        >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
             ███████████
           </span>
         </h1>
-        <p data-depth="2" className="text-xl font-bold">
+        <p
+          data-depth="2"
+          className="text-xl font-bold"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.20"
+        >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
             ███████ █ ████████ ███
           </span>
         </p>
-        <p data-depth="2" className="max-w-xl text-black/80">
+        <p
+          data-depth="2"
+          className="max-w-xl text-black/80"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.20"
+        >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
-            █ ██████████ ██ ██████ ███ ██████████ ██████████ ████ █████ ████████████ ███████
+            █████ ██████████ █████ ███ ███████ ██ ████ ████ ██ ██████ ████ ███████ ████ ██ ████ █
+            █████████ █████████ ██████ ███ ██████ ██ ███ ███ ███████ ████ ███
           </span>
         </p>
-        <div data-depth="2" className="mt-4 flex flex-wrap gap-3">
+        <div
+          className="mt-4 flex flex-wrap gap-3"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.00"
+          data-depth="-1"
+        >
           <button
             data-depth="3"
             className="border-[3px] border-black bg-black px-4 py-2 font-bold text-white shadow-[4px_4px_0_#000] transition active:translate-x-[2px] active:translate-y-[2px]"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.47"
             data-skeleton-interactive="true"
             aria-hidden="true"
             tabIndex={-1}
-            data-1p-ignore="true"
-            data-lpignore="true"
-            data-bwignore="true"
-            data-protonpass-ignore="true"
-            form="none"
           >
-            ███ ███████
+            ███ ███ ████
           </button>
           <button
             data-depth="3"
             className="border-[3px] border-black bg-white px-4 py-2 font-bold text-black shadow-[4px_4px_0_#000] transition active:translate-x-[2px] active:translate-y-[2px]"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.59"
             data-skeleton-interactive="true"
             aria-hidden="true"
             tabIndex={-1}
-            data-1p-ignore="true"
-            data-lpignore="true"
-            data-bwignore="true"
-            data-protonpass-ignore="true"
-            form="none"
           >
-            █████ ████
+            ████ ███ ██████
           </button>
         </div>
       </div>

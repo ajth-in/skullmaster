@@ -20,11 +20,33 @@ export default function ForestCanopy() {
       <img
         data-depth="1"
         className="h-48 w-full object-cover"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.20"
+        alt=""
         src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22450%22%20height%3D%22450%22%20viewBox%3D%220%200%20450%20450%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23808080%22%2F%3E%3C%2Fsvg%3E"
         data-image-skeleton="true"
       ></img>
-      <div className="p-4" data-depth="-1">
-        <h3 data-depth="2" className="font-black">
+      <div
+        className="p-4"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.00"
+        data-depth="-1"
+      >
+        <h3
+          data-depth="2"
+          className="font-black"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.20"
+        >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
             ██████ ██████
           </span>

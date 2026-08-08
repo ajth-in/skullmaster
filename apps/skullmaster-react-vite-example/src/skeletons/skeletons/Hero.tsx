@@ -49,7 +49,7 @@ export default function Hero() {
           data-visual-significance="0.20"
         >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
-            ███ █████████ ██ ████████
+            ██████ ████████████████ ████
           </span>
         </p>
         <p
@@ -62,7 +62,8 @@ export default function Hero() {
           data-visual-significance="0.20"
         >
           <span className="empty-set__text" data-text-node="true" data-depth="2">
-            █ ██████████ ██ ██████ ███ ██████████ ██████████ ████ █████ ████████████ ███████
+            █████ ██████ ████████████ ███████ ███ █████████████ ███████ ██ ██████ ████████ █████ ██
+            ██ █ █████████ █████████ ██████ ███ ███████ ██ ███ ███ ███████ ████ ███
           </span>
         </p>
         <div
@@ -86,7 +87,7 @@ export default function Hero() {
             aria-hidden="true"
             tabIndex={-1}
           >
-            ███ ███████
+            ███ ███ ████
           </button>
           <button
             data-depth="3"
@@ -100,7 +101,7 @@ export default function Hero() {
             aria-hidden="true"
             tabIndex={-1}
           >
-            █████ ████
+            ████ ███ ██████
           </button>
         </div>
       </div>

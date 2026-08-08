@@ -56,7 +56,7 @@ export default function Textarea() {
           data-protonpass-ignore="true"
           form="none"
         >
-          ████ ████████ ████████ █████
+          ██████ ████████ ███ ███ ████████ ███████████ ███ ███ █████ ██ ██████ ████████
         </textarea>
       </div>
     </div>

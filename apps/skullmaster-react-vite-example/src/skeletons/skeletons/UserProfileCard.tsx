@@ -28,7 +28,7 @@ export default function UserProfileCard() {
         data-visual-significance="0.20"
       >
         <span className="empty-set__text" data-text-node="true" data-depth="1">
-          ████ ███
+          ██████ ████
         </span>
       </h2>
       <span
@@ -40,7 +40,7 @@ export default function UserProfileCard() {
         data-skull-bblr="0"
         data-visual-significance="0.36"
       >
-        █████████ ████████
+        ███████ ███████
       </span>
       <p
         data-depth="1"
@@ -52,7 +52,8 @@ export default function UserProfileCard() {
         data-visual-significance="0.20"
       >
         <span className="empty-set__text" data-text-node="true" data-depth="1">
-          ████████ █████████ ███████ ███ ███████████ █████████ ██████████ ██████ ███ █████████████
+          ██████ ███████ ████ ████ ██ ████ █ █████████ ███████ █████████ ███ ███████ ████ ██
+          ███████████ ████ ████ █████
         </span>
       </p>
       <div
@@ -81,6 +82,66 @@ export default function UserProfileCard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
+            █
+          </strong>
+          <span
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            ███
+          </span>
+        </div>
+        <div
+          className="stat"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.00"
+          data-depth="-1"
+        >
+          <strong
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            █
+          </strong>
+          <span
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
+            ████ ████
+          </span>
+        </div>
+        <div
+          className="stat"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.00"
+          data-depth="-1"
+        >
+          <strong
+            data-depth="3"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             ████
           </strong>
           <span
@@ -91,67 +152,7 @@ export default function UserProfileCard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            █████████
-          </span>
-        </div>
-        <div
-          className="stat"
-          data-skull-btlr="0"
-          data-skull-btrr="0"
-          data-skull-bbrr="0"
-          data-skull-bblr="0"
-          data-visual-significance="0.00"
-          data-depth="-1"
-        >
-          <strong
-            data-depth="3"
-            data-skull-btlr="0"
-            data-skull-btrr="0"
-            data-skull-bbrr="0"
-            data-skull-bblr="0"
-            data-visual-significance="0.20"
-          >
-            ███
-          </strong>
-          <span
-            data-depth="3"
-            data-skull-btlr="0"
-            data-skull-btrr="0"
-            data-skull-bbrr="0"
-            data-skull-bblr="0"
-            data-visual-significance="0.20"
-          >
-            █████████
-          </span>
-        </div>
-        <div
-          className="stat"
-          data-skull-btlr="0"
-          data-skull-btrr="0"
-          data-skull-bbrr="0"
-          data-skull-bblr="0"
-          data-visual-significance="0.00"
-          data-depth="-1"
-        >
-          <strong
-            data-depth="3"
-            data-skull-btlr="0"
-            data-skull-btrr="0"
-            data-skull-bbrr="0"
-            data-skull-bblr="0"
-            data-visual-significance="0.20"
-          >
-            ██
-          </strong>
-          <span
-            data-depth="3"
-            data-skull-btlr="0"
-            data-skull-btrr="0"
-            data-skull-bbrr="0"
-            data-skull-bblr="0"
-            data-visual-significance="0.20"
-          >
-            ████████
+            ███████████
           </span>
         </div>
       </div>
@@ -167,7 +168,7 @@ export default function UserProfileCard() {
         aria-hidden="true"
         tabIndex={-1}
       >
-        ██████
+        ██████ ████ █ ████ ████████
       </button>
     </div>
   );

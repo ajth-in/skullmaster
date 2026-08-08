@@ -27,7 +27,7 @@ export default function Dashboard() {
         data-visual-significance="0.20"
       >
         <span className="empty-set__text" data-text-node="true" data-depth="1">
-          █████████
+          ██████ █████████
         </span>
       </h2>
       <div
@@ -57,7 +57,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            █████ ███████
+            ██████ ██████
           </span>
           <span
             data-depth="3"
@@ -68,7 +68,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ███████
+            █████ █
           </span>
           <span
             data-depth="3"
@@ -79,7 +79,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ██████
+            ███████████
           </span>
         </div>
         <div
@@ -100,7 +100,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ██████ █████
+            ██████ ██████
           </span>
           <span
             data-depth="3"
@@ -111,7 +111,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ██████
+            █████ █
           </span>
           <span
             data-depth="3"
@@ -122,7 +122,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            █████
+            ███████████
           </span>
         </div>
         <div
@@ -143,7 +143,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ██████
+            ██████ ██████
           </span>
           <span
             data-depth="3"
@@ -154,7 +154,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            █████
+            █████ █
           </span>
           <span
             data-depth="3"
@@ -165,7 +165,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            █████
+            ███████████
           </span>
         </div>
         <div
@@ -186,7 +186,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ██████████
+            ██████ ██████
           </span>
           <span
             data-depth="3"
@@ -197,7 +197,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            █████
+            █████ █
           </span>
           <span
             data-depth="3"
@@ -208,7 +208,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            █████
+            ███████████
           </span>
         </div>
       </div>
@@ -299,7 +299,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ████ ███
+            ██████ ███
           </span>
           <span
             data-depth="3"
@@ -310,7 +310,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ████████████████
+            ████████████████████
           </span>
           <span
             data-skull-btlr="0"
@@ -329,7 +329,7 @@ export default function Dashboard() {
               data-skull-bblr="0"
               data-visual-significance="0.60"
             >
-              █████
+              ████
             </span>
           </span>
           <span
@@ -361,7 +361,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ██████
+            ██
           </span>
         </div>
         <div
@@ -382,7 +382,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ████ █████
+            ██████ ███
           </span>
           <span
             data-depth="3"
@@ -393,7 +393,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ████████████████
+            ████████████████████
           </span>
           <span
             data-skull-btlr="0"
@@ -412,7 +412,7 @@ export default function Dashboard() {
               data-skull-bblr="0"
               data-visual-significance="0.60"
             >
-              ██████
+              ████
             </span>
           </span>
           <span
@@ -444,7 +444,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ██████
+            ██
           </span>
         </div>
         <div
@@ -465,7 +465,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ███ ███████
+            ██████ ███
           </span>
           <span
             data-depth="3"
@@ -476,7 +476,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ███████████████
+            ████████████████████
           </span>
           <span
             data-skull-btlr="0"
@@ -495,7 +495,7 @@ export default function Dashboard() {
               data-skull-bblr="0"
               data-visual-significance="0.60"
             >
-              ██████
+              ████
             </span>
           </span>
           <span
@@ -527,7 +527,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ████
+            ██
           </span>
         </div>
         <div
@@ -548,7 +548,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            █████ █████
+            ██████ ███
           </span>
           <span
             data-depth="3"
@@ -559,7 +559,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            █████████████████
+            ████████████████████
           </span>
           <span
             data-skull-btlr="0"
@@ -578,7 +578,7 @@ export default function Dashboard() {
               data-skull-bblr="0"
               data-visual-significance="0.60"
             >
-              ██████
+              ████
             </span>
           </span>
           <span
@@ -610,7 +610,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ██████
+            ██
           </span>
         </div>
         <div
@@ -631,7 +631,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ███████ ███
+            ██████ ███
           </span>
           <span
             data-depth="3"
@@ -642,7 +642,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ███████████████████
+            ████████████████████
           </span>
           <span
             data-skull-btlr="0"
@@ -661,7 +661,7 @@ export default function Dashboard() {
               data-skull-bblr="0"
               data-visual-significance="0.60"
             >
-              █████
+              ████
             </span>
           </span>
           <span
@@ -674,14 +674,14 @@ export default function Dashboard() {
           >
             <span
               data-depth="0"
-              className="badge badge-danger"
+              className="badge badge-success"
               data-skull-btlr="0"
               data-skull-btrr="0"
               data-skull-bbrr="0"
               data-skull-bblr="0"
-              data-visual-significance="0.41"
+              data-visual-significance="0.39"
             >
-              █████████
+              ██████
             </span>
           </span>
           <span
@@ -693,7 +693,7 @@ export default function Dashboard() {
             data-skull-bblr="0"
             data-visual-significance="0.20"
           >
-            ███████
+            ██
           </span>
         </div>
       </div>

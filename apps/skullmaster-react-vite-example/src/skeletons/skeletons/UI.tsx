@@ -556,7 +556,7 @@ export default function UI() {
                 data-skull-bblr="0"
                 data-visual-significance="0.20"
               >
-                ███ ████████
+                ███ ██ ████ ████ ██ ███████████ ███████
               </span>
             </div>
           </div>
@@ -609,7 +609,7 @@ export default function UI() {
                 data-visual-significance="0.20"
               >
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
-                  ████ ███
+                  ██████ ████
                 </span>
               </h4>
               <p
@@ -621,7 +621,7 @@ export default function UI() {
                 data-visual-significance="0.20"
               >
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
-                  ██████ ████ ████ █ █████ ███ █████
+                  ████ ████ ████ ██ ███████████ ███ █████████ █████████
                 </span>
               </p>
             </div>
@@ -643,7 +643,7 @@ export default function UI() {
                 data-visual-significance="0.20"
               >
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
-                  ████ ███
+                  ███████ ██████
                 </span>
               </h4>
               <p
@@ -655,7 +655,7 @@ export default function UI() {
                 data-visual-significance="0.20"
               >
                 <span className="empty-set__text" data-text-node="true" data-depth="5">
-                  ████ ███ ███ ██ ██████ ███████
+                  ████ ███████████ ████████ ████ █████
                 </span>
               </p>
             </div>
@@ -700,7 +700,7 @@ export default function UI() {
                   data-visual-significance="0.24"
                 >
                   <span className="empty-set__text" data-text-node="true" data-depth="6">
-                    █████ ████
+                    ██████ █████ ████
                   </span>
                 </h3>
                 <p
@@ -713,7 +713,7 @@ export default function UI() {
                   data-visual-significance="0.20"
                 >
                   <span className="empty-set__text" data-text-node="true" data-depth="6">
-                    █ ████ █████████ █ ████ █████ ████ █████████████ ████████
+                    █ ██████ ███████████ █████ ██████ █ █████ ███ ████ █████████
                   </span>
                 </p>
               </div>

@@ -11,8 +11,8 @@ export default function DeepOcean() {
   return (
     <div
       data-depth="0"
-      data-skullmaster="DeepOcean"
       className="card image-card-grid  empty-set__skeleton"
+      data-skullmaster="DeepOcean"
       data-seed="ocean"
       data-skeleton-interactive="true"
       aria-hidden="true"

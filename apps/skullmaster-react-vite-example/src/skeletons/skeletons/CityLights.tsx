@@ -11,8 +11,8 @@ export default function CityLights() {
   return (
     <div
       data-depth="0"
-      data-skullmaster="CityLights"
       className="card image-card-grid  empty-set__skeleton"
+      data-skullmaster="CityLights"
       data-seed="city"
       data-skeleton-interactive="true"
       aria-hidden="true"

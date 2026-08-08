@@ -67,7 +67,7 @@ function LoadingToggle() {
   const { isLoading, toggleLoading } = useLoading();
   return (
     <button className="loading-toggle" onClick={toggleLoading}>
-      {isLoading ? "Hide" : "Show"}
+      {isLoading ? "Hide" : "Show"} skeleton
     </button>
   );
 }
@@ -81,13 +81,14 @@ function Hero() {
     <section className="hero-section" {...markAsSkull("Hero")}>
       <div className="hero-content">
         <h1 className="hero-title">SKULLMASTER</h1>
-        <p className="hero-subtitle">Neo Brutalist UI Showcase</p>
+        <p className="hero-subtitle">Sample loading-skeleton demo</p>
         <p className="hero-desc">
-          A collection of common web components reimagined with bold, unapologetic design.
+          Every listed "component", "image" and "interactive" element is sample content, wired up to
+          a generated skeleton. Toggle the buttons to see the loaders swap in.
         </p>
         <div className="hero-actions">
-          <button className="btn btn-primary">Get Started</button>
-          <button className="btn btn-secondary">Learn More</button>
+          <button className="btn btn-primary">Run the demo</button>
+          <button className="btn btn-secondary">Read the README</button>
         </div>
       </div>
     </section>
@@ -100,26 +101,27 @@ function UserProfileCard() {
   return (
     <div className="card profile-card" {...markAsSkull("UserProfileCard")}>
       <div className="profile-avatar" />
-      <h2 className="profile-name">Jane Doe</h2>
-      <span className="profile-role">Principal Engineer</span>
+      <h2 className="profile-name">Sample User</h2>
+      <span className="profile-role">Example Profile</span>
       <p className="profile-bio">
-        Building resilient systems and championing developer experience across the organization.
+        Sample profile card used to demo a generated loading skeleton. The content here is
+        placeholder test data only.
       </p>
       <div className="profile-stats">
         <div className="stat">
-          <strong>2.4k</strong>
-          <span>Followers</span>
+          <strong>1</strong>
+          <span>App</span>
         </div>
         <div className="stat">
-          <strong>180</strong>
-          <span>Following</span>
+          <strong>0</strong>
+          <span>Real data</span>
         </div>
         <div className="stat">
-          <strong>43</strong>
-          <span>Projects</span>
+          <strong>100%</strong>
+          <span>Placeholder</span>
         </div>
       </div>
-      <button className="btn btn-primary btn-full">Follow</button>
+      <button className="btn btn-primary btn-full">Follow (not a real account)</button>
     </div>
   );
 }
@@ -129,7 +131,7 @@ function UIComponents() {
   if (isLoading) return <Skeleton name="UI" />;
   return (
     <section className="components-section" {...markAsSkull("UI", { isTransparent: true })}>
-      <h2 className="section-title">Common Components</h2>
+      <h2 className="section-title">Sample Components</h2>
       <div className="components-grid">
         <div className="card component-card">
           <h3>Buttons</h3>
@@ -193,7 +195,7 @@ function UIComponents() {
           <div className="component-demo progress-demo">
             <progress className="progress" value={75} max={100} />
             <div className="progress-labels">
-              <span>75% complete</span>
+              <span>75% of this demo is placeholder content</span>
             </div>
           </div>
         </div>
@@ -202,12 +204,12 @@ function UIComponents() {
           <h3>Cards</h3>
           <div className="component-demo cards-demo">
             <div className="mini-card">
-              <h4>Card One</h4>
-              <p>Simple card with a title and body.</p>
+              <h4>Sample Card</h4>
+              <p>Test card used to demonstrate the generated skeleton.</p>
             </div>
             <div className="mini-card mini-card-accent">
-              <h4>Card Two</h4>
-              <p>This one has an accent border.</p>
+              <h4>Another Sample</h4>
+              <p>More placeholder content, same demo.</p>
             </div>
             <ImageCard />
           </div>
@@ -233,51 +235,51 @@ function Dashboard() {
   const { isLoading } = useLoading();
   if (isLoading) return <Skeleton name="Dashboard" />;
   const stats = [
-    { label: "Total Revenue", value: "$128.5K", trend: "+12.5%", up: true },
-    { label: "Active Users", value: "24,890", trend: "+8.2%", up: true },
-    { label: "Orders", value: "1,432", trend: "-3.1%", up: false },
-    { label: "Conversion", value: "3.24%", trend: "+1.8%", up: true },
+    { label: "Sample Metric", value: "SKULL 1", trend: "placeholder", up: true },
+    { label: "Sample Metric", value: "SKULL 2", trend: "placeholder", up: true },
+    { label: "Sample Metric", value: "SKULL 3", trend: "placeholder", up: false },
+    { label: "Sample Metric", value: "SKULL 4", trend: "placeholder", up: true },
   ];
   const rows = [
     {
-      name: "John Doe",
-      email: "john@example.com",
-      role: "Admin",
+      name: "Sample Row",
+      email: "sample.1@example.com",
+      role: "Demo",
       status: "Active",
-      spent: "$4,320",
+      spent: "$1",
     },
     {
-      name: "Jane Smith",
-      email: "jane@example.com",
-      role: "Editor",
+      name: "Sample Row",
+      email: "sample.2@example.com",
+      role: "Demo",
       status: "Active",
-      spent: "$2,150",
+      spent: "$2",
     },
     {
-      name: "Bob Johnson",
-      email: "bob@example.com",
-      role: "Viewer",
+      name: "Sample Row",
+      email: "sample.3@example.com",
+      role: "Demo",
       status: "Inactive",
-      spent: "$890",
+      spent: "$3",
     },
     {
-      name: "Alice Brown",
-      email: "alice@example.com",
-      role: "Editor",
+      name: "Sample Row",
+      email: "sample.4@example.com",
+      role: "Demo",
       status: "Active",
-      spent: "$3,670",
+      spent: "$4",
     },
     {
-      name: "Charlie Lee",
-      email: "charlie@example.com",
-      role: "Admin",
-      status: "Suspended",
-      spent: "$12,400",
+      name: "Sample Row",
+      email: "sample.5@example.com",
+      role: "Demo",
+      status: "Active",
+      spent: "$5",
     },
   ];
   return (
     <section className="dashboard-section" {...markAsSkull("Dashboard")}>
-      <h2 className="section-title">Dashboard</h2>
+      <h2 className="section-title">Sample Dashboard</h2>
       <div className="stats-grid">
         {stats.map((s) => (
           <div className="stat-card" key={s.label}>
@@ -330,7 +332,7 @@ function ImagesGrid() {
   if (isLoading) {
     return (
       <section className="images-section">
-        <h2 className="section-title">Image Gallery</h2>
+        <h2 className="section-title">Sample Image Gallery</h2>
         <div className="images-grid">
           {IMAGES.map((img) => (
             <div key={img.seed} {...markAsSkull(img.name)}>
@@ -344,7 +346,10 @@ function ImagesGrid() {
 
   return (
     <section className="images-section">
-      <h2 className="section-title">Image Gallery</h2>
+      <h2 className="section-title">Sample Image Gallery</h2>
+      <p className="section-note">
+        Random placeholder photos, used only to demonstrate skeletons for image content.
+      </p>
       <div className="images-grid">
         {IMAGES.map((img) => (
           <div
@@ -405,7 +410,7 @@ function InteractiveElements() {
 
     return (
       <section className="interactive-section" {...markAsSkull("InteractiveElements")}>
-        <h2 className="section-title">Interactive Elements</h2>
+        <h2 className="section-title">Sample Interactive Controls</h2>
         <div className="interactive-grid">
           {cardNames.map((name) => (
             <Skeleton name={name} key={name} />
@@ -417,7 +422,10 @@ function InteractiveElements() {
 
   return (
     <section className="interactive-section" {...markAsSkull("InteractiveElements")}>
-      <h2 className="section-title">Interactive Elements</h2>
+      <h2 className="section-title">Sample Interactive Controls</h2>
+      <p className="section-note">
+        Native form controls with placeholder data, included so their skeletons can be compared.
+      </p>
       <div className="interactive-grid">
         <div className="card interactive-card" {...markAsSkull("Buttons")}>
           <h3>Buttons</h3>
@@ -573,7 +581,9 @@ function InteractiveElements() {
               className="interactive-textarea"
               rows={4}
               placeholder="Enter multiline text..."
-              defaultValue="Line one&#10;Line two&#10;Line three"
+              defaultValue={
+                "Sample textarea for the skeleton demo.\nLines two and three of sample content."
+              }
             />
           </div>
         </div>
@@ -607,9 +617,10 @@ function InteractiveElements() {
           </div>
           <dialog id="demo-dialog" className="interactive-dialog">
             <div className="interactive-dialog-content">
-              <h3>Modal Dialog</h3>
+              <h3>Sample Modal</h3>
               <p>
-                This is a native &lt;dialog&gt; element opened with <code>showModal()</code>.
+                A native &lt;dialog&gt; element opened with <code>showModal()</code>, shown here as
+                sample test content for the demo app.
               </p>
               <form method="dialog">
                 <button className="btn btn-primary">Close</button>
@@ -653,7 +664,7 @@ function InteractiveElements() {
             }}
           >
             <fieldset className="interactive-fieldset" {...tweakForSkull({ hideSubTree: true })}>
-              <legend>Login Form</legend>
+              <legend>Sample Login Form</legend>
               <label className="interactive-label">
                 Username
                 <input type="text" name="username" className="interactive-input" required />
@@ -683,6 +694,7 @@ function App() {
   return (
     <main>
       <SkullMaster />
+      <span className="demo-badge">Sample demo · not a real app</span>
       <LoadingToggle />
       <DarkModeToggle />
       <nav className="tab-bar">
@@ -690,19 +702,19 @@ function App() {
           className={`tab-btn ${activeTab === "components" ? "tab-btn--active" : ""}`}
           onClick={() => setActiveTab("components")}
         >
-          Components
+          Sample Components
         </button>
         <button
           className={`tab-btn ${activeTab === "images" ? "tab-btn--active" : ""}`}
           onClick={() => setActiveTab("images")}
         >
-          Images
+          Sample Images
         </button>
         <button
           className={`tab-btn ${activeTab === "interactive" ? "tab-btn--active" : ""}`}
           onClick={() => setActiveTab("interactive")}
         >
-          Interactive
+          Sample Interactive
         </button>
       </nav>
       {activeTab === "components" && (
@@ -716,7 +728,9 @@ function App() {
       {activeTab === "images" && <ImagesGrid />}
       {activeTab === "interactive" && <InteractiveElements />}
       <footer className="footer">
-        <p>Built with React + TypeScript &bull; Neo Brutalism Edition</p>
+        <p>
+          Sample demo app for <strong>Skullmaster</strong> &bull; Built with React + TypeScript
+        </p>
       </footer>
     </main>
   );

@@ -17,22 +17,67 @@ export default function Components() {
       aria-live="polite"
       aria-busy="true"
     >
-      <h2 data-depth="1" className="mb-4 text-2xl font-black">
+      <h2
+        data-depth="1"
+        className="mb-4 text-2xl font-black"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.20"
+      >
         <span className="empty-set__text" data-text-node="true" data-depth="1">
           ██████ ██████████
         </span>
       </h2>
-      <div className="grid gap-4 sm:grid-cols-2" data-depth="-1">
-        <div data-depth="2" className="border-[3px] border-black bg-white p-4">
-          <h3 data-depth="3" className="mb-3 font-black">
+      <div
+        className="grid gap-4 sm:grid-cols-2"
+        data-skull-btlr="0"
+        data-skull-btrr="0"
+        data-skull-bbrr="0"
+        data-skull-bblr="0"
+        data-visual-significance="0.00"
+        data-depth="-1"
+      >
+        <div
+          data-depth="2"
+          className="border-[3px] border-black bg-white p-4"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.16"
+        >
+          <h3
+            data-depth="3"
+            className="mb-3 font-black"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               ███████
             </span>
           </h3>
-          <div className="flex flex-wrap gap-2" data-depth="-1">
+          <div
+            className="flex flex-wrap gap-2"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
             <button
               data-depth="0"
               className="border-[3px] border-black bg-black px-3 py-1 font-bold text-white"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.60"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -42,6 +87,11 @@ export default function Components() {
             <button
               data-depth="0"
               className="border-[3px] border-black bg-white px-3 py-1 font-bold"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.36"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -51,6 +101,11 @@ export default function Components() {
             <button
               data-depth="0"
               className="border-[3px] border-dashed border-black px-3 py-1 font-bold"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.35"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -60,6 +115,11 @@ export default function Components() {
             <button
               data-depth="0"
               className="border-[3px] border-black bg-red-600 px-3 py-1 font-bold text-white"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.46"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -69,6 +129,11 @@ export default function Components() {
             <button
               data-depth="0"
               className="border-[3px] border-black bg-white px-3 py-1 font-bold opacity-50"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.18"
               data-skeleton-interactive="true"
               aria-hidden="true"
               tabIndex={-1}
@@ -77,55 +142,133 @@ export default function Components() {
             </button>
           </div>
         </div>
-        <div data-depth="2" className="border-[3px] border-black bg-white p-4">
-          <h3 data-depth="3" className="mb-3 font-black">
+        <div
+          data-depth="2"
+          className="border-[3px] border-black bg-white p-4"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.16"
+        >
+          <h3
+            data-depth="3"
+            className="mb-3 font-black"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               ██████ █ ██████
             </span>
           </h3>
-          <div className="mb-4 flex flex-wrap gap-2" data-depth="-1">
+          <div
+            className="mb-4 flex flex-wrap gap-2"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
             <span
               data-depth="0"
               className="border-2 border-black bg-black px-2 py-0.5 text-xs font-bold text-white"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.60"
             >
-              ███████
+              ██████
             </span>
             <span
               data-depth="0"
               className="border-2 border-black bg-lime-300 px-2 py-0.5 text-xs font-bold"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.49"
             >
-              ███████
+              ██████
             </span>
             <span
               data-depth="0"
               className="border-2 border-black bg-yellow-300 px-2 py-0.5 text-xs font-bold"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.51"
             >
-              ███████
+              ██████
             </span>
             <span
               data-depth="0"
               className="border-2 border-black bg-red-600 px-2 py-0.5 text-xs font-bold text-white"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.46"
             >
               ██████
             </span>
           </div>
-          <div className="flex flex-col gap-2" data-depth="-1">
+          <div
+            className="flex flex-col gap-2"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
             <div
               data-depth="0"
               className="border-2 border-black bg-yellow-300 px-3 py-2 text-sm font-bold"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.51"
             >
-              ██ █████ ████ ██████
+              ██ ███ ██████ ██████ ███████ ███████████
             </div>
             <div
               data-depth="0"
               className="border-2 border-black bg-lime-300 px-3 py-2 text-sm font-bold"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.49"
             >
-              █ █████████ ██████████
+              █ ████ ███████████ ███████ ███ ███ █████
             </div>
           </div>
         </div>
-        <div data-depth="2" className="border-[3px] border-black bg-white p-4">
-          <h3 data-depth="3" className="mb-3 font-black">
+        <div
+          data-depth="2"
+          className="border-[3px] border-black bg-white p-4"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.16"
+        >
+          <h3
+            data-depth="3"
+            className="mb-3 font-black"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
               ████████
             </span>
@@ -133,10 +276,23 @@ export default function Components() {
           <progress
             data-depth="3"
             className="h-4 w-full border-[3px] border-black [&::-webkit-progress-bar]:bg-white [&::-webkit-progress-value]:bg-lime-400"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.16"
           ></progress>
-          <p data-depth="3" className="mt-2 text-sm font-bold">
+          <p
+            data-depth="3"
+            className="mt-2 text-sm font-bold"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+          >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
-              ███ ████████
+              ███ ██ ████ ████ ██ ██████ ███████
             </span>
           </p>
         </div>
@@ -144,22 +300,57 @@ export default function Components() {
           data-depth="2"
           data-skullmaster="ImageCard"
           className="overflow-hidden border-[3px] border-black bg-white"
+          data-skull-btlr="0"
+          data-skull-btrr="0"
+          data-skull-bbrr="0"
+          data-skull-bblr="0"
+          data-visual-significance="0.16"
         >
           <img
             data-depth="3"
             className="h-40 w-full object-cover"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.20"
+            alt=""
             src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22300%22%20viewBox%3D%220%200%20400%20300%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20fill%3D%22%23808080%22%2F%3E%3C%2Fsvg%3E"
             data-image-skeleton="true"
           ></img>
-          <div className="p-4" data-depth="-1">
-            <h3 data-depth="0" className="font-black">
+          <div
+            className="p-4"
+            data-skull-btlr="0"
+            data-skull-btrr="0"
+            data-skull-bbrr="0"
+            data-skull-bblr="0"
+            data-visual-significance="0.00"
+            data-depth="-1"
+          >
+            <h3
+              data-depth="0"
+              className="font-black"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.20"
+            >
               <span className="empty-set__text" data-text-node="true" data-depth="4">
-                █████ ████
+                ██████ █████ ████
               </span>
             </h3>
-            <p data-depth="0" className="text-sm text-black/70">
+            <p
+              data-depth="0"
+              className="text-sm text-black/70"
+              data-skull-btlr="0"
+              data-skull-btrr="0"
+              data-skull-bbrr="0"
+              data-skull-bblr="0"
+              data-visual-significance="0.20"
+            >
               <span className="empty-set__text" data-text-node="true" data-depth="4">
-                █ ████ █████████ █ ████ █████ ████ █████████████ ████████
+                █ ██████ ███████████ █████ ██████ █ █████ ███ ████ █████████
               </span>
             </p>
           </div>

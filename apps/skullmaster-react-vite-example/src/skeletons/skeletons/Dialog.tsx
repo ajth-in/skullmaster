@@ -83,7 +83,7 @@ export default function Dialog() {
             data-visual-significance="0.20"
           >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
-              █████ ██████
+              ██████ █████
             </span>
           </h3>
           <p
@@ -95,7 +95,7 @@ export default function Dialog() {
             data-visual-significance="0.20"
           >
             <span className="empty-set__text" data-text-node="true" data-depth="3">
-              ████ ██ █ ██████ ████████ ███████ ██████ ████
+              █ ██████ ████████ ███████ ██████ ████
             </span>
             <code
               data-depth="0"
@@ -108,7 +108,7 @@ export default function Dialog() {
               ███████████
             </code>
             <span className="empty-set__text" data-text-node="true" data-depth="3">
-              █
+              █ █████ ████ ██ ██████ ████ ███████ ███ ███ ████ ████
             </span>
           </p>
           <form

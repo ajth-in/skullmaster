@@ -12,5 +12,5 @@
     "@skullmaster/react": "0.2.0",
     "skullmaster": "0.2.0"
   },
-  "changesets": []
+  "changesets": ["lovely-pants-float"]
 }

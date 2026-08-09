@@ -1,6 +1,6 @@
 {
   "name": "@skullmaster/excarnate",
-  "version": "0.2.0",
+  "version": "0.3.0-beta.0",
   "description": "A starter for creating a TypeScript package.",
   "homepage": "https://www.ajth.in/skullmaster/",
   "bugs": {

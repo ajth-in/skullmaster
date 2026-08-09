@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - releases/beta
 
 permissions:
   contents: write
@@ -60,10 +61,20 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Enter beta pre-release mode
+        if: github.ref == 'refs/heads/releases/beta'
+        run: |
+          MODE=$(node -e "console.log(require('./.changeset/pre.json').mode)")
+          TAG=$(node -e "console.log(require('./.changeset/pre.json').tag)")
+          if [ "$MODE" != "pre" ] || [ "$TAG" != "beta" ]; then
+            pnpm changeset pre enter beta
+          fi
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
         with:
+          version: pnpm changeset version
           publish: pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

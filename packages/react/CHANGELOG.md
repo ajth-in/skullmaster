@@ -1,5 +1,81 @@
 # @skullmaster/react
 
+## 0.2.0
+
+### Minor Changes
+
+- 70ae376: **Description:** Minor release focused on improving generated skeleton fidelity and fixing classname parsing edge cases.
+  - Removed text obfuscation and replaced incoming text with the Unicode full block character (`U+2588`) for more consistent text placeholders.
+  - Sanitized generated class names by escaping invalid escape sequences to prevent JavaScript parsing errors, particularly when working with PandaCSS.
+
+- f830a13: - Skeleton form fields (inputs, selects, textareas) are now suppressed from browser autofill and password managers.
+  - Skeleton images are now generated with an empty `alt` attribute so placeholders are treated as decorative by assistive technology.
+
+  - Skeleton placeholder colors now have better contrast in light and dark mode.
+  - Removed the forced border-radius on skeleton blocks and the `--skeleton-radius` CSS variable.
+
+  Added a Next.js + Tailwind CSS example app.
+
+- 1db051e: Minor Changes
+  - Skeleton elements are now scored on visual significance and tagged with `data-visual-significance`; elements with no visual presence are flagged with `data-depth="-1"`.
+  - Elements rendered with square corners (zero border radius) are now flagged so the skeleton layer can round them.
+
+  - Skeletons now apply the new `--skeleton-border-radius` token to elements that render with sharp corners.
+  - Removed the semi-transparent background overlay that previously showed through around text placeholders.
+  - Added the `--skeleton-border-radius` CSS variable.
+
+- 61c14d0: This release focuses on improving customization, generated output quality, developer experience, and documentation. It also includes several fixes to React generation and theme styling.
+  - Added support for the `data-skip-skull` attribute to exclude specific elements from skeleton generation.
+  - Added default CSS styling for interactive input components in generated skeletons.
+  - React components now accept a configurable `port` prop, allowing the development server port to be customized.
+  - Generated React skeleton files now automatically include the required style imports.
+  - Updated the documentation with new guides and improvements.
+  - Updated the documentation file paths for improved project structure.
+  - Upgraded the project to **pnpm 11**.
+  - Added an image testing section to improve visual validation of generated skeletons.
+  - Fixed React image skeleton generation by no longer automatically adding `width` and `height` props to `<img>` elements.
+  - Fixed an issue where `toPascalCase` received an incorrect file path in Excarnate.
+  - Improved dark theme colors for better visual consistency.
+  - Reduced light mode contrast to improve skeleton appearance.
+
+- e2e497e: - This release introduces new APIs for fine tuning generated skeletons, improves the generated output, and adds several quality of life improvements for the development workflow.
+  - Added `markAsSkull` support to generated files, making it easier to annotate elements for skeleton generation.
+
+  - Added `tweakForSkull` support to generated files, allowing generated skeleton output to be customized programmatically.
+
+  - Added the `excarnate-client` package and integrated it with the browser tooling.
+
+  - Added a `reset` command to restore the project to its initial generated state.
+
+  - Skeleton components can now receive and forward component props.
+
+  - Added autocomplete support for the skeleton name field.
+
+  - Added utilities for marking skeletons and tweaking generated output.
+
+  - Improved generated placeholder images by introducing an intermediate color for smoother visual appearance.
+
+  - Fixed an issue where the download highlight did not initialize correctly when the selected content was displayed over a modal.
+
+  - Removed redundant packages to reduce project overhead.
+
+  - Regenerated bundled skeletons to reflect the latest generation improvements.
+
+- 3283809: Remove NPM_TOKEN for publishing and use trusted publishing
+
+### Patch Changes
+
+- dab4cb0: prebundle excarnate client
+- e25ffa6: gradient colors for dark theme tokens
+- 45a516b: test excarnate-client deployment
+- 9c00452: test npm trusted publishing
+- dd50246: Test trusted publishing
+- 4fdce7d: Auto import styles to the registry file, and lighten the light theme color tokens
+- 9b485ec: - Improved the visual consistency of generated skeletons with a more balanced depth system, refined component styling, and a new default loading animation.
+  - Changed depth assignment from incrementing values to a cyclic pattern across four depth levels, resulting in a more consistent visual hierarchy regardless of DOM depth.
+  - Added a subtle border radius to generated skeleton components to better match the appearance of modern UI elements.
+  - Replaced the pulse animation with a transform based swish animation, providing a smoother and more natural loading effect.
+
 ## 0.2.0-next.9
 
 ### Minor Changes

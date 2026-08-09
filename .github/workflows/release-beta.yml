@@ -1,9 +1,9 @@
-name: Release
+name: Release (Beta)
 
 on:
   push:
     branches:
-      - master
+      - releases/beta
 
 permissions:
   contents: write
@@ -41,7 +41,7 @@ jobs:
         run: pnpm typecheck
 
   release:
-    name: Release
+    name: Release (Beta)
     runs-on: ubuntu-24.04
     needs: validate
 
@@ -60,7 +60,15 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Create Release Pull Request or Publish to npm
+      - name: Ensure beta pre-release mode
+        run: |
+          MODE=$(node -e "console.log(require('./.changeset/pre.json').mode)")
+          TAG=$(node -e "console.log(require('./.changeset/pre.json').tag)")
+          if [ "$MODE" != "pre" ] || [ "$TAG" != "beta" ]; then
+            exit 1;
+          fi
+
+      - name: Create Release Pull Request or Publish to npm (beta)
         id: changesets
         uses: changesets/action@v1
         with:

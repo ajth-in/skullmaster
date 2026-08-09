@@ -1,0 +1,16 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "skullmaster-nextjs-example": "0.0.2",
+    "skullmaster-react-vite-example": "0.0.4",
+    "@skullmaster/browser": "0.1.0",
+    "@skullmaster/oxlint-config": "0.0.0",
+    "@skullmaster/typescript-config": "0.0.0",
+    "@skullmaster/exacarnate-client": "0.2.0",
+    "@skullmaster/excarnate": "0.2.0",
+    "@skullmaster/react": "0.2.0",
+    "skullmaster": "0.2.0"
+  },
+  "changesets": []
+}

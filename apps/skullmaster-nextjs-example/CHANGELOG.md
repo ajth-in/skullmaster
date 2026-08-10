@@ -1,5 +1,12 @@
 # skullmaster-nextjs-example
 
+## 0.0.3-beta.1
+
+### Patch Changes
+
+- Updated dependencies [82f0b0e]
+  - @skullmaster/react@0.3.0-beta.1
+
 ## 0.0.3-beta.0
 
 ### Patch Changes

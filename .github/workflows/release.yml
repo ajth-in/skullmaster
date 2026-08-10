@@ -6,6 +6,9 @@ on:
       - master
       - releases/beta
 
+env:
+  LEFTHOOK: "0"
+
 permissions:
   contents: write
   pull-requests: write

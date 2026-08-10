@@ -16,7 +16,7 @@
   "scripts": {
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "prepare": "lefthook install",
+    "prepare": "lefthook install || true",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",

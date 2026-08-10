@@ -10,7 +10,8 @@ Skullmaster is a CLI tool that lets you generate customizable skeleton loaders f
 ### Step 1: Install Skullmaster
 
 ```bash
-npm install skullmaster@next --save-dev
+npm install skullmaster@beta --save-dev
+npm install @skullmaster/react@beta
 ```
 
 ### Step 2: Start the Development Server

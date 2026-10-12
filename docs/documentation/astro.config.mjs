@@ -2,16 +2,17 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightThemeRapide from "starlight-theme-rapide";
+import vercel from "@astrojs/vercel";
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     starlight({
       plugins: [starlightThemeRapide()],
       customCss: [
-        "@fontsource/figtree/400.css",
-        "@fontsource/figtree/500.css",
-        "@fontsource/figtree/600.css",
-        "@fontsource/figtree/700.css",
+        "@fontsource/source-code-pro/400.css",
+        "@fontsource/source-code-pro/500.css",
+        "@fontsource/source-code-pro/600.css",
+        "@fontsource/source-code-pro/700.css",
         "./src/styles/custom.css",
       ],
       title: "Skullmaster",
@@ -59,4 +60,6 @@ export default defineConfig({
       ],
     }),
   ],
+
+  adapter: vercel(),
 });

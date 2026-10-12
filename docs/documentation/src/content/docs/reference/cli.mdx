@@ -1,0 +1,29 @@
+---
+title: CLI reference
+description: skullmaster serve and reset commands.
+---
+
+import { PackageManagers } from "@hideoo/starlight-plugins-docs-components";
+
+## `skullmaster serve`
+
+Start the Skullmaster development server (default port `8080`):
+
+<PackageManagers type="exec" pkg="skullmaster" args="serve" />
+
+Or with a custom port:
+
+<PackageManagers type="exec" pkg="skullmaster" args="serve -- --port 8080" />
+
+On first run it prompts for:
+
+- **Output directory** (default: `src/skeletons`)
+- **Project type**: `react` or `react-ts`
+
+It creates `<outDir>/skeletons/DefaultBone.tsx` and serves at `http://localhost:8080`.
+
+## `skullmaster reset`
+
+Wipe all generated skeletons and reset the registry (asks for confirmation):
+
+<PackageManagers type="exec" pkg="skullmaster" args="reset" />

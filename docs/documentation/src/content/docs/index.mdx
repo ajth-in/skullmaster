@@ -1,0 +1,44 @@
+---
+title: Skullmaster
+description: Generate customizable skeleton loaders for your UI components directly from the browser.
+template: splash
+hero:
+  tagline: Stop hand-writing skeleton loaders. Generate them from the rendered UI.
+  image:
+    file: ../../assets/skull-logo.png
+  actions:
+    - text: Get started
+      link: /getting-started/
+      icon: right-arrow
+    - text: View on GitHub
+      link: https://github.com/ajth-in/skullmaster
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+Skullmaster is a CLI tool that generates customizable skeleton loaders for your UI components directly from the browser. Instead of manually creating placeholder components, mark a component, click it, and get a skeleton that mirrors the real rendered output.
+
+<CardGrid>
+  <Card title="Single source of truth" icon="pencil">
+    Skeletons are generated from your source components — not maintained as a second copy that
+    drifts out of sync.
+  </Card>
+  <Card title="Rendered, not guessed" icon="laptop">
+    Generation uses runtime info from the browser: final HTML, computed styles, image dimensions,
+    and text layout.
+  </Card>
+  <Card title="DOM-preserving output" icon="document">
+    Semantic elements like `article`, `section`, `button`, and `img` are preserved instead of
+    flattened into generic `div`s.
+  </Card>
+  <Card title="Customizable" icon="setting">
+    Fine-tune output with `data-skip-skull`, `data-depth="-1"`, or the type-safe `markAsSkull` /
+    `tweakForSkull` helpers.
+  </Card>
+</CardGrid>
+
+Follow [Getting started](/getting-started/) to generate your first skeleton.
+
+> **Experimental:** This package is under active development. APIs and generated output may change between releases.

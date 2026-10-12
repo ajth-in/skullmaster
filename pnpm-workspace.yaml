@@ -1,8 +1,11 @@
 packages:
   - "apps/*"
   - "packages/*"
+  - "docs/*"
 allowBuilds:
   esbuild: false
   lefthook: true
   sharp: true
   spawn-sync: false
+minimumReleaseAgeExclude:
+  - "@astrojs/vercel@11.0.14"

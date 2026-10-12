@@ -1,0 +1,60 @@
+---
+title: React package reference
+description: Exports from @skullmaster/react and the generated registry.
+---
+
+import { PackageManagers } from "@hideoo/starlight-plugins-docs-components";
+
+Install:
+
+<PackageManagers pkg="@skullmaster/react@beta @skullmaster/react@next" />
+
+## `Skullmaster` (provider)
+
+Mount once in your app entry (`App.tsx`, `main.tsx`, or `layout.tsx`):
+
+```jsx
+import { Skullmaster } from "@skullmaster/react";
+
+<Skullmaster />;
+```
+
+Dev-only helper: enables the skull icon, hover highlighting of `data-skullmaster` elements, and the download button that posts the payload to the CLI server.
+
+## `markAsSkull(name, tweaks?)`
+
+Registers an element for skeleton generation. The `name` becomes the skeleton file name (`<outDir>/skeletons/<name>.tsx`).
+
+```tsx
+<article {...markAsSkull("UserCard")}>...</article>
+<section {...markAsSkull("Hero", { isTransparent: true })}>...</section>
+```
+
+## `tweakForSkull(tweaks?)`
+
+Applies tweaks to a child element without registering a new name:
+
+```tsx
+<fieldset {...tweakForSkull({ hideSubTree: true })}>...</fieldset>
+```
+
+## `SkullTweaks`
+
+```ts
+type SkullTweaks = {
+  hideSubTree?: boolean; // -> data-skip-skull
+  isTransparent?: boolean; // -> data-depth="-1"
+};
+```
+
+## Generated registry
+
+`<outDir>/registry.tsx` exports `Skeleton`:
+
+```tsx
+import { Skeleton } from "./skeletons/registry";
+
+<Skeleton name="ProfileCard" />;
+```
+
+Renders `DefaultBone` until the named skeleton exists.

@@ -1,0 +1,23 @@
+---
+title: Accessibility & caveats
+description: How Skullmaster keeps skeletons out of the accessibility tree, and known limitations.
+---
+
+## Accessibility
+
+Generated skeletons are intended to be visual placeholders only — they should never be interpreted as meaningful page content.
+
+To avoid confusing screen reader users, Skullmaster automatically:
+
+- Removes interactive behavior (controls become inert, `tabIndex={-1}`).
+- Marks placeholder content as inaccessible (`aria-hidden="true"` on stripped elements).
+- Applies `role="status"`, `aria-live="polite"`, and `aria-busy="true"` on the skeleton root to indicate loading.
+- Gives skeleton images an empty `alt` so placeholders are treated as decorative.
+- Suppresses form fields from browser autofill/password managers (`autoComplete="off"`, `data-1p-ignore`, `data-lpignore`, `data-bwignore`, `data-protonpass-ignore`, `form="none"`).
+
+## Caveats
+
+- If the HTML generated in development differs from the HTML rendered in production, the generated skeleton may not accurately match the production UI.
+- Generated skeletons may not be semantically correct as skeleton markup — semantic elements are preserved for layout fidelity, then neutralized (see [Why preserve the DOM?](/concepts/why-preserve-dom/)).
+- If a component's styles change, manually trigger regeneration to apply the updated styles — there is no auto-sync.
+- This package is experimental: APIs and generated output may change between releases.

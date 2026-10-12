@@ -1,5 +1,11 @@
 # @skullmaster/exacarnate-client
 
+## 0.3.0-beta.0
+
+### Minor Changes
+
+- 5a76b12: enter beta tagged release
+
 ## 0.2.0
 
 ### Minor Changes

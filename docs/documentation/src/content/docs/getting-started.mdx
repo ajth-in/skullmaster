@@ -1,0 +1,77 @@
+---
+title: Getting started
+description: Install Skullmaster, run the dev server, and generate your first skeleton.
+---
+
+import { Steps } from "@astrojs/starlight/components";
+import { PackageManagers } from "@hideoo/starlight-plugins-docs-components";
+
+:::caution[Experimental]
+This package is under active development. APIs and generated output may change between releases.
+:::
+
+<Steps>
+
+1. ### Install Skullmaster
+
+   <PackageManagers pkg="skullmaster@beta" dev />
+   <PackageManagers pkg="@skullmaster/react@beta" />
+
+2. ### Start the development server
+
+   <PackageManagers type="exec" pkg="skullmaster" args="serve" />
+
+   The development server will then be available at:
+
+   ```text
+   http://localhost:8080
+   ```
+
+3. ### Mark a component
+
+   Register any element you want to generate a skeleton for using the `markAsSkull` helper from `@skullmaster/react`. Spread the returned props onto the element:
+
+   ```jsx
+   import { markAsSkull } from "@skullmaster/react";
+
+   <div {...markAsSkull("ProfileCard")}>...</div>;
+   ```
+
+   The `name` argument becomes the skeleton name. See [Marking components](/guides/marking-components/) for the full API including `tweakForSkull`.
+
+4. ### Add the provider
+
+   In your application's entry file (`App.tsx`, `main.tsx`, or `layout.tsx`), add the Skullmaster component:
+
+   ```jsx
+   import { Skullmaster } from "@skullmaster/react";
+
+   <Skullmaster />;
+   ```
+
+   This development-only helper collects runtime information and sends it to the CLI.
+
+5. ### Generate your first skeleton
+
+   Load your application in the browser, hover over the marked component and click:
+
+   ![Hovering over a marked component and clicking to generate its skeleton](/comp-select-optimized.gif)
+
+6. ### Use the generated skeleton
+
+   Once generated, `<Skeleton name="UserCard" />` displays the generated skeleton instead of [DefaultBone](/guides/default-bone/):
+
+   ```tsx ins={5}
+   import { Skeleton } from "../skeletons/registry";
+
+   function ProfileCardPage({ user, isLoading }) {
+     if (isLoading) {
+       return <Skeleton name="ProfileCard" />;
+     }
+     return <ProfileCard user={user} />;
+   }
+   ```
+
+</Steps>
+
+Next: learn how to [customize output](/guides/customization/) and [how generation works](/concepts/how-it-works/).

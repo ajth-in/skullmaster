@@ -1,5 +1,17 @@
 # @skullmaster/react
 
+## 0.3.0-beta.1
+
+### Patch Changes
+
+- 82f0b0e: make skeleton border radius responsive
+
+## 0.3.0-beta.0
+
+### Minor Changes
+
+- 5a76b12: enter beta tagged release
+
 ## 0.2.0
 
 ### Minor Changes

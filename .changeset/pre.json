@@ -12,8 +12,5 @@
     "@skullmaster/react": "0.2.0",
     "skullmaster": "0.2.0"
   },
-  "changesets": [
-    "free-bananas-sort",
-    "lovely-pants-float"
-  ]
+  "changesets": ["free-bananas-sort", "lovely-pants-float"]
 }

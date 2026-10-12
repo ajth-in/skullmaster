@@ -1,5 +1,11 @@
 # @skullmaster/react
 
+## 0.3.0-beta.1
+
+### Patch Changes
+
+- 82f0b0e: make skeleton border radius responsive
+
 ## 0.3.0-beta.0
 
 ### Minor Changes
@@ -11,10 +17,12 @@
 ### Minor Changes
 
 - 70ae376: **Description:** Minor release focused on improving generated skeleton fidelity and fixing classname parsing edge cases.
+
   - Removed text obfuscation and replaced incoming text with the Unicode full block character (`U+2588`) for more consistent text placeholders.
   - Sanitized generated class names by escaping invalid escape sequences to prevent JavaScript parsing errors, particularly when working with PandaCSS.
 
 - f830a13: - Skeleton form fields (inputs, selects, textareas) are now suppressed from browser autofill and password managers.
+
   - Skeleton images are now generated with an empty `alt` attribute so placeholders are treated as decorative by assistive technology.
 
   - Skeleton placeholder colors now have better contrast in light and dark mode.
@@ -23,6 +31,7 @@
   Added a Next.js + Tailwind CSS example app.
 
 - 1db051e: Minor Changes
+
   - Skeleton elements are now scored on visual significance and tagged with `data-visual-significance`; elements with no visual presence are flagged with `data-depth="-1"`.
   - Elements rendered with square corners (zero border radius) are now flagged so the skeleton layer can round them.
 
@@ -31,6 +40,7 @@
   - Added the `--skeleton-border-radius` CSS variable.
 
 - 61c14d0: This release focuses on improving customization, generated output quality, developer experience, and documentation. It also includes several fixes to React generation and theme styling.
+
   - Added support for the `data-skip-skull` attribute to exclude specific elements from skeleton generation.
   - Added default CSS styling for interactive input components in generated skeletons.
   - React components now accept a configurable `port` prop, allowing the development server port to be customized.
@@ -45,6 +55,7 @@
   - Reduced light mode contrast to improve skeleton appearance.
 
 - e2e497e: - This release introduces new APIs for fine tuning generated skeletons, improves the generated output, and adds several quality of life improvements for the development workflow.
+
   - Added `markAsSkull` support to generated files, making it easier to annotate elements for skeleton generation.
 
   - Added `tweakForSkull` support to generated files, allowing generated skeleton output to be customized programmatically.
@@ -87,6 +98,7 @@
 ### Minor Changes
 
 - 1db051e: Minor Changes
+
   - Skeleton elements are now scored on visual significance and tagged with `data-visual-significance`; elements with no visual presence are flagged with `data-depth="-1"`.
   - Elements rendered with square corners (zero border radius) are now flagged so the skeleton layer can round them.
 
@@ -99,6 +111,7 @@
 ### Minor Changes
 
 - f830a13: - Skeleton form fields (inputs, selects, textareas) are now suppressed from browser autofill and password managers.
+
   - Skeleton images are now generated with an empty `alt` attribute so placeholders are treated as decorative by assistive technology.
 
   - Skeleton placeholder colors now have better contrast in light and dark mode.
@@ -123,6 +136,7 @@
 ### Minor Changes
 
 - e2e497e: - This release introduces new APIs for fine tuning generated skeletons, improves the generated output, and adds several quality of life improvements for the development workflow.
+
   - Added `markAsSkull` support to generated files, making it easier to annotate elements for skeleton generation.
 
   - Added `tweakForSkull` support to generated files, allowing generated skeleton output to be customized programmatically.
@@ -213,6 +227,7 @@
 ### Patch Changes
 
 - 28aa74f: Minor release focused on improving the developer experience, introducing browser extension support, simplifying project setup, and enhancing the quality of generated skeletons.
+
   - Initialized the WXT project for browser extension support.
   - Added animation styles for skeletons with refined motion while removing unnecessary animations.
   - Improved generated HTML structure and overall consistency.

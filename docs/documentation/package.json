@@ -1,0 +1,26 @@
+{
+  "name": "documentation",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "oxlint -D correctness -W suspicious -W perf --config oxlint.json src",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.42.6",
+    "astro": "^7.2.10",
+    "sharp": "^0.35.3",
+    "starlight-theme-rapide": "^0.6.0"
+  },
+  "devDependencies": {
+    "@skullmaster/oxlint-config": "workspace:*",
+    "@skullmaster/typescript-config": "workspace:*",
+    "oxlint": "^1.0.0",
+    "typescript": "^6.0.3"
+  }
+}

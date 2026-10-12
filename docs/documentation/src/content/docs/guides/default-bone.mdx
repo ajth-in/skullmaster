@@ -1,0 +1,27 @@
+---
+title: DefaultBone
+description: The fallback skeleton rendered until a generated skeleton exists.
+---
+
+`DefaultBone` is the fallback skeleton. Whenever you render `<Skeleton name="..." />` for a component that hasn't been generated yet, `DefaultBone` is displayed instead.
+
+## Where it lives
+
+Setup creates it at:
+
+```text
+<outDir>/skeletons/DefaultBone.tsx
+```
+
+## When it renders
+
+```jsx
+<Skeleton name="ProfileCard" />
+```
+
+- Before `ProfileCard.tsx` is generated → renders `DefaultBone`.
+- After generation → renders the generated `ProfileCard` skeleton.
+
+## Customizing it
+
+`DefaultBone` is your file — edit it to change the app-wide loading fallback (e.g. a generic shimmer block that matches your design system). It applies everywhere a skeleton is still missing, so keep it generic.

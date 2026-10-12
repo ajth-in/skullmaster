@@ -1,0 +1,13 @@
+---
+title: Why preserve the DOM?
+description: The benefits of keeping generated markup close to the original component.
+---
+
+Keeping the generated markup close to the original component has several advantages:
+
+- **Responsiveness is not a concern.** Skullmaster preserves your component's DOM structure, so if the original component is responsive, the generated skeleton will be responsive too. A `getBoundingClientRect()`-based box approach would freeze one screen size.
+- **You don't need to maintain a separate skeleton.** The generated skeleton always mirrors the rendered output.
+
+## The accessibility tension
+
+A skeleton made of the real markup would be read out as content — a `p` announced as text, a `button` announced as a control you can tab to. So the result still behaves like a skeleton: Skullmaster injects ARIA attributes and strips meaningful information out of the source (see [How it works](/concepts/how-it-works/)).

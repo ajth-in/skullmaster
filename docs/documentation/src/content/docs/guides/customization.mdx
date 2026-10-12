@@ -1,0 +1,57 @@
+---
+title: Customization
+description: Control generated skeletons with data attributes and type-safe helpers.
+---
+
+The generated skeleton is intended to be a starting point. Depending on your component, the default output may not always match the level of detail you want. In some cases, generating placeholders for every DOM element can make the skeleton appear overly cluttered.
+
+To reduce unnecessary visual noise, Skullmaster automatically assigns `data-depth="-1"` to elements that are used only for layout or are not visually significant. These elements are rendered as transparent while still preserving the layout.
+
+You can also control these attributes yourself. The correction goes into the source, where it changes no styles in production: only the way the skeleton is generated.
+
+## Data attributes
+
+They ride along in the DOM for free, and the generator is the only thing that reads them.
+
+### `data-depth="-1"` — transparent, but still laid out
+
+Set it on elements that should stay invisible while keeping their place in the layout. Remove it, or set another depth, on elements that should render a visible bone.
+
+### `data-skip-skull` — leave the whole subtree out
+
+Add it to the root of anything that should not be generated at all. Skullmaster ignores that element and every one of its descendants.
+
+```html
+<div data-skip-skull>
+  <!-- this subtree never reaches the skeleton -->
+</div>
+```
+
+## Type-safe helpers
+
+The same corrections, without touching markup by hand:
+
+### `markAsSkull(name, tweaks?)`
+
+Registers the component for skeleton generation, and takes the tweaks for the top-level element:
+
+```tsx
+<section {...markAsSkull("Hero", { isTransparent: true })}>...</section>
+```
+
+### `tweakForSkull(tweaks?)`
+
+The same tweaks, applied to a child of an element that is already registered:
+
+```tsx
+<fieldset {...tweakForSkull({ hideSubTree: true })}>...</fieldset>
+```
+
+Both accept a `SkullTweaks` object:
+
+- `hideSubTree` — exclude the element and its entire subtree from generation (sets `data-skip-skull`).
+- `isTransparent` — render the element as transparent while preserving its layout (sets `data-depth="-1"`).
+
+:::tip
+Don't edit generated files to customize — the fix dies the next time you regenerate. Put the correction in the source via attributes/helpers instead.
+:::

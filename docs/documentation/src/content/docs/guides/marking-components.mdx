@@ -1,0 +1,56 @@
+---
+title: Marking components
+description: Register components for skeleton generation with markAsSkull and tweakForSkull.
+---
+
+## `markAsSkull(name, tweaks?)`
+
+Registers an element for skeleton generation. Spread the returned props onto the element:
+
+```jsx
+import { markAsSkull } from "@skullmaster/react";
+
+<div {...markAsSkull("ProfileCard")}>...</div>;
+```
+
+The `name` argument becomes the skeleton name. It also accepts tweaks for the top-level element:
+
+```tsx
+<section {...markAsSkull("Hero", { isTransparent: true })}>...</section>
+```
+
+## `tweakForSkull(tweaks?)`
+
+Fine-tune an element without registering it as a named component:
+
+```jsx
+import { tweakForSkull } from "@skullmaster/react";
+
+<fieldset {...tweakForSkull({ hideSubTree: true })}>...</fieldset>;
+```
+
+Use it on children of an already-registered parent.
+
+## `SkullTweaks`
+
+Both helpers accept a `tweaks` object:
+
+| Tweak           | Effect                                                   |
+| --------------- | -------------------------------------------------------- |
+| `hideSubTree`   | Exclude the element + subtree (sets `data-skip-skull`)   |
+| `isTransparent` | Render transparent, keep layout (sets `data-depth="-1"`) |
+
+If you prefer, you can set these `data-*` attributes manually instead of using the helpers.
+
+## Manual attributes
+
+- Set `data-depth="-1"` on elements you want to remain transparent while preserving their layout. Remove or change the attribute on elements that should render a visible skeleton placeholder.
+- Add `data-skip-skull` to the root of any subtree that should not be generated at all:
+
+```html
+<div data-skip-skull>
+  <!-- This subtree will not be included in the generated skeleton -->
+</div>
+```
+
+Nothing here changes production styling — the tweaks only change what ends up in the generated skeleton.

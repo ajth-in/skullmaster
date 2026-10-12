@@ -1,0 +1,14 @@
+---
+title: How it works
+description: A high-level overview of how Skullmaster generates skeletons.
+---
+
+Generating an accurate skeleton requires runtime information that only exists after your application has been rendered by the browser: the final HTML structure, computed styles, image dimensions, and text layout.
+
+Skullmaster collects this with a development-only helper inside your app. You open your site, click the fully rendered component, and Skullmaster reads the runtime information off that click and sends it to the CLI dev server (`localhost:8080` by default), which generates the skeleton component and registers it in `registry.tsx`.
+
+Because generation reads from your live dev session, there is no headless browser and no mock fixtures for conditional UI like modals or authenticated content.
+
+The generated skeleton preserves your DOM structure instead of flattening it into generic boxes: text becomes same-footprint placeholders, images become aspect-ratio-preserving placeholders, and interactive elements are made inert and hidden from assistive technology — while shimmer styling and loading semantics (`role="status"`, `aria-busy`) are applied.
+
+See [Why preserve the DOM?](/concepts/why-preserve-dom/) for the reasoning and [Customization](/guides/customization/) to fine-tune the output.

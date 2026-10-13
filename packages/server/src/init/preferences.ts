@@ -1,15 +1,18 @@
 import { mkdirSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import fileExists from "./is-file-exists";
-import { generateInitialRegistry, generateRegistry, type RegistryOperation } from "./registry";
+import { generateInitialRegistry } from "./registry";
+import { getExtension } from "./registry/extension";
+import { generateRegistry, type RegistryOperation } from "./registry/operations";
 import { updateCacheRegistry, type CacheOperation } from "./cache-registry";
 import defaultBone from "./default-bone";
 import { log } from "../shared";
+import type { Preferences } from "./collect-preferences";
 
 export class Config {
   outDir: string;
-  projectType: string;
+  projectType: Preferences["project"];
 
-  constructor(outDir: string, projectType: string) {
+  constructor(outDir: string, projectType: Preferences["project"]) {
     this.outDir = outDir;
     this.projectType = projectType;
   }
@@ -49,7 +52,7 @@ export class Config {
     }
     const defaultBonePath = this.getDefSkeletonPath();
     if (forceReset || !(await fileExists(defaultBonePath))) {
-      await defaultBone(defaultBonePath);
+      await defaultBone(defaultBonePath, this.projectType);
       log.success(`Created default bone: ${defaultBonePath}`);
     } else {
       log.gray(`Default bone exists: ${defaultBonePath}`);
@@ -60,7 +63,7 @@ export class Config {
     return await updateCacheRegistry(op, this.getCachePath());
   }
   async registry(op: RegistryOperation) {
-    return generateRegistry(op, this.projectType.endsWith("ts"), this.getRegistryPath());
+    return generateRegistry(op, this.projectType, this.getRegistryPath());
   }
   getCachePath() {
     return `${this.outDir}/cache.json`;
@@ -72,7 +75,7 @@ export class Config {
     return `${this.getSkeletonPath()}/DefaultBone.${this.getExt()}`;
   }
   getExt() {
-    return this.projectType.endsWith("ts") ? "tsx" : "jsx";
+    return getExtension(this.projectType);
   }
   getRegistryPath() {
     return `${this.outDir}/registry.${this.getExt()}`;

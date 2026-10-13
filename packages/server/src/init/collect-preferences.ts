@@ -2,10 +2,17 @@ import { cancel, isCancel, select, text } from "@clack/prompts";
 import fileExists from "./is-file-exists";
 import { readFile, writeFile } from "fs/promises";
 import { CONFIG_PATH } from "../constants";
-
+export const projectTypes = [
+  { value: "react", label: "React" } as const,
+  { value: "preact", label: "Preact" } as const,
+];
+const projectVariantType = [
+  { value: "ts", label: "TypeScript" } as const,
+  { value: "js", label: "JavaScript" } as const,
+];
 export type Preferences = {
   outDir: string;
-  project: string;
+  project: `${(typeof projectTypes)[number]["value"]}-${(typeof projectVariantType)[number]["value"]}`;
 };
 
 export default async function collectPreferences(): Promise<Preferences> {
@@ -30,10 +37,7 @@ export default async function collectPreferences(): Promise<Preferences> {
   const projectType = await select({
     message: "Pick a project type.",
     initialValue: "react",
-    options: [
-      { value: "react", label: "React" },
-      { value: "preact", label: "Preact" },
-    ],
+    options: projectTypes,
   });
 
   if (isCancel(projectType)) {
@@ -44,10 +48,7 @@ export default async function collectPreferences(): Promise<Preferences> {
   const variant = await select({
     message: "Pick a project variant.",
     initialValue: "ts",
-    options: [
-      { value: "ts", label: "TypeScript" },
-      { value: "js", label: "JavaScript" },
-    ],
+    options: projectVariantType,
   });
 
   if (isCancel(variant)) {
@@ -55,9 +56,9 @@ export default async function collectPreferences(): Promise<Preferences> {
     process.exit(0);
   }
 
-  const preferences = {
+  const preferences: Preferences = {
     outDir,
-    project: `${projectType}-${variant.toString()}`,
+    project: `${projectType}-${variant.toString()}` as Preferences["project"],
   };
   await writeFile(`./${CONFIG_PATH}`, JSON.stringify(preferences, null, 2), "utf-8");
 

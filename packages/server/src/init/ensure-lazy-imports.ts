@@ -1,22 +1,35 @@
 import { SourceFile } from "ts-morph";
+import type { Preferences } from "./collect-preferences";
 
-export function ensureLazyImport(sourceFile: SourceFile) {
-  const reactImport = sourceFile.getImportDeclaration(
-    (d) => d.getModuleSpecifierValue() === "react",
+export function ensureLazyImport(sourceFile: SourceFile, project: Preferences["project"]) {
+  let moduleSpecifier: string;
+  switch (project) {
+    case "preact-ts":
+    case "preact-js":
+      moduleSpecifier = "preact/compat";
+      break;
+    case "react-ts":
+    case "react-js":
+      moduleSpecifier = "react";
+      break;
+  }
+
+  const runtimeImport = sourceFile.getImportDeclaration(
+    (d) => d.getModuleSpecifierValue() === moduleSpecifier,
   );
 
-  if (!reactImport) {
+  if (!runtimeImport) {
     sourceFile.addImportDeclaration({
-      moduleSpecifier: "react",
+      moduleSpecifier,
       namedImports: ["lazy"],
     });
 
     return;
   }
 
-  const hasLazy = reactImport.getNamedImports().some((i) => i.getName() === "lazy");
+  const hasLazy = runtimeImport.getNamedImports().some((i) => i.getName() === "lazy");
 
   if (!hasLazy) {
-    reactImport.addNamedImport("lazy");
+    runtimeImport.addNamedImport("lazy");
   }
 }

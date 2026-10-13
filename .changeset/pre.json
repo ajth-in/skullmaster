@@ -10,7 +10,14 @@
     "@skullmaster/exacarnate-client": "0.2.0",
     "@skullmaster/excarnate": "0.2.0",
     "@skullmaster/react": "0.2.0",
-    "skullmaster": "0.2.0"
+    "skullmaster": "0.2.0",
+    "skullmaster-preact-ts-vite-example": "0.0.0",
+    "documentation": "0.0.1",
+    "@skullmaster/preact": "0.0.0"
   },
-  "changesets": ["free-bananas-sort", "lovely-pants-float"]
+  "changesets": [
+    "free-bananas-sort",
+    "lovely-pants-float",
+    "olive-ties-grow"
+  ]
 }

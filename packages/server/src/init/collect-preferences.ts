@@ -33,6 +33,8 @@ export default async function collectPreferences(): Promise<Preferences> {
     options: [
       { value: "react-ts", label: "React with TypeScript" },
       { value: "react-js", label: "React" },
+      { value: "preact-ts", label: "Preact with TypeScript" },
+      { value: "preact-js", label: "Preact" },
     ],
   });
 

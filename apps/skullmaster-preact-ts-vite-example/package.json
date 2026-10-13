@@ -1,0 +1,22 @@
+{
+  "name": "skullmaster-preact-ts-vite-example",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@skullmaster/react": "workspace:*",
+    "preact": "^10.29.8",
+    "skullmaster": "workspace:*"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@types/node": "^24.13.3",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}

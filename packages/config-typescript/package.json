@@ -15,6 +15,7 @@
     "base.json",
     "nextjs.json",
     "node-library.json",
+    "preact-library.json",
     "react-library.json"
   ],
   "publishConfig": {

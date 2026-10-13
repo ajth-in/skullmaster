@@ -14,7 +14,11 @@ Skullmaster is a CLI tool that lets you generate customizable skeleton loaders f
 ```bash
 npm install -D skullmaster@beta
 npm install @skullmaster/react@beta
+# or, for Preact:
+npm install @skullmaster/preact@beta
 ```
+
+> Using Preact? Swap `@skullmaster/react` for `@skullmaster/preact` in the steps below — same API. For framework-specific setup, see the [getting started guide](https://skullmaster.ajth.in/getting-started/).
 
 ### 2. Start the development server
 
@@ -30,7 +34,7 @@ http://localhost:8080
 
 ### 3. Mark a component
 
-Register any element you want to generate a skeleton for using the `markAsSkull` helper from `@skullmaster/react`. Spread the returned props onto the element:
+Register any element you want to generate a skeleton for using the `markAsSkull` helper from `@skullmaster/react` (or `@skullmaster/preact`). Spread the returned props onto the element:
 
 ```jsx
 import { markAsSkull } from "@skullmaster/react";
@@ -45,7 +49,7 @@ The `name` argument becomes the skeleton name. See [Marking components](https://
 In your application's entry file (`App.tsx`, `main.tsx`, or `layout.tsx`), add the Skullmaster component:
 
 ```jsx
-import { Skullmaster } from "@skullmaster/react";
+import { Skullmaster } from "@skullmaster/react"; // or "@skullmaster/preact"
 
 <Skullmaster />;
 ```

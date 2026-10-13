@@ -1,0 +1,14 @@
+:root {
+  --skeleton-bg-100: rgb(228, 228, 228);
+  --skeleton-bg-200: rgb(212, 212, 212);
+  --skeleton-bg-300: rgb(196, 196, 196);
+  --skeleton-bg-400: rgb(180, 180, 180);
+  --skeleton-border-radius: min(5%, 12px);
+}
+
+.dark {
+  --skeleton-bg-100: rgb(30, 30, 30);
+  --skeleton-bg-200: rgb(46, 46, 46);
+  --skeleton-bg-300: rgb(62, 62, 62);
+  --skeleton-bg-400: rgb(78, 78, 78);
+}

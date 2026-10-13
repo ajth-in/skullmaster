@@ -3,7 +3,7 @@ title: Getting started
 description: Install Skullmaster, run the dev server, and generate your first skeleton.
 ---
 
-import { Steps } from "@astrojs/starlight/components";
+import { Steps, Tabs, TabItem } from "@astrojs/starlight/components";
 import { PackageManagers } from "@hideoo/starlight-plugins-docs-components";
 
 :::caution[Experimental]
@@ -12,65 +12,95 @@ This package is under active development. APIs and generated output may change b
 
 <Steps>
 
-1. ### Install Skullmaster
+1.  ### Install Skullmaster
 
-   <PackageManagers pkg="skullmaster@beta" dev />
-   <PackageManagers pkg="@skullmaster/react@beta" />
+    <PackageManagers pkg="skullmaster@beta" dev />
 
-2. ### Start the development server
+    Then install the renderer for your framework:
 
-   <PackageManagers type="exec" pkg="skullmaster" args="serve" />
+    <Tabs syncKey="framework">
+      <TabItem label="React">
+        <PackageManagers pkg="@skullmaster/react@beta" />
+      </TabItem>
+      <TabItem label="Preact">
+        <PackageManagers pkg="@skullmaster/preact@beta" />
+      </TabItem>
+    </Tabs>
 
-   The development server will then be available at:
+2.  ### Start the development server
 
-   ```text
-   http://localhost:8080
-   ```
+    <PackageManagers type="exec" pkg="skullmaster" args="serve" />
 
-3. ### Mark a component
+    When prompted, pick the project type matching your framework (React or Preact) and variant (TypeScript or JavaScript).
 
-   Register any element you want to generate a skeleton for using the `markAsSkull` helper from `@skullmaster/react`. Spread the returned props onto the element:
+    The development server will then be available at:
 
-   ```jsx
-   import { markAsSkull } from "@skullmaster/react";
+    ```text
+    http://localhost:8080
+    ```
 
-   <div {...markAsSkull("ProfileCard")}>...</div>;
-   ```
+3.  ### Mark a component
 
-   The `name` argument becomes the skeleton name. See [Marking components](/guides/marking-components/) for the full API including `tweakForSkull`.
+    Register any element you want to generate a skeleton for using the `markAsSkull` helper from your generated registry. Spread the returned props onto the element:
 
-4. ### Add the provider
+    ```jsx
+    import { markAsSkull } from "../skeletons/registry";
 
-   In your application's entry file (`App.tsx`, `main.tsx`, or `layout.tsx`), add the Skullmaster component:
+    <div {...markAsSkull("ProfileCard")}>...</div>;
+    ```
 
-   ```jsx
-   import { Skullmaster } from "@skullmaster/react";
+    The path depends on the output directory you chose during setup (`src/skeletons` by default).
 
-   <Skullmaster />;
-   ```
+    The `name` argument becomes the skeleton name. See [Marking components](/guides/marking-components/) for the full API including `tweakForSkull`.
 
-   This development-only helper collects runtime information and sends it to the CLI.
+4.  ### Add the provider
 
-5. ### Generate your first skeleton
+        In your application's entry file (`App.tsx`, `main.tsx`, or `layout.tsx`), add the Skullmaster component:
 
-   Load your application in the browser, hover over the marked component and click:
+        <Tabs syncKey="framework">
 
-   ![Hovering over a marked component and clicking to generate its skeleton](/comp-select-optimized.gif)
+      <TabItem label="React">
+    ```jsx
+    import { Skullmaster } from "@skullmaster/react";
 
-6. ### Use the generated skeleton
+            <Skullmaster />;
+            ```
 
-   Once generated, `<Skeleton name="UserCard" />` displays the generated skeleton instead of [DefaultBone](/guides/default-bone/):
+          </TabItem>
 
-   ```tsx ins={5}
-   import { Skeleton } from "../skeletons/registry";
+      <TabItem label="Preact">
+    ```jsx
+    import { Skullmaster } from "@skullmaster/preact";
 
-   function ProfileCardPage({ user, isLoading }) {
-     if (isLoading) {
-       return <Skeleton name="ProfileCard" />;
-     }
-     return <ProfileCard user={user} />;
-   }
-   ```
+            <Skullmaster />;
+            ```
+
+          </TabItem>
+
+    </Tabs>
+
+        This development-only helper collects runtime information and sends it to the CLI.
+
+5.  ### Generate your first skeleton
+
+    Load your application in the browser, hover over the marked component and click:
+
+    ![Hovering over a marked component and clicking to generate its skeleton](/comp-select-optimized.gif)
+
+6.  ### Use the generated skeleton
+
+    Once generated, `<Skeleton name="UserCard" />` displays the generated skeleton instead of [DefaultBone](/guides/default-bone/):
+
+    ```tsx ins={5}
+    import { Skeleton } from "../skeletons/registry";
+
+    function ProfileCardPage({ user, isLoading }) {
+      if (isLoading) {
+        return <Skeleton name="ProfileCard" />;
+      }
+      return <ProfileCard user={user} />;
+    }
+    ```
 
 </Steps>
 

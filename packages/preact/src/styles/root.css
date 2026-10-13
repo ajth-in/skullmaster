@@ -1,0 +1,8 @@
+.empty-set__skeleton {
+  pointer-events: none;
+  user-select: none;
+  cursor: default;
+
+  caret-color: transparent !important;
+  appearance: none !important;
+}

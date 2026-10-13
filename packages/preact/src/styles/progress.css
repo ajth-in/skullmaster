@@ -1,0 +1,11 @@
+.empty-set__skeleton progress::-webkit-progress-bar {
+  background: transparent !important;
+}
+
+.empty-set__skeleton progress::-webkit-progress-value {
+  background: transparent !important;
+}
+
+.empty-set__skeleton progress::-moz-progress-bar {
+  background: transparent !important;
+}

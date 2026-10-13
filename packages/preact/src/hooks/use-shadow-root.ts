@@ -1,0 +1,20 @@
+import { useEffect, useState } from "preact/compat";
+
+export default function useShadowRoot() {
+  const [shadow, setShadow] = useState<ShadowRoot | null>(null);
+
+  useEffect(() => {
+    const host = document.createElement("div");
+    host.id = "skullmaster-shadow-root";
+    document.body.appendChild(host);
+
+    const shadowRoot = host.attachShadow({ mode: "open" });
+    setShadow(shadowRoot);
+
+    return () => {
+      host.remove();
+    };
+  }, []);
+
+  return shadow;
+}

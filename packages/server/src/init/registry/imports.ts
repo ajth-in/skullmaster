@@ -11,11 +11,11 @@ import { type ComponentProps, type HTMLAttributes, lazy } from "react";`;
 import DefaultBone from "./skeletons/DefaultBone";
 import { lazy } from "react";`;
     case "preact-ts":
-      return `import "@skullmaster/react/style.css";
+      return `import "@skullmaster/preact/style.css";
 import DefaultBone from "./skeletons/DefaultBone";
 import { type ComponentProps, type HTMLAttributes, lazy } from "preact/compat";`;
     case "preact-js":
-      return `import "@skullmaster/react/style.css";
+      return `import "@skullmaster/preact/style.css";
 import DefaultBone from "./skeletons/DefaultBone";
 import { lazy } from "preact/compat";`;
   }

@@ -11,11 +11,15 @@
  *
  */
 
-import "@skullmaster/react/style.css";
+import "@skullmaster/preact/style.css";
 import DefaultBone from "./skeletons/DefaultBone";
 import { type ComponentProps, type HTMLAttributes, lazy } from "preact/compat";
 
-const registry = { default: lazy(() => import("./skeletons/DefaultBone")) } as const;
+const registry = {
+  default: lazy(() => import("./skeletons/DefaultBone")),
+  NextSteps: lazy(() => import("./skeletons/NextSteps")),
+  ProfileCard: lazy(() => import("./skeletons/ProfileCard")),
+} as const;
 
 export type SkullTweaks = {
   /** Exclude this element and its entire subtree from skeleton generation. */

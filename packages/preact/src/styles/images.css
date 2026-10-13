@@ -1,0 +1,12 @@
+.empty-set__skeleton img[data-image-skeleton="true"] {
+  object-fit: cover !important;
+
+  color: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+
+  background-color: inherit !important;
+
+  pointer-events: none !important;
+  user-select: none !important;
+}

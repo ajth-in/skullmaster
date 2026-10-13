@@ -1,0 +1,4 @@
+.empty-set__skeleton ul,
+.empty-set__skeleton ol {
+  list-style: none !important;
+}

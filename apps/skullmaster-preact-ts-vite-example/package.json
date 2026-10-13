@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@skullmaster/react": "workspace:*",
+    "@skullmaster/preact": "workspace:*",
     "preact": "^10.29.8",
     "skullmaster": "workspace:*"
   },

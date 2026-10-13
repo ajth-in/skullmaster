@@ -1,0 +1,54 @@
+{
+  "name": "@skullmaster/preact",
+  "version": "0.0.0",
+  "description": "Skullmaster overlay and tooling for Preact.",
+  "homepage": "https://www.ajth.in/skullmaster/",
+  "bugs": {
+    "url": "https://github.com/ajth-in/skullmaster/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajth-in/skullmaster.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json",
+    "./style.css": "./dist/style.css"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "play": "vite",
+    "test": "vitest",
+    "lint": "oxlint -D correctness -W suspicious -W perf --config oxlint.json src",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp",
+    "prepublishOnly": "pnpm --filter @skullmaster/exacarnate-client build && pnpm run build"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@skullmaster/exacarnate-client": "workspace:*",
+    "@skullmaster/oxlint-config": "workspace:*",
+    "@skullmaster/typescript-config": "workspace:*",
+    "@tsdown/css": "^0.22.3",
+    "@types/node": "^25.6.2",
+    "@vitest/browser-playwright": "^4.1.5",
+    "oxlint": "^1.0.0",
+    "preact": "^10.29.0",
+    "tsdown": "^0.22.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.11",
+    "vitest": "^4.1.5"
+  },
+  "peerDependencies": {
+    "preact": "^10.29.0"
+  }
+}

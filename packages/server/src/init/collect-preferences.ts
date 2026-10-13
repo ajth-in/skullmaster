@@ -29,12 +29,10 @@ export default async function collectPreferences(): Promise<Preferences> {
 
   const projectType = await select({
     message: "Pick a project type.",
-    initialValue: "react-ts",
+    initialValue: "react",
     options: [
-      { value: "react-ts", label: "React with TypeScript" },
-      { value: "react-js", label: "React" },
-      { value: "preact-ts", label: "Preact with TypeScript" },
-      { value: "preact-js", label: "Preact" },
+      { value: "react", label: "React" },
+      { value: "preact", label: "Preact" },
     ],
   });
 
@@ -43,9 +41,23 @@ export default async function collectPreferences(): Promise<Preferences> {
     process.exit(0);
   }
 
+  const variant = await select({
+    message: "Pick a project variant.",
+    initialValue: "ts",
+    options: [
+      { value: "ts", label: "TypeScript" },
+      { value: "js", label: "JavaScript" },
+    ],
+  });
+
+  if (isCancel(variant)) {
+    cancel("Operation cancelled.");
+    process.exit(0);
+  }
+
   const preferences = {
     outDir,
-    project: projectType.toString(),
+    project: `${projectType}-${variant.toString()}`,
   };
   await writeFile(`./${CONFIG_PATH}`, JSON.stringify(preferences, null, 2), "utf-8");
 

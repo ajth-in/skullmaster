@@ -1,7 +1,7 @@
 {
   "name": "@skullmaster/excarnate",
-  "version": "0.3.0-beta.0",
-  "description": "A starter for creating a TypeScript package.",
+  "version": "0.3.0",
+  "description": "Analyze rendered components and generate skeleton loader code.",
   "homepage": "https://www.ajth.in/skullmaster/",
   "bugs": {
     "url": "https://github.com/ajth-in/skullmaster/issues"

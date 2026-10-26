@@ -1,7 +1,7 @@
 {
   "name": "@skullmaster/react",
-  "version": "0.3.0-beta.1",
-  "description": "A starter for creating a React component library.",
+  "version": "0.3.0",
+  "description": "Skullmaster overlay and tooling for React.",
   "homepage": "https://www.ajth.in/skullmaster/",
   "bugs": {
     "url": "https://github.com/ajth-in/skullmaster/issues"

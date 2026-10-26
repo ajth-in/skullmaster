@@ -1,6 +1,6 @@
 {
   "name": "@skullmaster/excarnate",
-  "version": "0.3.0-beta.0",
+  "version": "0.3.0",
   "description": "Analyze rendered components and generate skeleton loader code.",
   "homepage": "https://www.ajth.in/skullmaster/",
   "bugs": {

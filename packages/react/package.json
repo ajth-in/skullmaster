@@ -1,6 +1,6 @@
 {
   "name": "@skullmaster/react",
-  "version": "0.3.0-beta.1",
+  "version": "0.3.0",
   "description": "Skullmaster overlay and tooling for React.",
   "homepage": "https://www.ajth.in/skullmaster/",
   "bugs": {

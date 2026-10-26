@@ -1,6 +1,7 @@
 {
   "name": "documentation",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -25,6 +26,5 @@
     "@skullmaster/typescript-config": "workspace:*",
     "oxlint": "^1.0.0",
     "typescript": "^6.0.3"
-  },
-  "private": true
+  }
 }

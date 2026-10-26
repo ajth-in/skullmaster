@@ -16,6 +16,7 @@
     "@skullmaster/preact": "0.0.0"
   },
   "changesets": [
+    "brave-preact-release",
     "free-bananas-sort",
     "lovely-pants-float",
     "olive-ties-grow"
